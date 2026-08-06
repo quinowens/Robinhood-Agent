@@ -6,6 +6,9 @@
 - Added repository validation tooling and Make targets.
 - Added artifact tracking, contribution, and branch-protection guidance.
 - Clarified that generated Robinhood research records are private by default.
+- Added v1.9 validation-release guidance focused on shadow portfolios, score-bucket performance, scanner-source alpha, and rule opportunity cost.
+- Added market-health and shadow-trade templates plus outcome analysis tooling.
+- Added Portfolio Manager correlation-cluster checks for hidden AI/mega-cap concentration.
 
 ## Version 1.8 — Expanded Robinhood Tool Integration
 

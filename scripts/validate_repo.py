@@ -32,7 +32,10 @@ REQUIRED_FILES = [
     "templates/raw_scanner_snapshot.json",
     "templates/research_record.json",
     "templates/signal_outcome.json",
+    "templates/shadow_trade.json",
+    "templates/market_regime_snapshot.json",
     "templates/universe_run_manifest.json",
+    "docs/VALIDATION_RELEASE.md",
 ]
 
 DAILY_LOG_REQUIRED_SECTIONS = [
@@ -74,6 +77,10 @@ def check_json(errors: list[str]) -> None:
     for path in sorted(ROOT.glob("state/*.json")):
         parse_json_file(path, errors)
     for path in sorted(ROOT.glob("data/run_manifests/*.json")):
+        parse_json_file(path, errors)
+    for path in sorted(ROOT.glob("data/market_regime/*.json")):
+        parse_json_file(path, errors)
+    for path in sorted(ROOT.glob("data/validation_reports/*.json")):
         parse_json_file(path, errors)
     for path in sorted(ROOT.glob("backtests/*.json")):
         parse_json_file(path, errors)

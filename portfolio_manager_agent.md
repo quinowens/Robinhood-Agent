@@ -25,11 +25,12 @@ The Portfolio Manager Agent must:
 5. Enforce tier-specific position caps.
 6. Calculate position size using the 1% risk rule.
 7. Review market regime and sector exposure.
-8. Apply drawdown breakers and kill switch rules.
-9. Produce trade proposals or reject ideas.
-10. Log all proposals, skipped setups, and rule violations.
-11. Use realized P&L and trade history to evaluate drawdown breakers and recent execution quality.
-12. Inspect equity tax lots before proposing a partial or full equity sale.
+8. Review correlation-cluster exposure and hidden theme concentration.
+9. Apply drawdown breakers and kill switch rules.
+10. Produce trade proposals or reject ideas.
+11. Log all proposals, skipped setups, and rule violations.
+12. Use realized P&L and trade history to evaluate drawdown breakers and recent execution quality.
+13. Inspect equity tax lots before proposing a partial or full equity sale.
 
 ---
 
@@ -56,6 +57,7 @@ A trade proposal requires all of the following:
 - Earnings blackout does not apply.
 - Market regime is not hostile.
 - Sector exposure remains reasonable.
+- Correlation-cluster exposure remains reasonable.
 - No kill switch is active.
 - Current positions and open equity/options orders have been refreshed so pending exposure is included.
 
@@ -83,9 +85,10 @@ Before producing any trade proposal, confirm every item below:
 14. Max open positions will not be exceeded.
 15. Buying power is sufficient.
 16. Sector exposure remains reasonable after entry.
-17. No drawdown breaker or kill switch is active.
-18. Final proposal clearly states that no order has been placed.
-19. A simulated order review has been completed and all alerts are shown when an exact order is being prepared for approval.
+17. Correlation-cluster exposure remains reasonable after entry.
+18. No drawdown breaker or kill switch is active.
+19. Final proposal clearly states that no order has been placed.
+20. A simulated order review has been completed and all alerts are shown when an exact order is being prepared for approval.
 
 If any checklist item cannot be confirmed, output **NO TRADE**.
 
@@ -151,6 +154,7 @@ Position Dollars:
 Shares:
 Portfolio Exposure After Entry:
 Sector Exposure After Entry:
+Correlation Cluster Exposure After Entry:
 Approval Required:
 Reasons For Trade:
 Reasons Against Trade:
@@ -190,6 +194,22 @@ If the user activates the kill switch:
 - No add-ons.
 - Existing positions may only be managed to reduce or close risk.
 - Trading resumes only after explicit user approval.
+
+---
+
+## Correlation Cluster Checks
+
+Before serious funding or any new proposal that would add similar exposure, classify the candidate into a correlation cluster.
+
+Examples:
+
+- `mega_cap_ai_platforms`: MSFT, GOOGL, META, AMZN
+- `semiconductors_ai_infrastructure`: NVDA, AVGO, AMD, MU, ALAB, CRDO
+- `cybersecurity`: CRWD, PANW
+- `cloud_software`: NOW, ORCL
+- `fintech`: SOFI
+
+If a candidate is in a cluster that already dominates portfolio or shadow-portfolio exposure, the Portfolio Manager must either reduce size, reject the proposal, or require explicit user approval. Missing correlation data is a risk warning, not permission to ignore concentration.
 
 ---
 

@@ -1,0 +1,210 @@
+{
+  "generated_at": "2026-08-06T23:42:10.405412+00:00",
+  "month_filter": "2026-08",
+  "options_confirmation_lift": {
+    "alpha_lift": null,
+    "confirmed_momentum": {
+      "average": null,
+      "count": 0,
+      "median": null,
+      "observed_count": 0
+    },
+    "unconfirmed_momentum": {
+      "average": null,
+      "count": 6,
+      "median": null,
+      "observed_count": 0
+    }
+  },
+  "sample_health": {
+    "conclusion_quality": "directional",
+    "joined_records": 28,
+    "observed_30d_outcomes": 0,
+    "research_records": 28,
+    "signal_outcomes": 0
+  },
+  "scanner_sources": {
+    "Earnings Risk Radar": {
+      "forward_30d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_30d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "Momentum Candidates": {
+      "forward_30d_return": {
+        "average": null,
+        "count": 6,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_30d": {
+        "average": null,
+        "count": 6,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "current_universe_tier_2": {
+      "forward_30d_return": {
+        "average": null,
+        "count": 8,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_30d": {
+        "average": null,
+        "count": 8,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "current_watchlist": {
+      "forward_30d_return": {
+        "average": null,
+        "count": 3,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_30d": {
+        "average": null,
+        "count": 3,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "earnings_risk_radar": {
+      "forward_30d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_30d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "missing": {
+      "forward_30d_return": {
+        "average": null,
+        "count": 2,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_30d": {
+        "average": null,
+        "count": 2,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "momentum_candidates": {
+      "forward_30d_return": {
+        "average": null,
+        "count": 9,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_30d": {
+        "average": null,
+        "count": 9,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "options_activity_radar": {
+      "forward_30d_return": {
+        "average": null,
+        "count": 7,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_30d": {
+        "average": null,
+        "count": 7,
+        "median": null,
+        "observed_count": 0
+      }
+    }
+  },
+  "score_buckets": {
+    "75-79": {
+      "forward_30d_return": {
+        "average": null,
+        "count": 5,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_qqq_30d": {
+        "average": null,
+        "count": 5,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_30d": {
+        "average": null,
+        "count": 5,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "80-84": {
+      "forward_30d_return": {
+        "average": null,
+        "count": 6,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_qqq_30d": {
+        "average": null,
+        "count": 6,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_30d": {
+        "average": null,
+        "count": 6,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "missing": {
+      "forward_30d_return": {
+        "average": null,
+        "count": 17,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_qqq_30d": {
+        "average": null,
+        "count": 17,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_30d": {
+        "average": null,
+        "count": 17,
+        "median": null,
+        "observed_count": 0
+      }
+    }
+  },
+  "shadow_portfolio": {
+    "average_pnl_pct": null,
+    "average_r_multiple": null,
+    "closed_count": 0,
+    "count": 0,
+    "median_pnl_pct": null,
+    "positive_rate": null
+  }
+}

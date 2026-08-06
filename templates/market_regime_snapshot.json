@@ -1,0 +1,34 @@
+{
+  "as_of_date": null,
+  "as_of_time": null,
+  "market_health_score": null,
+  "classification": null,
+  "components": {
+    "spy_trend": null,
+    "qqq_trend": null,
+    "breadth": null,
+    "volatility": null,
+    "sector_participation": null
+  },
+  "raw_inputs": {
+    "spy_above_50_sma": null,
+    "spy_above_200_sma": null,
+    "spy_50_sma_slope_positive": null,
+    "qqq_above_50_sma": null,
+    "qqq_above_200_sma": null,
+    "qqq_50_sma_slope_positive": null,
+    "advance_decline_signal": null,
+    "percent_above_50_sma": null,
+    "vix_level": null,
+    "vix_trend": null,
+    "leading_sector_count": null
+  },
+  "risk_scaling": {
+    "max_new_entry_risk_pct": null,
+    "tier_1_position_cap_pct": null,
+    "tier_2_position_cap_pct": null,
+    "new_entries_allowed": null
+  },
+  "missing_data": [],
+  "notes": null
+}

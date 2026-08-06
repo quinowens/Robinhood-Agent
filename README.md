@@ -207,6 +207,8 @@ Useful maintenance targets:
 make status
 make scan-sensitive
 make daily-log DATE=2026-08-06
+make analyze-outcomes
+make validation-report MONTH=2026-08
 ```
 
 Generated research artifacts are currently tracked for reproducibility. The policy for what should remain tracked lives in `docs/ARTIFACT_POLICY.md`.
@@ -217,18 +219,18 @@ Generated research artifacts are currently tracked for reproducibility. The poli
 
 ### v1.9
 
-- Market regime scoring
-- VIX filters
-- Breadth filters
-- Objective market health score
+- Validation release: shadow portfolio, signal outcome tracking, score-bucket performance, scanner-source alpha, and rule opportunity-cost analysis
+- Market regime scoring with VIX, breadth, trend, and sector participation components
+- Correlation-cluster checks before serious funding
+- Monthly answer to: "If we had followed this agent for the last 30/60/90 days exactly as written, what would have happened?"
 
-### v1.9
+### v2.0
 
 - Sector rotation model
 - Correlation model
 - Sector exposure optimizer
 
-### v2.0
+### v2.1
 
 - Automated research logs
 - Automated trade logs

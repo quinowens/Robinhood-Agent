@@ -32,6 +32,8 @@ The goal is **not** to predict the future. The goal is to align with existing tr
 
 If conditions are unclear, the correct action is usually **no trade**.
 
+Version 1.9 should focus on evidence, not more discretionary rules. The system should prove which scanner sources, score buckets, temporary blocks, and portfolio constraints add value before any thresholds are loosened.
+
 ---
 
 ## Two-Agent Strategy Model
@@ -104,6 +106,7 @@ Before entering a position:
 7. Position must have a defined stop-loss.
 8. Earnings risk must be acceptable.
 9. Portfolio concentration rules must pass.
+10. Correlation-cluster exposure must not create hidden concentration.
 
 Universe membership and current entry eligibility are separate. A Tier 1 or Tier 2 member may remain in the Current Universe while temporarily blocked by earnings, extension, market regime, trend damage, or portfolio constraints.
 

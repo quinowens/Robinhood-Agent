@@ -10,7 +10,7 @@ If a metric cannot be computed, report it as `N/A`. Never fabricate a value.
 
 ## Evaluation Layers
 
-Version 1.7 tracks two separate layers plus scanner-pipeline quality:
+Version 1.9 tracks two separate layers plus scanner-pipeline quality, market-regime context, correlation risk, and shadow-portfolio evidence:
 
 ### Research Layer
 
@@ -188,6 +188,70 @@ Track whether Research Agent scores have predictive value.
 
 Track the same fixed forward horizons for Tier 1, Tier 2, Watchlist, score-based rejects, permanent-filter rejects, and scanner-only candidates. Do not evaluate only promoted candidates.
 
+### Required Validation Questions
+
+Monthly validation must answer these questions when sample size allows:
+
+1. Did higher score buckets outperform lower score buckets?
+2. Did high-scoring candidates outperform `SPY` and `QQQ`?
+3. Which scanner sources produced positive or negative alpha?
+4. Did Options Activity confirmation add measurable predictive value?
+5. Did temporary earnings and extension blocks save losses or create negative opportunity value?
+6. Did permanent rejection filters prevent repeated low-quality research spend?
+7. Did the shadow portfolio outperform cash, `SPY`, and `QQQ` after realistic risk sizing?
+
+If fewer than 20 observed 30-day outcomes are available for a category, label the conclusion directional only.
+
+---
+
+## Market Health Score
+
+Market regime should be scored, not only treated as ON/OFF.
+
+| Component | Max Points | Evidence |
+| --- | ---: | --- |
+| `SPY` trend | 20 | Above 50 SMA, above 200 SMA, positive 50-day slope |
+| `QQQ` trend | 20 | Above 50 SMA, above 200 SMA, positive 50-day slope |
+| Breadth | 20 | Advance/decline quality and percent of stocks above 50 SMA |
+| Volatility | 20 | VIX level, VIX trend, and volatility expansion/contraction |
+| Sector participation | 20 | Number and quality of leading sectors |
+
+Classification:
+
+| Score | Classification | Default Action |
+| ---: | --- | --- |
+| 80-100 | Strong | Normal proposal-only risk caps may apply |
+| 65-79 | Constructive | New entries allowed only for high-quality Tier 1/Tier 2 setups |
+| 50-64 | Mixed | Reduce risk; require stronger confirmation |
+| 0-49 | Hostile | No new entries unless explicitly approved as an exception |
+
+Risk scaling should be documented in `templates/market_regime_snapshot.json` and saved to `data/market_regime/` when market context is used in a decision.
+
+---
+
+## Correlation And Concentration Metrics
+
+Sector caps are necessary but not sufficient. The Portfolio Manager must also watch economic clustering.
+
+Track candidates and positions by correlation cluster, such as:
+
+- `mega_cap_ai_platforms`
+- `semiconductors_ai_infrastructure`
+- `cloud_software`
+- `cybersecurity`
+- `fintech`
+- `broad_market_etf`
+- `healthcare_innovation`
+
+Before serious funding, monthly validation should estimate:
+
+- Cluster exposure if all approved proposals had been taken.
+- Pairwise return correlation for active holdings and finalists when enough history exists.
+- Shadow-portfolio drawdowns during market stress windows.
+- Whether multiple tickers are effectively one AI/mega-cap technology bet.
+
+If correlation data is missing and exposure would concentrate in one theme, treat that as a Portfolio Manager risk warning.
+
 ---
 
 ## Benchmark Tracking
@@ -256,6 +320,18 @@ JSON Lines is preferred for append-only collections. Raw records must be retaine
 ## Shadow Portfolio
 
 While execution remains proposal-only, record every fully qualified setup as a hypothetical trade with entry, stop, target, risk-based shares, rule-driven exit, and taken/skipped reason. Shadow results must remain separate from real account results.
+
+Use `templates/shadow_trade.json` and append records to `data/shadow_trades/*.jsonl`.
+
+The shadow portfolio should answer:
+
+- What would have happened over 30, 60, and 90 trading days?
+- Which qualified setups were skipped, and why?
+- Did risk sizing improve or reduce returns?
+- Did conservative blocks reduce drawdown?
+- Did the agent outperform `SPY` and `QQQ` after realistic entry/exit rules?
+
+Run `python3 scripts/analyze_outcomes.py` during monthly review to summarize available evidence.
 
 ---
 

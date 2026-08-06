@@ -42,6 +42,9 @@ These directories are currently tracked for reproducibility:
 - `data/raw_scanner_snapshots/`
 - `data/research_records/`
 - `data/signal_outcomes/`
+- `data/shadow_trades/`
+- `data/market_regime/`
+- `data/validation_reports/`
 - `backtests/`
 
 If these artifacts become too noisy, switch them to local archival by adding the generated paths to `.gitignore` and keeping only `.gitkeep` placeholders plus periodic sanitized summaries.

@@ -1,13 +1,16 @@
 # Structured Data
 
-Version 1.7 stores machine-readable records alongside human-readable reports.
+Version 1.9 stores machine-readable records alongside human-readable reports.
 
 ```text
 data/
 ├── run_manifests/          # One JSON manifest per universe or daily run
 ├── raw_scanner_snapshots/  # Append-only JSONL raw scanner rows
 ├── research_records/       # Append-only JSONL candidate evaluations
-└── signal_outcomes/        # Append-only JSONL forward-return updates
+├── signal_outcomes/        # Append-only JSONL forward-return updates
+├── shadow_trades/          # Append-only JSONL hypothetical trades
+├── market_regime/          # Market health snapshots
+└── validation_reports/     # Monthly evidence summaries
 ```
 
 Rules:
@@ -22,3 +25,10 @@ Rules:
 - Run `make validate` before committing generated record changes.
 
 Use the JSON templates in `templates/` as the record contracts.
+
+Run outcome analysis with:
+
+```bash
+python3 scripts/analyze_outcomes.py
+python3 scripts/analyze_outcomes.py --month YYYY-MM --output data/validation_reports/YYYY-MM-validation-summary.json
+```

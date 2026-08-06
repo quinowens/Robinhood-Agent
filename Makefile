@@ -1,4 +1,4 @@
-.PHONY: validate scan-sensitive status daily-log
+.PHONY: validate scan-sensitive status daily-log analyze-outcomes validation-report
 
 PYTHON ?= python3
 
@@ -15,3 +15,10 @@ daily-log:
 	@test -n "$(DATE)" || (echo "Usage: make daily-log DATE=YYYY-MM-DD" && exit 2)
 	@test -f "research_logs/$(DATE)-daily-scanner-dry-run.md" || (echo "Missing research_logs/$(DATE)-daily-scanner-dry-run.md" && exit 1)
 	@sed -n '1,80p' "research_logs/$(DATE)-daily-scanner-dry-run.md"
+
+analyze-outcomes:
+	$(PYTHON) scripts/analyze_outcomes.py
+
+validation-report:
+	@test -n "$(MONTH)" || (echo "Usage: make validation-report MONTH=YYYY-MM" && exit 2)
+	$(PYTHON) scripts/analyze_outcomes.py --month "$(MONTH)" --output "data/validation_reports/$(MONTH)-validation-summary.json"
