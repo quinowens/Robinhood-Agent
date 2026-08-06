@@ -14,11 +14,13 @@ Track:
 - Alpha versus `SPY` and `QQQ` by score bucket.
 - Scanner-source alpha.
 - Rejection opportunity cost.
+- NO TRADE 5/10/20-day outcomes by block reason.
 - Options Activity confirmation lift.
 - Earnings-block opportunity value.
 - Shadow-portfolio return, drawdown, and R-multiple distribution.
 - Market-health score versus subsequent opportunity quality.
 - Correlation-cluster concentration among approved candidates.
+- Tier threshold calibration against actual score distributions.
 
 ## Do Not Loosen Rules Prematurely
 
@@ -52,3 +54,4 @@ The summary should answer:
 6. Did options activity add measurable value?
 7. Did market-health score improve or reduce entry quality?
 8. Did correlation clustering create hidden concentration?
+9. Are Tier 1 and Tier 2 thresholds predictive and reachable under the current scoring model?

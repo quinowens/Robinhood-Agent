@@ -9,6 +9,11 @@
 - Added v1.9 validation-release guidance focused on shadow portfolios, score-bucket performance, scanner-source alpha, and rule opportunity cost.
 - Added market-health and shadow-trade templates plus outcome analysis tooling.
 - Added Portfolio Manager correlation-cluster checks for hidden AI/mega-cap concentration.
+- Replaced `eligible_for_pm_review` with canonical `eligibility: eligible` state.
+- Changed Tier 2 approval sequencing so Portfolio Manager proposals do not require prior user approval; exact live orders still require approval.
+- Added provisional Tier 2 daily promotion path for scanner candidates that meet Tier 2 standards before the next monthly refresh.
+- Changed post-earnings blocks from fixed cooldowns to settled-session evidence reviews.
+- Added 5/10/20-day NO TRADE opportunity-cost tracking by block reason.
 
 ## Version 1.8 — Expanded Robinhood Tool Integration
 

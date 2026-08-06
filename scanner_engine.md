@@ -125,7 +125,7 @@ Example:
 }
 ```
 
-A ticker appearing in more than one positive scanner may receive a small decision-confidence boost. A ticker appearing in Earnings Risk Radar retains its tier but receives `eligibility: blocked_by_earnings` unless the report is already completed and post-earnings review has cleared the block.
+A ticker appearing in more than one positive scanner may receive a small decision-confidence boost. A ticker appearing in Earnings Risk Radar retains its tier but receives `eligibility: blocked_by_earnings` when the event is inside the pre-earnings blackout window or the post-earnings settled-session review has not cleared. After earnings, direct earnings data is primary; Earnings Risk Radar is secondary confirmation only.
 
 ---
 

@@ -137,7 +137,8 @@ Normalize measurable factor values across the eligible refresh population using 
 | Tier | Role | Typical Score |
 | --- | --- | --- |
 | Tier 1 | Highest conviction; eligible for standard position sizing | 85+ |
-| Tier 2 | Strong but less complete; reduced sizing and user approval | 75-84 |
+| Tier 2 | Strong but less complete; reduced sizing | 75-84 |
+| Provisional Tier 2 | Daily-run candidate that newly meets Tier 2 standards until next refresh | 75+ |
 | Watchlist | Interesting but not entry-eligible | 65-74 |
 | Reject | Not suitable | Below 65 or fails a Permanent Membership Rejection Filter |
 
@@ -214,7 +215,7 @@ The Research Agent output is advisory. The Portfolio Manager Agent must still ve
 - Position sizing
 - Drawdown breakers
 - Earnings risk
-- User approval requirements
+- Exact live-order approval requirements
 
 ---
 
@@ -265,5 +266,7 @@ The agent should no longer treat any manual watchlist as the primary source of i
 9. Score and tier only after validation.
 10. Use Level 2 only for finalists when execution quality materially affects the decision.
 11. Send only validated candidates to the Portfolio Manager Agent.
+12. Promote a daily-run Watchlist candidate to `provisional_tier_2` only when it meets Tier 2 score, completeness, confidence, critical-data, and temporary-block requirements.
+13. Create or schedule signal-outcome records for every terminal candidate so 5, 10, and 20 trading-day opportunity cost can be measured.
 
 A scanner hit is a reason to research, not a reason to trade.

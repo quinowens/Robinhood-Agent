@@ -130,9 +130,11 @@ Reject the candidate before scoring if any of the following are true:
 
 ### Temporary Entry Blocks
 
-Earnings blackout, unconfirmed extension, hostile market regime, temporary trend damage, and portfolio constraints block new entries without removing an otherwise qualified Tier 1 or Tier 2 member from the Current Universe.
+Earnings blackout, unconfirmed extension, hostile market regime, temporary trend damage, and portfolio constraints block new entries without removing an otherwise qualified Tier 1, Tier 2, or provisional Tier 2 member from the Current Universe.
 
 Every temporary block must state its reason and an `eligible_after` or `next_review_date`.
+
+After an earnings report, do not impose an automatic long cooldown solely because the stock moved. Re-evaluate after the first complete trading session and clear the block only when the gap is not excessive, volume confirms, price holds the move, risk/reward remains valid, and market/correlation checks pass.
 
 ### Scoring / Penalty Filters
 
@@ -158,12 +160,13 @@ Old manual watchlists are not a source of truth.
 | Tier | New Entries? | Position Cap | Approval |
 | --- | --- | ---: | --- |
 | Tier 1 | Yes, unless temporarily blocked | 15% of account | Standard workflow |
-| Tier 2 | Yes, unless temporarily blocked | 10% of account | Always requires user approval |
+| Tier 2 | Yes, unless temporarily blocked | 10% of account | Exact live order approval required |
+| Provisional Tier 2 | Yes, until next monthly refresh unless temporarily blocked | 10% of account | Exact live order approval required |
 | Watchlist | No | n/a | n/a |
 
-You may only initiate new positions in Tier 1 or Tier 2 names.
+You may only initiate new positions in Tier 1, Tier 2, or validated provisional Tier 2 names.
 
-You may not initiate positions in stocks outside the Current Universe without explicit user approval.
+You may not initiate positions in stocks outside the Current Universe unless they have passed the provisional Tier 2 daily promotion path or the user has explicitly approved a one-off exception.
 
 If the Current Universe has not been officially populated, do not place live trades. Research and proposal-only dry runs are allowed, but the final decision must clearly state that the candidate is outside the approved Current Universe.
 
@@ -228,8 +231,8 @@ If a condition cannot be confirmed, treat it as not met.
 
 Only consider entering a position if:
 
-- Candidate is Tier 1 or Tier 2 in the Current Universe
-- Current Universe is officially populated, or the user has explicitly approved a documented mid-month exception
+- Candidate is Tier 1 or Tier 2 in the Current Universe, or validated as provisional Tier 2
+- Current Universe is officially populated, or the candidate has passed the provisional Tier 2 daily promotion path
 - Research Agent score, data completeness, and decision confidence are acceptable
 - Market trend is constructive
 - Sector strength is acceptable
@@ -246,7 +249,7 @@ Only consider entering a position if:
 Before producing any trade proposal, confirm:
 
 1. Candidate is Tier 1 or Tier 2 in the Current Universe.
-2. Current Universe is officially populated, or the user has explicitly approved a documented mid-month exception.
+2. Current Universe is officially populated, or the candidate has passed the provisional Tier 2 daily promotion path.
 3. Candidate passed Research Agent review with acceptable score, data completeness, and decision confidence.
 4. Market regime is constructive or at least not hostile.
 5. Sector strength is acceptable.

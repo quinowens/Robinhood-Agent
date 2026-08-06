@@ -67,13 +67,54 @@ Temporary conditions affect entry eligibility, not universe membership:
 
 | Condition | Treatment |
 | --- | --- |
-| Earnings within 5 trading days | Retain tier; set `eligibility: blocked_by_earnings` |
-| Extreme one-day move | Retain tier; set `eligibility: blocked_by_extension` until follow-through review |
+| Earnings within 3-5 trading days | Retain tier; set `eligibility: blocked_by_earnings` |
+| Completed earnings event | Re-evaluate after the first complete trading session; do not impose an automatic long cooldown |
+| Extreme one-day move | Retain tier; set `eligibility: blocked_by_extension` only until structure/risk review confirms or rejects follow-through |
 | Weak market regime | Retain tier; set `eligibility: blocked_by_market_regime` |
 | Temporary trend damage | Retain tier or Watchlist; set a review date |
 | Portfolio constraint | Retain tier; Portfolio Manager blocks entry |
 
 Each block requires a reason and `eligible_after` or `next_review_date`.
+
+### Post-Earnings Recheck
+
+Before earnings, no new entry is allowed inside the blackout window.
+
+After earnings, the candidate may become eligible after the first complete trading session if all of the following are true:
+
+- Direct earnings result and next earnings date are recorded.
+- The gap or one-day move is not excessive relative to recent volatility.
+- Volume confirms institutional participation.
+- Price holds the earnings move without immediate reversal.
+- Entry, stop, and target still provide acceptable risk/reward.
+- Market health and correlation-cluster checks pass.
+
+If these cannot be verified, keep the temporary block and set `next_review_date`. Do not keep a candidate blocked solely because an earnings-related move occurred.
+
+### Canonical Eligibility State
+
+Use one canonical state progression:
+
+```text
+watchlist -> eligible -> temporarily_blocked -> proposed -> approved -> ordered
+```
+
+Implementation values:
+
+| State | Meaning |
+| --- | --- |
+| `watchlist` | Research-only; not entry eligible |
+| `eligible` | Tier 1, Tier 2, or provisional Tier 2 candidate may be reviewed by the Portfolio Manager |
+| `blocked_by_earnings` | Temporarily blocked by pre-earnings or unsettled post-earnings risk |
+| `blocked_by_extension` | Temporarily blocked by an unconfirmed extreme move |
+| `blocked_by_market_regime` | Temporarily blocked by market health |
+| `blocked_by_trend` | Temporarily blocked by damaged price/RS structure |
+| `blocked_by_portfolio` | Temporarily blocked by account, exposure, or sizing constraints |
+| `proposed` | Portfolio Manager produced an exact proposal; no order placed |
+| `approved` | User approved exact order terms |
+| `ordered` | Order was submitted and must be verified through order history |
+
+Do not use `eligible_for_pm_review`. That concept is represented by `eligibility: eligible` plus a valid tier.
 
 ### Scoring / Penalty Filters
 
@@ -125,7 +166,8 @@ Track three separate measures:
 | Tier | Role | Entry Eligibility | Position Cap |
 | --- | --- | --- | ---: |
 | Tier 1 | Score 85+; data completeness 90%+; constructive 200-day trend | Yes unless temporarily blocked | 15% |
-| Tier 2 | Score 75-84; data completeness 80%+ | Yes unless temporarily blocked; user approval required | 10% |
+| Tier 2 | Score 75-84; data completeness 80%+ | Yes unless temporarily blocked | 10% |
+| Provisional Tier 2 | Daily-run candidate meeting Tier 2 standards until next refresh | Proposal eligible unless temporarily blocked | 10% |
 | Watchlist | Interesting but not approved for entry | No | n/a |
 | Reject | Failed filter or weak score | No | n/a |
 
@@ -138,6 +180,20 @@ Initial construction targets:
 - No more than 50% of Tier 1 and Tier 2 combined from one theme.
 
 These are universe construction controls, not portfolio allocation targets. If too few names qualify, leave unused capacity rather than lowering standards.
+
+### Threshold Calibration Audit
+
+Do not lower Tier 1 or Tier 2 thresholds just to create activity. An empty Tier 1 is valid.
+
+However, if multiple official monthly refreshes show the best qualified candidates clustering below the Tier 1 threshold, run a calibration audit before changing rules:
+
+- Record the score distribution, including 90th, 95th, and 99th percentiles.
+- Compare fixed thresholds against percentile-based thresholds.
+- Measure forward returns and alpha by score bucket.
+- Check whether the 85+ Tier 1 threshold is genuinely predictive or simply unreachable.
+- Propose any threshold change only with evidence in `data/validation_reports/` and a changelog entry.
+
+A possible future Tier 1 definition may combine percentile rank and absolute quality, such as top-decile qualified candidates plus minimum score, completeness, confidence, and trend requirements. Do not adopt this without validation evidence.
 
 ---
 
@@ -166,16 +222,18 @@ Steps:
 
 ## Mid-Month Exceptions
 
-Mid-month additions should be rare.
+Mid-month additions should be controlled, but not impossible.
 
-A candidate may be added mid-month only if:
+A daily scanner candidate may become `provisional_tier_2` until the next monthly refresh if:
 
 - It passes all Permanent Membership Rejection Filters.
-- It has an exceptional catalyst or breakout.
-- The Research Agent score is 90+.
-- The Portfolio Manager Agent confirms risk capacity.
-- The user explicitly approves the exception.
-- The exception is logged.
+- It meets current Tier 2 standards: research score 75+, data completeness 80%+, and decision confidence 70%+.
+- It has complete critical data: tradability, quote, liquidity, earnings timing, historical trend, and benchmark-relative strength.
+- It is not blocked by earnings, unconfirmed extension, market regime, trend, or portfolio risk.
+- The Portfolio Manager can produce a full proposal with entry, stop, target, position size, reasons for and against, and all account checks.
+- The provisional promotion is logged in the run manifest and research record with source scanner tags.
+
+User approval is required before submitting any exact live order, not before producing a Portfolio Manager proposal. A candidate below Tier 2 standards may still be considered as an exceptional one-off only with explicit user approval and documented rationale.
 
 ---
 
@@ -205,18 +263,18 @@ No Tier 1 names are currently approved. No candidate cleared the 85+ research-sc
 
 ### Tier 2
 
-Tier 2 names may be reviewed by the Portfolio Manager Agent only after user approval and only when temporary blocks, earnings windows, sizing, and order-quality checks pass:
+Tier 2 names may be reviewed by the Portfolio Manager Agent when temporary blocks, earnings windows, sizing, concentration, and order-quality checks pass. User approval is required only before submitting an exact live order:
 
 | Symbol | Research Score | Data Completeness | Eligibility |
 | --- | ---: | ---: | --- |
-| GOOGL | 82 | 93% | Eligible for PM review |
+| GOOGL | 82 | 93% | Eligible |
 | AMZN | 82 | 93% | Blocked by extension until 2026-08-07 |
 | MSFT | 81 | 93% | Blocked by extension until 2026-08-07 |
-| NVDA | 80 | 92% | Eligible for PM review; monitor earnings |
+| NVDA | 80 | 92% | Eligible; monitor earnings |
 | META | 78 | 91% | Blocked by extension until 2026-08-07 |
-| CRWD | 77 | 87% | Eligible for PM review; monitor earnings |
-| PANW | 76 | 86% | Eligible for PM review; monitor earnings |
-| AVGO | 76 | 86% | Eligible for PM review; monitor earnings |
+| CRWD | 77 | 87% | Eligible; monitor earnings |
+| PANW | 76 | 86% | Eligible; monitor earnings |
+| AVGO | 76 | 86% | Eligible; monitor earnings |
 
 ### Watchlist
 
@@ -264,8 +322,6 @@ Options are not added to the Current Universe. They are handled through `options
 
 The universe is no longer expected to begin from a static watchlist. Scanner outputs from `scanner_engine.md` and `pipeline_config.md` feed the Research Agent.
 
-Conservative v1.7 rule: scanner candidates are **research candidates only** until the monthly Current Universe is officially populated. They may be analyzed, scored, and used for proposal-only dry runs, but they are not approved for live orders.
-
-A scanner candidate can become a mid-month exception only with explicit user approval, documented rationale, and exception logging. Without that approval, the Portfolio Manager must treat it as outside the approved universe.
+Scanner candidates are **research candidates only** until validated. After the monthly Current Universe is officially populated, a daily scanner candidate can become `provisional_tier_2` through the Mid-Month Exceptions rules above. Without that validation, the Portfolio Manager must treat it as outside the approved universe.
 
 The monthly universe refresh should use dynamic scanner results as one input, alongside fundamentals, historical trend, earnings timing, and market regime.

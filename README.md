@@ -107,7 +107,7 @@ Performance Review
 | Maximum Tier 1 position size | 15% of account |
 | Maximum Tier 2 position size | 10% of account |
 | Maximum risk per trade | 1% of account |
-| New entries outside approved universe | User approval required |
+| New entries outside approved universe | Provisional Tier 2 validation or explicit one-off user approval required |
 | Watchlist entries | Not eligible for purchase |
 
 ---

@@ -77,7 +77,7 @@ steps:
   - refresh_account_state
   - review_exact_order_if_requested
   - produce_proposal_report
-  - schedule_forward_outcome_tracking
+  - schedule_forward_outcome_tracking_for_all_terminal_candidates
 ```
 
 ---
@@ -91,6 +91,7 @@ statuses:
   - research_further
   - portfolio_review
   - proposal_candidate
+  - provisional_tier_2
   - blocked_by_earnings
   - blocked_by_risk
 ```
@@ -147,7 +148,7 @@ If any requirement fails, preserve collected records, set the manifest status to
 
 ### Universe Constraint
 
-In v1.8, scanner candidates remain research candidates until the Current Universe is officially populated. Outside-universe names require explicit user approval before becoming mid-month exception candidates.
+Scanner candidates remain research candidates until validated. When the Current Universe is officially populated, a daily scanner candidate may become `provisional_tier_2` until the next monthly refresh if it meets Tier 2 standards, has complete critical data, and has no active temporary block. Outside-universe names below those standards require explicit user approval before any one-off review.
 
 ---
 
@@ -164,6 +165,7 @@ Every pipeline run must produce:
 7. A structured run manifest and run-health summary.
 8. Raw scanner snapshots and structured research records.
 9. A completeness percentage and publish/degrade decision.
+10. Forward outcome tracking records for every terminal candidate, including NO TRADE, blocked, rejected, Watchlist, and proposal candidates.
 
 Daily dry-run reports should follow `templates/daily_research_log.md` when possible and should be saved to `research_logs/YYYY-MM-DD-description.md`.
 

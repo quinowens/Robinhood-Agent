@@ -139,7 +139,7 @@ The agent may not:
 - Ignore risk controls
 - Treat stale watchlists as approved universes
 - Add to losing positions without explicit user approval
-- Enter trades outside the Current Universe without explicit user approval
+- Enter trades outside the Current Universe unless validated as provisional Tier 2 or explicitly approved as a one-off exception
 
 ---
 

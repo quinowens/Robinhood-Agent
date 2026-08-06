@@ -134,6 +134,26 @@ def summarize_options_lift(rows: list[dict[str, Any]]) -> dict[str, Any]:
     }
 
 
+def summarize_blocked_candidates(rows: list[dict[str, Any]]) -> dict[str, Any]:
+    groups: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for row in rows:
+        status = str(row.get("pipeline_status") or row.get("eligibility") or "")
+        reason = row.get("blocked_reason") or row.get("entry_eligibility") or status or "missing"
+        if "block" in status or "reject" in status or reason not in {"eligible", "missing", None}:
+            groups[str(reason)].append(row)
+    return {
+        reason: {
+            "forward_5d_return": summarize_group(group_rows, "forward_5d_return"),
+            "forward_10d_return": summarize_group(group_rows, "forward_10d_return"),
+            "forward_20d_return": summarize_group(group_rows, "forward_20d_return"),
+            "forward_vs_spy_20d": summarize_group(group_rows, "forward_vs_spy_20d"),
+            "mfe_20d": summarize_group(group_rows, "max_favorable_excursion_20d"),
+            "mae_20d": summarize_group(group_rows, "max_adverse_excursion_20d"),
+        }
+        for reason, group_rows in sorted(groups.items())
+    }
+
+
 def summarize_shadow(shadow_rows: list[dict[str, Any]]) -> dict[str, Any]:
     returns = [value for row in shadow_rows if (value := numeric(row.get("pnl_pct"))) is not None]
     r_multiples = [value for row in shadow_rows if (value := numeric(row.get("r_multiple"))) is not None]
@@ -179,6 +199,7 @@ def build_report(month: str | None) -> dict[str, Any]:
         "score_buckets": summarize_score_buckets(joined),
         "scanner_sources": summarize_scanners(joined),
         "options_confirmation_lift": summarize_options_lift(joined),
+        "blocked_candidate_opportunity_cost": summarize_blocked_candidates(joined),
         "shadow_portfolio": summarize_shadow(shadow),
     }
 

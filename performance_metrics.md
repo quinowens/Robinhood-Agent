@@ -43,7 +43,7 @@ Every evaluated candidate should produce one row:
 | `data_completeness` | float | 0-100; percentage of required inputs available |
 | `decision_confidence` | float | 0-100; confidence in the classification |
 | `tier_recommendation` | enum | `tier_1`, `tier_2`, `watchlist`, `reject` |
-| `entry_eligibility` | enum | `eligible`, `blocked_by_earnings`, `blocked_by_extension`, `blocked_by_market_regime`, `blocked_by_trend`, `blocked_by_portfolio` |
+| `entry_eligibility` | enum | `eligible`, `provisional_tier_2`, `blocked_by_earnings`, `blocked_by_extension`, `blocked_by_market_regime`, `blocked_by_trend`, `blocked_by_portfolio` |
 | `eligible_after` | date | Nullable; required when a date can clear a temporary block |
 | `next_review_date` | date | Nullable; required when a block needs reassessment |
 | `mandatory_rejection_filters_passed` | bool | |
@@ -56,6 +56,7 @@ Every evaluated candidate should produce one row:
 | `forward_vs_qqq_30d` | float | Filled later if tracking available |
 | `forward_5d_return` | float | Filled after 5 trading sessions |
 | `forward_10d_return` | float | Filled after 10 trading sessions |
+| `forward_20d_return` | float | Filled after 20 trading sessions; required for NO TRADE opportunity-cost review |
 | `max_favorable_excursion_30d` | float | Best return reached in first 30 sessions |
 | `max_adverse_excursion_30d` | float | Worst return reached in first 30 sessions |
 | `notes` | str | Optional |
@@ -199,8 +200,11 @@ Monthly validation must answer these questions when sample size allows:
 5. Did temporary earnings and extension blocks save losses or create negative opportunity value?
 6. Did permanent rejection filters prevent repeated low-quality research spend?
 7. Did the shadow portfolio outperform cash, `SPY`, and `QQQ` after realistic risk sizing?
+8. For every NO TRADE candidate, what happened 5, 10, and 20 trading days later?
 
 If fewer than 20 observed 30-day outcomes are available for a category, label the conclusion directional only.
+
+For blocked or rejected candidates, group forward outcomes by `blocked_reason` or `entry_eligibility`. At minimum, report count, median 20-day return, 20-day excess return versus `SPY`, win rate, max favorable excursion, and max adverse excursion. This is the evidence used to decide whether earnings, extension, Watchlist status, or tier cutoffs are helping or hurting.
 
 ---
 

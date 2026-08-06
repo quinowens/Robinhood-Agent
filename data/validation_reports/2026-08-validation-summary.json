@@ -1,5 +1,463 @@
 {
-  "generated_at": "2026-08-06T23:42:10.405412+00:00",
+  "blocked_candidate_opportunity_cost": {
+    "Current Universe watchlist has next_review 2026-08-12; verified earnings on 2026-08-11 pm; one-day move is extended.": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "Current Universe watchlist has next_review 2026-08-13; verified earnings on 2026-08-12 am; financials returned null entry.": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "Reported today after market close; Current Universe temporary block eligible_after 2026-08-06 remains binding.": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "Tier 2 requires Portfolio Manager/user approval; earnings are not inside the immediate no-trade window but remain a forward risk.": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "Tier 2 requires Portfolio Manager/user approval; negative trailing PE and high valuation need PM risk review.": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "Tier 2 requires Portfolio Manager/user approval; no order terms proposed in dry run.": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "Verified earnings 2026-08-04 pm; Current Universe temporary block eligible_after 2026-08-06 remains binding.": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 2,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 2,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 2,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 2,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 2,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 2,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "blocked_by_earnings": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 7,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 7,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 7,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 7,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 7,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 7,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "blocked_by_extension": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 5,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 5,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 5,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 5,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 5,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 5,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "eligible_for_pm_review": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 5,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 5,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 5,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 5,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 5,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 5,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "rejected": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 2,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 2,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 2,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 2,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 2,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 2,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "watch_only": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      }
+    }
+  },
+  "generated_at": "2026-08-06T23:54:12.178812+00:00",
   "month_filter": "2026-08",
   "options_confirmation_lift": {
     "alpha_lift": null,

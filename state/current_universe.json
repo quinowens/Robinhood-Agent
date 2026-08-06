@@ -1,6 +1,7 @@
 {
   "status": "populated",
   "pipeline_version": "1.8",
+  "state_model_version": "1.9-canonical-eligibility",
   "run_id": "2026-08-03-catch-up-universe-refresh",
   "last_refresh_date": "2026-08-03",
   "published_at": "2026-08-03T20:47:26Z",
@@ -9,7 +10,7 @@
   "limitations": [
     "Scanner result totals exceeded the rows exposed by the connector payload; preserved visible rows, scanner totals, and source-scanner tags.",
     "No live orders were placed, canceled, modified, simulated, or proposed.",
-    "Tier 2 names remain subject to Portfolio Manager approval, account-size constraints, and temporary blocks."
+    "Tier 2 names are eligible for Portfolio Manager proposals unless temporarily blocked; exact live order submission still requires user approval."
   ],
   "tier_1": [],
   "tier_2": [
@@ -18,7 +19,7 @@
       "research_score": 82,
       "data_completeness": 93,
       "decision_confidence": 82,
-      "eligibility": "eligible_for_pm_review",
+      "eligibility": "eligible",
       "sources": ["popular_100", "momentum_candidates", "options_activity_radar"],
       "notes": "Large-cap liquid technology leader; direct tradability, quote, fundamentals, financials, earnings, and history checks passed."
     },
@@ -45,7 +46,7 @@
       "research_score": 80,
       "data_completeness": 92,
       "decision_confidence": 79,
-      "eligibility": "eligible_for_pm_review",
+      "eligibility": "eligible",
       "sources": ["popular_100", "options_activity_radar"],
       "notes": "Institutional AI semiconductor leader; next earnings monitored but outside the five-trading-day block window on refresh date."
     },
@@ -63,7 +64,7 @@
       "research_score": 77,
       "data_completeness": 87,
       "decision_confidence": 74,
-      "eligibility": "eligible_for_pm_review",
+      "eligibility": "eligible",
       "sources": ["popular_100", "momentum_candidates"],
       "notes": "Cybersecurity momentum candidate with improving recent financials; earnings window must be rechecked before any PM action."
     },
@@ -72,7 +73,7 @@
       "research_score": 76,
       "data_completeness": 86,
       "decision_confidence": 73,
-      "eligibility": "eligible_for_pm_review",
+      "eligibility": "eligible",
       "sources": ["momentum_candidates"],
       "notes": "Liquid cybersecurity leader; latest quarterly net income was negative, so confidence stays below Tier 1."
     },
@@ -81,7 +82,7 @@
       "research_score": 76,
       "data_completeness": 86,
       "decision_confidence": 73,
-      "eligibility": "eligible_for_pm_review",
+      "eligibility": "eligible",
       "sources": ["popular_100", "options_activity_radar"],
       "notes": "Liquid semiconductor/infrastructure leader; upcoming earnings monitor required before any PM action."
     }

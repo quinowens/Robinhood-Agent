@@ -47,6 +47,7 @@ The agent may not submit live orders unless the user explicitly enables a higher
 A trade proposal requires all of the following:
 
 - Candidate is Tier 1 or Tier 2 in the Current Universe.
+- Or candidate is `provisional_tier_2` from a validated daily promotion path.
 - Candidate has `eligibility: eligible`; temporary blocks do not remove universe membership but prohibit a new entry.
 - Candidate passed Research Agent review.
 - Account has enough buying power.
@@ -69,8 +70,8 @@ If any required check fails, output **NO TRADE**.
 
 Before producing any trade proposal, confirm every item below:
 
-1. Candidate is Tier 1 or Tier 2 in the Current Universe.
-2. Current Universe is officially populated, or the user has explicitly approved a documented mid-month exception.
+1. Candidate is Tier 1 or Tier 2 in the Current Universe, or validated as `provisional_tier_2` until the next refresh.
+2. Current Universe is officially populated.
 3. Candidate has no active Temporary Entry Block.
 4. Candidate passed Research Agent review with acceptable score, data completeness, and decision confidence.
 5. Market regime is constructive or at least not hostile.
@@ -161,6 +162,8 @@ Reasons Against Trade:
 Final Decision:
 ```
 
+A Portfolio Manager proposal is not execution approval. The agent may produce a complete proposal for an eligible Tier 1, Tier 2, or provisional Tier 2 candidate without prior user approval. Explicit user approval remains mandatory before submitting the exact live order.
+
 ---
 
 ## No-Trade Output Format
@@ -222,7 +225,7 @@ The Portfolio Manager Agent may not:
 - Exceed max position limits
 - Exceed max open positions
 - Trade Watchlist names
-- Trade outside the Current Universe without explicit approval
+- Trade outside the Current Universe unless validated as provisional Tier 2 or explicitly approved as a one-off exception
 - Submit live orders in proposal-only mode
 - Trade options, crypto, futures, margin, leveraged ETFs, inverse ETFs, or short positions
 
@@ -265,4 +268,4 @@ A scanner candidate can only become a proposal if it passes:
 3. Tier assignment
 4. Portfolio constraints
 5. Risk sizing
-6. User approval workflow
+6. Exact live-order approval workflow
