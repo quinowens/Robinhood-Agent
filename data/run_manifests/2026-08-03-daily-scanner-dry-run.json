@@ -1,0 +1,86 @@
+{
+  "run_id": "2026-08-03-daily-scanner-dry-run",
+  "pipeline_version": "1.8",
+  "mode": "research-only / proposal-only",
+  "created_at": "2026-08-03T15:56:00-05:00",
+  "status": "complete",
+  "status_reason": "Rerun completed after Current Universe was populated. All configured scanners matched by name and ID, account/portfolio/order preflight succeeded, direct earnings checks and enrichment data returned. Raw scanner persistence remains limited to decision-driving rows captured from the live scanner responses.",
+  "account": {
+    "account_number_masked": "*****8691",
+    "nickname": "Agentic",
+    "agentic_allowed": true,
+    "portfolio_value": "100",
+    "cash": "100",
+    "buying_power": "100.0000",
+    "equity_positions": 0,
+    "option_positions": 0,
+    "open_equity_orders_checked_states": ["queued", "confirmed", "partially_filled"],
+    "open_option_orders_checked_states": ["queued", "confirmed", "partially_filled"],
+    "open_orders_found": 0
+  },
+  "current_universe": {
+    "status": "populated",
+    "source_run_id": "2026-08-03-catch-up-universe-refresh",
+    "published_at": "2026-08-03T20:47:26Z",
+    "completeness_score": 94,
+    "tier_1_count": 0,
+    "tier_2_count": 8,
+    "watchlist_count": 14,
+    "temporary_block_count": 8
+  },
+  "scanner_resolution": [
+    {
+      "configured_name": "Momentum Candidates",
+      "configured_scan_id": "26cdeb14-da13-493f-b0c6-783468971a16",
+      "matched_title": "Robinhood Agent - Momentum Candidates",
+      "matched": true
+    },
+    {
+      "configured_name": "Options Activity Radar",
+      "configured_scan_id": "7068db65-2a47-470c-bde9-94d66f36b806",
+      "matched_title": "Robinhood Agent - Options Activity Radar",
+      "matched": true
+    },
+    {
+      "configured_name": "Earnings Risk Radar",
+      "configured_scan_id": "737924f1-e94f-4ad4-ba98-6c12fcaafaa9",
+      "matched_title": "Robinhood Agent - Earnings Risk Radar",
+      "matched": true
+    }
+  ],
+  "scanner_totals": {
+    "momentum_candidates": 398,
+    "options_activity_radar": 163,
+    "earnings_risk_radar": 328,
+    "total_live_matches": 889
+  },
+  "call_coverage": [
+    {"tool": "get_accounts", "timestamp": "2026-08-03T15:54:00-05:00", "requested": "all accounts", "success": true, "retry_count": 0, "missing_fields": []},
+    {"tool": "get_portfolio", "timestamp": "2026-08-03T15:54:00-05:00", "requested": "account *****8691", "success": true, "retry_count": 0, "missing_fields": []},
+    {"tool": "get_equity_positions", "timestamp": "2026-08-03T15:54:00-05:00", "requested": "account *****8691", "success": true, "retry_count": 0, "missing_fields": []},
+    {"tool": "get_option_positions", "timestamp": "2026-08-03T15:54:00-05:00", "requested": "account *****8691 nonzero", "success": true, "retry_count": 0, "missing_fields": []},
+    {"tool": "get_equity_orders", "timestamp": "2026-08-03T15:54:00-05:00", "requested": "queued, confirmed, partially_filled", "success": true, "retry_count": 0, "missing_fields": []},
+    {"tool": "get_option_orders", "timestamp": "2026-08-03T15:54:00-05:00", "requested": "queued, confirmed, partially_filled", "success": true, "retry_count": 0, "missing_fields": []},
+    {"tool": "get_scans", "timestamp": "2026-08-03T15:54:00-05:00", "requested": "saved scanners", "success": true, "retry_count": 0, "missing_fields": []},
+    {"tool": "run_scan", "timestamp": "2026-08-03T15:54:00-05:00", "requested": "Momentum Candidates", "success": true, "retry_count": 0, "missing_fields": []},
+    {"tool": "run_scan", "timestamp": "2026-08-03T15:54:00-05:00", "requested": "Options Activity Radar", "success": true, "retry_count": 0, "missing_fields": []},
+    {"tool": "run_scan", "timestamp": "2026-08-03T15:54:00-05:00", "requested": "Earnings Risk Radar", "success": true, "retry_count": 0, "missing_fields": []},
+    {"tool": "get_indexes", "timestamp": "2026-08-03T15:54:00-05:00", "requested": "SPX,NDX,DJI,RUT", "success": true, "retry_count": 0, "missing_fields": ["DJI not returned", "RUT restricted"]},
+    {"tool": "get_index_quotes", "timestamp": "2026-08-03T15:54:00-05:00", "requested": "SPX,NDX", "success": true, "retry_count": 0, "missing_fields": []},
+    {"tool": "get_earnings_calendar", "timestamp": "2026-08-03T15:55:00-05:00", "requested": "2026-08-03 forward 14 days, high_market_cap", "success": true, "retry_count": 0, "missing_fields": []},
+    {"tool": "get_equity_quotes", "timestamp": "2026-08-03T15:55:00-05:00", "requested": "GOOGL,AMZN,MSFT,NVDA,META,CRWD,PANW,AVGO,PLTR,AMD,ANET,CRWV,NBIS,FSLR,SOFI,COHR,ORCL,SPY,QQQ", "success": true, "retry_count": 0, "missing_fields": []},
+    {"tool": "get_equity_fundamentals", "timestamp": "2026-08-03T15:55:00-05:00", "requested": "19 symbols in two batches", "success": true, "retry_count": 0, "missing_fields": []},
+    {"tool": "get_financials", "timestamp": "2026-08-03T15:55:00-05:00", "requested": "17 symbols, quarterly, limit 4", "success": true, "retry_count": 0, "missing_fields": ["NBIS returned null financials entry"]},
+    {"tool": "get_equity_tradability", "timestamp": "2026-08-03T15:55:00-05:00", "requested": "19 symbols in two batches for account *****8691", "success": true, "retry_count": 0, "missing_fields": []},
+    {"tool": "get_earnings_results", "timestamp": "2026-08-03T15:56:00-05:00", "requested": "GOOGL,AMZN,MSFT,NVDA,META,PLTR,AMD,ANET,CRWV,NBIS", "success": true, "retry_count": 0, "missing_fields": []},
+    {"tool": "get_equity_historicals", "timestamp": "2026-08-03T15:56:00-05:00", "requested": "SPY,QQQ plus 17 enriched symbols, day bars, 2026-07-03 through 2026-08-03", "success": true, "retry_count": 0, "missing_fields": ["2026-08-03 daily bar not included before official settled close; live quote used for current price"]}
+  ],
+  "publish_decision": "daily_log_updated_current_universe_unchanged",
+  "state_file_decision": {
+    "current_universe_json": "unchanged",
+    "open_theses_json": "unchanged",
+    "rejected_candidates_json": "unchanged_on_rerun"
+  },
+  "orders_placed": 0,
+  "orders_proposed": 0
+}

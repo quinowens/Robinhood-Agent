@@ -1,0 +1,21 @@
+{
+  "run_id": null,
+  "timestamp": null,
+  "scanner_id": null,
+  "scanner_name": null,
+  "ticker": null,
+  "rank": null,
+  "price": null,
+  "daily_change": null,
+  "momentum_direction": null,
+  "volume": null,
+  "average_volume": null,
+  "average_dollar_volume": null,
+  "relative_volume": null,
+  "market_cap": null,
+  "relative_options_volume": null,
+  "implied_volatility": null,
+  "earnings_date": null,
+  "raw_data_complete": false,
+  "missing_fields": []
+}

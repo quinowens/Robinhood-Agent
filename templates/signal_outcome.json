@@ -1,0 +1,17 @@
+{
+  "research_id": null,
+  "ticker": null,
+  "signal_date": null,
+  "signal_price": null,
+  "classification_at_signal": null,
+  "scanner_sources": [],
+  "forward_5d_return": null,
+  "forward_10d_return": null,
+  "forward_30d_return": null,
+  "forward_60d_return": null,
+  "forward_vs_spy_30d": null,
+  "forward_vs_qqq_30d": null,
+  "max_favorable_excursion_30d": null,
+  "max_adverse_excursion_30d": null,
+  "last_updated_at": null
+}

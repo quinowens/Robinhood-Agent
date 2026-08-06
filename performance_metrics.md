@@ -1,0 +1,332 @@
+# Performance Metrics
+
+## Purpose
+
+The agent must measure itself to improve. This document defines trade logging, daily reporting, research evaluation, portfolio performance, and monthly self-review.
+
+If a metric cannot be computed, report it as `N/A`. Never fabricate a value.
+
+---
+
+## Evaluation Layers
+
+Version 1.7 tracks two separate layers plus scanner-pipeline quality:
+
+### Research Layer
+
+Measures whether the Research Agent is finding good candidates.
+
+### Portfolio Layer
+
+Measures whether the Portfolio Manager Agent is making good allocation and risk decisions.
+
+Separating the two prevents confusing a good stock idea with a bad portfolio decision.
+
+---
+
+## Research Log Schema
+
+Every evaluated candidate should produce one row:
+
+| Field | Type | Notes |
+| --- | --- | --- |
+| `research_id` | int | Monotonic counter |
+| `date` | date | |
+| `ticker` | str | |
+| `sector` | str | |
+| `scanner_sources` | list[str] | Scanners that surfaced the candidate |
+| `scanner_signals` | dict | Momentum/options/earnings/other signal flags |
+| `pipeline_status` | enum | `rejected`, `watch_only`, `research_further`, `portfolio_review`, `proposal_candidate`, `blocked_by_earnings`, `blocked_by_risk` |
+| `blocked_reason` | str | Required when rejected or blocked |
+| `earnings_risk_flag` | bool | True when candidate appears in earnings risk workflow |
+| `research_score` | float | 0-100 |
+| `data_completeness` | float | 0-100; percentage of required inputs available |
+| `decision_confidence` | float | 0-100; confidence in the classification |
+| `tier_recommendation` | enum | `tier_1`, `tier_2`, `watchlist`, `reject` |
+| `entry_eligibility` | enum | `eligible`, `blocked_by_earnings`, `blocked_by_extension`, `blocked_by_market_regime`, `blocked_by_trend`, `blocked_by_portfolio` |
+| `eligible_after` | date | Nullable; required when a date can clear a temporary block |
+| `next_review_date` | date | Nullable; required when a block needs reassessment |
+| `mandatory_rejection_filters_passed` | bool | |
+| `missing_data` | list[str] | Empty if complete |
+| `key_reasons` | list[str] | |
+| `risks` | list[str] | |
+| `forward_30d_return` | float | Filled later if tracking available |
+| `forward_60d_return` | float | Filled later if tracking available |
+| `forward_vs_spy_30d` | float | Filled later if tracking available |
+| `forward_vs_qqq_30d` | float | Filled later if tracking available |
+| `forward_5d_return` | float | Filled after 5 trading sessions |
+| `forward_10d_return` | float | Filled after 10 trading sessions |
+| `max_favorable_excursion_30d` | float | Best return reached in first 30 sessions |
+| `max_adverse_excursion_30d` | float | Worst return reached in first 30 sessions |
+| `notes` | str | Optional |
+
+---
+
+
+---
+
+## Options Proposal Log Schema
+
+Every options idea reviewed by the system should produce one row, even if rejected.
+
+| Field | Type | Notes |
+| --- | --- | --- |
+| `option_proposal_id` | int | Monotonic counter |
+| `date` | date | |
+| `underlying` | str | |
+| `option_type` | enum | `call` or `put` |
+| `side` | enum | `buy` or `sell` |
+| `position_effect` | enum | `open` or `close` |
+| `expiration` | date | |
+| `strike` | float | |
+| `estimated_premium` | float | Per contract |
+| `contracts` | int | |
+| `max_premium_risk` | float | Required for long premium trades |
+| `underlying_research_score` | float | 0-100 |
+| `confidence` | float | 0-100 |
+| `liquidity_notes` | str | Bid/ask, volume, open interest when available |
+| `earnings_risk` | str | Blackout status or N/A |
+| `review_alerts` | list[str] | From review tool when available |
+| `decision` | enum | `propose`, `reject`, `watch` |
+| `reason` | str | |
+
+Options proposals should be evaluated separately from equity trades so premium risk and expiration behavior do not distort equity metrics.
+
+## Trade Log Schema
+
+Every closed trade must produce one row:
+
+| Field | Type | Notes |
+| --- | --- | --- |
+| `trade_id` | int | Monotonic counter |
+| `ticker` | str | |
+| `sector` | str | GICS sector or thematic tag |
+| `entry_date` | date | |
+| `exit_date` | date | |
+| `entry_price` | float | |
+| `exit_price` | float | |
+| `stop_price` | float | Initial stop defined at entry |
+| `target_price` | float | Initial target defined at entry |
+| `shares` | float | Fractional shares allowed if platform supports it |
+| `position_dollars` | float | `shares * entry_price` |
+| `risk_dollars` | float | `shares * (entry_price - stop_price)` |
+| `pnl_dollars` | float | `shares * (exit_price - entry_price)` minus commissions / fees |
+| `pnl_pct` | float | `pnl_dollars / position_dollars` |
+| `r_multiple` | float | `pnl_dollars / risk_dollars` |
+| `outcome` | enum | `win`, `loss`, or `breakeven` |
+| `exit_reason` | enum | `stop_hit`, `target_hit`, `trend_break`, `rs_deterioration`, `time_stop`, `earnings_exit`, `manual` |
+| `rules_violated` | list[str] | Empty if clean |
+| `research_score_at_entry` | float | From Research Agent |
+| `data_completeness_at_entry` | float | From Research Agent |
+| `decision_confidence_at_entry` | float | From Research Agent |
+| `notes` | str | Optional |
+
+---
+
+## Core Metrics
+
+Track over daily, monthly, YTD, and all-time windows.
+
+### Win Rate
+
+```text
+win_rate = wins / (wins + losses)
+```
+
+Breakeven trades are excluded.
+
+### Profit Factor
+
+```text
+gross_profit = sum(pnl_dollars where pnl_dollars > 0)
+gross_loss   = sum(pnl_dollars where pnl_dollars < 0)
+profit_factor = gross_profit / abs(gross_loss)
+```
+
+### R-Multiple
+
+```text
+r_multiple = pnl_dollars / risk_dollars
+```
+
+Track average win R, average loss R, and total R.
+
+### Max Drawdown
+
+```text
+peak_equity_t = max(equity_curve up to time t)
+drawdown_t    = (peak_equity_t - equity_t) / peak_equity_t
+max_drawdown  = max(drawdown_t over the window)
+```
+
+### Opportunity Capture
+
+A skipped trade is any setup the agent explicitly evaluated, scored as meeting entry criteria, but did not enter.
+
+```text
+opportunity_capture = trades_taken / (trades_taken + qualified_trades_skipped)
+```
+
+---
+
+## Research Quality Metrics
+
+Track whether Research Agent scores have predictive value.
+
+| Metric | Purpose |
+| --- | --- |
+| Average 30-day return by score bucket | Shows if high scores outperform low scores |
+| Average alpha vs `SPY` by score bucket | Measures relative quality |
+| Tier 1 forward performance | Validates Tier 1 quality |
+| Tier 2 forward performance | Validates reduced-size candidates |
+| Watchlist promotion rate | Shows whether watchlist adds value |
+| False positive rate | High score but weak forward result |
+| Rejection opportunity cost | Forward performance of rejected candidates |
+| Scanner-source alpha | Forward alpha grouped by discovery source |
+| Score monotonicity | Whether higher score buckets produce better outcomes |
+| Options confirmation lift | Difference between qualified momentum names with and without options confirmation |
+
+Track the same fixed forward horizons for Tier 1, Tier 2, Watchlist, score-based rejects, permanent-filter rejects, and scanner-only candidates. Do not evaluate only promoted candidates.
+
+---
+
+## Benchmark Tracking
+
+Benchmarks:
+
+| Benchmark | Proxy | Role |
+| --- | --- | --- |
+| S&P 500 | `SPY` | Broad market reference |
+| Nasdaq 100 | `QQQ` | Tech/growth reference |
+
+```text
+agent_return = (equity_end - equity_start) / equity_start
+benchmark_return = (close_end - close_start) / close_start
+alpha_vs_benchmark = agent_return - benchmark_return
+```
+
+The agent should aim to outperform at least one benchmark and ideally both.
+
+---
+
+## Rule Violations
+
+Target: zero.
+
+Any rule violation must be logged with:
+
+- Date
+- Rule violated
+- Trade or proposal involved
+- Cause
+- Corrective action
+
+---
+
+## Daily Report Additions
+
+Daily scanner dry runs and research reports should follow `templates/daily_research_log.md` when possible and should be saved to `research_logs/YYYY-MM-DD-description.md`.
+
+```text
+Day Summary
+- Equity start / end:
+- Daily P/L $ / %:
+- Drawdown from peak:
+- Trades taken:
+- Trades skipped:
+- Wins / Losses / BE:
+- Research candidates evaluated:
+- Rule violations:
+- Current operating mode:
+```
+
+Use explicit zeroes when an activity did not occur. Use `N/A` only when a value cannot be computed. A missing field is not equivalent to zero.
+
+## Structured Collection Requirements
+
+In addition to Markdown reports, preserve:
+
+1. Raw scanner snapshots using `templates/raw_scanner_snapshot.json`.
+2. Research records using `templates/research_record.json`.
+3. Universe-run manifests using `templates/universe_run_manifest.json`.
+4. Signal outcomes using `templates/signal_outcome.json`.
+
+JSON Lines is preferred for append-only collections. Raw records must be retained before normalization. Each record must include a stable `run_id` or `research_id`.
+
+## Shadow Portfolio
+
+While execution remains proposal-only, record every fully qualified setup as a hypothetical trade with entry, stop, target, risk-based shares, rule-driven exit, and taken/skipped reason. Shadow results must remain separate from real account results.
+
+---
+
+## Monthly Review
+
+Run on the first weekend after the last trading day of each calendar month. Output to `backtests/YYYY-MM-review.md`.
+
+### Performance Summary
+
+| Metric | Value |
+| --- | --- |
+| Trades taken | |
+| Trades skipped | |
+| Opportunity capture | |
+| Win rate | |
+| Average win ($ / R) | |
+| Average loss ($ / R) | |
+| Profit factor | |
+| Max drawdown (% / $) | |
+| Realized P/L ($ / %) | |
+| Rule violations | |
+| `SPY` return | |
+| `QQQ` return | |
+| Alpha vs `SPY` | |
+| Alpha vs `QQQ` | |
+
+### Research Review
+
+| Metric | Value |
+| --- | --- |
+| Candidates evaluated | |
+| Tier 1 candidates | |
+| Tier 2 candidates | |
+| Watchlist candidates | |
+| Average Tier 1 forward return | |
+| Average Tier 2 forward return | |
+| Best research signal | |
+| Worst research signal | |
+| Missing data issues | |
+
+### Rule Change Governance
+
+Do not change rules casually.
+
+A rule change requires:
+
+1. Evidence from performance data.
+2. Written rationale.
+3. Expected benefit.
+4. Risk of the change.
+5. Changelog entry.
+
+
+---
+
+## Scanner Pipeline Metrics
+
+The dynamic pipeline must be evaluated over time.
+
+Track these metrics monthly:
+
+| Metric | Purpose |
+| --- | --- |
+| Scanner candidates reviewed | Measures pipeline workload |
+| Candidates rejected | Shows filter strictness |
+| Candidates sent to Portfolio Manager | Measures research quality |
+| Proposals generated | Measures actionable output |
+| Trades taken | Measures selectivity |
+| Scanner source of winning trades | Identifies useful scanners |
+| Scanner source of losing trades | Identifies noisy scanners |
+| False positives by scanner | Finds scanners that create bad research leads |
+| Earnings blocks avoided | Measures risk-control value |
+
+A scanner that produces many candidates but few high-quality proposals should be tightened or retired.

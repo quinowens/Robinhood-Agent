@@ -1,0 +1,85 @@
+{
+  "run_id": "2026-08-03-catch-up-universe-refresh",
+  "created_at": "2026-08-03T20:47:26Z",
+  "pipeline_version": "1.8",
+  "seed_count": 300,
+  "deduplicated_count": 300,
+  "sources": {
+    "robinhood_popular_100": {
+      "source_type": "read_only_watchlist",
+      "name": "100 most popular",
+      "id": "e8ef4c1f-244f-4db5-a582-c4c37f3c8e8e",
+      "count_used": 100
+    },
+    "momentum_candidates": {
+      "source_type": "scanner",
+      "name": "Momentum Candidates",
+      "id": "26cdeb14-da13-493f-b0c6-783468971a16",
+      "scanner_total_items": 398,
+      "note": "Connector exposed visible rows but not the full 398-row payload."
+    },
+    "options_activity_radar": {
+      "source_type": "scanner",
+      "name": "Options Activity Radar",
+      "id": "7068db65-2a47-470c-bde9-94d66f36b806",
+      "scanner_total_items": 163,
+      "note": "Options activity was retained as a research tag only, never positive evidence by itself."
+    },
+    "earnings_risk_radar": {
+      "source_type": "scanner",
+      "name": "Earnings Risk Radar",
+      "id": "737924f1-e94f-4ad4-ba98-6c12fcaafaa9",
+      "scanner_total_items": 328,
+      "note": "Direct earnings calendar and earnings results controlled event-risk decisions."
+    },
+    "institutional_liquid_names": {
+      "source_type": "manual_broad_liquid_seed",
+      "count_used": 200,
+      "note": "Large and mid-cap institutional names used to complete the broad 300-name refresh seed."
+    }
+  },
+  "symbols": [
+    "SPCX", "NVDA", "AAPL", "TSLA", "AMZN", "VOO", "MSFT", "SPY", "META", "AMC",
+    "GOOGL", "VTI", "F", "BND", "VEA", "VWO", "IVV", "QQQ", "NFLX", "AMD",
+    "PLTR", "DIS", "SNDL", "SCHD", "SPMO", "MU", "LCID", "AVGO", "HOOD", "NIO",
+    "KO", "COST", "RIVN", "GOOG", "TSM", "WMT", "INTC", "SOFI", "UBER", "PFE",
+    "SNAP", "CVX", "PLUG", "SGOV", "LLY", "GME", "CRWD", "VB", "BABA", "NOK",
+    "BAC", "JNJ", "MRVL", "NOW", "AAL", "GLD", "SPHQ", "V", "SBUX", "VONG",
+    "CCL", "XOM", "RKLB", "TLRY", "QUAL", "BRK.B", "DAL", "ORCL", "COIN", "NKE",
+    "SHOP", "T", "IWM", "DXJ", "SOUN", "QQQM", "GE", "VYM", "VST", "VXUS",
+    "CGC", "NEE", "DJT", "QBTS", "SCHG", "IJR", "QCOM", "ABBV", "IONQ", "JPM",
+    "PYPL", "BA", "EMXC", "ASHR", "RGTI", "SPCE", "MRK", "BBAI", "O", "VUG",
+    "CRWV", "NBIS", "FSLR", "DOCN", "CBRS", "VRT", "RDDT", "COHR", "LITE", "FTAI",
+    "IREN", "ARES", "ASTS", "BAX", "NVT", "ALNY", "TTMI", "TSEM", "FERG", "VSAT",
+    "GDDY", "GLW", "QXO", "DELL", "CG", "BE", "CVNA", "SNDK", "RKT", "CRDO",
+    "HPE", "SNOW", "ETN", "ASX", "AFRM", "ISRG", "UAL", "BX", "GRAB", "IR",
+    "U", "HUT", "ENTG", "KKR", "JHX", "SYK", "BAM", "ONON", "LUV", "AUR",
+    "UNM", "PANW", "DXCM", "TSN", "TRMB", "ANET", "ERIC", "NWG", "HD", "CAH",
+    "CMCSA", "RVTY", "DHR", "SAP", "CAT", "AKAM", "MCHP", "VIK", "ZM", "DASH",
+    "DECK", "CARR", "RELX", "ARCC", "BN", "LOW", "PINS", "AMAT", "ON", "INIO",
+    "BEKE", "SGI", "CP", "BRO", "AS", "NEM", "GEV", "HBAN", "RDY", "EXPD",
+    "INFY", "KHC", "CART", "SW", "RF", "ALLY", "PDD", "B", "EQR", "DLTR",
+    "MRSH", "WFC", "APH", "CRM", "ZION", "MSTR", "ADBE", "ADP", "AMGN", "AMT",
+    "AXP", "BLK", "BMY", "BSX", "C", "CB", "CDNS", "CEG", "CI", "CMG",
+    "CME", "COP", "CSCO", "CSX", "CTAS", "CTSH", "DE", "DEO", "DG", "DHI",
+    "DOW", "DUK", "ELV", "EMR", "ENPH", "EOG", "EQIX", "EW", "FI", "GS",
+    "HON", "IBM", "INTU", "KLAC", "LRCX", "MA", "MCD", "MDT", "MMC", "MPC",
+    "MS", "MUFG", "NOC", "NOV", "NVO", "OKTA", "PEP", "PG", "PM", "REGN",
+    "RTX", "SCHW", "SLB", "SPGI", "SRE", "STX", "TMO", "TROW", "TXN", "UNH",
+    "UNP", "UPS", "VRTX", "WDAY", "WM", "ZTS", "ADSK", "ABNB", "APP", "ARM",
+    "AZN", "BIIB", "CDW", "DDOG", "FTNT", "NET", "TEAM", "TTD", "ZS", "SMCI",
+    "ALAB", "APPF", "OKLO", "BWXT", "LDOS", "LIN", "MDLZ", "MO", "PAYX", "PCAR"
+  ],
+  "terminal_status_summary": {
+    "scored": 18,
+    "tiered": 8,
+    "watchlist": 14,
+    "explicitly_incomplete_or_rejected": 278,
+    "missing_terminal_status": 0
+  },
+  "completeness_gate": {
+    "required_terminal_status_pct": 90.0,
+    "actual_terminal_status_pct": 100.0,
+    "passed": true
+  }
+}

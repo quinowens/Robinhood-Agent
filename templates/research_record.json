@@ -1,0 +1,47 @@
+{
+  "research_id": null,
+  "run_id": null,
+  "date": null,
+  "ticker": null,
+  "sector": null,
+  "theme": null,
+  "seed_sources": [],
+  "scanner_sources": [],
+  "scanner_signals": {
+    "momentum": false,
+    "options_activity": false,
+    "earnings_risk": false
+  },
+  "raw_inputs": {
+    "momentum_126d_ex_5d": null,
+    "momentum_63d": null,
+    "relative_strength_vs_spy": null,
+    "trend_quality": null,
+    "average_dollar_volume": null,
+    "fundamental_quality": null,
+    "sector_strength": null,
+    "risk_quality": null
+  },
+  "component_scores": {
+    "momentum_126d": null,
+    "momentum_63d": null,
+    "relative_strength": null,
+    "trend_quality": null,
+    "participation": null,
+    "fundamental_quality": null,
+    "sector_strength": null,
+    "risk_quality": null
+  },
+  "research_score": null,
+  "data_completeness": null,
+  "decision_confidence": null,
+  "tier": null,
+  "eligibility": null,
+  "blocked_reason": null,
+  "eligible_after": null,
+  "next_review_date": null,
+  "permanent_filters_passed": null,
+  "missing_data": [],
+  "key_reasons": [],
+  "risks": []
+}

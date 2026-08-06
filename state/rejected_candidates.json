@@ -1,0 +1,333 @@
+{
+  "rejected_candidates": [
+    {
+      "symbol": "TLSA",
+      "last_rejected_date": "2026-07-13",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "reason_codes": [
+        "penny_stock_or_microcap",
+        "insufficient_liquidity",
+        "high_volatility"
+      ],
+      "evidence": "Repeated top Options Activity reject on 2026-07-02 and 2026-07-03, then reappeared on 2026-07-13; latest scan showed about $157M market cap, $1.33 last price, about 384K volume, and implied volatility above 9."
+    },
+    {
+      "symbol": "SURG",
+      "last_rejected_date": "2026-08-06",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "reason_codes": [
+        "penny_stock_or_microcap",
+        "high_volatility",
+        "extended_one_day_move"
+      ],
+      "evidence": "Repeated top Options Activity reject on 2026-07-02 and 2026-07-03; reappeared as the top Options Activity Radar row on 2026-08-06 with about $8.2M market cap from fundamentals, $0.3257 latest quote, relative options volume above 8, implied volatility above 6, and Noncompliant financial status."
+    },
+    {
+      "symbol": "AARD",
+      "last_rejected_date": "2026-07-13",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "reason_codes": [
+        "penny_stock_or_microcap",
+        "insufficient_liquidity",
+        "high_volatility"
+      ],
+      "evidence": "Repeated top Options Activity reject on 2026-07-02 and 2026-07-03, then reappeared on 2026-07-13; latest scan showed about $167M market cap, $5.97 last price, about 658K volume, implied volatility above 2.8, and a sharp negative daily move."
+    },
+    {
+      "symbol": "ATLX",
+      "last_rejected_date": "2026-07-03",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "reason_codes": [
+        "penny_stock_or_microcap",
+        "insufficient_liquidity",
+        "high_volatility"
+      ],
+      "evidence": "Repeated top Options Activity reject on 2026-07-02 and 2026-07-03; latest scan showed about $107M market cap and about 414K volume."
+    },
+    {
+      "symbol": "FLD",
+      "last_rejected_date": "2026-07-03",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "reason_codes": [
+        "penny_stock_or_microcap",
+        "insufficient_liquidity",
+        "high_volatility"
+      ],
+      "evidence": "Repeated top Options Activity reject on 2026-07-02 and 2026-07-03; latest scan showed about $24M market cap, $0.48 last price, and about 175K volume."
+    },
+    {
+      "symbol": "MMLP",
+      "last_rejected_date": "2026-07-15",
+      "sources": [
+        "Options Activity Radar",
+        "Earnings Risk Radar"
+      ],
+      "reason_codes": [
+        "penny_stock_or_microcap",
+        "insufficient_liquidity",
+        "high_volatility",
+        "blocked_by_earnings"
+      ],
+      "evidence": "Repeated top Options Activity reject on 2026-07-02 and 2026-07-03, reappeared in the 2026-07-09 and 2026-07-14 Earnings Risk Radar, and reappeared again on 2026-07-15; latest scan showed about $84M market cap, $2.16 last price, about 45K volume, and near-term earnings."
+    },
+    {
+      "symbol": "AVIR",
+      "last_rejected_date": "2026-07-14",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "reason_codes": [
+        "penny_stock_or_microcap",
+        "insufficient_liquidity",
+        "high_volatility"
+      ],
+      "evidence": "Rejected from Options Activity Radar on 2026-07-09, then reappeared on 2026-07-14 with about $379M market cap, $4.70 last price, about 342K volume, relative options volume above 4.7, and implied volatility above 1.17."
+    },
+    {
+      "symbol": "YRD",
+      "last_rejected_date": "2026-07-03",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "reason_codes": [
+        "penny_stock_or_microcap",
+        "high_volatility",
+        "extended_one_day_move"
+      ],
+      "evidence": "Repeated top Options Activity reject on 2026-07-02 and 2026-07-03; latest scan showed about $126M market cap, $1.37 last price, and a sharp negative move."
+    },
+    {
+      "symbol": "TBRG",
+      "last_rejected_date": "2026-07-07",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "reason_codes": [
+        "penny_stock_or_microcap",
+        "insufficient_liquidity",
+        "missing_critical_data"
+      ],
+      "evidence": "Repeated Options Activity reject on 2026-07-06 and 2026-07-07; latest scan showed about $394M market cap, about 175K volume, and no qualifying momentum or quality confirmation."
+    },
+    {
+      "symbol": "TVRD",
+      "last_rejected_date": "2026-07-08",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "reason_codes": [
+        "penny_stock_or_microcap",
+        "high_volatility",
+        "extended_one_day_move"
+      ],
+      "evidence": "Repeated Options Activity reject on 2026-07-07 and 2026-07-08; latest scan showed about $29M market cap, $4.82 last price, implied volatility above 15, and a daily move above 55%."
+    },
+    {
+      "symbol": "FRMM",
+      "last_rejected_date": "2026-07-17",
+      "sources": [
+        "Options Activity Radar",
+        "Earnings Risk Radar"
+      ],
+      "reason_codes": [
+        "penny_stock_or_microcap",
+        "insufficient_liquidity",
+        "high_volatility",
+        "blocked_by_earnings"
+      ],
+      "evidence": "Repeated Options Activity reject on 2026-07-06 and 2026-07-08; reappeared in the 2026-07-16 Earnings Risk Radar with about $79M market cap, $6.105 last price, about 109K volume, and near-term earnings; reappeared again on 2026-07-17 with about $77M market cap, $5.66 last price, about 37K volume, and near-term earnings."
+    },
+    {
+      "symbol": "MARA",
+      "last_rejected_date": "2026-07-22",
+      "sources": [
+        "Options Activity Radar",
+        "Earnings Risk Radar"
+      ],
+      "reason_codes": [
+        "market_cap_below_preference",
+        "crypto_adjacency",
+        "options_activity_alone_insufficient",
+        "blocked_by_earnings"
+      ],
+      "evidence": "Repeated Options Activity reject on 2026-07-09 and 2026-07-10; reappeared on 2026-07-22 in Options Activity Radar with about $4.7B market cap, $12.15 last price, about 98.2M volume, relative options volume above 2.5, and crypto adjacency; also appeared in Earnings Risk Radar, blocking new entries."
+    },
+    {
+      "symbol": "TTGT",
+      "last_rejected_date": "2026-07-15",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "reason_codes": [
+        "penny_stock_or_microcap",
+        "insufficient_liquidity",
+        "high_volatility"
+      ],
+      "evidence": "Rejected from Options Activity Radar on 2026-07-13, then reappeared on 2026-07-15 with about $266M market cap, $3.81 last price, about 133K volume, relative options volume above 4.3, and elevated implied volatility."
+    },
+    {
+      "symbol": "ATAI",
+      "last_rejected_date": "2026-07-16",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "reason_codes": [
+        "market_cap_below_preference",
+        "extended_one_day_move",
+        "high_volatility",
+        "options_activity_alone_insufficient"
+      ],
+      "evidence": "Rejected for now from Options Activity Radar on 2026-07-14, then reappeared on 2026-07-16 with about $2.0B market cap, $7.145 last price, about 106M volume, relative options volume above 9.6, implied volatility above 1.0, and a daily move above 33%."
+    },
+    {
+      "symbol": "HOWL",
+      "last_rejected_date": "2026-07-22",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "reason_codes": [
+        "penny_stock_or_microcap",
+        "insufficient_liquidity",
+        "high_volatility",
+        "options_activity_alone_insufficient"
+      ],
+      "evidence": "Rejected from Options Activity Radar on 2026-07-03, then reappeared on 2026-07-22 with about $18M market cap, $0.377 last price, about 421K volume, relative options volume above 2.5, and implied volatility above 4.3."
+    },
+    {
+      "symbol": "QRHC",
+      "last_rejected_date": "2026-07-24",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "reason_codes": [
+        "penny_stock_or_microcap",
+        "insufficient_liquidity",
+        "high_volatility",
+        "options_activity_alone_insufficient"
+      ],
+      "evidence": "Rejected from Options Activity Radar on 2026-07-16, reappeared on 2026-07-23, and reappeared again on 2026-07-24 with about $26M market cap, $1.23 last price, about 12K visible volume, relative options volume above 3.0, and implied volatility about 6.70."
+    },
+    {
+      "symbol": "PACK",
+      "last_rejected_date": "2026-07-23",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "reason_codes": [
+        "penny_stock_or_microcap",
+        "insufficient_liquidity",
+        "high_volatility",
+        "options_activity_alone_insufficient"
+      ],
+      "evidence": "Rejected from Options Activity Radar on 2026-07-15, then reappeared on 2026-07-23 with about $600M market cap, $6.49 last price, about 222K volume, relative options volume above 7.3, and implied volatility about 1.49."
+    },
+    {
+      "symbol": "CPIX",
+      "last_rejected_date": "2026-07-23",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "reason_codes": [
+        "penny_stock_or_microcap",
+        "insufficient_liquidity",
+        "high_volatility",
+        "options_activity_alone_insufficient"
+      ],
+      "evidence": "Rejected from Options Activity Radar on 2026-07-02, then reappeared on 2026-07-23 with about $106M market cap, $6.64 last price, about 282K volume, relative options volume above 3.4, and implied volatility about 1.63."
+    },
+    {
+      "symbol": "WRAP",
+      "last_rejected_date": "2026-07-29",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "reason_codes": [
+        "penny_stock_or_microcap",
+        "insufficient_liquidity",
+        "high_volatility",
+        "options_activity_alone_insufficient"
+      ],
+      "evidence": "Rejected from Options Activity Radar on 2026-07-09, mentioned in the 2026-07-12 weekly review as not yet persistent enough for state, then reappeared on 2026-07-29 with about $97M market cap, $1.645 last price, about 441K visible volume, relative options volume above 3.0, and implied volatility above 1.56."
+    },
+    {
+      "symbol": "EVTL",
+      "last_rejected_date": "2026-07-30",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "reason_codes": [
+        "penny_stock_or_microcap",
+        "insufficient_liquidity",
+        "high_volatility",
+        "options_activity_alone_insufficient"
+      ],
+      "evidence": "Rejected from Options Activity Radar on 2026-07-16, mentioned in the 2026-07-19 weekly review as not yet persistent enough for state, then reappeared on 2026-07-30 with about $154M market cap, $1.285 last price, about 1.88M visible volume, relative options volume above 3.0, and implied volatility above 1.37."
+    },
+    {
+      "symbol": "DGNX",
+      "last_rejected_date": "2026-07-31",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "reason_codes": [
+        "penny_stock_or_microcap",
+        "insufficient_liquidity",
+        "high_volatility",
+        "options_activity_alone_insufficient"
+      ],
+      "evidence": "Rejected from Options Activity Radar on 2026-07-30, then reappeared near the top of Options Activity Radar on 2026-07-31 with about $52M market cap, $1.625 last price, about 1.73M visible volume, relative options volume above 3.2, implied volatility above 3.5, and no qualifying momentum or quality confirmation."
+    },
+    {
+      "symbol": "EGHT",
+      "last_rejected_date": "2026-08-03",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "reason_codes": [
+        "penny_stock_or_microcap",
+        "insufficient_liquidity",
+        "high_volatility",
+        "options_activity_alone_insufficient"
+      ],
+      "evidence": "Rejected from Options Activity Radar on 2026-07-08, then reappeared near the top of Options Activity Radar on 2026-08-03 with about $269M market cap, $2.06 last price, about 1.86M visible volume, relative options volume above 3.7, implied volatility above 1.8, and no qualifying large-cap momentum or quality confirmation."
+    },
+    {
+      "symbol": "SCM",
+      "last_rejected_date": "2026-08-03",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "reason_codes": [
+        "penny_stock_or_microcap",
+        "insufficient_liquidity",
+        "high_volatility",
+        "options_activity_alone_insufficient"
+      ],
+      "evidence": "Rejected from Options Activity Radar on 2026-07-14, then reappeared in Options Activity Radar on 2026-08-03 with about $217M market cap, $7.78 last price, about 389K visible volume, relative options volume above 3.1, implied volatility above 1.35, and no qualifying momentum or quality confirmation."
+    },
+    {
+      "symbol": "ARAY",
+      "last_rejected_date": "2026-08-05",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "reason_codes": [
+        "penny_stock_or_microcap",
+        "insufficient_liquidity",
+        "high_volatility",
+        "options_activity_alone_insufficient"
+      ],
+      "evidence": "Rejected from Options Activity Radar on 2026-08-04, then reappeared as the top Options Activity Radar row on 2026-08-05 with about $37M market cap, $0.2851 last price, about 446K visible volume, relative options volume above 2.6, implied volatility above 3.1, and no qualifying large-cap momentum or quality confirmation."
+    }
+  ]
+}

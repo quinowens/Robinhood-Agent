@@ -1,0 +1,60 @@
+{
+  "run_id": "2026-08-03-catch-up-universe-refresh",
+  "mode": "research_only_proposal_only",
+  "official_refresh": true,
+  "started_at": "2026-08-03T20:17:00Z",
+  "completed_at": "2026-08-03T20:47:26Z",
+  "pipeline_version": "1.8",
+  "account_id": "839798691",
+  "portfolio_snapshot": {
+    "total_value": "100",
+    "cash": "100",
+    "buying_power": "100.0000",
+    "equity_positions": 0,
+    "option_positions": 0,
+    "open_equity_orders": 0,
+    "open_option_orders": 0
+  },
+  "tools_used": [
+    {"tool": "get_accounts", "status": "success", "retry_count": 0},
+    {"tool": "get_portfolio", "status": "success", "retry_count": 0},
+    {"tool": "get_equity_positions", "status": "success", "retry_count": 0},
+    {"tool": "get_option_positions", "status": "success", "retry_count": 0},
+    {"tool": "_get_equity_orders", "status": "success", "retry_count": 0},
+    {"tool": "_get_option_orders", "status": "success", "retry_count": 0},
+    {"tool": "get_scans", "status": "success", "retry_count": 0},
+    {"tool": "run_scan", "requested": ["Momentum Candidates", "Options Activity Radar", "Earnings Risk Radar"], "status": "degraded_success", "retry_count": 0, "missing_fields": ["full scanner payload beyond connector-visible rows"]},
+    {"tool": "get_popular_watchlists", "status": "success", "retry_count": 0},
+    {"tool": "get_watchlist_items", "requested": ["100 most popular"], "status": "success", "retry_count": 0},
+    {"tool": "get_indexes", "requested": ["SPX", "NDX", "DJI", "RUT"], "status": "partial_success", "retry_count": 0, "missing_fields": ["RUT quote unavailable through MCP", "DJI not returned"]},
+    {"tool": "get_index_quotes", "requested": ["SPX", "NDX"], "status": "success", "retry_count": 0},
+    {"tool": "get_index_historicals", "requested": ["SPX", "NDX"], "status": "success", "retry_count": 0},
+    {"tool": "get_equity_quotes", "requested": ["SPY", "QQQ", "GOOGL", "AMZN", "MSFT", "NVDA", "META", "CRWD", "PANW", "ORCL", "PLTR", "MU", "CRDO", "VRT", "AVGO", "ANET", "AMD", "NOW", "BA", "FSLR"], "status": "success", "retry_count": 0},
+    {"tool": "get_equity_tradability", "requested": ["SPY", "QQQ", "GOOGL", "AMZN", "MSFT", "NVDA", "META", "CRWD", "PANW", "ORCL", "PLTR", "MU", "CRDO", "VRT", "AVGO", "ANET", "AMD", "NOW", "BA", "FSLR"], "status": "success", "retry_count": 0},
+    {"tool": "get_equity_fundamentals", "requested": ["SPY", "QQQ", "GOOGL", "AMZN", "MSFT", "NVDA", "META", "CRWD", "PANW", "ORCL", "PLTR", "MU", "CRDO", "VRT", "AVGO", "ANET", "AMD", "NOW", "BA", "FSLR"], "status": "success", "retry_count": 0},
+    {"tool": "get_financials", "requested": ["GOOGL", "AMZN", "MSFT", "NVDA", "META", "CRWD", "PANW", "ORCL", "PLTR", "MU", "CRDO", "VRT", "AVGO", "ANET", "AMD", "NOW", "BA", "FSLR"], "status": "success", "retry_count": 0, "missing_fields": ["ORCL gross_profit"]},
+    {"tool": "get_earnings_results", "requested": ["GOOGL", "AMZN", "MSFT", "NVDA", "META", "CRWD", "PANW", "ORCL", "PLTR", "MU", "CRDO", "VRT", "AVGO", "ANET", "AMD", "NOW", "BA", "FSLR"], "status": "success", "retry_count": 0},
+    {"tool": "get_equity_historicals", "requested": ["SPY", "QQQ", "GOOGL", "AMZN", "MSFT", "NVDA", "META", "CRWD", "PANW", "ORCL", "PLTR", "MU", "CRDO", "VRT", "AVGO", "ANET", "AMD", "NOW", "BA", "FSLR"], "status": "degraded_success", "retry_count": 0, "missing_fields": ["full terminal display of second-batch raw bars due context truncation"]}
+  ],
+  "scanner_resolution": {
+    "Momentum Candidates": "26cdeb14-da13-493f-b0c6-783468971a16",
+    "Options Activity Radar": "7068db65-2a47-470c-bde9-94d66f36b806",
+    "Earnings Risk Radar": "737924f1-e94f-4ad4-ba98-6c12fcaafaa9"
+  },
+  "market_context": {
+    "SPX": {"quote": "7600.5", "as_of": "2026-08-03T16:38:04.427130065-04:00"},
+    "NDX": {"quote": "28776.8035", "as_of": "2026-08-03T16:40:44.154602902-04:00"},
+    "summary": "Broad market context remained constructive but extended; SPX was near highs and NDX was rebounding below prior June highs."
+  },
+  "gate_results": {
+    "run_manifest_exists": true,
+    "deduplicated_seed_terminal_status_pct": 100.0,
+    "tier_1_critical_data_verified": true,
+    "tier_2_critical_data_verified": true,
+    "benchmark_histories_available": true,
+    "failures_and_missing_fields_recorded": true,
+    "repository_completeness_gate_passed": true
+  },
+  "publish_decision": "state/current_universe.json updated; universe.md Current Universe section updated; prior empty universe archived.",
+  "trade_decision": "NO TRADE. No orders were placed, canceled, modified, simulated, or proposed."
+}

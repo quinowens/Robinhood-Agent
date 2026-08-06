@@ -1,0 +1,28 @@
+{
+  "run_id": "2026-08-03-catch-up-universe-refresh",
+  "captured_at": "2026-08-03T20:47:26Z",
+  "mode": "read_only",
+  "scanner_rows_preserved": "connector_visible_rows_and_totals",
+  "scanners": [
+    {
+      "name": "Momentum Candidates",
+      "id": "26cdeb14-da13-493f-b0c6-783468971a16",
+      "total_items": 398,
+      "visible_symbols": ["CRWV", "NBIS", "PLTR", "FSLR", "DOCN", "SOFI", "CBRS", "VRT", "RDDT", "COHR", "ORCL", "LITE", "FTAI", "RKLB", "IREN", "ARES", "BA", "ASTS", "IONQ", "BAX", "NVT", "ALNY", "TTMI", "TSEM", "FERG", "VSAT", "GDDY", "GLW", "QXO", "DELL", "CRWD", "CG", "BE", "CVNA", "SNDK", "RKT", "CRDO", "META", "HPE", "SNOW", "ETN", "ASX", "AFRM", "SPCX", "ISRG", "UAL", "BX", "GRAB", "AAL", "IR", "U", "HUT", "ENTG", "VST", "KKR", "JHX", "DAL", "HOOD", "SYK", "MSFT", "BAM", "ONON", "LUV", "AUR", "UNM", "PANW", "DXCM", "GOOGL", "TSN", "TRMB", "ANET", "ERIC", "NWG", "HD", "NOK", "CAH", "CMCSA", "RVTY", "DHR", "SAP", "CAT", "AMD", "AKAM", "MCHP", "VIK", "ZM", "DIS", "DASH", "DECK", "NKE", "CARR", "NFLX", "RELX", "ARCC", "BN", "LOW", "PINS", "AMAT", "ON", "INIO", "BEKE", "SGI", "CP", "BRO", "AS", "GE", "NEM", "GEV", "HBAN", "RDY", "EXPD", "INFY", "KHC", "UBER", "CART", "SW", "RF", "ALLY", "PDD", "B", "EQR", "DLTR", "MRSH", "WFC", "APH", "CRM", "ZION", "MSTR"]
+    },
+    {
+      "name": "Options Activity Radar",
+      "id": "7068db65-2a47-470c-bde9-94d66f36b806",
+      "total_items": 163,
+      "visible_symbols": ["TOON", "INO", "BRAG", "TLYS", "AUTL", "CNDT", "ONL", "EGHT", "PROF", "BOOM", "LNSR", "AXTI", "NBIS", "IREN", "CRWV", "MU", "INTC", "META", "SPOT", "ZM", "KKR", "BAX", "MSFT", "AMZN", "GOOGL", "GOOG", "NVDA", "BA", "AAPL", "PFE"],
+      "guardrail": "Options activity retained only as a source-scanner tag and not used as positive research evidence by itself."
+    },
+    {
+      "name": "Earnings Risk Radar",
+      "id": "737924f1-e94f-4ad4-ba98-6c12fcaafaa9",
+      "total_items": 328,
+      "visible_symbols": ["PLTR", "ANET", "AMD", "CRWV", "NBIS", "DOCN", "ASTS", "COHR"],
+      "guardrail": "Direct get_earnings_results data controlled event-risk blocks; scanner was secondary confirmation."
+    }
+  ]
+}

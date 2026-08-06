@@ -1,0 +1,203 @@
+# Quin AI Trading Agent
+
+## Mission
+
+Build and continuously improve an AI-powered trading agent focused on disciplined long-equity investing.
+
+The agent's primary goal is **capital preservation** and **consistent long-term account growth** through systematic decision-making.
+
+This project is designed for Robinhood's AI Agent platform. The primary strategy remains **long-equity trading**, with options added only for research, simulated review, and manually approved proposals.
+
+---
+
+## Current Version
+
+- **Version:** 1.7
+- **Account Type:** Dedicated AI Agent account
+- **Execution Mode:** Proposal-only until explicitly upgraded
+- **Asset Type:** Long equities primary; options research/proposal-only
+
+---
+
+## Core Principles
+
+1. Capital preservation comes first.
+2. Cash is a valid position.
+3. Risk management is more important than prediction.
+4. The agent should not inherit stale watchlists.
+5. The tradable universe should be regenerated systematically.
+6. Research and portfolio decisions should be separated.
+7. High-quality setups are preferred over high trade frequency.
+8. The system should evolve through testing, performance review, and controlled version changes.
+
+---
+
+## Agent Architecture
+
+Version 1.8 integrates Robinhood's expanded Agentic Trading tools for direct earnings, financials, index context, technical cross-checks, Level 2 execution checks, realized P&L, trade history, tax lots, watchlists, and scanner management while preserving explicit approval for every account write and live order.
+
+### 1. Research Agent
+
+The Research Agent is responsible for finding opportunities. It scans a broad universe, applies filters, ranks candidates, and produces a scored research output.
+
+It does **not** place trades.
+
+### 2. Portfolio Manager Agent
+
+The Portfolio Manager Agent decides whether a research idea should become a trade proposal. It applies account constraints, risk rules, drawdown controls, sector exposure limits, and position sizing.
+
+It may only propose trades unless autonomous execution has been explicitly enabled.
+
+### Scanner Engine
+
+The Scanner Engine uses live Robinhood scanner tools to discover candidates from the broader market. Scanner results are research inputs only and do not automatically become trades.
+
+The dynamic pipeline uses multiple scanner types:
+
+- Momentum Candidates
+- Options Activity Radar
+- Earnings Risk Radar
+- Manual / legacy watchlists for testing only
+
+Scanner results are merged, deduplicated, filtered, scored, and routed to the Portfolio Manager only after research validation.
+
+### Options Strategy Layer
+
+Options are permitted only in proposal-only / review-only mode. The agent may analyze chains, retrieve quotes, and review simulated single-leg option orders, but may not place live option orders without explicit approval of the exact reviewed order.
+
+
+```text
+Broad Market Universe + Saved Scanners
+        ↓
+Scanner Pipeline
+        ↓
+Research Agent
+        ↓
+Ranked Candidate List
+        ↓
+Portfolio Manager Agent
+        ↓
+Risk Check + Position Sizing
+        ↓
+Trade Proposal / No Trade
+        ↓
+Performance Review
+```
+
+---
+
+## Trading Style
+
+- Long-only equities as the primary strategy
+- Options research and manually approved proposals only
+- Momentum
+- Trend following
+- Sector rotation
+- Quality bias
+- Institutional participation
+- Market-regime awareness
+
+---
+
+## Risk Parameters
+
+| Parameter | Value |
+| --- | --- |
+| Maximum open positions | 3 |
+| Maximum Tier 1 position size | 15% of account |
+| Maximum Tier 2 position size | 10% of account |
+| Maximum risk per trade | 1% of account |
+| New entries outside approved universe | User approval required |
+| Watchlist entries | Not eligible for purchase |
+
+---
+
+## Repository Structure
+
+```text
+Robinhood-Agent/
+├── README.md                    # Project overview
+├── system_prompt.md             # Master operating instructions
+├── research_agent.md            # Research Agent responsibilities and output format
+├── portfolio_manager_agent.md   # Portfolio Manager Agent responsibilities and risk decisions
+├── strategy.md                  # Trading strategy specification
+├── universe.md                  # Universe selection rules + active Current Universe
+├── scanner_engine.md            # Robinhood scanner workflow and governance
+├── pipeline_config.md           # Active scanner IDs and dynamic pipeline steps
+├── tool_policy.md               # Tool catalog, permissions, freshness, and order lifecycle
+├── performance_metrics.md       # Metrics and monthly review framework
+├── changelog.md                 # Version history and roadmap
+├── templates/                   # Reusable report templates
+├── data/                        # Structured manifests, snapshots, research records, and outcomes
+├── research_logs/               # Live scanner dry runs and research reports
+├── state/                       # Persistent universe, thesis, and rejection memory
+└── backtests/                   # Monthly reviews and archived universes
+```
+
+---
+
+## Operating Modes
+
+### Mode 1 — Research Only
+
+The agent scans, ranks, and reports. No trade proposals.
+
+### Mode 2 — Proposal Only
+
+The agent may produce trade proposals but cannot submit orders.
+
+### Mode 3 — Confirm-Before-Trade
+
+The agent may prepare orders but must receive explicit approval before submission.
+
+### Mode 4 — Autonomous Execution
+
+Not enabled by default. Requires proven performance, stable logs, clean rule compliance, and explicit user approval.
+
+---
+
+## Version 1.8 Status
+
+Version 1.8 is the current source of truth.
+
+The system is now a **measurable dynamic scanner pipeline**:
+
+- Robinhood saved scanners discover candidates.
+- `pipeline_config.md` defines which scanners run and how results are routed.
+- `scanner_engine.md` defines scanner behavior and guardrails.
+- `research_agent.md` scores and validates candidates.
+- `portfolio_manager_agent.md` applies account, universe, and risk constraints.
+- `system_prompt.md` remains the master behavior file.
+- `tool_policy.md` maps the expanded Robinhood tool surface to permissions and safe call sequences.
+- Universe membership is separate from temporary entry eligibility.
+- Universe refreshes require a run manifest, at least 90% terminal coverage, and complete critical data for Tier 1 and Tier 2.
+- Structured templates preserve raw scanner rows, research evaluations, and forward outcomes.
+
+The **Current Universe is not yet populated** by an official monthly refresh. Until that refresh happens, scanner results are research candidates only. They may be used for analysis and proposal-only dry runs, but they are not approved for live orders.
+
+Options remain research/proposal-only and are not autonomous.
+
+Live dry-run reports should be stored in `research_logs/` and should follow `templates/daily_research_log.md` when possible. Backtests and month-end historical reviews should remain in `backtests/`. Persistent machine-readable memory should live in `state/`.
+
+---
+
+## Roadmap
+
+### v1.9
+
+- Market regime scoring
+- VIX filters
+- Breadth filters
+- Objective market health score
+
+### v1.9
+
+- Sector rotation model
+- Correlation model
+- Sector exposure optimizer
+
+### v2.0
+
+- Automated research logs
+- Automated trade logs
+- Monthly universe refresh automation

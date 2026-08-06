@@ -1,0 +1,31 @@
+{
+  "run_id": "2026-08-03-catch-up-universe-refresh",
+  "created_at": "2026-08-03T20:47:26Z",
+  "scoring_formula": "universe.md v1.8 weighted composite: 6m momentum 20%, 3m momentum 10%, relative strength 20%, trend quality 15%, volume/institutional participation 10%, earnings/revenue quality 10%, sector strength 5%, volatility/risk quality 5%, narrative durability 5%.",
+  "benchmark_context": {
+    "SPY_quote": "758.42",
+    "QQQ_quote": "700.72",
+    "SPX_quote": "7600.5",
+    "NDX_quote": "28776.8035"
+  },
+  "candidates": [
+    {"symbol": "GOOGL", "research_score": 82, "data_completeness": 93, "decision_confidence": 82, "classification": "tier_2", "components": {"momentum_6m": 80, "momentum_3m": 77, "relative_strength": 82, "trend_quality": 84, "volume_participation": 74, "earnings_revenue_quality": 88, "sector_strength": 82, "risk_quality": 76, "narrative_durability": 92}},
+    {"symbol": "AMZN", "research_score": 82, "data_completeness": 93, "decision_confidence": 80, "classification": "tier_2_blocked", "components": {"momentum_6m": 84, "momentum_3m": 82, "relative_strength": 84, "trend_quality": 86, "volume_participation": 90, "earnings_revenue_quality": 88, "sector_strength": 76, "risk_quality": 72, "narrative_durability": 92}},
+    {"symbol": "MSFT", "research_score": 81, "data_completeness": 93, "decision_confidence": 81, "classification": "tier_2_blocked", "components": {"momentum_6m": 80, "momentum_3m": 75, "relative_strength": 76, "trend_quality": 78, "volume_participation": 88, "earnings_revenue_quality": 90, "sector_strength": 82, "risk_quality": 80, "narrative_durability": 92}},
+    {"symbol": "NVDA", "research_score": 80, "data_completeness": 92, "decision_confidence": 79, "classification": "tier_2", "components": {"momentum_6m": 76, "momentum_3m": 70, "relative_strength": 75, "trend_quality": 78, "volume_participation": 74, "earnings_revenue_quality": 95, "sector_strength": 82, "risk_quality": 70, "narrative_durability": 96}},
+    {"symbol": "META", "research_score": 78, "data_completeness": 91, "decision_confidence": 76, "classification": "tier_2_blocked", "components": {"momentum_6m": 78, "momentum_3m": 80, "relative_strength": 74, "trend_quality": 76, "volume_participation": 88, "earnings_revenue_quality": 68, "sector_strength": 82, "risk_quality": 70, "narrative_durability": 88}},
+    {"symbol": "CRWD", "research_score": 77, "data_completeness": 87, "decision_confidence": 74, "classification": "tier_2", "components": {"momentum_6m": 82, "momentum_3m": 78, "relative_strength": 84, "trend_quality": 86, "volume_participation": 82, "earnings_revenue_quality": 61, "sector_strength": 85, "risk_quality": 62, "narrative_durability": 85}},
+    {"symbol": "PANW", "research_score": 76, "data_completeness": 86, "decision_confidence": 73, "classification": "tier_2", "components": {"momentum_6m": 84, "momentum_3m": 80, "relative_strength": 86, "trend_quality": 88, "volume_participation": 83, "earnings_revenue_quality": 55, "sector_strength": 85, "risk_quality": 58, "narrative_durability": 84}},
+    {"symbol": "AVGO", "research_score": 76, "data_completeness": 86, "decision_confidence": 73, "classification": "tier_2", "components": {"momentum_6m": 72, "momentum_3m": 68, "relative_strength": 70, "trend_quality": 74, "volume_participation": 65, "earnings_revenue_quality": 88, "sector_strength": 82, "risk_quality": 70, "narrative_durability": 92}},
+    {"symbol": "CRDO", "research_score": 74, "data_completeness": 84, "decision_confidence": 70, "classification": "watchlist"},
+    {"symbol": "MU", "research_score": 73, "data_completeness": 84, "decision_confidence": 70, "classification": "watchlist"},
+    {"symbol": "VRT", "research_score": 73, "data_completeness": 84, "decision_confidence": 70, "classification": "watchlist"},
+    {"symbol": "FSLR", "research_score": 72, "data_completeness": 83, "decision_confidence": 69, "classification": "watchlist"},
+    {"symbol": "PLTR", "research_score": 72, "data_completeness": 83, "decision_confidence": 67, "classification": "watchlist_blocked"},
+    {"symbol": "ORCL", "research_score": 69, "data_completeness": 82, "decision_confidence": 66, "classification": "watchlist"},
+    {"symbol": "NOW", "research_score": 70, "data_completeness": 82, "decision_confidence": 66, "classification": "watchlist"},
+    {"symbol": "ANET", "research_score": 74, "data_completeness": 84, "decision_confidence": 68, "classification": "watchlist_blocked"},
+    {"symbol": "AMD", "research_score": 68, "data_completeness": 84, "decision_confidence": 64, "classification": "watchlist_blocked"},
+    {"symbol": "BA", "research_score": 60, "data_completeness": 84, "decision_confidence": 61, "classification": "watchlist_rejected_from_tiers"}
+  ]
+}

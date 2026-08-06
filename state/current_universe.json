@@ -1,0 +1,155 @@
+{
+  "status": "populated",
+  "pipeline_version": "1.8",
+  "run_id": "2026-08-03-catch-up-universe-refresh",
+  "last_refresh_date": "2026-08-03",
+  "published_at": "2026-08-03T20:47:26Z",
+  "completeness_pct": 94.0,
+  "decision": "official_refresh_published_with_limitations",
+  "limitations": [
+    "Scanner result totals exceeded the rows exposed by the connector payload; preserved visible rows, scanner totals, and source-scanner tags.",
+    "No live orders were placed, canceled, modified, simulated, or proposed.",
+    "Tier 2 names remain subject to Portfolio Manager approval, account-size constraints, and temporary blocks."
+  ],
+  "tier_1": [],
+  "tier_2": [
+    {
+      "symbol": "GOOGL",
+      "research_score": 82,
+      "data_completeness": 93,
+      "decision_confidence": 82,
+      "eligibility": "eligible_for_pm_review",
+      "sources": ["popular_100", "momentum_candidates", "options_activity_radar"],
+      "notes": "Large-cap liquid technology leader; direct tradability, quote, fundamentals, financials, earnings, and history checks passed."
+    },
+    {
+      "symbol": "AMZN",
+      "research_score": 82,
+      "data_completeness": 93,
+      "decision_confidence": 80,
+      "eligibility": "blocked_by_extension",
+      "sources": ["popular_100", "options_activity_radar"],
+      "notes": "Strong liquidity and direct data coverage; post-earnings move requires follow-through review."
+    },
+    {
+      "symbol": "MSFT",
+      "research_score": 81,
+      "data_completeness": 93,
+      "decision_confidence": 81,
+      "eligibility": "blocked_by_extension",
+      "sources": ["popular_100", "momentum_candidates", "options_activity_radar"],
+      "notes": "High-quality liquid software/infrastructure name; post-earnings extension requires review."
+    },
+    {
+      "symbol": "NVDA",
+      "research_score": 80,
+      "data_completeness": 92,
+      "decision_confidence": 79,
+      "eligibility": "eligible_for_pm_review",
+      "sources": ["popular_100", "options_activity_radar"],
+      "notes": "Institutional AI semiconductor leader; next earnings monitored but outside the five-trading-day block window on refresh date."
+    },
+    {
+      "symbol": "META",
+      "research_score": 78,
+      "data_completeness": 91,
+      "decision_confidence": 76,
+      "eligibility": "blocked_by_extension",
+      "sources": ["popular_100", "momentum_candidates", "options_activity_radar"],
+      "notes": "Liquid mega-cap platform name; recent earnings reaction and EPS miss reduce confidence."
+    },
+    {
+      "symbol": "CRWD",
+      "research_score": 77,
+      "data_completeness": 87,
+      "decision_confidence": 74,
+      "eligibility": "eligible_for_pm_review",
+      "sources": ["popular_100", "momentum_candidates"],
+      "notes": "Cybersecurity momentum candidate with improving recent financials; earnings window must be rechecked before any PM action."
+    },
+    {
+      "symbol": "PANW",
+      "research_score": 76,
+      "data_completeness": 86,
+      "decision_confidence": 73,
+      "eligibility": "eligible_for_pm_review",
+      "sources": ["momentum_candidates"],
+      "notes": "Liquid cybersecurity leader; latest quarterly net income was negative, so confidence stays below Tier 1."
+    },
+    {
+      "symbol": "AVGO",
+      "research_score": 76,
+      "data_completeness": 86,
+      "decision_confidence": 73,
+      "eligibility": "eligible_for_pm_review",
+      "sources": ["popular_100", "options_activity_radar"],
+      "notes": "Liquid semiconductor/infrastructure leader; upcoming earnings monitor required before any PM action."
+    }
+  ],
+  "watchlist": [
+    {"symbol": "CRDO", "reason": "Strong recurring scanner candidate; score below Tier 2 after risk and event adjustments."},
+    {"symbol": "MU", "reason": "Liquid semiconductor candidate; watch pending trend and earnings-risk review."},
+    {"symbol": "VRT", "reason": "Institutional AI-infrastructure name; strong data but score below Tier 2 threshold."},
+    {"symbol": "ORCL", "reason": "Visible scanner leader, but longer trend quality remains damaged."},
+    {"symbol": "PLTR", "reason": "Strong scanner candidate; blocked by same-day earnings and valuation risk."},
+    {"symbol": "NOW", "reason": "Liquid software name; score and confidence below Tier 2."},
+    {"symbol": "FSLR", "reason": "Strong earnings and momentum; average-volume preference not fully satisfied."},
+    {"symbol": "ANET", "reason": "High-quality network infrastructure name; blocked by next-day earnings."},
+    {"symbol": "AMD", "reason": "Liquid semiconductor leader; blocked by next-day earnings."},
+    {"symbol": "BA", "reason": "Liquid institutional name; rejected from tiers due negative earnings quality."},
+    {"symbol": "CRWV", "reason": "Repeated scanner leader; event risk and extension keep it watch-only."},
+    {"symbol": "NBIS", "reason": "Repeated scanner/options activity leader; earnings and extension keep it watch-only."},
+    {"symbol": "SOFI", "reason": "Popular/scanner name; requires stronger quality evidence before tiering."},
+    {"symbol": "COHR", "reason": "Scanner leader; needs fuller direct financial and earnings review."}
+  ],
+  "temporary_blocks": [
+    {
+      "symbol": "AMZN",
+      "eligibility": "blocked_by_extension",
+      "reason": "Post-earnings move from 2026-07-30 report requires follow-through review.",
+      "eligible_after": "2026-08-07"
+    },
+    {
+      "symbol": "MSFT",
+      "eligibility": "blocked_by_extension",
+      "reason": "Post-earnings move from 2026-07-29 report requires follow-through review.",
+      "eligible_after": "2026-08-07"
+    },
+    {
+      "symbol": "META",
+      "eligibility": "blocked_by_extension",
+      "reason": "Post-earnings move and EPS miss from 2026-07-29 report require follow-through review.",
+      "eligible_after": "2026-08-07"
+    },
+    {
+      "symbol": "PLTR",
+      "eligibility": "blocked_by_earnings",
+      "reason": "Reported earnings after market close on 2026-08-03.",
+      "eligible_after": "2026-08-06"
+    },
+    {
+      "symbol": "ANET",
+      "eligibility": "blocked_by_earnings",
+      "reason": "Verified earnings scheduled after market close on 2026-08-04.",
+      "eligible_after": "2026-08-06"
+    },
+    {
+      "symbol": "AMD",
+      "eligibility": "blocked_by_earnings",
+      "reason": "Verified earnings scheduled after market close on 2026-08-04.",
+      "eligible_after": "2026-08-06"
+    },
+    {
+      "symbol": "CRWV",
+      "eligibility": "blocked_by_earnings",
+      "reason": "Upcoming earnings and extension risk; watch-only until direct post-event review.",
+      "next_review_date": "2026-08-12"
+    },
+    {
+      "symbol": "NBIS",
+      "eligibility": "blocked_by_earnings",
+      "reason": "Upcoming earnings and extension risk; watch-only until direct post-event review.",
+      "next_review_date": "2026-08-13"
+    }
+  ]
+}

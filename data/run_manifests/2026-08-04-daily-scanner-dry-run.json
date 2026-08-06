@@ -1,0 +1,68 @@
+{
+  "run_id": "2026-08-04-daily-scanner-dry-run",
+  "automation_id": "robinhood-agent-daily-scanner-dry-run",
+  "run_time_local": "2026-08-04 15:36:20 CDT",
+  "mode": "research-only/proposal-only",
+  "status": "degraded",
+  "degraded_reasons": [
+    "Large scanner responses exposed scanner totals and visible rows, but not a complete raw row export in the connector transcript.",
+    "RUT index quote was restricted through the MCP and DJI was not returned by get_indexes.",
+    "Quarterly financials returned null for ZBRA, ENTG, ARM, NBIS, and SPCX."
+  ],
+  "account_preflight": {
+    "selected_account_id_suffix": "8691",
+    "total_value": 100,
+    "cash": 100,
+    "buying_power": 100,
+    "equity_positions": 0,
+    "option_positions": 0,
+    "open_equity_orders": 0,
+    "open_option_orders": 0
+  },
+  "scanner_resolution": [
+    {
+      "name": "Momentum Candidates",
+      "configured_id": "26cdeb14-da13-493f-b0c6-783468971a16",
+      "matched": true,
+      "matches": 398
+    },
+    {
+      "name": "Options Activity Radar",
+      "configured_id": "7068db65-2a47-470c-bde9-94d66f36b806",
+      "matched": true,
+      "matches": 222
+    },
+    {
+      "name": "Earnings Risk Radar",
+      "configured_id": "737924f1-e94f-4ad4-ba98-6c12fcaafaa9",
+      "matched": true,
+      "matches": 331
+    }
+  ],
+  "tool_calls": [
+    {"tool": "get_accounts", "timestamp": "2026-08-04T20:36Z", "requested": "all", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_portfolio", "timestamp": "2026-08-04T20:36Z", "requested": "account *****8691", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_equity_positions", "timestamp": "2026-08-04T20:36Z", "requested": "account *****8691", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_option_positions", "timestamp": "2026-08-04T20:36Z", "requested": "account *****8691 nonzero", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_equity_orders", "timestamp": "2026-08-04T20:36Z", "requested": "queued, confirmed, partially_filled", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_option_orders", "timestamp": "2026-08-04T20:36Z", "requested": "queued, confirmed, partially_filled", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_scans", "timestamp": "2026-08-04T20:36Z", "requested": "saved scanners", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "run_scan", "timestamp": "2026-08-04T20:36Z", "requested": "Momentum, Options Activity, Earnings Risk", "status": "success", "retry_count": 0, "missing_fields": ["full raw row export unavailable in connector transcript"]},
+    {"tool": "get_earnings_calendar", "timestamp": "2026-08-04T20:36Z", "requested": "2026-08-04 forward 14 days high_market_cap", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_earnings_results", "timestamp": "2026-08-04T20:36Z", "requested": "GOOGL,NVDA,CRWD,PANW,AVGO,AMZN,MSFT,META,W,PLTR,ANET,ALAB,CRWV,SMCI,COHR,ZBRA,MRVL,IT,ENTG,ARM,ASTS,NBIS,AMD,MU,VRT,ORCL,FSLR,SOFI,SPCX,DELL,CSCO,APLD", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_equity_tradability", "timestamp": "2026-08-04T20:36Z", "requested": "32 enriched symbols", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_equity_fundamentals", "timestamp": "2026-08-04T20:36Z", "requested": "32 enriched symbols", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_financials", "timestamp": "2026-08-04T20:36Z", "requested": "32 enriched symbols quarterly limit 4", "status": "partial_success", "retry_count": 0, "missing_fields": ["ZBRA", "ENTG", "ARM", "NBIS", "SPCX"]},
+    {"tool": "get_equity_quotes", "timestamp": "2026-08-04T20:36Z", "requested": "32 enriched symbols", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_equity_historicals", "timestamp": "2026-08-04T20:36Z", "requested": "SPY,QQQ and enriched symbols daily bars", "status": "success", "retry_count": 0, "missing_fields": ["SPCX pre-June bars interpolated/zero-volume"]},
+    {"tool": "get_indexes", "timestamp": "2026-08-04T20:36Z", "requested": "SPX,NDX,DJI,RUT", "status": "partial_success", "retry_count": 0, "missing_fields": ["DJI", "RUT restricted"]},
+    {"tool": "get_index_quotes", "timestamp": "2026-08-04T20:36Z", "requested": "SPX and NDX instrument IDs", "status": "success", "retry_count": 0, "missing_fields": []}
+  ],
+  "order_tools_called": false,
+  "state_updates": {
+    "current_universe_json": "unchanged",
+    "open_theses_json": "unchanged",
+    "rejected_candidates_json": "unchanged"
+  },
+  "decision": "NO TRADE"
+}

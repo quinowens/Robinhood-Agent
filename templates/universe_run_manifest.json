@@ -1,0 +1,40 @@
+{
+  "run_id": "YYYY-MM-universe-NNN",
+  "pipeline_version": "1.8",
+  "status": "running",
+  "started_at": null,
+  "completed_at": null,
+  "seed_sources": [],
+  "seed_count": 0,
+  "deduplicated_count": 0,
+  "terminal_result_count": 0,
+  "scored_count": 0,
+  "permanently_rejected_count": 0,
+  "incomplete_count": 0,
+  "completeness_pct": 0,
+  "minimum_publish_completeness_pct": 90,
+  "benchmark_dates": {
+    "start_126d": null,
+    "start_63d": null,
+    "end": null
+  },
+  "preflight": {
+    "authentication": "pending",
+    "quotes": "pending",
+    "historicals": "pending",
+    "fundamentals": "pending",
+    "earnings": "pending",
+    "financials": "pending",
+    "tradability": "pending",
+    "indexes": "pending",
+    "account_state": "pending",
+    "open_orders": "pending",
+    "spy_history": "pending",
+    "qqq_history": "pending"
+  },
+  "failed_calls": 0,
+  "retried_calls": 0,
+  "missing_critical_fields": [],
+  "publish_decision": "pending",
+  "notes": []
+}

@@ -1,0 +1,83 @@
+{
+  "run_id": "2026-08-06-daily-scanner-dry-run",
+  "pipeline_version": "1.8",
+  "mode": "research-only / proposal-only",
+  "started_at_ct": "2026-08-06 18:00:50 CDT",
+  "account": {
+    "account_number_last4": "8691",
+    "type": "cash",
+    "agentic_allowed": true,
+    "total_value": "100",
+    "cash": "100",
+    "buying_power": "100.0000",
+    "equity_positions": 0,
+    "option_positions": 0,
+    "open_equity_orders_checked_states": ["queued", "confirmed", "partially_filled"],
+    "open_option_orders_checked_states": ["queued", "confirmed", "partially_filled"]
+  },
+  "scanner_resolution": {
+    "status": "matched",
+    "configured_scans": [
+      {
+        "name": "Momentum Candidates",
+        "expected_scan_id": "26cdeb14-da13-493f-b0c6-783468971a16",
+        "matched_title": "Robinhood Agent - Momentum Candidates",
+        "matched_scan_id": "26cdeb14-da13-493f-b0c6-783468971a16"
+      },
+      {
+        "name": "Options Activity Radar",
+        "expected_scan_id": "7068db65-2a47-470c-bde9-94d66f36b806",
+        "matched_title": "Robinhood Agent - Options Activity Radar",
+        "matched_scan_id": "7068db65-2a47-470c-bde9-94d66f36b806"
+      },
+      {
+        "name": "Earnings Risk Radar",
+        "expected_scan_id": "737924f1-e94f-4ad4-ba98-6c12fcaafaa9",
+        "matched_title": "Robinhood Agent - Earnings Risk Radar",
+        "matched_scan_id": "737924f1-e94f-4ad4-ba98-6c12fcaafaa9"
+      }
+    ]
+  },
+  "call_manifest": [
+    {"tool": "get_accounts", "requested": "all accounts", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_portfolio", "requested": "account ...8691", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_equity_positions", "requested": "account ...8691", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_option_positions", "requested": "account ...8691 nonzero", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_equity_orders", "requested": "queued, confirmed, partially_filled", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_option_orders", "requested": "queued, confirmed, partially_filled", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_scans", "requested": "saved scanners", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "run_scan", "requested": "Momentum Candidates", "status": "success_degraded_persistence", "retry_count": 0, "missing_fields": ["full raw row export not preserved in transcript"]},
+    {"tool": "run_scan", "requested": "Options Activity Radar", "status": "success_degraded_persistence", "retry_count": 0, "missing_fields": ["full raw row export not preserved in transcript"]},
+    {"tool": "run_scan", "requested": "Earnings Risk Radar", "status": "success_degraded_persistence", "retry_count": 0, "missing_fields": ["full raw row export not preserved in transcript"]},
+    {"tool": "get_earnings_calendar", "requested": "2026-08-06 forward 14 days high_market_cap", "status": "success_degraded_transcript", "retry_count": 0, "missing_fields": ["large payload truncated in transcript"]},
+    {"tool": "get_earnings_results", "requested": "20 enriched symbols", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_equity_tradability", "requested": "28 symbols including finalists/noise checks", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_equity_fundamentals", "requested": "30 symbols including benchmarks/noise checks", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_financials", "requested": "20 enriched symbols quarterly limit 4", "status": "partial", "retry_count": 0, "missing_fields": ["TIGO financials null", "SPCX financials null"]},
+    {"tool": "get_equity_quotes", "requested": "benchmarks and enriched/noise symbols", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_equity_historicals", "requested": "SPY, QQQ, GOOGL, NVDA, CRWD, PANW, AVGO, AMZN, MSFT, META, INSM, U, TIGO, ALAB, AAOI, SNDK, RKLB, SPCX, MU, COHR, AMD, CRDO daily 2026-05-01 through 2026-08-06", "status": "success_degraded_transcript", "retry_count": 0, "missing_fields": ["large historical payloads truncated in transcript"]},
+    {"tool": "get_indexes", "requested": "SPX, NDX, DJI, RUT", "status": "partial", "retry_count": 0, "missing_fields": ["DJI not returned", "RUT restricted"]},
+    {"tool": "get_index_quotes", "requested": "SPX, NDX", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_index_historicals", "requested": "SPX, NDX daily 2026-05-01 through 2026-08-06", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_equity_price_book", "requested": "finalists", "status": "skipped", "retry_count": 0, "missing_fields": ["no finalists requiring execution-quality review"]}
+  ],
+  "run_health": {
+    "status": "degraded",
+    "expected_scanner_calls": 3,
+    "successful_scanner_calls": 3,
+    "failed_scanner_calls": 0,
+    "retried_calls": 0,
+    "raw_rows_persisted": "visible rows plus scanner totals",
+    "deduplicated_decision_candidates": 30,
+    "terminal_candidates": 30,
+    "completeness_percentage": 88,
+    "degradation_reasons": [
+      "Large scanner payloads could not be fully preserved from the tool transcript.",
+      "Direct earnings calendar payload was truncated in transcript.",
+      "RUT quote was restricted and DJI did not resolve through get_indexes.",
+      "TIGO and SPCX financial rows returned null."
+    ]
+  },
+  "decision": "NO TRADE",
+  "orders_placed_or_proposed": false
+}

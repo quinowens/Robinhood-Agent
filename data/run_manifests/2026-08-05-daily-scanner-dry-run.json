@@ -1,0 +1,88 @@
+{
+  "run_id": "2026-08-05-daily-scanner-dry-run",
+  "automation_id": "robinhood-agent-daily-scanner-dry-run",
+  "run_time_local": "2026-08-05 11:59:00 CDT",
+  "mode": "research-only/proposal-only",
+  "status": "degraded",
+  "degraded_reasons": [
+    "Large scanner and historical responses exposed scanner totals and visible rows, but not a complete raw row export in the connector transcript.",
+    "RUT index quote was restricted through the MCP and DJI was not returned by get_indexes.",
+    "Quarterly financials returned null for DT, GFI, AEM, and PAAS.",
+    "PAAS direct earnings results were not completed; AAPL earnings results were read twice incidentally and excluded from decisions."
+  ],
+  "account_preflight": {
+    "selected_account_id_suffix": "8691",
+    "total_value": 100,
+    "cash": 100,
+    "buying_power": 100,
+    "equity_positions": 0,
+    "option_positions": 0,
+    "open_equity_orders": 0,
+    "open_option_orders": 0
+  },
+  "scanner_resolution": [
+    {
+      "name": "Momentum Candidates",
+      "configured_id": "26cdeb14-da13-493f-b0c6-783468971a16",
+      "matched": true,
+      "matches": 284
+    },
+    {
+      "name": "Options Activity Radar",
+      "configured_id": "7068db65-2a47-470c-bde9-94d66f36b806",
+      "matched": true,
+      "matches": 88
+    },
+    {
+      "name": "Earnings Risk Radar",
+      "configured_id": "737924f1-e94f-4ad4-ba98-6c12fcaafaa9",
+      "matched": true,
+      "matches": 350
+    }
+  ],
+  "market_context": {
+    "SPX": {
+      "quote": 7743.92,
+      "venue_timestamp": "2026-08-05T12:55:28.0705-04:00",
+      "previous_settled_close": 7736.52
+    },
+    "NDX": {
+      "quote": 29695.2284,
+      "venue_timestamp": "2026-08-05T12:55:28.1366-04:00",
+      "previous_settled_close": 29733.160844
+    },
+    "SPY": {
+      "last_trade_price": 771.905,
+      "previous_close": 771.33
+    },
+    "QQQ": {
+      "last_trade_price": 722.23,
+      "previous_close": 723.85
+    },
+    "missing": [
+      "RUT quote restricted",
+      "DJI not returned"
+    ]
+  },
+  "terminal_counts": {
+    "research_further": 5,
+    "watch_only": 6,
+    "blocked_by_earnings": 4,
+    "blocked_by_risk": 5,
+    "rejected": 5,
+    "no_trade": true
+  },
+  "state_updates": {
+    "current_universe": "unchanged",
+    "open_theses": "unchanged",
+    "rejected_candidates": [
+      "ARAY"
+    ]
+  },
+  "orders": {
+    "placed": false,
+    "reviewed": false,
+    "proposed": false,
+    "cancelled": false
+  }
+}
