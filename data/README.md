@@ -18,5 +18,7 @@ Rules:
 - Do not overwrite completed records. Append corrections with an update timestamp.
 - A degraded run may write data here but may not replace the last valid Current Universe.
 - Do not store credentials, tokens, account secrets, or authentication responses.
+- Treat all generated records as private unless they have been manually sanitized.
+- Run `make validate` before committing generated record changes.
 
 Use the JSON templates in `templates/` as the record contracts.

@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-06
+
+- Added private data handling policy for account-adjacent research artifacts.
+- Added repository validation tooling and Make targets.
+- Added artifact tracking, contribution, and branch-protection guidance.
+- Clarified that generated Robinhood research records are private by default.
+
 ## Version 1.8 — Expanded Robinhood Tool Integration
 
 - Added `tool_policy.md` mapping all currently documented Robinhood Agentic Trading tools to read-only research, account writes, simulations, live orders, and cancellations.

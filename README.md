@@ -12,7 +12,7 @@ This project is designed for Robinhood's AI Agent platform. The primary strategy
 
 ## Current Version
 
-- **Version:** 1.7
+- **Version:** 1.8
 - **Account Type:** Dedicated AI Agent account
 - **Execution Mode:** Proposal-only until explicitly upgraded
 - **Asset Type:** Long equities primary; options research/proposal-only
@@ -117,6 +117,8 @@ Performance Review
 ```text
 Robinhood-Agent/
 ├── README.md                    # Project overview
+├── PRIVATE_DATA.md              # Private data and public-release policy
+├── Makefile                     # Validation and repo helper targets
 ├── system_prompt.md             # Master operating instructions
 ├── research_agent.md            # Research Agent responsibilities and output format
 ├── portfolio_manager_agent.md   # Portfolio Manager Agent responsibilities and risk decisions
@@ -128,6 +130,8 @@ Robinhood-Agent/
 ├── performance_metrics.md       # Metrics and monthly review framework
 ├── changelog.md                 # Version history and roadmap
 ├── templates/                   # Reusable report templates
+├── docs/                        # Artifact, contribution, and branch-protection guidance
+├── scripts/                     # Validation and maintenance tooling
 ├── data/                        # Structured manifests, snapshots, research records, and outcomes
 ├── research_logs/               # Live scanner dry runs and research reports
 ├── state/                       # Persistent universe, thesis, and rejection memory
@@ -178,6 +182,34 @@ The **Current Universe is not yet populated** by an official monthly refresh. Un
 Options remain research/proposal-only and are not autonomous.
 
 Live dry-run reports should be stored in `research_logs/` and should follow `templates/daily_research_log.md` when possible. Backtests and month-end historical reviews should remain in `backtests/`. Persistent machine-readable memory should live in `state/`.
+
+---
+
+## Repository Safety
+
+This repository is private by default. Review `PRIVATE_DATA.md` before sharing it or changing repository visibility.
+
+Run validation before pushing:
+
+```bash
+make validate
+```
+
+If Apple command-line developer tools are not installed, run the validator directly:
+
+```bash
+python3 scripts/validate_repo.py
+```
+
+Useful maintenance targets:
+
+```bash
+make status
+make scan-sensitive
+make daily-log DATE=2026-08-06
+```
+
+Generated research artifacts are currently tracked for reproducibility. The policy for what should remain tracked lives in `docs/ARTIFACT_POLICY.md`.
 
 ---
 
