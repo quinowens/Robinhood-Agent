@@ -2,13 +2,13 @@
 
 ## Strategy Name
 
-**Institutional Momentum Equity Rotation**
+**Institutional Momentum Tactical Options System**
 
 ---
 
 ## Objective
 
-Generate consistent long-term account growth by investing in high-quality equities exhibiting strong momentum, institutional participation, and favorable market conditions.
+Generate disciplined tactical exposure by identifying high-quality directional underlyings and expressing qualified theses through liquid, defined-risk option contracts when the options setup itself is attractive.
 
 The system should avoid low-quality speculation, stale watchlists, forced trades, and emotional entries.
 
@@ -16,9 +16,9 @@ The system should avoid low-quality speculation, stale watchlists, forced trades
 
 ## Market Philosophy
 
-The market rewards strength.
+The market rewards strength, weakness, timing, and risk control.
 
-The agent should focus on stocks demonstrating:
+The agent should focus on underlyings demonstrating:
 
 - Relative strength
 - Strong volume
@@ -28,31 +28,31 @@ The agent should focus on stocks demonstrating:
 - Quality fundamentals
 - Durable business narratives
 
-The goal is **not** to predict the future. The goal is to align with existing trends while maintaining disciplined risk management.
+The goal is **not** to predict the future. The goal is to align with directional evidence while maintaining disciplined premium risk management.
 
 If conditions are unclear, the correct action is usually **no trade**.
 
-Version 1.9 should focus on evidence, not more discretionary rules. The system should prove which scanner sources, score buckets, temporary blocks, and portfolio constraints add value before any thresholds are loosened.
+Version 2.0 should preserve the validation mindset. The system must measure underlying thesis quality, contract-selection quality, account fit, and option outcomes separately before changing thresholds.
 
 ---
 
 ## Two-Agent Strategy Model
 
-### Research Agent
+### Underlying Research Agent
 
 The Research Agent answers:
 
-> What stocks deserve attention?
+> Which underlyings deserve directional exposure?
 
-It scans a broad candidate universe, applies objective filters, scores candidates, and produces a ranked list.
+It scans a broad candidate universe, applies objective filters, scores candidates, classifies directional thesis, and produces a ranked list.
 
 ### Portfolio Manager Agent
 
 The Portfolio Manager Agent answers:
 
-> Should this idea become a position in Quin's account?
+> Should this directional thesis become a defined-risk options position in Quin's account?
 
-It reviews the Research Agent output, checks current account constraints, calculates sizing, evaluates risk, and decides whether to propose a trade.
+It reviews the underlying thesis, candidate contract, account constraints, premium risk, correlation exposure, and simulated order alerts before deciding whether to produce a hypothetical options proposal.
 
 Research quality and portfolio risk are intentionally separated to prevent a good stock idea from automatically becoming a bad portfolio decision.
 
@@ -60,7 +60,7 @@ Research quality and portfolio risk are intentionally separated to prevent a goo
 
 ## Trading Universe
 
-The set of tradable equities is **generated dynamically** from objective filters and ranking logic. It is not based on an old manual watchlist.
+The set of approved underlyings is **generated dynamically** from objective filters and ranking logic. It is not based on an old manual watchlist.
 
 See `universe.md` for:
 
@@ -89,24 +89,37 @@ The agent may favor sectors with strong momentum, institutional interest, and du
 - Healthcare innovation
 - High-quality broad-market ETFs
 
-Sector leadership should be earned through data, not assumed.
+Sector leadership should be earned through data, not assumed. A strong sector or theme does not automatically justify buying calls; the contract must pass options suitability and setup scoring.
 
 ---
 
-## Entry Requirements
+## Directional Thesis Model
 
-Before entering a position:
+After an underlying passes research, classify the thesis:
 
-1. The stock must be in Tier 1 or Tier 2 of the Current Universe.
-2. Market trend must be constructive.
-3. Sector must show relative strength.
-4. Stock must demonstrate above-average volume or clear institutional participation.
-5. Price structure must be constructive.
-6. Risk/reward must be favorable.
-7. Position must have a defined stop-loss.
-8. Earnings risk must be acceptable.
-9. Portfolio concentration rules must pass.
-10. Correlation-cluster exposure must not create hidden concentration.
+- `bullish`: may proceed to long-call research.
+- `bearish`: may proceed to long-put research.
+- `neutral`: no options proposal.
+
+Direction must be supported by underlying evidence. Options Activity Radar may confirm options context, but it may not create direction by itself. A failed bullish setup is not automatically a bearish setup.
+
+---
+
+## Options Entry Requirements
+
+Before producing a live-quality options proposal:
+
+1. The underlying must be Tier 1, Tier 2, or validated provisional Tier 2.
+2. The underlying must have `eligibility: eligible`.
+3. Directional thesis must be `bullish` for a call or `bearish` for a put.
+4. Directional confidence and thesis horizon must be explicit.
+5. Options Suitability Gate must return `OPTIONS_RESEARCH`.
+6. Contract must have acceptable DTE, strike, delta, liquidity, spread, premium, and event timing.
+7. Options Setup Score, options completeness, and options confidence must be recorded separately from the underlying score.
+8. Account fit must pass for `PM_PROPOSAL`, or the setup must be marked `SHADOW_ONLY_QUALIFIED` / `QUALIFIED_BUT_NOT_ACCOUNT_FIT`.
+9. Earnings risk must be acceptable.
+10. Portfolio and correlation-cluster exposure must remain reasonable.
+11. Exit and invalidation plan must be defined before entry.
 
 Universe membership and current entry eligibility are separate. A Tier 1 or Tier 2 member may remain in the Current Universe while temporarily blocked by earnings, extension, market regime, trend damage, or portfolio constraints.
 
@@ -114,15 +127,16 @@ Universe membership and current entry eligibility are separate. A Tier 1 or Tier
 
 ## Exit Requirements
 
-Exit or reduce exposure when:
+Exit or reduce option exposure when:
 
-- Stop-loss is triggered.
-- Trend structure breaks.
+- Premium stop is triggered.
+- Underlying invalidation level is hit.
+- Trend structure breaks against the thesis.
 - Relative strength materially deteriorates.
 - Market conditions materially worsen.
 - Earnings risk becomes unacceptable.
 - The position thesis is invalidated.
-- A better opportunity exists and portfolio capacity is limited.
+- Time stop or minimum remaining DTE rule triggers.
 
 ---
 
@@ -140,6 +154,11 @@ The agent may not:
 - Treat stale watchlists as approved universes
 - Add to losing positions without explicit user approval
 - Enter trades outside the Current Universe unless validated as provisional Tier 2 or explicitly approved as a one-off exception
+- Enable 0DTE
+- Buy cheap far-OTM contracts solely for affordability
+- Treat high options activity as direction
+- Convert every bullish stock into a call
+- Convert every failed bullish setup into a put
 
 ---
 
@@ -171,11 +190,11 @@ At month-end, the system should:
 
 ---
 
-## Options Overlay
+## Options Primary Expression
 
-Options are not the core strategy. They are a secondary tactical layer used only when they provide a clearly better risk/reward structure than buying stock or staying in cash.
+Options are the primary proposed trade expression in v2.0, but only after underlying research and contract research both pass.
 
-Options are proposal-only by default. See `options_strategy.md` for contract selection, premium risk limits, forbidden structures, and required proposal format.
+Options are proposal-only / shadow-trading by default. See `options_strategy.md` for long-call/long-put scope, contract selection, premium risk limits, forbidden structures, setup scoring, and required proposal format.
 
 ---
 

@@ -1,10 +1,10 @@
-# Trading Universe
+# Approved Underlying Universe
 
 ## Purpose
 
-This file defines how the agent builds, ranks, and maintains the approved trading universe.
+This file defines how the agent builds, ranks, and maintains the approved underlying universe.
 
-The Current Universe is the source of truth for what the Portfolio Manager Agent may consider for new entries.
+The Current Universe is the source of truth for which equities are high enough quality to serve as option underlyings.
 
 The agent should **not** rely on an old manually created watchlist. Legacy watchlists may be used for tool testing only.
 
@@ -22,7 +22,7 @@ The universe should be:
 - Broad enough to avoid tunnel vision
 - Narrow enough for disciplined execution
 
-The goal is to identify strong candidates before trade selection, not to trade every interesting stock.
+The goal is to identify strong underlyings before options selection, not to trade every interesting stock or contract.
 
 ---
 
@@ -165,10 +165,10 @@ Track three separate measures:
 
 | Tier | Role | Entry Eligibility | Position Cap |
 | --- | --- | --- | ---: |
-| Tier 1 | Score 85+; data completeness 90%+; constructive 200-day trend | Yes unless temporarily blocked | 15% |
-| Tier 2 | Score 75-84; data completeness 80%+ | Yes unless temporarily blocked | 10% |
-| Provisional Tier 2 | Daily-run candidate meeting Tier 2 standards until next refresh | Proposal eligible unless temporarily blocked | 10% |
-| Watchlist | Interesting but not approved for entry | No | n/a |
+| Tier 1 | Score 85+; data completeness 90%+; constructive 200-day trend | Eligible as option underlying unless temporarily blocked | 15% equity-equivalent cap |
+| Tier 2 | Score 75-84; data completeness 80%+ | Eligible as option underlying unless temporarily blocked | 10% equity-equivalent cap |
+| Provisional Tier 2 | Daily-run candidate meeting Tier 2 standards until next refresh | Eligible as option underlying unless temporarily blocked | 10% equity-equivalent cap |
+| Watchlist | Interesting but not approved for live-quality option proposal | No | n/a |
 | Reject | Failed filter or weak score | No | n/a |
 
 Initial construction targets:
@@ -311,11 +311,11 @@ These are **not automatically approved for live trading**.
 
 ## Options Relationship
 
-The Current Universe governs underlying equity eligibility.
+The Current Universe governs option underlying eligibility.
 
 An option contract may only be researched or proposed if its underlying is approved by the universe process or explicitly approved by the user for a one-off review.
 
-Options are not added to the Current Universe. They are handled through `options_strategy.md`.
+Options contracts are not added to the Current Universe. They are handled through `options_strategy.md` and option setup records.
 
 
 ---

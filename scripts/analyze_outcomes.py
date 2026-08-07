@@ -200,7 +200,7 @@ def infer_primary_blocking_rule(row: dict[str, Any]) -> str:
         return "blocked_by_extension"
     if "watchlist" in text or "outside" in text:
         return "watchlist_or_outside_universe"
-    if "tier 2 requires" in text or "approval" in text:
+    if "tier 2 requires" in text or "approval" in text or "eligible_for_pm_review" in text:
         return "legacy_tier_2_approval_deadlock"
     if any(term in text for term in ["score", "confidence", "completeness", "threshold"]):
         return "insufficient_score_or_confidence"
@@ -240,21 +240,101 @@ def summarize_shadow(shadow_rows: list[dict[str, Any]]) -> dict[str, Any]:
     }
 
 
+def bucket_dte(value: Any) -> str:
+    dte = numeric(value)
+    if dte is None:
+        return "missing"
+    if dte < 30:
+        return "under_30"
+    if dte <= 45:
+        return "30_45"
+    if dte <= 60:
+        return "46_60"
+    if dte <= 90:
+        return "61_90"
+    return "over_90"
+
+
+def bucket_delta(value: Any) -> str:
+    delta = numeric(value)
+    if delta is None:
+        return "missing"
+    absolute = abs(delta)
+    if absolute < 0.35:
+        return "under_035"
+    if absolute <= 0.50:
+        return "035_050"
+    if absolute <= 0.70:
+        return "051_070"
+    return "over_070"
+
+
+def summarize_option_setups(setups: list[dict[str, Any]], outcomes: list[dict[str, Any]], shadows: list[dict[str, Any]]) -> dict[str, Any]:
+    outcome_lookup = {str(row.get("option_setup_id")): row for row in outcomes if row.get("option_setup_id") is not None}
+    joined: list[dict[str, Any]] = []
+    for row in setups:
+        merged = dict(row)
+        outcome = outcome_lookup.get(str(row.get("option_setup_id")), {})
+        for key, value in outcome.items():
+            merged.setdefault(key, value)
+        joined.append(merged)
+
+    by_type: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    by_dte: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    by_delta: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    by_score: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    by_block: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    classifications: dict[str, int] = defaultdict(int)
+    for row in joined:
+        by_type[str(row.get("option_type") or "missing")].append(row)
+        by_dte[bucket_dte(row.get("dte") or row.get("dte_at_signal"))].append(row)
+        by_delta[bucket_delta(row.get("delta"))].append(row)
+        by_score[score_bucket(row.get("options_setup_score"))].append(row)
+        block = row.get("primary_blocking_rule")
+        if block:
+            by_block[str(block)].append(row)
+        classifications[str(row.get("outcome_classification") or "unobserved")] += 1
+
+    return {
+        "setup_records": len(setups),
+        "outcome_records": len(outcomes),
+        "shadow_trades": summarize_shadow(shadows),
+        "by_option_type": {key: summarize_group(rows, "option_forward_20d_return") for key, rows in sorted(by_type.items())},
+        "by_dte_bucket": {key: summarize_group(rows, "option_forward_20d_return") for key, rows in sorted(by_dte.items())},
+        "by_delta_bucket": {key: summarize_group(rows, "option_forward_20d_return") for key, rows in sorted(by_delta.items())},
+        "by_options_setup_score_bucket": {key: summarize_group(rows, "option_forward_20d_return") for key, rows in sorted(by_score.items())},
+        "by_primary_blocking_rule": {key: summarize_group(rows, "option_forward_20d_return") for key, rows in sorted(by_block.items())},
+        "outcome_classifications": dict(sorted(classifications.items())),
+    }
+
+
 def build_report(month: str | None) -> dict[str, Any]:
     research = []
     outcomes = []
     shadow = []
+    option_setups = []
+    option_outcomes = []
+    option_shadow = []
     for path in sorted((ROOT / "data/research_records").glob("*.jsonl")):
         research.extend(read_jsonl(path))
     for path in sorted((ROOT / "data/signal_outcomes").glob("*.jsonl")):
         outcomes.extend(read_jsonl(path))
     for path in sorted((ROOT / "data/shadow_trades").glob("*.jsonl")):
         shadow.extend(read_jsonl(path))
+    for path in sorted((ROOT / "data/options_setup_records").glob("*.jsonl")):
+        option_setups.extend(read_jsonl(path))
+    for path in sorted((ROOT / "data/option_signal_outcomes").glob("*.jsonl")):
+        option_outcomes.extend(read_jsonl(path))
+    for path in sorted((ROOT / "data/option_shadow_trades").glob("*.jsonl")):
+        option_shadow.extend(read_jsonl(path))
 
     if month:
         research = [row for row in research if str(row.get("date", "")).startswith(month)]
         outcomes = [row for row in outcomes if str(row.get("signal_date", "")).startswith(month)]
         shadow = [row for row in shadow if str(row.get("setup_date", "")).startswith(month)]
+        option_setups = [row for row in option_setups if str(row.get("timestamp", "")).startswith(month) or str(row.get("created_at", "")).startswith(month)]
+        option_outcomes = [row for row in option_outcomes if str(row.get("signal_date", "")).startswith(month)]
+        option_shadow = [row for row in option_shadow if str(row.get("entry_date", "")).startswith(month)]
 
     joined = joined_research_rows(research, outcomes)
     observed_30d = sum(1 for row in joined if numeric(row.get("forward_30d_return")) is not None)
@@ -275,6 +355,7 @@ def build_report(month: str | None) -> dict[str, Any]:
         "options_confirmation_lift": summarize_options_lift(joined),
         "blocked_candidate_opportunity_cost": summarize_blocked_candidates(joined),
         "shadow_portfolio": summarize_shadow(shadow),
+        "options_strategy": summarize_option_setups(option_setups, option_outcomes, option_shadow),
     }
 
 

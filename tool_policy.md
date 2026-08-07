@@ -1,4 +1,4 @@
-# Robinhood Tool Policy — Version 1.8
+# Robinhood Tool Policy — Version 2.0
 
 This file maps Robinhood's available Agentic Trading tools to the safest, most useful workflow for this project. Tool output is evidence, not permission to trade.
 
@@ -15,10 +15,12 @@ Read-only calls may be made without additional approval when they are relevant t
 | Market context | `get_indexes`, `get_index_quotes`, `get_equity_technical_indicators` | Check index regime and independently verify computed indicators against raw history when decisions depend on them. |
 | Event risk | `get_earnings_results`, `get_earnings_calendar` | Replace inferred or scanner-only earnings dates with direct event data. |
 | Execution quality | `get_equity_price_book` | Optional for timing and spread/depth checks; never use Level 2 alone as a directional signal. Maximum 4 stocks per call. |
-| Options research | `get_option_level_upgrade_info`, `get_option_chains`, `get_option_instruments`, `get_option_quotes`, `get_option_historicals` | Use only under `options_strategy.md`; access links do not authorize options trading. |
+| Options research | `get_option_level_upgrade_info`, `get_option_chains`, `get_option_instruments`, `get_option_quotes`, `get_option_historicals` | Use progressively under `options_strategy.md` after underlying qualification and Options Suitability Gate. Access links do not authorize options trading. |
 | Watchlist reads | `get_watchlists`, `get_watchlist_items`, `get_option_watchlist` | Organizational context only; watchlist membership never grants universe or trade eligibility. |
 
 Use `get_equity_quotes` in batches of no more than 20 symbols and `get_equity_price_book` in batches of no more than 4 symbols. Prefer batched calls where supported, but do not request data that the workflow will not use.
+
+Do not pull full option-chain data for every scanner hit. Use options reads in this order: account/options preflight, underlying qualification, `get_option_chains`, filtered `get_option_instruments`, selected `get_option_quotes`, then `get_option_historicals` only when needed for reproducible option-outcome or IV/premium context.
 
 ## Account Writes
 
@@ -36,6 +38,8 @@ Approval to create or change one watchlist or scan does not grant standing permi
 `review_equity_order` and `review_option_order` are simulations and must precede any corresponding live order. Display all warnings and the exact reviewed payload. A review does not authorize placement.
 
 `place_equity_order` and `place_option_order` are live financial actions. They require the operating mode and exact-order approval required by `system_prompt.md`. Never silently alter symbol, side, quantity, order type, limit price, time in force, option contract, or position effect after approval; material changes require a new review and approval.
+
+For v2.0 options, only single-leg long calls and long puts may reach review by default. No 0DTE, naked option selling, cash-secured puts, covered calls, or multi-leg spreads are enabled unless a later source-of-truth release explicitly adds support and validation.
 
 `cancel_equity_order` and `cancel_option_order` also change account state. Confirm the exact open order and obtain explicit user approval unless the user has already issued a clear cancellation instruction identifying it.
 

@@ -2,175 +2,312 @@
 
 ## Purpose
 
-This file defines how options may be researched, reviewed, and proposed inside the Robinhood Agent system.
+This file defines the core v2.0 options strategy.
 
-Options are powerful but risky. They may create rapid losses, expiration risk, liquidity problems, and behavioral mistakes. For that reason, options are treated as a separate strategy layer with stricter controls than long equities.
+Equities remain the research substrate. Options are the primary proposed trade expression when a qualified underlying has a clear directional thesis and a liquid, defined-risk contract can express that thesis efficiently.
+
+The goal is selective asymmetric exposure with defined premium risk, not high trade frequency.
 
 ---
 
 ## Current Options Mode
 
-**Mode:** Proposal-only / review-only
+**Mode:** Proposal-only / shadow-trading by default
 
-The agent may research option contracts, retrieve chains, retrieve option quotes, review simulated option orders, and present trade proposals.
+The agent may research underlyings, retrieve option chains, retrieve option instruments, retrieve option quotes, retrieve option historicals when useful, review simulated option orders, and present hypothetical option proposals.
 
 The agent may **not** place live option orders unless the user explicitly approves the exact reviewed order after seeing:
 
-- Underlying symbol
+- Underlying symbol and thesis direction
 - Contract type
 - Strike
-- Expiration
-- Premium
-- Max premium at risk
-- Liquidity / spread notes
-- Earnings risk
-- Why the option is being used instead of stock
-- Pre-trade alerts from the review tool
+- Expiration and DTE
+- Premium and max premium at risk
+- Bid, ask, midpoint, and spread notes
+- Earnings/event risk
+- Options setup score, completeness, and confidence
+- Account fit status
+- Pre-trade alerts from `review_option_order`
 
 No standing permission exists for autonomous options execution.
 
 ---
 
-## Supported Option Structures
+## Launch Scope
 
-Only single-leg options are allowed in this framework.
+Phase 1 v2.0 supports only single-leg long-premium options:
 
-Allowed for research and proposal:
+- `LONG_CALL`
+- `LONG_PUT`
 
-- Long calls
-- Long puts
-- Covered calls, only if the required shares are already held
-- Cash-secured puts, only if cash collateral is available and explicitly approved
+Disabled in v2.0:
 
-Not allowed:
-
+- 0DTE
 - Naked short calls
-- Naked short puts without cash-secured intent and manual approval
+- Naked short puts
+- Cash-secured puts
+- Covered calls
 - Multi-leg spreads
-- Iron condors
-- Butterflies
-- Calendars
-- Diagonals
-- Straddles
-- Strangles
-- 0DTE trades unless manually approved for research only
+- Margin-driven option selling
 - Earnings lottery trades
-- Contracts with poor liquidity or wide bid/ask spreads
+
+Future schemas may support call debit spreads and put debit spreads, but they are not enabled by default.
 
 ---
 
-## Options Philosophy
+## Two-Stage Decision
 
-Options should be used only when they improve the trade structure versus buying or selling stock.
+Every option idea requires two separate decisions:
 
-Acceptable reasons to consider options:
+1. Is the underlying worth taking directional exposure to?
+2. Is there an option contract that expresses the thesis with acceptable timing, liquidity, volatility, and risk?
 
-- Defined premium risk
-- Limited capital deployment
-- Strong directional thesis with a clear time window
-- Existing equity position hedging
-- Covered income strategy on owned shares
+A strong underlying does not automatically create an option proposal.
 
-Bad reasons to consider options:
+Directional thesis values:
 
-- Trying to get rich quickly
-- Avoiding proper position sizing
-- Chasing unusual options volume
-- Gambling around earnings
-- Buying cheap contracts because they are cheap
-- Trading contracts without understanding expiration risk
+- `bullish`: may proceed to long-call research.
+- `bearish`: may proceed to long-put research.
+- `neutral`: no options proposal.
+
+Options Activity Radar may add options context, but it may not create direction by itself. A failed bullish setup is not automatically a bearish setup.
 
 ---
 
-## Contract Selection Rules
+## Options Suitability Gate
 
-For long calls or puts, prefer:
+Before pulling large chains, decide whether options are appropriate for the thesis.
 
-- Expiration at least 30-90 days out unless manually approved
-- Delta generally between 0.35 and 0.70
-- Tight bid/ask spread relative to premium
-- Sufficient open interest and volume when available
-- Clear underlying trend confirmation
-- No new long premium entry within 5 trading days before earnings unless manually approved
+Statuses:
 
-Avoid:
+- `OPTIONS_RESEARCH`
+- `STOCK_THESIS_ONLY`
+- `WATCH`
+- `TEMP_BLOCK`
+- `NO_DIRECTIONAL_EDGE`
+- `REJECT`
 
-- Deep out-of-the-money lottery contracts
-- Illiquid contracts
-- Contracts with extreme implied volatility after a major move
-- Contracts expiring within 14 days unless specifically approved
+Because v2.0 is options-primary, `STOCK_THESIS_ONLY` does not create an equity purchase proposal. It is logged as a valid underlying thesis with no acceptable option expression.
+
+Reject or block options research when:
+
+- Direction is not clear.
+- Thesis horizon is undefined.
+- Earnings/event risk is unresolved.
+- Underlying liquidity or tradability is insufficient.
+- Account options access cannot be verified.
+- No plausible expiration window has enough DTE.
+- Long premium would introduce obviously unacceptable IV/event risk.
+- Critical contract, account, or risk data is missing.
 
 ---
 
-## Premium Risk Limits
+## Progressive Options Data Workflow
 
-Options risk is measured by premium at risk, not notional exposure.
+Do not pull full option chains for every scanner hit.
 
-Default rules:
+Use this sequence:
 
-| Account Stage | Max Premium Risk Per New Option Trade |
+```text
+Underlying filters
+  -> Underlying Thesis Score
+  -> Directional thesis
+  -> Options Suitability Gate
+  -> get_option_chains
+  -> filter expirations
+  -> get_option_instruments
+  -> filter strikes/contracts
+  -> get_option_quotes
+  -> get_option_historicals when needed
+  -> rank contracts
+  -> Portfolio Manager review
+```
+
+If a desired metric is unavailable, mark it unavailable, reduce options data completeness if material, and continue only when the remaining evidence is sufficient.
+
+Never fabricate Greeks, IV metrics, open interest, volume, or historical volatility.
+
+---
+
+## Contract Selection
+
+Preferred DTE:
+
+- 30-90 DTE
+- Reject below 30 DTE unless a documented future rule permits it.
+- Hard-disable 0DTE in v2.0.
+
+Preferred delta:
+
+- Approximately 0.35-0.70 delta when available.
+- Delta is a ranking input, not a directional signal.
+- Do not buy very low-delta contracts simply because they are affordable.
+
+Rank contracts by:
+
+- Thesis horizon fit
+- DTE
+- Delta
+- Breakeven
+- Bid/ask spread
+- Open interest when available
+- Volume when available
+- Premium
+- IV/premium reasonableness
+- Catalyst and expiration timing
+- Strike relationship to underlying price
+
+Do not force a far-OTM or very-short-expiration contract to fit buying power.
+
+---
+
+## Options Setup Score
+
+Every serious contract candidate receives a score separate from the underlying score.
+
+| Component | Max Points |
 | --- | ---: |
-| Testing account | $25 or less preferred |
-| Small live account | 0.25% - 0.50% of equity |
-| Mature account | 0.50% - 1.00% of equity only with strong justification |
+| Contract liquidity / execution quality | 25 |
+| Expiration / thesis-horizon fit | 20 |
+| IV / premium reasonableness | 20 |
+| Delta / strike / breakeven fit | 15 |
+| Catalyst / event compatibility | 10 |
+| Defined exit / reward-risk quality | 10 |
+| **Total** | **100** |
 
-For Quin's current small Agentic account, options should normally be **research-only** unless a very small, manually approved test is being performed.
+Persist:
+
+- `underlying_research_score`
+- `options_setup_score`
+- `options_data_completeness`
+- `options_decision_confidence`
+- component scores
+
+Do not create an arbitrary passing threshold that makes qualification structurally unreachable. Log the distribution and calibrate thresholds from outcomes.
+
+---
+
+## Contract Ranking
+
+For each qualified underlying:
+
+1. Rank candidate contracts.
+2. Retain a small set of finalists.
+3. Select the best contract for PM review.
+4. Optionally show 1-2 alternates for transparency.
+
+Each finalist must include:
+
+- `contract_rank`
+- `selection_reason`
+
+Lower premium does not automatically outrank a better contract.
+
+---
+
+## Account Fit Separation
+
+Setup quality and account affordability are separate.
+
+Statuses:
+
+- `PM_PROPOSAL`
+- `SHADOW_ONLY_QUALIFIED`
+- `QUALIFIED_BUT_NOT_ACCOUNT_FIT`
+- `WATCH`
+- `TEMP_BLOCK`
+- `REJECT`
+
+Rules:
+
+- `QUALIFIED_BUT_NOT_ACCOUNT_FIT` must never become a live order proposal.
+- It should be shadow-tracked.
+- Do not solve affordability by selecting a lower-quality far-OTM or short-DTE contract.
+
+---
+
+## Premium Risk
+
+Long-option risk is measured by premium at risk.
+
+Every proposal must include:
+
+- Premium per contract
+- Number of contracts
+- Max premium risk
+- Max premium risk as percentage of account
+- Current open options premium risk
+- Post-proposal premium risk
+- Correlation-cluster exposure after proposal
+
+Maximum contractual loss is normally premium paid plus applicable fees, but every setup still needs planned exits.
+
+---
+
+## Exit And Invalidation
+
+Every option proposal must include an exit plan before entry:
+
+- Underlying invalidation level
+- Option-premium stop rule
+- Profit objective or target logic
+- Time stop
+- Minimum remaining DTE / expiration-management rule
+- Earnings/event exit requirement
+- Thesis invalidation event
+
+Do not keep an option open solely because it still has time. Do not average down. Do not roll automatically.
 
 ---
 
 ## Required Proposal Format
 
-Every option proposal must include:
-
 ```text
-UNDERLYING:
-CONTRACT:
-SIDE:
-POSITION EFFECT:
-EXPIRATION:
-STRIKE:
-ESTIMATED PREMIUM:
-MAX PREMIUM RISK:
-THESIS:
-WHY OPTION INSTEAD OF STOCK:
-LIQUIDITY NOTES:
-EARNINGS DATE / BLACKOUT CHECK:
-EXIT PLAN:
-INVALIDATION LEVEL:
-REVIEW TOOL ALERTS:
-FINAL DECISION: PROPOSE / NO TRADE
+EXECUTIVE DECISION: HYPOTHETICAL OPTIONS PROPOSAL
+
+UNDERLYING
+Symbol:
+Universe Tier:
+Eligibility:
+Directional Thesis:
+Underlying Thesis Score:
+Underlying Completeness:
+Underlying Confidence:
+
+OPTIONS SETUP
+Contract:
+Expiration:
+DTE:
+Strike:
+Delta:
+Bid / Ask / Midpoint:
+Spread % Mid:
+Open Interest:
+Volume:
+Implied Volatility:
+Estimated Premium:
+Breakeven:
+Options Setup Score:
+Options Data Completeness:
+Options Decision Confidence:
+
+RISK
+Contracts:
+Max Premium Risk:
+Premium Risk % of Account:
+Current Open Options Premium Risk:
+Post-Proposal Premium Risk:
+Correlation Cluster:
+
+ACCOUNT FIT
+PASS / FAIL
+
+FINAL CLASSIFICATION
+PM_PROPOSAL / SHADOW_ONLY_QUALIFIED / QUALIFIED_BUT_NOT_ACCOUNT_FIT / WATCH / TEMP_BLOCK / REJECT
+
+EXECUTION
+HYPOTHETICAL PROPOSAL - NOT SUBMITTED.
+Explicit approval of the exact reviewed order is required before any live execution.
 ```
 
-If any required field is missing, output `NO TRADE`.
-
----
-
-## Exit Rules
-
-Before entering an option, define an exit plan.
-
-Possible exits:
-
-- Underlying trend breaks
-- Premium loses 40-50% from entry
-- Contract reaches target profit
-- Thesis invalidated
-- Earnings event approaches
-- Time decay becomes unacceptable
-- Better risk/reward exists in equity instead
-
-Never hold an option simply because it is down and the user hopes it recovers.
-
----
-
-## Relationship to Equity Strategy
-
-The equity strategy remains the primary system.
-
-Options are secondary and should usually require stronger evidence than stock trades. A valid equity setup does not automatically mean a valid option setup.
-
-The Portfolio Manager Agent must always ask:
-
-> Is the option structure clearly better than simply buying the stock or staying in cash?
-
-If not, choose stock or no trade.
+If any critical field is missing, output `NO TRADE` or the appropriate blocked/rejected classification.

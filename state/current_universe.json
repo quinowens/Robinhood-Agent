@@ -1,6 +1,9 @@
 {
   "status": "populated",
   "pipeline_version": "1.8",
+  "strategy_version": "2.0",
+  "strategy_mode": "options_primary",
+  "universe_role": "approved_underlying_universe",
   "state_model_version": "1.9-canonical-eligibility",
   "run_id": "2026-08-03-catch-up-universe-refresh",
   "last_refresh_date": "2026-08-03",

@@ -33,9 +33,18 @@ REQUIRED_FILES = [
     "templates/research_record.json",
     "templates/signal_outcome.json",
     "templates/shadow_trade.json",
+    "templates/options_setup_record.json",
+    "templates/option_shadow_trade.json",
+    "templates/option_signal_outcome.json",
     "templates/market_regime_snapshot.json",
     "templates/universe_run_manifest.json",
     "docs/VALIDATION_RELEASE.md",
+]
+
+REQUIRED_DIRS = [
+    "data/options_setup_records",
+    "data/option_shadow_trades",
+    "data/option_signal_outcomes",
 ]
 
 DAILY_LOG_REQUIRED_SECTIONS = [
@@ -71,6 +80,81 @@ def check_required_files(errors: list[str]) -> None:
     for file_name in REQUIRED_FILES:
         if not (ROOT / file_name).is_file():
             fail(errors, f"missing required file: {file_name}")
+    for dir_name in REQUIRED_DIRS:
+        if not (ROOT / dir_name).is_dir():
+            fail(errors, f"missing required directory: {dir_name}")
+
+
+def read_text_file(file_name: str) -> str:
+    return (ROOT / file_name).read_text(encoding="utf-8")
+
+
+def check_v2_options_invariants(errors: list[str]) -> None:
+    core = "\n".join(
+        read_text_file(file_name)
+        for file_name in [
+            "README.md",
+            "system_prompt.md",
+            "strategy.md",
+            "options_strategy.md",
+            "pipeline_config.md",
+            "portfolio_manager_agent.md",
+            "performance_metrics.md",
+        ]
+    )
+    lower = core.lower()
+    required_phrases = [
+        "version 2.0",
+        "options-primary",
+        "long calls",
+        "long puts",
+        "underlying thesis score",
+        "options setup score",
+        "options data completeness",
+        "options decision confidence",
+        "exact reviewed order",
+        "no autonomous",
+        "0dte",
+        "naked short calls",
+        "naked short puts",
+    ]
+    for phrase in required_phrases:
+        if phrase not in lower:
+            fail(errors, f"missing v2.0 invariant phrase: {phrase}")
+
+    if "current universe" not in lower or "underlying" not in lower:
+        fail(errors, "Current Universe / underlying relationship is not documented")
+
+    pipeline = read_text_file("pipeline_config.md")
+    for step in [
+        "classify_directional_thesis",
+        "evaluate_options_suitability",
+        "pull_option_chains_for_qualified_finalists",
+        "rank_option_contracts",
+        "calculate_options_setup_score",
+        "evaluate_account_fit",
+        "record_option_shadow_trade_when_qualified",
+        "schedule_option_outcome_tracking",
+    ]:
+        if step not in pipeline:
+            fail(errors, f"missing options pipeline step: {step}")
+
+    options_setup = json.loads(read_text_file("templates/options_setup_record.json"))
+    for field in [
+        "underlying_research_score",
+        "options_setup_score",
+        "options_data_completeness",
+        "options_decision_confidence",
+        "account_fit_status",
+        "primary_blocking_rule",
+    ]:
+        if field not in options_setup:
+            fail(errors, f"options setup template missing field: {field}")
+
+    universe = json.loads(read_text_file("state/current_universe.json"))
+    for contract_key in ["expiration", "strike", "option_type", "contract"]:
+        if contract_key in universe:
+            fail(errors, f"Current Universe must not store option contracts: {contract_key}")
 
 
 def check_json(errors: list[str]) -> None:
@@ -155,6 +239,7 @@ def main() -> int:
         check_json(errors)
         check_jsonl(errors)
         check_daily_logs(errors)
+        check_v2_options_invariants(errors)
         check_sensitive_strings(errors)
 
     if errors:

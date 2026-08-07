@@ -10,7 +10,7 @@ If a metric cannot be computed, report it as `N/A`. Never fabricate a value.
 
 ## Evaluation Layers
 
-Version 1.9 tracks two separate layers plus scanner-pipeline quality, market-regime context, correlation risk, and shadow-portfolio evidence:
+Version 2.0 tracks underlying research, options setup quality, scanner-pipeline quality, market-regime context, correlation risk, and shadow-portfolio evidence:
 
 ### Research Layer
 
@@ -18,7 +18,11 @@ Measures whether the Research Agent is finding good candidates.
 
 ### Portfolio Layer
 
-Measures whether the Portfolio Manager Agent is making good allocation and risk decisions.
+Measures whether the Portfolio Manager Agent is making good account-fit, premium-risk, and correlation decisions.
+
+### Options Setup Layer
+
+Measures whether contract selection adds value beyond the underlying thesis.
 
 Separating the two prevents confusing a good stock idea with a bad portfolio decision.
 
@@ -94,6 +98,32 @@ Every options idea reviewed by the system should produce one row, even if reject
 | `reason` | str | |
 
 Options proposals should be evaluated separately from equity trades so premium risk and expiration behavior do not distort equity metrics.
+
+## Options Setup Metrics
+
+Track v2.0 options records separately from equity/underlying records.
+
+| Metric | Purpose |
+| --- | --- |
+| Bullish thesis hit rate | Measures long-call directional quality |
+| Bearish thesis hit rate | Measures long-put directional quality |
+| Options setup-score bucket performance | Calibrates setup thresholds |
+| DTE bucket performance | Compares 30-45, 46-60, 61-90, and other DTE bands |
+| Delta bucket performance | Measures mid-delta versus low/high delta outcomes |
+| Call versus put performance | Separates bullish and bearish playbooks |
+| IV/premium bucket performance | Tests whether long premium is overpriced |
+| Spread/liquidity bucket performance | Tests whether liquidity rules prevent losses |
+| Account-fit failures | Measures qualified setups that the current account cannot safely take |
+| Thesis/contract classification | Distinguishes right thesis from poor contract choice |
+
+Outcome classes:
+
+- `THESIS_RIGHT_CONTRACT_RIGHT`
+- `THESIS_RIGHT_CONTRACT_POOR`
+- `THESIS_WRONG`
+- `INSUFFICIENT_DATA`
+
+Options-specific performance must not be merged into equity performance in a way that hides expiration, spread, or premium-risk behavior.
 
 ## Trade Log Schema
 
@@ -348,6 +378,9 @@ In addition to Markdown reports, preserve:
 2. Research records using `templates/research_record.json`.
 3. Universe-run manifests using `templates/universe_run_manifest.json`.
 4. Signal outcomes using `templates/signal_outcome.json`.
+5. Options setup records using `templates/options_setup_record.json`.
+6. Option shadow trades using `templates/option_shadow_trade.json`.
+7. Option signal outcomes using `templates/option_signal_outcome.json`.
 
 JSON Lines is preferred for append-only collections. Raw records must be retained before normalization. Each record must include a stable `run_id` or `research_id`.
 

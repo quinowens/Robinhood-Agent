@@ -6,7 +6,7 @@ The Scanner Engine defines the dynamic discovery pipeline for the Robinhood Agen
 
 The system should not rely on stale watchlists. Saved scanners act as market sensors that continuously surface candidates from different opportunity buckets.
 
-Scanner results are **research inputs only**. A scanner hit is never a trade signal by itself.
+Scanner results are **underlying research inputs only**. A scanner hit is never a trade signal or options direction signal by itself.
 
 ---
 
@@ -22,8 +22,8 @@ The agent may list and run saved scanners without additional approval. Creating 
 
 | Scanner | Scan ID | Purpose | Status |
 | --- | --- | --- | --- |
-| Momentum Candidates | `26cdeb14-da13-493f-b0c6-783468971a16` | Large-cap, liquid daily movers | Active |
-| Options Activity Radar | `7068db65-2a47-470c-bde9-94d66f36b806` | High options activity / implied volatility names | Active, research only |
+| Momentum Candidates | `26cdeb14-da13-493f-b0c6-783468971a16` | Underlying movement / opportunity discovery | Active |
+| Options Activity Radar | `7068db65-2a47-470c-bde9-94d66f36b806` | Options context, attention, and IV review input | Active, research only |
 | Earnings Risk Radar | `737924f1-e94f-4ad4-ba98-6c12fcaafaa9` | Upcoming earnings risk filter | Active |
 
 These scanners live inside Robinhood, not in this repository. IDs are expected values, not unquestionable truth: call `get_scans` at run start, match both name and ID, and mark the run degraded if an expected scan is missing or mismatched.
@@ -47,6 +47,12 @@ Apply Eligibility Filters
         ↓
 Research Agent Scoring
         ↓
+Directional Thesis Classification
+        ↓
+Options Suitability Gate
+        ↓
+Options Contract Research for Finalists
+        ↓
 Theme + Sector Grouping
         ↓
 Tier Assignment
@@ -62,7 +68,7 @@ Proposal / Watch / Reject
 
 ### 1. Momentum Candidates
 
-Primary source for long-equity ideas.
+Primary source for underlying movement and opportunity discovery.
 
 Current filters:
 
@@ -70,11 +76,11 @@ Current filters:
 - Volume greater than 2M shares
 - Sorted by daily percent change descending
 
-Use this scanner to identify where capital is flowing today. Downstream validation must record momentum direction, average dollar volume, relative volume, price versus the 200-day SMA, and whether the one-day move exceeds 10% or 15%. Raw share volume is not sufficient as the primary liquidity measure.
+Use this scanner to identify where capital is flowing today. Downstream validation must record momentum direction, average dollar volume, relative volume, price versus the 200-day SMA, and whether the one-day move exceeds 10% or 15%. A high positive daily move does not automatically mean buy calls.
 
 ### 2. Options Activity Radar
 
-Research-only source for unusual interest.
+Options-context source for unusual attention, relative options activity, and IV context.
 
 Current preset:
 
@@ -82,7 +88,7 @@ Current preset:
 - Stocks only
 - Sorted by implied volatility descending
 
-This scanner may surface tradeable underlyings, but options activity alone is not enough to trade.
+This scanner may prioritize underlyings for options research, but options activity alone is not enough to create direction or trade.
 
 Before Options Activity contributes any positive scoring impact, the underlying should:
 
@@ -92,7 +98,7 @@ Before Options Activity contributes any positive scoring impact, the underlying 
 - Be outside the earnings blackout window.
 - Not have an unconfirmed extreme one-day move.
 
-Options confirmation may add no more than 3 points to decision confidence and must not materially change the research score by itself. The existing saved scanner may continue unchanged until the user explicitly approves a Robinhood scanner modification.
+Options Activity Radar should contribute to `options_setup_score` or `options_decision_confidence` when supported by contract evidence. It should not inflate the Underlying Thesis Score or create a bullish/bearish thesis by itself. The existing saved scanner may continue unchanged until the user explicitly approves a Robinhood scanner modification.
 
 ### 3. Earnings Risk Radar
 
@@ -137,7 +143,7 @@ Scanner-level scoring is not the final score. It is only the first pass.
 | --- | ---: |
 | Large-cap momentum hit | +10 |
 | High relative volume | +5 |
-| Qualified high options activity | +0 research score; up to +3 decision confidence |
+| Qualified high options activity | +0 underlying score; options-context input only |
 | Multiple positive scanner confirmation | +0 research score; up to +3 decision confidence |
 | Upcoming earnings within 5 trading days | Temporary entry block; no universe-score penalty |
 | Market cap below strategy threshold | Reject or -30 |
@@ -199,14 +205,18 @@ The Scanner Engine must not:
 6. Pull historicals and benchmark/index context where trend validation is needed.
 7. Score the candidates.
 8. Group names by theme and sector.
-9. Send only the best ideas to the Portfolio Manager.
-10. Produce a proposal-only report.
+9. Classify directional thesis for qualified finalists.
+10. Run Options Suitability Gate before option-chain work.
+11. Pull option chains/instruments/quotes only for qualified finalists.
+12. Rank contracts and calculate Options Setup Score.
+13. Send only validated option setups to the Portfolio Manager.
+14. Produce a proposal-only / shadow-trading report.
 
 ---
 
 ## Options Integration
 
-Options activity can improve research confidence in the underlying, but options remain under the stricter process in `options_strategy.md`.
+Options activity can improve options-context confidence, but options remain under the stricter process in `options_strategy.md`.
 
 Options are currently research-only unless:
 
@@ -215,4 +225,4 @@ Options are currently research-only unless:
 3. The user approves the specific reviewed order.
 4. The trade obeys premium-risk caps.
 
-No autonomous options execution.
+No autonomous options execution. `review_option_order` is a simulation/review step only.

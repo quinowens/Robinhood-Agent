@@ -2,20 +2,20 @@
 
 ## Mission
 
-Build and continuously improve an AI-powered trading agent focused on disciplined long-equity investing.
+Build and continuously improve an AI-powered tactical options agent grounded in disciplined underlying-equity research.
 
 The agent's primary goal is **capital preservation** and **consistent long-term account growth** through systematic decision-making.
 
-This project is designed for Robinhood's AI Agent platform. The primary strategy remains **long-equity trading**, with options added only for research, simulated review, and manually approved proposals.
+This project is designed for Robinhood's AI Agent platform. In v2.0, equities remain the research substrate and options become the primary proposed trade expression.
 
 ---
 
 ## Current Version
 
-- **Version:** 1.8
+- **Version:** 2.0
 - **Account Type:** Dedicated AI Agent account
 - **Execution Mode:** Proposal-only until explicitly upgraded
-- **Asset Type:** Long equities primary; options research/proposal-only
+- **Asset Type:** Options-primary; long calls/long puts only at launch; equities are approved underlyings
 
 ---
 
@@ -34,17 +34,17 @@ This project is designed for Robinhood's AI Agent platform. The primary strategy
 
 ## Agent Architecture
 
-Version 1.8 integrates Robinhood's expanded Agentic Trading tools for direct earnings, financials, index context, technical cross-checks, Level 2 execution checks, realized P&L, trade history, tax lots, watchlists, and scanner management while preserving explicit approval for every account write and live order.
+Version 2.0 integrates Robinhood's expanded Agentic Trading tools for underlying research, options-chain research, account context, simulated order review, validation, and outcome tracking while preserving explicit approval for every account write and live order.
 
 ### 1. Research Agent
 
-The Research Agent is responsible for finding opportunities. It scans a broad universe, applies filters, ranks candidates, and produces a scored research output.
+The Research Agent is responsible for finding qualified option underlyings. It scans a broad equity universe, applies filters, ranks candidates, classifies directional thesis, and produces an Underlying Thesis Score.
 
 It does **not** place trades.
 
 ### 2. Portfolio Manager Agent
 
-The Portfolio Manager Agent decides whether a research idea should become a trade proposal. It applies account constraints, risk rules, drawdown controls, sector exposure limits, and position sizing.
+The Portfolio Manager Agent decides whether a directional thesis should become a defined-risk options proposal. It reviews the underlying, contract, account fit, premium risk, correlation exposure, and execution alerts.
 
 It may only propose trades unless autonomous execution has been explicitly enabled.
 
@@ -63,23 +63,27 @@ Scanner results are merged, deduplicated, filtered, scored, and routed to the Po
 
 ### Options Strategy Layer
 
-Options are permitted only in proposal-only / review-only mode. The agent may analyze chains, retrieve quotes, and review simulated single-leg option orders, but may not place live option orders without explicit approval of the exact reviewed order.
+Options are the primary proposed trade expression in v2.0, but remain proposal-only / shadow-trading by default. The agent may analyze chains, retrieve quotes, rank long call/put contracts, and review simulated single-leg option orders, but may not place live option orders without explicit approval of the exact reviewed order.
 
 
 ```text
-Broad Market Universe + Saved Scanners
+Market Regime
         ↓
-Scanner Pipeline
+Saved Scanners / Discovery
         ↓
-Research Agent
+Underlying Research Engine
         ↓
-Ranked Candidate List
+Underlying Eligibility + Directional Thesis
         ↓
-Portfolio Manager Agent
+Options Suitability Gate
         ↓
-Risk Check + Position Sizing
+Options Chain / Contract Research
         ↓
-Trade Proposal / No Trade
+Options Setup Score
+        ↓
+Portfolio / Risk Manager
+        ↓
+Hypothetical Options Proposal / Shadow Tracking / No Trade
         ↓
 Performance Review
 ```
@@ -88,8 +92,8 @@ Performance Review
 
 ## Trading Style
 
-- Long-only equities as the primary strategy
-- Options research and manually approved proposals only
+- Options-focused tactical expression using single-leg long calls and long puts
+- Long equities as underlying research and validation substrate
 - Momentum
 - Trend following
 - Sector rotation
@@ -106,9 +110,9 @@ Performance Review
 | Maximum open positions | 3 |
 | Maximum Tier 1 position size | 15% of account |
 | Maximum Tier 2 position size | 10% of account |
-| Maximum risk per trade | 1% of account |
+| Maximum risk per trade | Premium-risk cap by account stage; never loosened to force trades |
 | New entries outside approved universe | Provisional Tier 2 validation or explicit one-off user approval required |
-| Watchlist entries | Not eligible for purchase |
+| Watchlist entries | Not eligible for live-quality options proposals |
 
 ---
 
@@ -160,26 +164,27 @@ Not enabled by default. Requires proven performance, stable logs, clean rule com
 
 ---
 
-## Version 1.8 Status
+## Version 2.0 Status
 
-Version 1.8 is the current source of truth.
+Version 2.0 is the current source of truth.
 
-The system is now a **measurable dynamic scanner pipeline**:
+The system is now an **options-primary tactical pipeline**:
 
 - Robinhood saved scanners discover candidates.
 - `pipeline_config.md` defines which scanners run and how results are routed.
 - `scanner_engine.md` defines scanner behavior and guardrails.
-- `research_agent.md` scores and validates candidates.
-- `portfolio_manager_agent.md` applies account, universe, and risk constraints.
+- `research_agent.md` scores and validates underlyings, direction, and options suitability.
+- `options_strategy.md` scores and ranks contracts separately from the underlying thesis.
+- `portfolio_manager_agent.md` applies account, premium-risk, correlation, and exact-order constraints.
 - `system_prompt.md` remains the master behavior file.
 - `tool_policy.md` maps the expanded Robinhood tool surface to permissions and safe call sequences.
 - Universe membership is separate from temporary entry eligibility.
 - Universe refreshes require a run manifest, at least 90% terminal coverage, and complete critical data for Tier 1 and Tier 2.
-- Structured templates preserve raw scanner rows, research evaluations, and forward outcomes.
+- Structured templates preserve raw scanner rows, underlying research, options setup records, shadow options trades, and forward outcomes.
 
-The **Current Universe is not yet populated** by an official monthly refresh. Until that refresh happens, scanner results are research candidates only. They may be used for analysis and proposal-only dry runs, but they are not approved for live orders.
+The **Current Universe** remains the Approved Underlying Universe. It governs which equities are high enough quality to serve as option underlyings.
 
-Options remain research/proposal-only and are not autonomous.
+Options remain proposal-only / shadow-trading by default and are not autonomous.
 
 Live dry-run reports should be stored in `research_logs/` and should follow `templates/daily_research_log.md` when possible. Backtests and month-end historical reviews should remain in `backtests/`. Persistent machine-readable memory should live in `state/`.
 
@@ -226,12 +231,18 @@ Generated research artifacts are currently tracked for reproducibility. The poli
 
 ### v2.0
 
-- Sector rotation model
-- Correlation model
-- Sector exposure optimizer
+- Tactical options pivot
+- Long calls and long puts only at launch
+- Separate Underlying Thesis Score and Options Setup Score
+- Options setup, shadow-trade, and outcome records
+- Account fit separated from setup quality
 
 ### v2.1
 
+- Call debit spreads and put debit spreads, after validation
+- Sector rotation model
+- Correlation model
+- Sector exposure optimizer
 - Automated research logs
 - Automated trade logs
 - Monthly universe refresh automation

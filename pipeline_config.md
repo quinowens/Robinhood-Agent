@@ -8,10 +8,11 @@ This file defines the active dynamic research pipeline. It is the operational ma
 
 ## Pipeline Version
 
-- **Version:** 1.8
+- **Version:** 2.0
 - **Mode:** Research-only / Proposal-only
-- **Primary Asset:** Long equities
-- **Options:** Research-only unless explicitly approved
+- **Primary Asset:** Tactical long options
+- **Underlyings:** Equity Current Universe / provisional Tier 2
+- **Options:** Long calls and long puts only at launch; no autonomous execution
 
 ---
 
@@ -21,13 +22,13 @@ This file defines the active dynamic research pipeline. It is the operational ma
 scanners:
   - name: Momentum Candidates
     scan_id: 26cdeb14-da13-493f-b0c6-783468971a16
-    role: primary_opportunity_discovery
+    role: primary_underlying_movement_discovery
     run_frequency: daily
     priority: high
 
   - name: Options Activity Radar
     scan_id: 7068db65-2a47-470c-bde9-94d66f36b806
-    role: sentiment_and_attention_signal
+    role: options_context_and_attention_signal
     run_frequency: daily
     priority: medium
     mode: research_only
@@ -71,13 +72,28 @@ steps:
   - score_candidates
   - assign_tiers
   - apply_temporary_entry_blocks
+  - classify_directional_thesis
+  - evaluate_options_suitability
+  - pull_option_chains_for_qualified_finalists
+  - filter_option_expirations
+  - pull_option_instruments
+  - filter_option_contracts
+  - pull_option_quotes
+  - pull_option_historicals_when_needed
+  - rank_option_contracts
+  - calculate_options_setup_score
+  - validate_options_completeness
+  - evaluate_account_fit
   - validate_run_completeness
   - publish_or_mark_degraded
-  - send_to_portfolio_manager
+  - send_option_setup_to_portfolio_manager
   - refresh_account_state
   - review_exact_order_if_requested
   - produce_proposal_report
+  - record_option_setup_record
+  - record_option_shadow_trade_when_qualified
   - schedule_forward_outcome_tracking_for_all_terminal_candidates
+  - schedule_option_outcome_tracking
 ```
 
 ---
@@ -92,6 +108,12 @@ statuses:
   - portfolio_review
   - proposal_candidate
   - provisional_tier_2
+  - options_research
+  - stock_thesis_only
+  - no_directional_edge
+  - pm_proposal
+  - shadow_only_qualified
+  - qualified_but_not_account_fit
   - blocked_by_earnings
   - blocked_by_risk
 ```
@@ -150,6 +172,10 @@ If any requirement fails, preserve collected records, set the manifest status to
 
 Scanner candidates remain research candidates until validated. When the Current Universe is officially populated, a daily scanner candidate may become `provisional_tier_2` until the next monthly refresh if it meets Tier 2 standards, has complete critical data, and has no active temporary block. Outside-universe names below those standards require explicit user approval before any one-off review.
 
+### Options Data Constraint
+
+Do not retrieve option chains for every scanner hit. Option-chain work begins only after the underlying passes permanent filters, has enough data to classify a directional thesis, and passes the Options Suitability Gate.
+
 ---
 
 ## Output Requirement
@@ -167,7 +193,8 @@ Every pipeline run must produce:
 9. A completeness percentage and publish/degrade decision.
 10. Forward outcome tracking records for every terminal candidate, including NO TRADE, blocked, rejected, Watchlist, and proposal candidates.
 11. Primary blocking-rule attribution for every blocked, rejected, Watchlist, or NO TRADE candidate.
+12. Options setup records, option shadow trades, and option outcome tracking when an underlying reaches options research.
 
 Daily dry-run reports should follow `templates/daily_research_log.md` when possible and should be saved to `research_logs/YYYY-MM-DD-description.md`.
 
-Default output is **NO TRADE** unless a candidate passes the full research and portfolio review process.
+Default output is **NO TRADE** unless a candidate passes underlying research, options suitability, contract scoring, account-fit review, and exact-order approval requirements. A qualified but unaffordable setup should be `SHADOW_ONLY_QUALIFIED`, not forced into a lower-quality contract.

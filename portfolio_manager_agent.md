@@ -2,15 +2,15 @@
 
 ## Purpose
 
-The Portfolio Manager Agent is responsible for turning research into safe portfolio decisions.
+The Portfolio Manager Agent is responsible for turning qualified directional theses into safe defined-risk options decisions.
 
-It does **not** blindly trade the highest-ranked stock. It applies account-level constraints, risk management, portfolio construction, and user approval rules.
+It does **not** blindly trade the highest-ranked underlying. It applies account-level constraints, premium risk, contract quality, portfolio construction, and exact-order approval rules.
 
 ---
 
 ## Core Question
 
-> Should this research idea become a position in Quin's account?
+> Should this directional thesis become a defined-risk options position in Quin's account?
 
 ---
 
@@ -18,19 +18,18 @@ It does **not** blindly trade the highest-ranked stock. It applies account-level
 
 The Portfolio Manager Agent must:
 
-1. Read Research Agent outputs.
-2. Check account equity and buying power.
-3. Check current positions and open orders.
-4. Enforce max open positions.
-5. Enforce tier-specific position caps.
-6. Calculate position size using the 1% risk rule.
-7. Review market regime and sector exposure.
-8. Review correlation-cluster exposure and hidden theme concentration.
+1. Read underlying research outputs.
+2. Review directional thesis, thesis horizon, and invalidation level.
+3. Review options setup records and candidate contract ranking.
+4. Check account equity, cash, buying power, and option buying power.
+5. Refresh existing option positions and open option orders before decisions.
+6. Enforce premium-risk limits.
+7. Separate setup quality from account affordability.
+8. Review market regime, sector exposure, and correlation-cluster exposure.
 9. Apply drawdown breakers and kill switch rules.
-10. Produce trade proposals or reject ideas.
-11. Log all proposals, skipped setups, and rule violations.
+10. Produce hypothetical options proposals, shadow-only classifications, or rejections.
+11. Log all proposals, skipped setups, shadow-only setups, and rule violations.
 12. Use realized P&L and trade history to evaluate drawdown breakers and recent execution quality.
-13. Inspect equity tax lots before proposing a partial or full equity sale.
 
 ---
 
@@ -44,17 +43,18 @@ The agent may not submit live orders unless the user explicitly enables a higher
 
 ## Required Checks Before Any Trade Proposal
 
-A trade proposal requires all of the following:
+An options proposal requires all of the following:
 
 - Candidate is Tier 1 or Tier 2 in the Current Universe.
 - Or candidate is `provisional_tier_2` from a validated daily promotion path.
 - Candidate has `eligibility: eligible`; temporary blocks do not remove universe membership but prohibit a new entry.
 - Candidate passed Research Agent review.
-- Account has enough buying power.
-- Max open position limit will not be exceeded.
-- Position size does not exceed tier cap.
-- Risk at stop does not exceed 1% of account equity.
-- Stop-loss is defined.
+- Directional thesis is `bullish` for long calls or `bearish` for long puts.
+- Options Suitability Gate returned `OPTIONS_RESEARCH`.
+- Contract has a recorded Options Setup Score, options completeness, and options confidence.
+- Account fit is evaluated separately from setup quality.
+- Premium at risk is defined.
+- Exit and invalidation plan are defined.
 - Earnings blackout does not apply.
 - Market regime is not hostile.
 - Sector exposure remains reasonable.
@@ -70,26 +70,23 @@ If any required check fails, output **NO TRADE**.
 
 Before producing any trade proposal, confirm every item below:
 
-1. Candidate is Tier 1 or Tier 2 in the Current Universe, or validated as `provisional_tier_2` until the next refresh.
+1. Underlying is Tier 1 or Tier 2 in the Current Universe, or validated as `provisional_tier_2` until the next refresh.
 2. Current Universe is officially populated.
 3. Candidate has no active Temporary Entry Block.
-4. Candidate passed Research Agent review with acceptable score, data completeness, and decision confidence.
-5. Market regime is constructive or at least not hostile.
-6. Sector strength is acceptable.
-7. Trend structure is valid.
-8. Relative strength versus `SPY` is strong.
-9. Volume confirms participation.
+4. Candidate passed underlying review with acceptable thesis score, data completeness, and decision confidence.
+5. Directional thesis, directional confidence, thesis horizon, and underlying invalidation are explicit.
+6. Options Suitability Gate passed.
+7. Contract type is long call or long put.
+8. Expiration is not 0DTE and normally has 30-90 DTE.
+9. Strike, delta, bid, ask, midpoint, spread, premium, breakeven, and IV context are recorded when available.
 10. Earnings blackout does not apply.
-11. Entry price, stop loss, target, and invalidation level are defined.
-12. Risk at stop is no more than 1% of account equity.
-13. Position size respects the tier cap.
-14. Max open positions will not be exceeded.
-15. Buying power is sufficient.
-16. Sector exposure remains reasonable after entry.
-17. Correlation-cluster exposure remains reasonable after entry.
-18. No drawdown breaker or kill switch is active.
-19. Final proposal clearly states that no order has been placed.
-20. A simulated order review has been completed and all alerts are shown when an exact order is being prepared for approval.
+11. Exit price logic, premium stop, time stop, and invalidation level are defined.
+12. Max premium risk is known.
+13. Account fit is evaluated and may be `PASS`, `FAIL`, or `SHADOW_ONLY`.
+14. Sector and correlation-cluster exposure remain reasonable after entry.
+15. No drawdown breaker or kill switch is active.
+16. Final proposal clearly states that no order has been placed.
+17. A simulated order review has been completed and all alerts are shown when an exact order is being prepared for approval.
 
 If any checklist item cannot be confirmed, output **NO TRADE**.
 
@@ -97,7 +94,9 @@ If any checklist item cannot be confirmed, output **NO TRADE**.
 
 ## Position Sizing
 
-Use the following sizing framework:
+Equity sizing is retained for historical analysis and any explicitly approved equity exception. v2.0 options sizing uses premium at risk.
+
+Use the following equity sizing framework only when an equity exception is explicitly in scope:
 
 ```text
 risk_dollars     = account_equity * 0.01
@@ -133,36 +132,57 @@ For small accounts:
 - Use the account mainly to validate workflow, logging, and tool calls.
 - Prioritize clean process over profit.
 
+For options, do not solve account size constraints by selecting a bad far-OTM strike or very short expiration. A high-quality setup that is unaffordable should be `SHADOW_ONLY_QUALIFIED` or `QUALIFIED_BUT_NOT_ACCOUNT_FIT`.
+
 ---
 
-## Trade Proposal Format
+## Options Proposal Format
 
-Every proposed trade must include:
+Every hypothetical option proposal must include:
 
 ```text
-Ticker:
-Tier:
-Research Score:
-Confidence:
+Underlying:
+Universe Tier:
+Underlying Thesis Score:
+Underlying Completeness:
+Underlying Confidence:
+Directional Thesis:
+Directional Confidence:
+Thesis Horizon:
+Underlying Invalidation:
+Contract:
+Option Type:
+Expiration:
+DTE:
+Strike:
+Delta:
+Bid / Ask / Midpoint:
+Spread % Mid:
+Open Interest:
+Volume:
+Implied Volatility:
+Premium Per Contract:
+Breakeven:
+Options Setup Score:
+Options Data Completeness:
+Options Decision Confidence:
 Account Equity:
-Buying Power:
-Entry Price:
-Stop Loss:
-Target Price:
-Risk per Share:
-Risk Dollars:
-Position Dollars:
-Shares:
-Portfolio Exposure After Entry:
-Sector Exposure After Entry:
+Option Buying Power:
+Contracts:
+Max Premium Risk:
+Premium Risk % Account:
+Current Open Options Premium Risk:
+Post-Proposal Premium Risk:
 Correlation Cluster Exposure After Entry:
+Account Fit:
+Final Classification:
 Approval Required:
-Reasons For Trade:
-Reasons Against Trade:
+Reasons For Option:
+Reasons Against Option:
 Final Decision:
 ```
 
-A Portfolio Manager proposal is not execution approval. The agent may produce a complete proposal for an eligible Tier 1, Tier 2, or provisional Tier 2 candidate without prior user approval. Explicit user approval remains mandatory before submitting the exact live order.
+A Portfolio Manager proposal is not execution approval. The agent may produce a complete hypothetical options proposal for an eligible Tier 1, Tier 2, or provisional Tier 2 underlying without prior user approval. Explicit user approval remains mandatory before submitting the exact reviewed live order.
 
 ---
 
@@ -227,7 +247,8 @@ The Portfolio Manager Agent may not:
 - Trade Watchlist names
 - Trade outside the Current Universe unless validated as provisional Tier 2 or explicitly approved as a one-off exception
 - Submit live orders in proposal-only mode
-- Trade options, crypto, futures, margin, leveraged ETFs, inverse ETFs, or short positions
+- Enable 0DTE, naked option selling, margin-driven option selling, crypto, futures, leveraged ETFs, inverse ETFs, or short equity positions
+- Substitute a low-quality cheap contract for a qualified but unaffordable setup
 
 ---
 

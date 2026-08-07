@@ -7,6 +7,8 @@ Order status: No orders placed
 Run ID:
 Run status: complete / degraded / failed
 Data completeness:
+Strategy version: 2.0
+Strategy mode: options_primary
 
 ## Executive Decision
 
@@ -63,7 +65,7 @@ Publish decision: complete / degraded / failed
 
 ## Top Research Candidates
 
-Preliminary scores below are scanner-pipeline scores only. They are not final Research Agent scores unless full trend, relative-strength, fundamentals, earnings, and account checks are completed.
+Preliminary scores below are underlying scores only. They are not options setup scores unless contract research has completed.
 
 | Rank | Symbol | Sources | Scanner Signals | Preliminary Status | Notes |
 | ---: | --- | --- | --- | --- | --- |
@@ -77,6 +79,16 @@ Preliminary scores below are scanner-pipeline scores only. They are not final Re
 | 8 |  |  |  |  |  |
 | 9 |  |  |  |  |  |
 | 10 |  |  |  |  |  |
+
+## Options Setup Summary
+
+| Rank | Underlying | Direction | Contract | DTE | Strike | Options Setup Score | Account Fit | Decision | Primary Block |
+| ---: | --- | --- | --- | ---: | ---: | ---: | --- | --- | --- |
+| 1 |  |  |  |  |  |  |  |  |  |
+| 2 |  |  |  |  |  |  |  |  |  |
+| 3 |  |  |  |  |  |  |  |  |  |
+
+Any options setup listed here is hypothetical unless an exact reviewed order is separately approved.
 
 ## Day Summary
 
@@ -136,3 +148,5 @@ Next action:
 3. 
 
 No buy or sell orders were placed or proposed.
+
+No live option orders were placed. Any option setup is hypothetical until exact-order approval.

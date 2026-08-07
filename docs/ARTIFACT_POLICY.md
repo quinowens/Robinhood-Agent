@@ -43,6 +43,9 @@ These directories are currently tracked for reproducibility:
 - `data/research_records/`
 - `data/signal_outcomes/`
 - `data/shadow_trades/`
+- `data/options_setup_records/`
+- `data/option_shadow_trades/`
+- `data/option_signal_outcomes/`
 - `data/market_regime/`
 - `data/validation_reports/`
 - `backtests/`

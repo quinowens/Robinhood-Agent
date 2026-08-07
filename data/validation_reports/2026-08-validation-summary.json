@@ -76,78 +76,40 @@
         "observed_count": 0
       }
     },
-    "eligible_for_pm_review": {
-      "forward_10d_return": {
-        "average": null,
-        "count": 5,
-        "median": null,
-        "observed_count": 0
-      },
-      "forward_20d_return": {
-        "average": null,
-        "count": 5,
-        "median": null,
-        "observed_count": 0
-      },
-      "forward_5d_return": {
-        "average": null,
-        "count": 5,
-        "median": null,
-        "observed_count": 0
-      },
-      "forward_vs_spy_20d": {
-        "average": null,
-        "count": 5,
-        "median": null,
-        "observed_count": 0
-      },
-      "mae_20d": {
-        "average": null,
-        "count": 5,
-        "median": null,
-        "observed_count": 0
-      },
-      "mfe_20d": {
-        "average": null,
-        "count": 5,
-        "median": null,
-        "observed_count": 0
-      }
-    },
     "legacy_tier_2_approval_deadlock": {
       "forward_10d_return": {
         "average": null,
-        "count": 2,
+        "count": 7,
         "median": null,
         "observed_count": 0
       },
       "forward_20d_return": {
         "average": null,
-        "count": 2,
+        "count": 7,
         "median": null,
         "observed_count": 0
       },
       "forward_5d_return": {
         "average": null,
-        "count": 2,
+        "count": 7,
         "median": null,
         "observed_count": 0
       },
       "forward_vs_spy_20d": {
         "average": null,
-        "count": 2,
+        "count": 7,
         "median": null,
         "observed_count": 0
       },
       "mae_20d": {
         "average": null,
-        "count": 2,
+        "count": 7,
         "median": null,
         "observed_count": 0
       },
       "mfe_20d": {
         "average": null,
-        "count": 2,
+        "count": 7,
         "median": null,
         "observed_count": 0
       }
@@ -229,7 +191,7 @@
       }
     }
   },
-  "generated_at": "2026-08-07T00:01:11.033334+00:00",
+  "generated_at": "2026-08-07T01:07:29.293956+00:00",
   "month_filter": "2026-08",
   "options_confirmation_lift": {
     "alpha_lift": null,
@@ -244,6 +206,24 @@
       "count": 6,
       "median": null,
       "observed_count": 0
+    }
+  },
+  "options_strategy": {
+    "by_delta_bucket": {},
+    "by_dte_bucket": {},
+    "by_option_type": {},
+    "by_options_setup_score_bucket": {},
+    "by_primary_blocking_rule": {},
+    "outcome_classifications": {},
+    "outcome_records": 0,
+    "setup_records": 0,
+    "shadow_trades": {
+      "average_pnl_pct": null,
+      "average_r_multiple": null,
+      "closed_count": 0,
+      "count": 0,
+      "median_pnl_pct": null,
+      "positive_rate": null
     }
   },
   "sample_health": {

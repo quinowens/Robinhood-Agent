@@ -1,6 +1,6 @@
 # Structured Data
 
-Version 1.9 stores machine-readable records alongside human-readable reports.
+Version 2.0 stores machine-readable records alongside human-readable reports.
 
 ```text
 data/
@@ -9,6 +9,9 @@ data/
 ├── research_records/       # Append-only JSONL candidate evaluations
 ├── signal_outcomes/        # Append-only JSONL forward-return updates
 ├── shadow_trades/          # Append-only JSONL hypothetical trades
+├── options_setup_records/  # Append-only JSONL options setup evaluations
+├── option_shadow_trades/   # Append-only JSONL hypothetical options trades
+├── option_signal_outcomes/ # Append-only JSONL option/underlying forward outcomes
 ├── market_regime/          # Market health snapshots
 └── validation_reports/     # Monthly evidence summaries
 ```

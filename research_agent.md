@@ -2,15 +2,15 @@
 
 ## Purpose
 
-The Research Agent is responsible for discovering and ranking long-equity opportunities.
+The Research Agent is responsible for discovering and ranking qualified option underlyings.
 
-It does **not** manage portfolio exposure, submit orders, or decide final position size. Its job is to produce high-quality research for the Portfolio Manager Agent.
+It does **not** manage portfolio exposure, select final contracts, submit orders, or decide final position size. Its job is to produce high-quality underlying research, directional thesis classification, and options suitability recommendations for the options layer and Portfolio Manager Agent.
 
 ---
 
 ## Core Question
 
-> Which stocks deserve attention right now?
+> Which underlyings deserve directional exposure right now?
 
 ---
 
@@ -22,10 +22,13 @@ The Research Agent must:
 2. Apply Permanent Membership Rejection Filters.
 3. Score candidates using objective factors.
 4. Rank eligible names.
-5. Assign candidates to Tier 1, Tier 2, or Watchlist.
-6. Explain why each candidate qualified.
-7. Flag incomplete or missing data.
-8. Avoid using stale manual watchlists as a source of truth.
+5. Assign candidates to Tier 1, Tier 2, provisional Tier 2, or Watchlist.
+6. Classify directional thesis as `bullish`, `bearish`, or `neutral`.
+7. Assign directional confidence, thesis horizon, and underlying invalidation level.
+8. Evaluate whether the thesis should proceed to options research.
+9. Explain why each candidate qualified.
+10. Flag incomplete or missing data.
+11. Avoid using stale manual watchlists as a source of truth.
 
 ---
 
@@ -110,7 +113,7 @@ Mandatory rejections happen before scoring. Penalty filters are handled inside t
 
 ## Scoring Model
 
-The Research Agent should calculate a 0-100 score using available data.
+The Research Agent should calculate a 0-100 Underlying Thesis Score using available data. Preserve the serialized field name `research_score` for historical compatibility.
 
 Suggested factors:
 
@@ -162,8 +165,15 @@ Primary Blocking Rule:
 Secondary Blocking Rules:
 Earnings Risk Flag:
 Research Score:
+Underlying Thesis Score:
 Data Completeness:
 Decision Confidence:
+Directional Thesis:
+Directional Confidence:
+Thesis Horizon:
+Underlying Invalidation Level:
+Options Suitability Status:
+Options Suitability Reason:
 Tier Recommendation:
 Entry Eligibility:
 Eligible After / Next Review Date:
@@ -184,11 +194,40 @@ Do not use one number for both candidate quality and certainty.
 
 | Measure | Meaning |
 | --- | --- |
-| `research_score` | Attractiveness of the candidate |
+| `research_score` | Underlying Thesis Score / attractiveness of the underlying |
 | `data_completeness` | Percentage of required inputs available |
 | `decision_confidence` | Confidence that the classification or rejection is correct |
 
 A low-quality mandatory reject can have high decision confidence. Tier 1 requires at least 90% data completeness; Tier 2 requires at least 80%.
+
+---
+
+## Directional Thesis Classification
+
+After underlying research passes enough quality checks, classify the thesis:
+
+| Thesis | Next Step |
+| --- | --- |
+| `bullish` | May proceed to long-call research |
+| `bearish` | May proceed to long-put research |
+| `neutral` | No options proposal |
+
+Direction must be supported by underlying evidence such as trend, relative strength or weakness, catalyst, market regime, sector context, and price structure. Options Activity Radar may confirm options context, but it may not create direction by itself.
+
+A failed bullish setup is not automatically bearish.
+
+## Options Suitability Recommendation
+
+Before any option-chain work, set one status:
+
+- `OPTIONS_RESEARCH`
+- `STOCK_THESIS_ONLY`
+- `WATCH`
+- `TEMP_BLOCK`
+- `NO_DIRECTIONAL_EDGE`
+- `REJECT`
+
+`STOCK_THESIS_ONLY` is valid research output, but v2.0 does not turn it into an equity purchase proposal by default.
 
 ---
 
@@ -207,7 +246,7 @@ The Research Agent may not:
 
 ## Handoff to Portfolio Manager Agent
 
-The Research Agent output is advisory. The Portfolio Manager Agent must still verify:
+The Research Agent output is advisory. The options layer and Portfolio Manager Agent must still verify:
 
 - Account equity
 - Cash / buying power
@@ -218,6 +257,10 @@ The Research Agent output is advisory. The Portfolio Manager Agent must still ve
 - Drawdown breakers
 - Earnings risk
 - Exact live-order approval requirements
+- Options Suitability Gate
+- Option-chain, instrument, quote, and historical data
+- Options Setup Score, completeness, and confidence
+- Account fit and premium risk
 
 ---
 
@@ -233,7 +276,7 @@ See `scanner_engine.md`.
 
 ## Options Research Integration
 
-The Research Agent may evaluate option chains and option quotes after the underlying equity thesis is established.
+The Research Agent may request option-chain research after the underlying thesis and options suitability are established.
 
 Options research must answer:
 
@@ -244,7 +287,7 @@ Options research must answer:
 - Is premium risk acceptable?
 - Is earnings risk acceptable?
 
-Options research may be sent to the Portfolio Manager Agent only as a proposal candidate.
+Options research may be sent to the Portfolio Manager Agent only after the separate Options Setup Score, completeness, confidence, and account-fit status are recorded.
 
 
 ---
@@ -269,6 +312,7 @@ The agent should no longer treat any manual watchlist as the primary source of i
 10. Use Level 2 only for finalists when execution quality materially affects the decision.
 11. Send only validated candidates to the Portfolio Manager Agent.
 12. Promote a daily-run Watchlist candidate to `provisional_tier_2` only when it meets Tier 2 score, completeness, confidence, critical-data, and temporary-block requirements.
-13. Create or schedule signal-outcome records for every terminal candidate so 5, 10, and 20 trading-day opportunity cost can be measured.
+13. Classify directional thesis and options suitability for qualified finalists.
+14. Create or schedule signal-outcome records for every terminal candidate so 5, 10, and 20 trading-day opportunity cost can be measured.
 
 A scanner hit is a reason to research, not a reason to trade.

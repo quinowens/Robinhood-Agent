@@ -1,10 +1,10 @@
-# v1.9 Validation Release
+# v2.0 Validation Release
 
-Version 1.9 should prove whether the existing rules work before adding more discretionary rules.
+Version 2.0 should prove whether the options-primary system works before adding more discretionary rules.
 
 The central question is:
 
-> If the agent had been followed exactly as written over the last 30, 60, and 90 trading days, what would have happened?
+> If the agent had followed each underlying thesis and selected option contract exactly as written over the last 30, 60, and 90 trading days, what would have happened?
 
 ## Evidence Priorities
 
@@ -22,6 +22,8 @@ Track:
 - Correlation-cluster concentration among approved candidates.
 - Tier threshold calibration against actual score distributions.
 - Primary-vs-secondary blocking rule attribution.
+- Options setup-score distribution and option outcome quality.
+- Thesis-right versus contract-right classification.
 
 ## Do Not Loosen Rules Prematurely
 

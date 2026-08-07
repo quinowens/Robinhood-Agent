@@ -1,5 +1,18 @@
 # Changelog
 
+## Version 2.0 — Tactical Options Pivot
+
+- Pivoted the system from long-equity-primary to options-primary while preserving equity research as the Approved Underlying Universe.
+- Limited v2.0 launch scope to single-leg long calls and long puts.
+- Kept proposal-only / shadow-trading as default; no autonomous live options execution was enabled.
+- Kept exact reviewed-order approval mandatory before any live order.
+- Added directional thesis classification and Options Suitability Gate before option-chain research.
+- Added separate Options Setup Score, Options Data Completeness, and Options Decision Confidence.
+- Added contract ranking, account-fit separation, premium-risk model, and `SHADOW_ONLY_QUALIFIED` / `QUALIFIED_BUT_NOT_ACCOUNT_FIT` semantics.
+- Added options setup, option shadow-trade, and option signal-outcome templates and data directories.
+- Updated analyzer and validator for options-primary records and v2.0 safety invariants.
+- Preserved historical v1.x records and underlying validation metrics.
+
 ## 2026-08-06
 
 - Added private data handling policy for account-adjacent research artifacts.
