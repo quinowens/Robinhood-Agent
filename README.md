@@ -1,4 +1,4 @@
-# Quin AI Trading Agent
+# Robinhood Tactical Options Agent
 
 ## Mission
 
