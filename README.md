@@ -218,6 +218,8 @@ make validation-report MONTH=2026-08
 
 Generated research artifacts are currently tracked for reproducibility. The policy for what should remain tracked lives in `docs/ARTIFACT_POLICY.md`.
 
+Scheduled daily, weekly, and monthly scan behavior is documented in `docs/SCHEDULED_SCANS.md`.
+
 ---
 
 ## Roadmap

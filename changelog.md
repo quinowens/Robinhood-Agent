@@ -12,6 +12,7 @@
 - Added options setup, option shadow-trade, and option signal-outcome templates and data directories.
 - Updated analyzer and validator for options-primary records and v2.0 safety invariants.
 - Preserved historical v1.x records and underlying validation metrics.
+- Updated daily, weekly, and monthly Codex scheduled scans to v2.0 options-primary semantics.
 
 ## 2026-08-06
 
