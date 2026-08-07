@@ -14,6 +14,8 @@
 - Added provisional Tier 2 daily promotion path for scanner candidates that meet Tier 2 standards before the next monthly refresh.
 - Changed post-earnings blocks from fixed cooldowns to settled-session evidence reviews.
 - Added 5/10/20-day NO TRADE opportunity-cost tracking by block reason.
+- Added score-distribution threshold calibration reporting for universe refreshes.
+- Added primary-vs-secondary blocking-rule attribution so opportunity-cost analysis does not double-count stacked rules.
 
 ## Version 1.8 — Expanded Robinhood Tool Integration
 

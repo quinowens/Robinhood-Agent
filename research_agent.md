@@ -158,6 +158,8 @@ Scanner Sources:
 Scanner Signals:
 Pipeline Status:
 Blocked Reason:
+Primary Blocking Rule:
+Secondary Blocking Rules:
 Earnings Risk Flag:
 Research Score:
 Data Completeness:
@@ -223,7 +225,7 @@ The Research Agent output is advisory. The Portfolio Manager Agent must still ve
 
 The Research Agent may use scanner results as candidate inputs. Scanner hits are not automatically approved.
 
-The Research Agent must label scanner candidates by source, apply Permanent Membership Rejection Filters, apply Scoring / Penalty Filters, assign pipeline status, record blocked reasons, and adjust data completeness and decision confidence.
+The Research Agent must label scanner candidates by source, apply Permanent Membership Rejection Filters, apply Scoring / Penalty Filters, assign pipeline status, record blocked reasons, choose exactly one primary blocking rule when a candidate is rejected or blocked, store other true blocks as secondary blocking rules, and adjust data completeness and decision confidence.
 
 See `scanner_engine.md`.
 

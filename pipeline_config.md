@@ -121,7 +121,7 @@ Retain an otherwise qualified candidate in its assigned tier, but mark it inelig
 - Temporary trend damage
 - Portfolio risk, concentration, or buying-power constraint
 
-Every block must include `eligibility`, `blocked_reason`, and `eligible_after` or `next_review_date`. A temporary block must not erase a high-quality candidate from the Current Universe.
+Every block must include `eligibility`, `blocked_reason`, `primary_blocking_rule`, and `eligible_after` or `next_review_date`. Secondary applicable blocks belong in `secondary_blocking_rules`. A temporary block must not erase a high-quality candidate from the Current Universe.
 
 ### Scoring / Penalty Filters
 
@@ -166,6 +166,7 @@ Every pipeline run must produce:
 8. Raw scanner snapshots and structured research records.
 9. A completeness percentage and publish/degrade decision.
 10. Forward outcome tracking records for every terminal candidate, including NO TRADE, blocked, rejected, Watchlist, and proposal candidates.
+11. Primary blocking-rule attribution for every blocked, rejected, Watchlist, or NO TRADE candidate.
 
 Daily dry-run reports should follow `templates/daily_research_log.md` when possible and should be saved to `research_logs/YYYY-MM-DD-description.md`.
 

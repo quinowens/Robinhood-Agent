@@ -195,6 +195,8 @@ However, if multiple official monthly refreshes show the best qualified candidat
 
 A possible future Tier 1 definition may combine percentile rank and absolute quality, such as top-decile qualified candidates plus minimum score, completeness, confidence, and trend requirements. Do not adopt this without validation evidence.
 
+Every official universe refresh manifest must include score distribution fields: highest score, 95th percentile, 90th percentile, median, Tier 1 count, Tier 2 count, and any calibration warning. After three refreshes with the highest score below 85 or the 95th percentile below 85, flag Tier 1 threshold calibration for review.
+
 ---
 
 ## Monthly Universe Refresh

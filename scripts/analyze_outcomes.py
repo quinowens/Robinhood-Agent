@@ -53,6 +53,19 @@ def mean(values: list[float]) -> float | None:
     return statistics.fmean(values) if values else None
 
 
+def percentile(values: list[float], pct: float) -> float | None:
+    if not values:
+        return None
+    ordered = sorted(values)
+    if len(ordered) == 1:
+        return ordered[0]
+    rank = (len(ordered) - 1) * pct
+    lower = int(rank)
+    upper = min(lower + 1, len(ordered) - 1)
+    weight = rank - lower
+    return ordered[lower] * (1 - weight) + ordered[upper] * weight
+
+
 def summarize_group(rows: list[dict[str, Any]], field: str) -> dict[str, Any]:
     values = [value for row in rows if (value := numeric(row.get(field))) is not None]
     return {
@@ -98,6 +111,30 @@ def summarize_score_buckets(rows: list[dict[str, Any]]) -> dict[str, Any]:
     }
 
 
+def summarize_score_distribution(rows: list[dict[str, Any]]) -> dict[str, Any]:
+    scores = [score for row in rows if (score := numeric(row.get("research_score"))) is not None]
+    tier_1_threshold = 85
+    tier_2_threshold = 75
+    highest = max(scores) if scores else None
+    p95 = percentile(scores, 0.95)
+    p90 = percentile(scores, 0.90)
+    warning = None
+    if scores and highest is not None and highest < tier_1_threshold:
+        warning = "highest_score_below_tier_1_threshold"
+    return {
+        "scored_count": len(scores),
+        "highest": highest,
+        "percentile_95": p95,
+        "percentile_90": p90,
+        "median": statistics.median(scores) if scores else None,
+        "tier_1_threshold": tier_1_threshold,
+        "tier_2_threshold": tier_2_threshold,
+        "tier_1_count": sum(1 for score in scores if score >= tier_1_threshold),
+        "tier_2_count": sum(1 for score in scores if tier_2_threshold <= score < tier_1_threshold),
+        "calibration_warning": warning,
+    }
+
+
 def summarize_scanners(rows: list[dict[str, Any]]) -> dict[str, Any]:
     scanners: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for row in rows:
@@ -134,11 +171,47 @@ def summarize_options_lift(rows: list[dict[str, Any]]) -> dict[str, Any]:
     }
 
 
+def infer_primary_blocking_rule(row: dict[str, Any]) -> str:
+    explicit = row.get("primary_blocking_rule")
+    if explicit:
+        return str(explicit)
+    text = " ".join(
+        str(value or "")
+        for value in [
+            row.get("blocked_reason"),
+            row.get("entry_eligibility"),
+            row.get("pipeline_status"),
+            row.get("eligibility"),
+        ]
+    ).lower()
+    if any(term in text for term in ["penny", "microcap", "otc", "tradability", "unsupported", "critical data"]):
+        return "permanent_rejection_filter"
+    if "earning" in text or "report" in text:
+        return "blocked_by_earnings"
+    if any(term in text for term in ["buying power", "account", "kill", "drawdown", "open order"]):
+        return "blocked_by_account_risk"
+    if any(term in text for term in ["correlation", "concentration", "exposure"]):
+        return "blocked_by_concentration"
+    if "market" in text and "regime" in text:
+        return "blocked_by_market_regime"
+    if any(term in text for term in ["trend", "relative strength", "rs "]):
+        return "blocked_by_trend"
+    if "extension" in text or "extended" in text:
+        return "blocked_by_extension"
+    if "watchlist" in text or "outside" in text:
+        return "watchlist_or_outside_universe"
+    if "tier 2 requires" in text or "approval" in text:
+        return "legacy_tier_2_approval_deadlock"
+    if any(term in text for term in ["score", "confidence", "completeness", "threshold"]):
+        return "insufficient_score_or_confidence"
+    return str(row.get("blocked_reason") or row.get("entry_eligibility") or row.get("pipeline_status") or "missing")
+
+
 def summarize_blocked_candidates(rows: list[dict[str, Any]]) -> dict[str, Any]:
     groups: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for row in rows:
         status = str(row.get("pipeline_status") or row.get("eligibility") or "")
-        reason = row.get("blocked_reason") or row.get("entry_eligibility") or status or "missing"
+        reason = infer_primary_blocking_rule(row)
         if "block" in status or "reject" in status or reason not in {"eligible", "missing", None}:
             groups[str(reason)].append(row)
     return {
@@ -196,6 +269,7 @@ def build_report(month: str | None) -> dict[str, Any]:
             "observed_30d_outcomes": observed_30d,
             "conclusion_quality": "directional" if observed_30d < 20 else "usable",
         },
+        "score_distribution": summarize_score_distribution(joined),
         "score_buckets": summarize_score_buckets(joined),
         "scanner_sources": summarize_scanners(joined),
         "options_confirmation_lift": summarize_options_lift(joined),

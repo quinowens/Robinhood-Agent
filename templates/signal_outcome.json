@@ -7,6 +7,8 @@
   "scanner_sources": [],
   "pipeline_status": null,
   "blocked_reason": null,
+  "primary_blocking_rule": null,
+  "secondary_blocking_rules": [],
   "entry_eligibility": null,
   "forward_5d_return": null,
   "forward_10d_return": null,

@@ -38,6 +38,8 @@ Every evaluated candidate should produce one row:
 | `scanner_signals` | dict | Momentum/options/earnings/other signal flags |
 | `pipeline_status` | enum | `rejected`, `watch_only`, `research_further`, `portfolio_review`, `proposal_candidate`, `blocked_by_earnings`, `blocked_by_risk` |
 | `blocked_reason` | str | Required when rejected or blocked |
+| `primary_blocking_rule` | str | First decisive rule that caused NO TRADE, blocked, or rejected status |
+| `secondary_blocking_rules` | list[str] | Other true but non-decisive blocks; retained for context, not primary attribution |
 | `earnings_risk_flag` | bool | True when candidate appears in earnings risk workflow |
 | `research_score` | float | 0-100 |
 | `data_completeness` | float | 0-100; percentage of required inputs available |
@@ -204,7 +206,35 @@ Monthly validation must answer these questions when sample size allows:
 
 If fewer than 20 observed 30-day outcomes are available for a category, label the conclusion directional only.
 
-For blocked or rejected candidates, group forward outcomes by `blocked_reason` or `entry_eligibility`. At minimum, report count, median 20-day return, 20-day excess return versus `SPY`, win rate, max favorable excursion, and max adverse excursion. This is the evidence used to decide whether earnings, extension, Watchlist status, or tier cutoffs are helping or hurting.
+For blocked or rejected candidates, group forward outcomes by `primary_blocking_rule`. At minimum, report count, median 20-day return, 20-day excess return versus `SPY`, win rate, max favorable excursion, and max adverse excursion. This is the evidence used to decide whether earnings, extension, Watchlist status, or tier cutoffs are helping or hurting.
+
+### Blocking Rule Attribution
+
+When multiple blocks apply, assign exactly one `primary_blocking_rule` and put the rest in `secondary_blocking_rules`.
+
+Use this attribution order unless a more specific source-of-truth file overrides it:
+
+1. Permanent rejection filters, such as unsupported asset, penny stock, OTC, failed tradability, or unresolved critical data.
+2. Earnings blackout or unsettled post-earnings review.
+3. Account, buying-power, open-order, kill-switch, or drawdown constraint.
+4. Portfolio concentration or correlation-cluster constraint.
+5. Market regime block.
+6. Trend or relative-strength failure.
+7. Unconfirmed extension.
+8. Watchlist or outside-universe status.
+9. Low score, low confidence, or insufficient completeness.
+
+Example:
+
+```text
+Ticker: NVDA
+Primary blocking rule: blocked_by_earnings
+Secondary blocking rules:
+- blocked_by_extension
+- blocked_by_market_regime
+```
+
+Only the primary rule receives opportunity-cost credit or blame. Secondary rules remain useful for diagnostics but must not be counted as separate missed opportunities.
 
 ---
 

@@ -21,6 +21,7 @@ Track:
 - Market-health score versus subsequent opportunity quality.
 - Correlation-cluster concentration among approved candidates.
 - Tier threshold calibration against actual score distributions.
+- Primary-vs-secondary blocking rule attribution.
 
 ## Do Not Loosen Rules Prematurely
 
@@ -55,3 +56,4 @@ The summary should answer:
 7. Did market-health score improve or reduce entry quality?
 8. Did correlation clustering create hidden concentration?
 9. Are Tier 1 and Tier 2 thresholds predictive and reachable under the current scoring model?
+10. Which primary blocking rules created the largest missed-winner or avoided-loser effects?

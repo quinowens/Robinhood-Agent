@@ -9,6 +9,17 @@
   "deduplicated_count": 0,
   "terminal_result_count": 0,
   "scored_count": 0,
+  "score_distribution": {
+    "highest": null,
+    "percentile_95": null,
+    "percentile_90": null,
+    "median": null,
+    "tier_1_threshold": 85,
+    "tier_2_threshold": 75,
+    "tier_1_count": 0,
+    "tier_2_count": 0,
+    "calibration_warning": null
+  },
   "permanently_rejected_count": 0,
   "incomplete_count": 0,
   "completeness_pct": 0,

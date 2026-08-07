@@ -38,6 +38,8 @@
   "tier": null,
   "eligibility": null,
   "blocked_reason": null,
+  "primary_blocking_rule": null,
+  "secondary_blocking_rules": [],
   "eligible_after": null,
   "next_review_date": null,
   "permanent_filters_passed": null,
