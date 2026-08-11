@@ -7,7 +7,7 @@ Order status: No orders placed
 Run ID:
 Run status: complete / degraded / failed
 Data completeness:
-Strategy version: 2.0
+Strategy version: 2.0.1
 Strategy mode: options_primary
 
 ## Executive Decision
@@ -90,6 +90,16 @@ Preliminary scores below are underlying scores only. They are not options setup 
 
 Any options setup listed here is hypothetical unless an exact reviewed order is separately approved.
 
+`WATCH` means the underlying or setup is not fully qualified. `SHADOW_ONLY_QUALIFIED` means setup quality passed but account fit failed; those rows must be frozen in the Options Shadow Portfolio.
+
+## Options Shadow Portfolio
+
+| Underlying | Frozen Contract | Entry Midpoint | DTE | Delta | Setup Score | Account Fit Reason | Tracking |
+| --- | --- | ---: | ---: | ---: | ---: | --- | --- |
+|  |  |  |  |  |  |  | 1/5/10/20/30d |
+
+For each `SHADOW_ONLY_QUALIFIED` setup, freeze the exact contract and entry snapshot. Track option return, underlying return, MFE/MAE, stop/target status, thesis validity, expired-worthless status, and `SPY`/`QQQ` comparisons.
+
 ## Day Summary
 
 - Equity start / end: N/A
@@ -149,4 +159,4 @@ Next action:
 
 No buy or sell orders were placed or proposed.
 
-No live option orders were placed. Any option setup is hypothetical until exact-order approval.
+No live option orders were placed. Any option setup is hypothetical and may be researched or shadow-tracked without live-order review. Exact reviewed-order approval is required before any future live execution.

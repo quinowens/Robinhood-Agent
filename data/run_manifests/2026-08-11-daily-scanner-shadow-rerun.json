@@ -1,0 +1,82 @@
+{
+  "run_id": "2026-08-11-daily-scanner-shadow-rerun",
+  "pipeline_version": "2.0.1",
+  "strategy_version": "2.0.1",
+  "strategy_mode": "options_primary",
+  "status": "DEGRADED",
+  "run_trigger": "manual same-day rerun after shadow-only portfolio rule update",
+  "session_context": "research-only / proposal-only / shadow-trading",
+  "intended_workflow": "daily options-primary scanner dry run shadow rerun",
+  "started_at": "2026-08-11T19:19:08Z",
+  "first_tool_call_at": "2026-08-11T19:19:08Z",
+  "last_tool_call_at": "2026-08-11T19:21:51Z",
+  "completed_at": "2026-08-11T19:21:51Z",
+  "account_snapshot_id": "2026-08-11T19:19:08Z-agentic-8691",
+  "account_snapshot_as_of": "2026-08-11T19:19:08Z",
+  "account": {
+    "account_number_masked": "*****8691",
+    "type": "cash",
+    "agentic_allowed": true,
+    "broker_option_level": "option_level_2",
+    "strategy_enabled_options": ["LONG_CALL", "LONG_PUT"],
+    "account_value": 100.0,
+    "cash": 100.0,
+    "buying_power": 100.0,
+    "equity_value": 0.0,
+    "options_value": 0.0,
+    "open_equity_positions": 0,
+    "open_option_positions": 0,
+    "open_equity_orders_checked": true,
+    "open_equity_orders": 0,
+    "open_option_orders_checked": true,
+    "open_option_orders": 0
+  },
+  "tool_calls": [
+    {"tool": "get_accounts", "timestamp": "2026-08-11T19:19:08Z", "success": true, "retry_count": 0},
+    {"tool": "get_portfolio", "timestamp": "2026-08-11T19:19:08Z", "success": true, "retry_count": 0},
+    {"tool": "get_equity_positions", "timestamp": "2026-08-11T19:19:08Z", "success": true, "retry_count": 0},
+    {"tool": "get_option_positions", "timestamp": "2026-08-11T19:19:08Z", "success": true, "retry_count": 0},
+    {"tool": "get_equity_orders", "timestamp": "2026-08-11T19:21:35Z", "success": true, "retry_count": 0},
+    {"tool": "get_option_orders", "timestamp": "2026-08-11T19:21:35Z", "success": true, "retry_count": 0},
+    {"tool": "get_scans", "timestamp": "2026-08-11T19:19:08Z", "success": true, "retry_count": 0},
+    {"tool": "run_scan", "symbols_or_ids": ["26cdeb14-da13-493f-b0c6-783468971a16"], "timestamp": "2026-08-11T19:19:08Z", "success": true, "retry_count": 0},
+    {"tool": "run_scan", "symbols_or_ids": ["7068db65-2a47-470c-bde9-94d66f36b806"], "timestamp": "2026-08-11T19:19:08Z", "success": true, "retry_count": 0},
+    {"tool": "run_scan", "symbols_or_ids": ["737924f1-e94f-4ad4-ba98-6c12fcaafaa9"], "timestamp": "2026-08-11T19:19:08Z", "success": true, "retry_count": 0},
+    {"tool": "get_equity_quotes", "timestamp": "2026-08-11T19:21:35Z", "success": true, "retry_count": 0},
+    {"tool": "get_equity_fundamentals", "timestamp": "2026-08-11T19:21:12Z", "success": true, "retry_count": 0},
+    {"tool": "get_financials", "timestamp": "2026-08-11T19:21:12Z", "success": true, "retry_count": 0},
+    {"tool": "get_earnings_results", "timestamp": "2026-08-11T19:21:12Z", "success": true, "retry_count": 0},
+    {"tool": "get_indexes", "timestamp": "2026-08-11T19:19:08Z", "success": true, "retry_count": 0},
+    {"tool": "get_index_quotes", "timestamp": "2026-08-11T19:21:12Z", "success": true, "retry_count": 0},
+    {"tool": "get_option_chains", "timestamp": "2026-08-11T19:21:12Z", "success": true, "retry_count": 0},
+    {"tool": "get_option_instruments", "timestamp": "2026-08-11T19:21:29Z", "success": true, "retry_count": 0},
+    {"tool": "get_option_quotes", "timestamp": "2026-08-11T19:21:35Z", "success": true, "retry_count": 0}
+  ],
+  "scanner_resolution": {
+    "expected": 3,
+    "matched": 3,
+    "missing_or_mismatched": []
+  },
+  "scanner_results": {
+    "momentum_candidates_total": null,
+    "options_activity_radar_total": null,
+    "earnings_risk_radar_total": null,
+    "raw_rows_persisted": "scanner calls executed, but full result tables were transcript-truncated during same-day rerun; no row counts inferred"
+  },
+  "run_health": {
+    "expected_scanner_calls": 3,
+    "successful_scanner_calls": 3,
+    "failed_scanner_calls": 0,
+    "retried_calls": 0,
+    "deduplicated_decision_candidates": 2,
+    "terminal_candidates": 2,
+    "completeness_pct": 78,
+    "publish_decision": "degraded_same_day_shadow_rerun_do_not_publish_universe"
+  },
+  "state_file_decision": {
+    "current_universe": "unchanged",
+    "open_theses": "unchanged",
+    "rejected_candidates": "unchanged"
+  },
+  "execution_statement": "No live orders were placed, modified, canceled, reviewed, or submitted."
+}

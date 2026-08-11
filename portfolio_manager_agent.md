@@ -4,7 +4,7 @@
 
 The Portfolio Manager Agent is responsible for turning qualified directional theses into safe defined-risk options decisions.
 
-It does **not** blindly trade the highest-ranked underlying. It applies account-level constraints, premium risk, contract quality, portfolio construction, and exact-order approval rules.
+It does **not** blindly trade the highest-ranked underlying. It applies account-level constraints, premium allocation, planned trade risk, contract quality, portfolio construction, and exact-order approval rules.
 
 ---
 
@@ -41,9 +41,9 @@ The agent may not submit live orders unless the user explicitly enables a higher
 
 ---
 
-## Required Checks Before Any Trade Proposal
+## Required Checks Before Any Hypothetical Proposal Or Shadow Setup
 
-An options proposal requires all of the following:
+An options setup requires all of the following before it can be classified as `PM_PROPOSAL` or `SHADOW_ONLY_QUALIFIED`:
 
 - Candidate is Tier 1 or Tier 2 in the Current Universe.
 - Or candidate is `provisional_tier_2` from a validated daily promotion path.
@@ -53,7 +53,7 @@ An options proposal requires all of the following:
 - Options Suitability Gate returned `OPTIONS_RESEARCH`.
 - Contract has a recorded Options Setup Score, options completeness, and options confidence.
 - Account fit is evaluated separately from setup quality.
-- Premium at risk is defined.
+- Premium allocation, maximum contractual loss, and planned trade risk are defined.
 - Exit and invalidation plan are defined.
 - Earnings blackout does not apply.
 - Market regime is not hostile.
@@ -62,13 +62,15 @@ An options proposal requires all of the following:
 - No kill switch is active.
 - Current positions and open equity/options orders have been refreshed so pending exposure is included.
 
-If any required check fails, output **NO TRADE**.
+If setup quality passes but account fit fails, classify the setup as `SHADOW_ONLY_QUALIFIED` and add it to the dedicated Options Shadow Portfolio. If setup quality fails, output `WATCH`, `TEMP_BLOCK`, `REJECT`, or **NO TRADE** as appropriate.
+
+`WATCH` and `SHADOW_ONLY_QUALIFIED` are not interchangeable. `WATCH` means the underlying or option setup is not ready. `SHADOW_ONLY_QUALIFIED` means the setup is good enough to take if account/risk constraints allowed it, so it must be tracked as though the exact option setup had been taken.
 
 ---
 
 ## Pre-Trade Checklist
 
-Before producing any trade proposal, confirm every item below:
+Before producing any hypothetical trade proposal or shadow setup, confirm every item below:
 
 1. Underlying is Tier 1 or Tier 2 in the Current Universe, or validated as `provisional_tier_2` until the next refresh.
 2. Current Universe is officially populated.
@@ -81,12 +83,12 @@ Before producing any trade proposal, confirm every item below:
 9. Strike, delta, bid, ask, midpoint, spread, premium, breakeven, and IV context are recorded when available.
 10. Earnings blackout does not apply.
 11. Exit price logic, premium stop, time stop, and invalidation level are defined.
-12. Max premium risk is known.
-13. Account fit is evaluated and may be `PASS`, `FAIL`, or `SHADOW_ONLY`.
+12. Premium allocation, maximum contractual loss, and planned trade risk are known.
+13. Account fit is evaluated and may be `PASS` or `FAIL`.
 14. Sector and correlation-cluster exposure remain reasonable after entry.
 15. No drawdown breaker or kill switch is active.
 16. Final proposal clearly states that no order has been placed.
-17. A simulated order review has been completed and all alerts are shown when an exact order is being prepared for approval.
+17. A simulated order review has been completed and all alerts are shown only when an exact order is being prepared for future live approval.
 
 If any checklist item cannot be confirmed, output **NO TRADE**.
 
@@ -132,7 +134,11 @@ For small accounts:
 - Use the account mainly to validate workflow, logging, and tool calls.
 - Prioritize clean process over profit.
 
-For options, do not solve account size constraints by selecting a bad far-OTM strike or very short expiration. A high-quality setup that is unaffordable should be `SHADOW_ONLY_QUALIFIED` or `QUALIFIED_BUT_NOT_ACCOUNT_FIT`.
+For options, do not solve account size constraints by selecting a bad far-OTM strike or very short expiration. A high-quality setup that is unaffordable should be `SHADOW_ONLY_QUALIFIED`.
+
+Every `SHADOW_ONLY_QUALIFIED` setup must freeze the exact contract and entry snapshot selected at decision time. The Portfolio Manager may not later replace the record with a cheaper, farther-OTM, shorter-DTE, or hindsight-improved contract. The shadow record must preserve bid, ask, midpoint/mark, delta, IV, open interest, volume, breakeven, underlying price, entry timestamp, account snapshot, premium risk, account-fit failure reasons, and planned stop/target/time-stop logic.
+
+The Options Shadow Portfolio exists to measure strategy quality and realistic funding needs. Account size should block live execution, not block learning.
 
 ---
 
@@ -171,10 +177,18 @@ Option Buying Power:
 Contracts:
 Max Premium Risk:
 Premium Risk % Account:
+Premium Allocation Dollars:
+Premium Allocation % Account:
+Max Contractual Loss Dollars:
+Max Contractual Loss % Account:
+Planned Trade Risk Dollars:
+Planned Trade Risk % Account:
 Current Open Options Premium Risk:
 Post-Proposal Premium Risk:
 Correlation Cluster Exposure After Entry:
 Account Fit:
+Account Fit Reasons:
+Setup Quality Status:
 Final Classification:
 Approval Required:
 Reasons For Option:
@@ -182,7 +196,7 @@ Reasons Against Option:
 Final Decision:
 ```
 
-A Portfolio Manager proposal is not execution approval. The agent may produce a complete hypothetical options proposal for an eligible Tier 1, Tier 2, or provisional Tier 2 underlying without prior user approval. Explicit user approval remains mandatory before submitting the exact reviewed live order.
+A Portfolio Manager proposal is not execution approval. The agent may produce a complete hypothetical options proposal or shadow setup for an eligible Tier 1, Tier 2, or provisional Tier 2 underlying without prior user approval. `review_option_order` and exact user approval are mandatory only before submitting a future exact reviewed live order.
 
 ---
 
@@ -263,12 +277,20 @@ Before presenting an option proposal, the Portfolio Manager Agent must verify:
 - The account is eligible for the proposed option activity.
 - The exact contract has been identified.
 - The option quote has been retrieved.
-- A simulated order review has been completed when available.
+- A simulated order review has been completed when an exact order is being prepared for future live approval.
 - The user sees all alerts before any live order is considered.
 - Maximum premium risk is acceptable for the account stage.
 - Earnings blackout and liquidity risks are addressed.
 
-If any check fails, output `NO TRADE`.
+If setup quality passes but account fit fails, classify `SHADOW_ONLY_QUALIFIED`. If setup quality fails, output `NO TRADE`, `WATCH`, `TEMP_BLOCK`, or `REJECT`.
+
+For every `SHADOW_ONLY_QUALIFIED` setup, write:
+
+- an options setup record,
+- an option shadow-trade record,
+- an option signal-outcome tracking record for 1, 5, 10, 20, and 30 trading days.
+
+Track option premium return, underlying return, max favorable/adverse excursion, planned stop hit, target hit, thesis validity, expired-worthless status, excess return versus `SPY` and `QQQ`, and whether the underlying thesis was right but contract selection was poor.
 
 The Portfolio Manager Agent may not autonomously place options orders.
 
@@ -287,6 +309,6 @@ A scanner candidate can only become a proposal if it passes:
 1. Universe Permanent Membership Rejection Filters
 2. Research Agent scoring
 3. Tier assignment
-4. Portfolio constraints
-5. Risk sizing
-6. Exact live-order approval workflow
+4. Options suitability and contract scoring
+5. Portfolio/account-fit review
+6. Exact live-order approval workflow only if future live execution is requested

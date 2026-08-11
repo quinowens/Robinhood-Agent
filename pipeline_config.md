@@ -92,9 +92,12 @@ steps:
   - produce_proposal_report
   - record_option_setup_record
   - record_option_shadow_trade_when_qualified
+  - record_unaffordable_qualified_setup_in_options_shadow_portfolio
   - schedule_forward_outcome_tracking_for_all_terminal_candidates
   - schedule_option_outcome_tracking
 ```
+
+Same-day reruns, repairs, and schema backfills must not create new independent observations. Every options setup, option shadow trade, and option signal outcome must persist `signal_group_id`, `supersedes_setup_id`, and `is_canonical`. Analytics must use only canonical records; non-canonical repair/rerun rows may remain for audit but must not affect win rates, average returns, funding requirements, or conversion statistics.
 
 ---
 
@@ -113,7 +116,6 @@ statuses:
   - no_directional_edge
   - pm_proposal
   - shadow_only_qualified
-  - qualified_but_not_account_fit
   - blocked_by_earnings
   - blocked_by_risk
 ```
@@ -197,4 +199,19 @@ Every pipeline run must produce:
 
 Daily dry-run reports should follow `templates/daily_research_log.md` when possible and should be saved to `research_logs/YYYY-MM-DD-description.md`.
 
-Default output is **NO TRADE** unless a candidate passes underlying research, options suitability, contract scoring, account-fit review, and exact-order approval requirements. A qualified but unaffordable setup should be `SHADOW_ONLY_QUALIFIED`, not forced into a lower-quality contract.
+Daily option research should evaluate up to `shadow_options_research_top_n: 3` qualified finalists before stopping for account-fit failures. Keep `shadow_research_limit`, `live_proposal_limit`, and `live_position_limit` separate.
+
+`WATCH` and `SHADOW_ONLY_QUALIFIED` are intentionally different:
+
+- `WATCH` means the underlying, timing, direction, or option setup is not currently qualified.
+- `SHADOW_ONLY_QUALIFIED` means the underlying and selected option setup are good enough that the Portfolio Manager would take the setup if account/risk constraints allowed it.
+
+Every `SHADOW_ONLY_QUALIFIED` setup must be added to the dedicated Options Shadow Portfolio, not to a normal watchlist. The record must freeze the exact setup selected at decision time: underlying, direction, option instrument ID when available, expiration, strike, type, side, position effect, DTE, bid, ask, midpoint/mark, delta, IV, open interest, volume, breakeven, underlying price, option setup score, account snapshot, account-fit failure reasons, premium risk, and planned exit/stop/target rules. Do not later replace that frozen contract with a cheaper, farther-OTM, shorter-DTE, or hindsight-improved contract.
+
+Default live-execution output is **NO TRADE** unless a candidate passes underlying research, options suitability, contract scoring, account-fit review, exact reviewed-order review, and exact user approval. Research output is separate: a setup that qualifies but fails account fit is `SHADOW_ONLY_QUALIFIED` and is not forced into a lower-quality contract.
+
+Required account-dependent records must include `account_snapshot_id`, `account_snapshot_as_of`, `setup_quality_status`, `account_fit_status`, and `final_decision`. Material account-state changes during a run invalidate downstream account-fit decisions and require recomputation from the newest account snapshot.
+
+For each `SHADOW_ONLY_QUALIFIED` setup, schedule option outcome tracking for 1, 5, 10, 20, and 30 trading days. Tracking must preserve option premium return, underlying return, excess return versus `SPY` and `QQQ`, maximum favorable and adverse excursion for option and underlying, whether the planned premium stop would have triggered, whether the target would have hit, whether the underlying thesis stayed valid, whether the option expired worthless, and whether the underlying thesis was right but contract selection was poor.
+
+Run manifests must include UTC lifecycle fields `started_at`, `first_tool_call_at`, `last_tool_call_at`, and `completed_at`. `completed_at` must be null while status is `RUNNING`, then set after outputs and validation finish. Manifests must also record `run_trigger`, `session_context`, and `intended_workflow`.

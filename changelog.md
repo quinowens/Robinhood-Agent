@@ -1,5 +1,14 @@
 # Changelog
 
+## Version 2.0.1 — First-Run Hardening
+
+- Added explicit broker capability mapping for the Agentic account: Level 2 options, buying calls and puts, covered calls, cash-covered puts, and exercise enabled; spreads unavailable.
+- Separated broker permission from strategy permission. Strategy launch scope remains only `LONG_CALL` and `LONG_PUT`; covered calls, cash-secured puts, spreads, 0DTE, naked selling, and autonomous live execution stay disabled.
+- Fixed the proposal-vs-execution deadlock: research, scoring, hypothetical Portfolio Manager proposals, and shadow setups do not require `review_option_order`, exact user approval, or live-order readiness.
+- Standardized final decisions: setup quality PASS plus account fit PASS is `PM_PROPOSAL`; setup quality PASS plus account fit FAIL is `SHADOW_ONLY_QUALIFIED`; setup failures remain `WATCH`, `TEMP_BLOCK`, or `REJECT`.
+- Split long-option risk vocabulary into premium allocation, maximum contractual loss, planned trade risk, total open premium exposure, and correlated open premium exposure.
+- Added run-manifest timing, account snapshot, account capability, shadow-research-limit, and validation invariants for v2.0.1 records.
+
 ## Version 2.0 — Tactical Options Pivot
 
 - Pivoted the system from long-equity-primary to options-primary while preserving equity research as the Approved Underlying Universe.
@@ -8,7 +17,7 @@
 - Kept exact reviewed-order approval mandatory before any live order.
 - Added directional thesis classification and Options Suitability Gate before option-chain research.
 - Added separate Options Setup Score, Options Data Completeness, and Options Decision Confidence.
-- Added contract ranking, account-fit separation, premium-risk model, and `SHADOW_ONLY_QUALIFIED` / `QUALIFIED_BUT_NOT_ACCOUNT_FIT` semantics.
+- Added contract ranking, account-fit separation, premium-risk model, and initial shadow/account-fit semantics later hardened in v2.0.1.
 - Added options setup, option shadow-trade, and option signal-outcome templates and data directories.
 - Updated analyzer and validator for options-primary records and v2.0 safety invariants.
 - Preserved historical v1.x records and underlying validation metrics.

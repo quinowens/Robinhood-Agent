@@ -1,6 +1,82 @@
 {
   "blocked_candidate_opportunity_cost": {
+    "account_risk": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      }
+    },
     "blocked_by_earnings": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 15,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 15,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 15,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 15,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 15,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 15,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "blocked_by_extension": {
       "forward_10d_return": {
         "average": null,
         "count": 13,
@@ -38,40 +114,78 @@
         "observed_count": 0
       }
     },
-    "blocked_by_extension": {
+    "correlation_cluster_limit": {
       "forward_10d_return": {
         "average": null,
-        "count": 5,
+        "count": 1,
         "median": null,
         "observed_count": 0
       },
       "forward_20d_return": {
         "average": null,
-        "count": 5,
+        "count": 1,
         "median": null,
         "observed_count": 0
       },
       "forward_5d_return": {
         "average": null,
-        "count": 5,
+        "count": 1,
         "median": null,
         "observed_count": 0
       },
       "forward_vs_spy_20d": {
         "average": null,
-        "count": 5,
+        "count": 1,
         "median": null,
         "observed_count": 0
       },
       "mae_20d": {
         "average": null,
-        "count": 5,
+        "count": 1,
         "median": null,
         "observed_count": 0
       },
       "mfe_20d": {
         "average": null,
-        "count": 5,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "financial_quality_caution": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 1,
         "median": null,
         "observed_count": 0
       }
@@ -114,6 +228,82 @@
         "observed_count": 0
       }
     },
+    "outside_current_universe": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 4,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 4,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 4,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 4,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 4,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 4,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "penny_stock_or_microcap": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 2,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 2,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 2,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 2,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 2,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 2,
+        "median": null,
+        "observed_count": 0
+      }
+    },
     "rejected": {
       "forward_10d_return": {
         "average": null,
@@ -148,6 +338,44 @@
       "mfe_20d": {
         "average": null,
         "count": 2,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "shadow_research_limit": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 1,
         "median": null,
         "observed_count": 0
       }
@@ -189,48 +417,140 @@
         "median": null,
         "observed_count": 0
       }
+    },
+    "weak_relative_strength": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      }
     }
   },
-  "generated_at": "2026-08-07T01:07:29.293956+00:00",
+  "generated_at": "2026-08-10T21:02:06.314772+00:00",
   "month_filter": "2026-08",
   "options_confirmation_lift": {
     "alpha_lift": null,
     "confirmed_momentum": {
       "average": null,
-      "count": 0,
+      "count": 5,
       "median": null,
       "observed_count": 0
     },
     "unconfirmed_momentum": {
       "average": null,
-      "count": 6,
+      "count": 12,
       "median": null,
       "observed_count": 0
     }
   },
   "options_strategy": {
-    "by_delta_bucket": {},
-    "by_dte_bucket": {},
-    "by_option_type": {},
-    "by_options_setup_score_bucket": {},
-    "by_primary_blocking_rule": {},
-    "outcome_classifications": {},
-    "outcome_records": 0,
-    "setup_records": 0,
+    "account_fit_failures_by_reason": {
+      "max_contractual_loss_exceeds_account_equity": 1,
+      "premium_allocation_exceeds_account_equity": 1,
+      "small_account_mode": 1
+    },
+    "account_fit_status": {
+      "FAIL": 1
+    },
+    "by_delta_bucket": {
+      "035_050": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "by_dte_bucket": {
+      "30_45": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "by_option_type": {
+      "call": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "by_options_setup_score_bucket": {
+      "75-79": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "by_primary_blocking_rule": {
+      "account_risk": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "final_decisions": {
+      "SHADOW_ONLY_QUALIFIED": 1
+    },
+    "outcome_classifications": {
+      "unobserved": 1
+    },
+    "outcome_records": 1,
+    "pipeline_conversion": {
+      "qualified_account_fit_fail": 1
+    },
+    "setup_quality_status": {
+      "QUALIFIED": 1
+    },
+    "setup_records": 1,
     "shadow_trades": {
       "average_pnl_pct": null,
       "average_r_multiple": null,
       "closed_count": 0,
-      "count": 0,
+      "count": 1,
       "median_pnl_pct": null,
       "positive_rate": null
     }
   },
   "sample_health": {
     "conclusion_quality": "directional",
-    "joined_records": 28,
+    "joined_records": 49,
     "observed_30d_outcomes": 0,
-    "research_records": 28,
+    "research_records": 49,
     "signal_outcomes": 0
   },
   "scanner_sources": {
@@ -265,13 +585,27 @@
     "current_universe_tier_2": {
       "forward_30d_return": {
         "average": null,
-        "count": 8,
+        "count": 16,
         "median": null,
         "observed_count": 0
       },
       "forward_vs_spy_30d": {
         "average": null,
-        "count": 8,
+        "count": 16,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "current_universe_watchlist": {
+      "forward_30d_return": {
+        "average": null,
+        "count": 3,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_30d": {
+        "average": null,
+        "count": 3,
         "median": null,
         "observed_count": 0
       }
@@ -321,13 +655,13 @@
     "momentum_candidates": {
       "forward_30d_return": {
         "average": null,
-        "count": 9,
+        "count": 20,
         "median": null,
         "observed_count": 0
       },
       "forward_vs_spy_30d": {
         "average": null,
-        "count": 9,
+        "count": 20,
         "median": null,
         "observed_count": 0
       }
@@ -335,13 +669,13 @@
     "options_activity_radar": {
       "forward_30d_return": {
         "average": null,
-        "count": 7,
+        "count": 15,
         "median": null,
         "observed_count": 0
       },
       "forward_vs_spy_30d": {
         "average": null,
-        "count": 7,
+        "count": 15,
         "median": null,
         "observed_count": 0
       }
@@ -351,19 +685,19 @@
     "75-79": {
       "forward_30d_return": {
         "average": null,
-        "count": 5,
+        "count": 9,
         "median": null,
         "observed_count": 0
       },
       "forward_vs_qqq_30d": {
         "average": null,
-        "count": 5,
+        "count": 9,
         "median": null,
         "observed_count": 0
       },
       "forward_vs_spy_30d": {
         "average": null,
-        "count": 5,
+        "count": 9,
         "median": null,
         "observed_count": 0
       }
@@ -371,19 +705,19 @@
     "80-84": {
       "forward_30d_return": {
         "average": null,
-        "count": 6,
+        "count": 10,
         "median": null,
         "observed_count": 0
       },
       "forward_vs_qqq_30d": {
         "average": null,
-        "count": 6,
+        "count": 10,
         "median": null,
         "observed_count": 0
       },
       "forward_vs_spy_30d": {
         "average": null,
-        "count": 6,
+        "count": 10,
         "median": null,
         "observed_count": 0
       }
@@ -391,19 +725,19 @@
     "missing": {
       "forward_30d_return": {
         "average": null,
-        "count": 17,
+        "count": 30,
         "median": null,
         "observed_count": 0
       },
       "forward_vs_qqq_30d": {
         "average": null,
-        "count": 17,
+        "count": 30,
         "median": null,
         "observed_count": 0
       },
       "forward_vs_spy_30d": {
         "average": null,
-        "count": 17,
+        "count": 30,
         "median": null,
         "observed_count": 0
       }
@@ -415,10 +749,10 @@
     "median": 80.0,
     "percentile_90": 82.0,
     "percentile_95": 82.0,
-    "scored_count": 11,
+    "scored_count": 19,
     "tier_1_count": 0,
     "tier_1_threshold": 85,
-    "tier_2_count": 11,
+    "tier_2_count": 19,
     "tier_2_threshold": 75
   },
   "shadow_portfolio": {

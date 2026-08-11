@@ -149,7 +149,7 @@
     },
     {
       "symbol": "MARA",
-      "last_rejected_date": "2026-07-22",
+      "last_rejected_date": "2026-08-07",
       "sources": [
         "Options Activity Radar",
         "Earnings Risk Radar"
@@ -160,7 +160,21 @@
         "options_activity_alone_insufficient",
         "blocked_by_earnings"
       ],
-      "evidence": "Repeated Options Activity reject on 2026-07-09 and 2026-07-10; reappeared on 2026-07-22 in Options Activity Radar with about $4.7B market cap, $12.15 last price, about 98.2M volume, relative options volume above 2.5, and crypto adjacency; also appeared in Earnings Risk Radar, blocking new entries."
+      "evidence": "Repeated Options Activity reject on 2026-07-09 and 2026-07-10; reappeared on 2026-07-22 in Options Activity Radar with about $4.7B market cap, $12.15 last price, about 98.2M volume, relative options volume above 2.5, and crypto adjacency; reappeared again on 2026-08-07 with about $4.06B market cap, $10.21 last price, relative options volume above 3.3, and no qualifying independent universe or quality confirmation."
+    },
+    {
+      "symbol": "HTZ",
+      "last_rejected_date": "2026-08-07",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "reason_codes": [
+        "penny_stock_or_microcap",
+        "low_price",
+        "high_volatility",
+        "options_activity_alone_insufficient"
+      ],
+      "evidence": "Appeared in the 2026-08-06 Options Activity Radar near the top with low price and sub-$1B market cap, then reappeared on 2026-08-07 with about $818M market cap from fundamentals, $2.275 latest quote, relative options volume above 3.6, implied volatility about 1.9, negative PE, and no qualifying Current Universe or quality confirmation."
     },
     {
       "symbol": "TTGT",

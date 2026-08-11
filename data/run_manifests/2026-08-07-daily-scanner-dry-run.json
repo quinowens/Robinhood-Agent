@@ -1,0 +1,184 @@
+{
+  "run_id": "2026-08-07-daily-scanner-dry-run",
+  "pipeline_version": "2.0.1",
+  "mode": "research-only / proposal-only / shadow-trading",
+  "status": "DEGRADED",
+  "run_trigger": "manual",
+  "session_context": "codex_desktop_robinhood_agent_daily_scanner_dry_run",
+  "intended_workflow": "daily_options_primary_scanner",
+  "started_at": "2026-08-07T15:34:55Z",
+  "first_tool_call_at": "2026-08-07T15:34:55Z",
+  "last_tool_call_at": "2026-08-07T15:39:57Z",
+  "completed_at": "2026-08-07T15:45:00Z",
+  "started_at_ct": "2026-08-07 10:34:55 CDT",
+  "completed_at_ct": "2026-08-07 10:45:00 CDT",
+  "shadow_options_research_top_n": 3,
+  "shadow_research_limit": 3,
+  "live_proposal_limit": 1,
+  "live_position_limit": 0,
+  "account_snapshots": [
+    {
+      "account_snapshot_id": "acct-2026-08-07T15:34:55Z-agentic-8691",
+      "account_snapshot_as_of": "2026-08-07T15:34:55Z",
+      "account_number_last4": "8691",
+      "nickname": "Agentic",
+      "type": "cash",
+      "agentic_allowed": true,
+      "option_level": "pending_user_app_approval",
+      "total_value": "100",
+      "cash": "100",
+      "buying_power": "100.0000",
+      "equity_positions": 0,
+      "option_positions": 0
+    },
+    {
+      "account_snapshot_id": "acct-2026-08-07T15:39:57Z-agentic-8691",
+      "account_snapshot_as_of": "2026-08-07T15:39:57Z",
+      "account_number_last4": "8691",
+      "nickname": "Agentic",
+      "type": "cash",
+      "agentic_allowed": true,
+      "option_level": "option_level_2",
+      "options_upgrade_url_available": false,
+      "total_value": "100",
+      "cash": "100",
+      "buying_power": "100.0000",
+      "equity_positions": 0,
+      "option_positions": 0,
+      "open_equity_orders_checked_states": ["queued", "confirmed", "partially_filled"],
+      "open_option_orders_checked_states": ["queued", "confirmed", "partially_filled"]
+    }
+  ],
+  "account_capability_map": {
+    "account_number_last4": "8691",
+    "source": "broker_account_capability_confirmation",
+    "broker_options_capabilities": {
+      "options_level": "level_2",
+      "buy_calls": true,
+      "buy_puts": true,
+      "covered_calls": true,
+      "cash_covered_puts": true,
+      "exercise_options": true,
+      "spreads": false
+    },
+    "strategy_options_capabilities": {
+      "enabled_structures": ["LONG_CALL", "LONG_PUT"],
+      "covered_calls_enabled": false,
+      "cash_secured_puts_enabled": false,
+      "spreads_enabled": false,
+      "autonomous_live_execution_enabled": false
+    }
+  },
+  "account": {
+    "account_number_last4": "8691",
+    "nickname": "Agentic",
+    "type": "cash",
+    "agentic_allowed": true,
+    "option_level": "option_level_2",
+    "options_upgrade_url_available": false,
+    "total_value": "100",
+    "cash": "100",
+    "buying_power": "100.0000",
+    "equity_positions": 0,
+    "option_positions": 0,
+    "open_equity_orders_checked_states": ["queued", "confirmed", "partially_filled"],
+    "open_option_orders_checked_states": ["queued", "confirmed", "partially_filled"]
+  },
+  "scanner_resolution": {
+    "status": "matched",
+    "configured_scans": [
+      {
+        "name": "Momentum Candidates",
+        "expected_scan_id": "26cdeb14-da13-493f-b0c6-783468971a16",
+        "matched_title": "Robinhood Agent - Momentum Candidates",
+        "matched_scan_id": "26cdeb14-da13-493f-b0c6-783468971a16"
+      },
+      {
+        "name": "Options Activity Radar",
+        "expected_scan_id": "7068db65-2a47-470c-bde9-94d66f36b806",
+        "matched_title": "Robinhood Agent - Options Activity Radar",
+        "matched_scan_id": "7068db65-2a47-470c-bde9-94d66f36b806"
+      },
+      {
+        "name": "Earnings Risk Radar",
+        "expected_scan_id": "737924f1-e94f-4ad4-ba98-6c12fcaafaa9",
+        "matched_title": "Robinhood Agent - Earnings Risk Radar",
+        "matched_scan_id": "737924f1-e94f-4ad4-ba98-6c12fcaafaa9"
+      }
+    ]
+  },
+  "call_manifest": [
+    {"tool": "get_accounts", "requested": "all accounts", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_portfolio", "requested": "account ...8691", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_equity_positions", "requested": "account ...8691", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_option_positions", "requested": "account ...8691 nonzero", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_equity_orders", "requested": "queued, confirmed, partially_filled", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_option_orders", "requested": "queued, confirmed, partially_filled", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_option_level_upgrade_info", "requested": "account ...8691 before app approval", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_accounts", "requested": "fresh verification after user app approval", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_scans", "requested": "saved scanners", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "run_scan", "requested": "Momentum Candidates", "status": "success_degraded_persistence", "retry_count": 0, "missing_fields": ["full scanner row export not preserved in transcript"]},
+    {"tool": "run_scan", "requested": "Options Activity Radar", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "run_scan", "requested": "Earnings Risk Radar", "status": "success_degraded_persistence", "retry_count": 0, "missing_fields": ["full scanner row export not preserved in transcript"]},
+    {"tool": "get_equity_quotes", "requested": "benchmarks, Current Universe Tier 2, and scanner leaders", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_equity_fundamentals", "requested": "Current Universe Tier 2 and scanner leaders", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_financials", "requested": "Current Universe Tier 2 and scanner leaders", "status": "partial", "retry_count": 0, "missing_fields": ["TEAM financials null", "HALO financials null", "SPCX financials null"]},
+    {"tool": "get_earnings_results", "requested": "Current Universe Tier 2 and scanner leaders", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_indexes", "requested": "SPX, NDX, DJI, RUT", "status": "partial", "retry_count": 0, "missing_fields": ["DJI not returned", "RUT restricted"]},
+    {"tool": "get_index_quotes", "requested": "SPX, NDX", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_option_chains", "requested": "NVDA", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_option_instruments", "requested": "NVDA 2026-09-18 and 2026-10-16 calls near spot", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "get_option_quotes", "requested": "six NVDA candidate calls", "status": "success", "retry_count": 0, "missing_fields": []},
+    {"tool": "review_option_order", "requested": "none; not required for shadow-only research", "status": "not_called", "retry_count": 0, "missing_fields": []},
+    {"tool": "place_option_order", "requested": "forbidden in this run", "status": "not_called", "retry_count": 0, "missing_fields": []}
+  ],
+  "run_health": {
+    "status": "degraded",
+    "expected_scanner_calls": 3,
+    "successful_scanner_calls": 3,
+    "failed_scanner_calls": 0,
+    "retried_calls": 0,
+    "raw_rows_persisted": "visible rows plus scanner totals",
+    "deduplicated_decision_candidates": 31,
+    "terminal_candidates": 31,
+    "completeness_percentage": 86,
+    "degradation_reasons": [
+      "Large Momentum and Earnings Risk scanner payloads could not be fully preserved from the tool transcript.",
+      "RUT quote was restricted and DJI did not resolve through get_indexes.",
+      "Some financial rows returned null.",
+      "No equity historical tool was exposed in the callable Robinhood toolset during this run, so trend calculations used prior universe scores plus live quotes/fundamentals instead of fresh raw history."
+    ]
+  },
+  "portfolio_manager": {
+    "setup_quality_status": "QUALIFIED",
+    "account_fit": "FAIL",
+    "account_fit_reasons": ["premium_allocation_exceeds_account_equity", "max_contractual_loss_exceeds_account_equity", "small_account_mode"],
+    "option_buying_power": "100.0000",
+    "option_level": "option_level_2",
+    "current_open_options_premium_risk": 0,
+    "premium_allocation_dollars": 977.5,
+    "premium_allocation_pct_account": 9.775,
+    "max_contractual_loss_dollars": 977.5,
+    "max_contractual_loss_pct_account": 9.775,
+    "planned_trade_risk_dollars": 977.5,
+    "planned_trade_risk_pct_account": 9.775,
+    "planned_trade_risk_source": "default_max_contractual_loss",
+    "post_proposal_premium_risk": 977.5,
+    "primary_blocking_rule": "account_risk",
+    "final_decision": "SHADOW_ONLY_QUALIFIED",
+    "notes": [
+      "Agentic account now has option_level_2 after fresh verification.",
+      "Best scoped NVDA contract candidate had $977.50 premium allocation and maximum contractual loss for one contract, far above the $100 account.",
+      "No duplicate equity or option exposure was found.",
+      "No order review was required because no live execution was requested."
+    ]
+  },
+  "decision": "SHADOW_ONLY_QUALIFIED",
+  "state_file_decision": {
+    "current_universe": "unchanged",
+    "open_theses": "unchanged",
+    "rejected_candidates": "updated for MARA and HTZ repeated permanent rejects",
+    "account_capabilities": "created from broker confirmation and strategy scope"
+  },
+  "orders_placed_modified_or_canceled": false
+}

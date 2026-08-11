@@ -37,9 +37,25 @@ Approval to create or change one watchlist or scan does not grant standing permi
 
 `review_equity_order` and `review_option_order` are simulations and must precede any corresponding live order. Display all warnings and the exact reviewed payload. A review does not authorize placement.
 
+`review_option_order` is not required for research, contract scoring, hypothetical Portfolio Manager proposals, or option shadow-tracking records. It is required only when the user later asks to prepare a specific live option order for possible execution.
+
 `place_equity_order` and `place_option_order` are live financial actions. They require the operating mode and exact-order approval required by `system_prompt.md`. Never silently alter symbol, side, quantity, order type, limit price, time in force, option contract, or position effect after approval; material changes require a new review and approval.
 
-For v2.0 options, only single-leg long calls and long puts may reach review by default. No 0DTE, naked option selling, cash-secured puts, covered calls, or multi-leg spreads are enabled unless a later source-of-truth release explicitly adds support and validation.
+For v2.0.1 options, only single-leg long calls and long puts may reach review by default. No 0DTE, naked option selling, cash-secured puts, covered calls, or multi-leg spreads are enabled unless a later source-of-truth release explicitly adds support and validation.
+
+## Broker Capability vs Strategy Permission
+
+Account preflight must record broker-reported account options capability and keep it separate from strategy permission.
+
+Current Agentic account capability source: `broker_account_capability_confirmation`.
+
+- Broker options level: `level_2`
+- Broker permitted: buying calls, buying puts, selling covered calls, selling cash-covered puts, exercising options
+- Broker unavailable: buying and selling spreads
+- Strategy enabled: `LONG_CALL`, `LONG_PUT`
+- Strategy disabled despite broker permission: covered calls, cash-secured puts, spreads, 0DTE, naked option selling, autonomous live options execution
+
+Broker permission never expands strategy scope by itself.
 
 `cancel_equity_order` and `cancel_option_order` also change account state. Confirm the exact open order and obtain explicit user approval unless the user has already issued a clear cancellation instruction identifying it.
 

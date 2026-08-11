@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This file defines the core v2.0 options strategy.
+This file defines the core v2.0.1 options strategy.
 
 Equities remain the research substrate. Options are the primary proposed trade expression when a qualified underlying has a clear directional thesis and a liquid, defined-risk contract can express that thesis efficiently.
 
@@ -14,7 +14,7 @@ The goal is selective asymmetric exposure with defined premium risk, not high tr
 
 **Mode:** Proposal-only / shadow-trading by default
 
-The agent may research underlyings, retrieve option chains, retrieve option instruments, retrieve option quotes, retrieve option historicals when useful, review simulated option orders, and present hypothetical option proposals.
+The agent may research underlyings, retrieve option chains, retrieve option instruments, retrieve option quotes, retrieve option historicals when useful, and present hypothetical option proposals or shadow records. Simulated option-order review is reserved for future live-execution preparation.
 
 The agent may **not** place live option orders unless the user explicitly approves the exact reviewed order after seeing:
 
@@ -27,9 +27,11 @@ The agent may **not** place live option orders unless the user explicitly approv
 - Earnings/event risk
 - Options setup score, completeness, and confidence
 - Account fit status
-- Pre-trade alerts from `review_option_order`
+- Pre-trade alerts from `review_option_order` when a future live order is being prepared
 
 No standing permission exists for autonomous options execution.
+
+Research, scoring, hypothetical Portfolio Manager proposals, and shadow tracking do not require `review_option_order`, exact user approval, or live-order readiness.
 
 ---
 
@@ -52,6 +54,8 @@ Disabled in v2.0:
 - Earnings lottery trades
 
 Future schemas may support call debit spreads and put debit spreads, but they are not enabled by default.
+
+Broker capability is recorded separately from strategy permission. The Agentic account is broker-approved for Level 2 options capability: buying calls, buying puts, selling covered calls, selling cash-covered puts, and exercising options. Spreads are broker-unavailable. Covered calls and cash-secured puts remain strategy-disabled.
 
 ---
 
@@ -95,7 +99,7 @@ Reject or block options research when:
 - Thesis horizon is undefined.
 - Earnings/event risk is unresolved.
 - Underlying liquidity or tradability is insufficient.
-- Account options access cannot be verified.
+- Account options access cannot be verified for account-fit classification.
 - No plausible expiration window has enough DTE.
 - Long premium would introduce obviously unacceptable IV/event risk.
 - Critical contract, account, or risk data is missing.
@@ -213,34 +217,68 @@ Statuses:
 
 - `PM_PROPOSAL`
 - `SHADOW_ONLY_QUALIFIED`
-- `QUALIFIED_BUT_NOT_ACCOUNT_FIT`
 - `WATCH`
 - `TEMP_BLOCK`
 - `REJECT`
 
 Rules:
 
-- `QUALIFIED_BUT_NOT_ACCOUNT_FIT` must never become a live order proposal.
-- It should be shadow-tracked.
+- Setup quality PASS plus account fit PASS becomes `PM_PROPOSAL`.
+- Setup quality PASS plus account fit FAIL becomes `SHADOW_ONLY_QUALIFIED`.
+- Setup failures become `WATCH`, `TEMP_BLOCK`, or `REJECT`.
+- Deprecated account-fit failure labels must not be written by v2.0.1 records.
+- `SHADOW_ONLY_QUALIFIED` must be recorded in the dedicated Options Shadow Portfolio with the exact selected setup frozen at signal time.
 - Do not solve affordability by selecting a lower-quality far-OTM or short-DTE contract.
+- Account fit must not rewrite Current Universe membership, tier, canonical eligibility, research score, or directional thesis.
+
+`WATCH` is not a shadow portfolio decision. Use `WATCH` when the stock is interesting but the underlying, timing, direction, or contract setup is not fully qualified. Use `SHADOW_ONLY_QUALIFIED` only when setup quality is good enough to take if account/risk constraints allowed it.
+
+The frozen shadow record must include the exact option instrument ID when available, expiration, strike, type, DTE, bid, ask, midpoint or mark, delta, implied volatility, open interest, volume, breakeven, underlying price, selected-entry timestamp, option setup score, account snapshot, account-fit failure reasons, and planned premium stop, target, time stop, and invalidation rules.
+
+Persist:
+
+- `signal_group_id`
+- `supersedes_setup_id`
+- `is_canonical`
+- `setup_quality_status`
+- `account_fit_status`
+- `account_fit_reasons`
+- `final_decision`
+- `account_snapshot_id`
+- `account_snapshot_as_of`
+- `option_shadow_trade_id` when `final_decision` is `SHADOW_ONLY_QUALIFIED`
+- `option_signal_outcome_id` for forward tracking
 
 ---
 
 ## Premium Risk
 
-Long-option risk is measured by premium at risk.
+Long-option risk is measured by premium allocation and maximum contractual loss.
 
 Every proposal must include:
 
 - Premium per contract
 - Number of contracts
-- Max premium risk
-- Max premium risk as percentage of account
+- Premium allocation dollars
+- Premium allocation as percentage of account
+- Maximum contractual loss dollars
+- Maximum contractual loss as percentage of account
+- Planned trade risk dollars
+- Planned trade risk as percentage of account
 - Current open options premium risk
 - Post-proposal premium risk
 - Correlation-cluster exposure after proposal
 
-Maximum contractual loss is normally premium paid plus applicable fees, but every setup still needs planned exits.
+For single-leg long calls and puts, maximum contractual loss equals the premium allocation plus applicable fees. If there is no reproducible planned-exit calculation, planned trade risk defaults to maximum contractual loss; never invent a smaller planned-risk value.
+
+Current launch rule: planned trade risk for single-leg long calls and long puts is `default_max_contractual_loss` unless a future source-of-truth document defines a deterministic exit method with reproducible stop-price calculation, stop validity conditions, and outcome-review handling. A "50% premium stop" or any other heuristic may be discussed as a candidate rule, but it must not be written into `planned_trade_risk_dollars` or used for account-fit sizing until formally adopted.
+
+Keep these caps distinct:
+
+- `max_premium_allocation_pct_account`
+- `max_planned_trade_risk_pct_account`
+- `max_total_open_premium_exposure_pct_account`
+- `max_correlated_open_premium_exposure_pct_account`
 
 ---
 
@@ -295,6 +333,12 @@ RISK
 Contracts:
 Max Premium Risk:
 Premium Risk % of Account:
+Premium Allocation Dollars:
+Premium Allocation % Account:
+Max Contractual Loss Dollars:
+Max Contractual Loss % Account:
+Planned Trade Risk Dollars:
+Planned Trade Risk % Account:
 Current Open Options Premium Risk:
 Post-Proposal Premium Risk:
 Correlation Cluster:
@@ -303,11 +347,11 @@ ACCOUNT FIT
 PASS / FAIL
 
 FINAL CLASSIFICATION
-PM_PROPOSAL / SHADOW_ONLY_QUALIFIED / QUALIFIED_BUT_NOT_ACCOUNT_FIT / WATCH / TEMP_BLOCK / REJECT
+PM_PROPOSAL / SHADOW_ONLY_QUALIFIED / WATCH / TEMP_BLOCK / REJECT
 
 EXECUTION
 HYPOTHETICAL PROPOSAL - NOT SUBMITTED.
-Explicit approval of the exact reviewed order is required before any live execution.
+No live-order review is required for research or shadow tracking. Exact reviewed-order approval is required before any future live execution.
 ```
 
 If any critical field is missing, output `NO TRADE` or the appropriate blocked/rejected classification.

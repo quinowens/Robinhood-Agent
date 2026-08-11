@@ -225,4 +225,6 @@ Options are currently research-only unless:
 3. The user approves the specific reviewed order.
 4. The trade obeys premium-risk caps.
 
-No autonomous options execution. `review_option_order` is a simulation/review step only.
+No autonomous options execution. `review_option_order` is a simulation/review step only for future live execution preparation; it is not required for scanner research, contract scoring, hypothetical proposals, or shadow tracking.
+
+Scanner-driven option-chain work should stop at the configured `shadow_options_research_top_n` qualified finalists, currently 3, instead of stopping after the first account-fit failure. Account-fit failures should be recorded as account constraints, not as direction signals or universe demotions.

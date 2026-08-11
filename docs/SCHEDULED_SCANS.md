@@ -22,6 +22,8 @@ Purpose:
 - Pull option-chain data only for qualified finalists.
 - Rank long-call / long-put contracts.
 - Record options setup, option shadow, and option outcome tracking where applicable.
+- For every setup where option setup quality passes but account fit fails, classify `SHADOW_ONLY_QUALIFIED` and add the exact frozen contract to the Options Shadow Portfolio.
+- Keep `WATCH` separate from `SHADOW_ONLY_QUALIFIED`; do not add merely interesting stocks to the shadow portfolio.
 - Report primary and secondary blocking rules.
 
 ## Weekly
@@ -38,6 +40,8 @@ Purpose:
 - Review recurring underlyings, provisional Tier 2 candidates, and expiring temporary blocks.
 - Evaluate directional thesis quality, options suitability, contract-selection quality, and account-fit misses.
 - Review option shadow outcomes by call/put, DTE, delta, spread, IV/premium, scanner source, and market regime where sample size allows.
+- Review 1/5/10/20/30-day option and underlying performance for every `SHADOW_ONLY_QUALIFIED` setup, including stop/target flags and thesis-right versus contract-right classification.
+- Summarize account-fit failures and preferred-contract premium distribution to estimate realistic account funding needs.
 - Keep primary blocking-rule attribution separate from secondary diagnostics.
 
 ## Monthly
@@ -55,6 +59,7 @@ Purpose:
 - Evaluate options strategy evidence separately from underlying universe evidence.
 - Calibrate Underlying Thesis Score and Options Setup Score distributions.
 - Review option contract-selection rules and account-fit constraints without changing thresholds from small samples.
+- Report how many qualified setups failed account fit, the median and 75th percentile preferred-contract premium, and estimated account size needed to participate under the current premium-risk caps.
 
 ## Path Compatibility
 

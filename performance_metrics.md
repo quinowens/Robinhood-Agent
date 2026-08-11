@@ -10,7 +10,7 @@ If a metric cannot be computed, report it as `N/A`. Never fabricate a value.
 
 ## Evaluation Layers
 
-Version 2.0 tracks underlying research, options setup quality, scanner-pipeline quality, market-regime context, correlation risk, and shadow-portfolio evidence:
+Version 2.0.1 tracks underlying research, options setup quality, scanner-pipeline quality, market-regime context, correlation risk, and shadow-portfolio evidence:
 
 ### Research Layer
 
@@ -18,13 +18,19 @@ Measures whether the Research Agent is finding good candidates.
 
 ### Portfolio Layer
 
-Measures whether the Portfolio Manager Agent is making good account-fit, premium-risk, and correlation decisions.
+Measures whether the Portfolio Manager Agent is making good account-fit, premium-allocation, planned-risk, and correlation decisions.
 
 ### Options Setup Layer
 
 Measures whether contract selection adds value beyond the underlying thesis.
 
 Separating the two prevents confusing a good stock idea with a bad portfolio decision.
+
+### Options Shadow Portfolio Layer
+
+Measures setups that were genuinely qualified but could not be taken responsibly because of account, buying-power, premium-risk, drawdown, or concentration constraints. These are not normal watchlist items.
+
+`WATCH` means the underlying or option setup was not ready. `SHADOW_ONLY_QUALIFIED` means setup quality passed and account fit failed. The system must freeze the exact selected option setup and score it as though it had been taken.
 
 ---
 
@@ -88,7 +94,16 @@ Every options idea reviewed by the system should produce one row, even if reject
 | `strike` | float | |
 | `estimated_premium` | float | Per contract |
 | `contracts` | int | |
-| `max_premium_risk` | float | Required for long premium trades |
+| `premium_allocation_dollars` | float | `premium_per_contract * 100 * contracts` |
+| `premium_allocation_pct_account` | float | Premium allocation divided by account equity |
+| `max_contractual_loss_dollars` | float | Equal to premium allocation for long options |
+| `max_contractual_loss_pct_account` | float | Maximum contractual loss divided by account equity |
+| `planned_trade_risk_dollars` | float | Reproducible exit-risk amount; defaults to max contractual loss if unavailable |
+| `planned_trade_risk_pct_account` | float | Planned trade risk divided by account equity |
+| `setup_quality_status` | enum | `QUALIFIED`, `WATCH`, `TEMP_BLOCK`, or `REJECT` |
+| `account_fit_status` | enum | `PASS`, `FAIL`, or `NOT_EVALUATED` |
+| `final_decision` | enum | `PM_PROPOSAL`, `SHADOW_ONLY_QUALIFIED`, `WATCH`, `TEMP_BLOCK`, `REJECT`, `STOCK_THESIS_ONLY`, `NO_DIRECTIONAL_EDGE` |
+| `account_snapshot_id` | str | Account snapshot used for account-fit decision |
 | `underlying_research_score` | float | 0-100 |
 | `confidence` | float | 0-100 |
 | `liquidity_notes` | str | Bid/ask, volume, open interest when available |
@@ -98,6 +113,66 @@ Every options idea reviewed by the system should produce one row, even if reject
 | `reason` | str | |
 
 Options proposals should be evaluated separately from equity trades so premium risk and expiration behavior do not distort equity metrics.
+
+## Options Shadow Portfolio Schema
+
+Every `SHADOW_ONLY_QUALIFIED` setup must create a shadow record with a frozen entry snapshot:
+
+| Field | Type | Notes |
+| --- | --- | --- |
+| `option_shadow_trade_id` | str | Stable ID for the frozen shadow setup |
+| `option_setup_id` | str | Links to the options setup record |
+| `shadow_portfolio` | str | Must be `options_shadow_portfolio` |
+| `shadow_reason` | str | Usually account or premium-risk constraint |
+| `underlying` | str | |
+| `directional_thesis` | enum | `bullish` or `bearish` |
+| `option_type` | enum | `call` or `put` |
+| `expiration` | date | |
+| `strike` | float | |
+| `dte_at_entry` | int | |
+| `entry_snapshot_at` | datetime | Time the contract was selected |
+| `entry_premium` | float | Midpoint/mark used for performance |
+| `entry_bid` / `entry_ask` / `entry_midpoint` | float | Quote snapshot |
+| `entry_delta` | float | When available |
+| `entry_implied_volatility` | float | When available |
+| `entry_open_interest` / `entry_volume` | int | When available |
+| `entry_breakeven` | float | When available |
+| `underlying_price_at_entry` | float | |
+| `options_setup_score` | float | |
+| `account_snapshot_id` | str | |
+| `account_fit_status` | enum | `FAIL` for unaffordable qualified setups |
+| `account_fit_reasons` | list[str] | |
+| `premium_allocation_dollars` | float | |
+| `max_contractual_loss_dollars` | float | |
+| `planned_trade_risk_dollars` | float | |
+| `premium_stop_rule` | str | Shadow stop logic; no live order |
+| `target_logic` | str | Shadow target logic; no live order |
+| `time_stop` | str | |
+| `underlying_invalidation_level` | str | |
+
+Do not revise a frozen shadow setup to a cheaper or hindsight-improved contract. Later records may update outcomes only.
+
+## Options Shadow Outcome Schema
+
+Track each shadow setup at 1, 5, 10, 20, and 30 trading days:
+
+| Field | Type | Notes |
+| --- | --- | --- |
+| `option_forward_1d_return` / `5d` / `10d` / `20d` / `30d` | float | Premium return from frozen entry |
+| `underlying_forward_1d_return` / `5d` / `10d` / `20d` / `30d` | float | Underlying return from frozen entry |
+| `underlying_forward_vs_spy_*` | float | Underlying excess return versus `SPY` |
+| `underlying_forward_vs_qqq_*` | float | Underlying excess return versus `QQQ` |
+| `option_mfe_20d` / `option_mae_20d` | float | Option max favorable/adverse excursion |
+| `underlying_mfe_20d` / `underlying_mae_20d` | float | Underlying max favorable/adverse excursion |
+| `planned_stop_triggered` | bool | Whether the planned premium stop would have triggered |
+| `planned_target_hit` | bool | Whether the planned target would have hit |
+| `thesis_validity_status` | enum | `valid`, `invalidated`, or `unclear` |
+| `expired_worthless` | bool | True only after expiration when applicable |
+| `directional_thesis_result` | enum | `right`, `wrong`, or `insufficient_data` |
+| `contract_selection_result` | enum | `good`, `poor`, or `insufficient_data` |
+| `option_vs_underlying_result` | enum | e.g. `option_outperformed`, `underlying_better`, `both_poor` |
+
+This distinction is required: an underlying thesis can be right while contract selection is poor, such as when long premium underperforms the stock because IV was too expensive.
 
 ## Options Setup Metrics
 
@@ -115,6 +190,7 @@ Track v2.0 options records separately from equity/underlying records.
 | Spread/liquidity bucket performance | Tests whether liquidity rules prevent losses |
 | Account-fit failures | Measures qualified setups that the current account cannot safely take |
 | Thesis/contract classification | Distinguishes right thesis from poor contract choice |
+| Funding requirement distribution | Estimates capital needed to participate in qualified setups |
 
 Outcome classes:
 
@@ -122,6 +198,8 @@ Outcome classes:
 - `THESIS_RIGHT_CONTRACT_POOR`
 - `THESIS_WRONG`
 - `INSUFFICIENT_DATA`
+
+Funding-need analytics should report the count of qualified setups, count and percentage failing account fit, median preferred-contract premium, 75th percentile preferred-contract premium, and the account size needed to satisfy current premium-risk caps for median and 75th percentile setups.
 
 Options-specific performance must not be merged into equity performance in a way that hides expiration, spread, or premium-risk behavior.
 

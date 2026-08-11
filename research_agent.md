@@ -287,7 +287,9 @@ Options research must answer:
 - Is premium risk acceptable?
 - Is earnings risk acceptable?
 
-Options research may be sent to the Portfolio Manager Agent only after the separate Options Setup Score, completeness, confidence, and account-fit status are recorded.
+Options research may be sent to the Portfolio Manager Agent only after the separate Options Setup Score, completeness, confidence, setup-quality status, and account-fit status are recorded.
+
+Account fit must not rewrite underlying eligibility, Current Universe membership, tier recommendation, research score, or directional thesis. A qualifying setup that fails account fit remains a qualified setup and is classified by the Portfolio Manager as `SHADOW_ONLY_QUALIFIED`.
 
 
 ---

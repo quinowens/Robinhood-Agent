@@ -1,0 +1,39 @@
+{
+  "schema_version": "2.0.1",
+  "last_updated_at": "2026-08-07T15:39:57Z",
+  "account_capabilities": [
+    {
+      "account_number_last4": "8691",
+      "nickname": "Agentic",
+      "broker_options_capabilities": {
+        "options_level": "level_2",
+        "buy_calls": true,
+        "buy_puts": true,
+        "covered_calls": true,
+        "cash_covered_puts": true,
+        "exercise_options": true,
+        "spreads": false,
+        "last_confirmed_at": "2026-08-07T15:39:57Z",
+        "source": "broker_account_capability_confirmation"
+      },
+      "strategy_options_capabilities": {
+        "enabled_structures": ["LONG_CALL", "LONG_PUT"],
+        "disabled_structures": [
+          "COVERED_CALL",
+          "CASH_SECURED_PUT",
+          "CALL_DEBIT_SPREAD",
+          "PUT_DEBIT_SPREAD",
+          "0DTE",
+          "NAKED_SHORT_CALL",
+          "NAKED_SHORT_PUT",
+          "AUTONOMOUS_LIVE_OPTIONS_EXECUTION"
+        ],
+        "covered_calls_enabled": false,
+        "cash_secured_puts_enabled": false,
+        "spreads_enabled": false,
+        "autonomous_live_execution_enabled": false,
+        "source": "robinhood_agent_strategy_v2_0_1"
+      }
+    }
+  ]
+}

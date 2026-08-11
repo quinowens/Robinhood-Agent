@@ -12,10 +12,11 @@ This project is designed for Robinhood's AI Agent platform. In v2.0, equities re
 
 ## Current Version
 
-- **Version:** 2.0
+- **Version:** 2.0.1
 - **Account Type:** Dedicated AI Agent account
 - **Execution Mode:** Proposal-only until explicitly upgraded
 - **Asset Type:** Options-primary; long calls/long puts only at launch; equities are approved underlyings
+- **Capability Scope:** Broker Level 2 capability is recorded separately from strategy permission
 
 ---
 
@@ -34,7 +35,9 @@ This project is designed for Robinhood's AI Agent platform. In v2.0, equities re
 
 ## Agent Architecture
 
-Version 2.0 integrates Robinhood's expanded Agentic Trading tools for underlying research, options-chain research, account context, simulated order review, validation, and outcome tracking while preserving explicit approval for every account write and live order.
+Version 2.0.1 integrates Robinhood's expanded Agentic Trading tools for underlying research, options-chain research, account context, simulated order review, validation, and outcome tracking while preserving explicit approval for every account write and live order.
+
+Broker capability does not expand strategy scope. The Agentic account is broker-approved for Level 2 options, including buying calls and puts, selling covered calls, selling cash-covered puts, and exercising options; spreads are unavailable. The strategy launch scope remains only single-leg long calls and long puts. Covered calls, cash-secured puts, spreads, 0DTE, naked selling, and autonomous live options execution are strategy-disabled.
 
 ### 1. Research Agent
 
@@ -44,7 +47,9 @@ It does **not** place trades.
 
 ### 2. Portfolio Manager Agent
 
-The Portfolio Manager Agent decides whether a directional thesis should become a defined-risk options proposal. It reviews the underlying, contract, account fit, premium risk, correlation exposure, and execution alerts.
+The Portfolio Manager Agent decides whether a directional thesis should become a defined-risk hypothetical options proposal or shadow setup. It reviews the underlying, contract, account fit, premium allocation, maximum contractual loss, planned trade risk, correlation exposure, and execution alerts.
+
+Account fit is separate from setup quality and underlying eligibility. A qualified setup that fails account fit is recorded as `SHADOW_ONLY_QUALIFIED`.
 
 It may only propose trades unless autonomous execution has been explicitly enabled.
 
@@ -164,9 +169,9 @@ Not enabled by default. Requires proven performance, stable logs, clean rule com
 
 ---
 
-## Version 2.0 Status
+## Version 2.0.1 Status
 
-Version 2.0 is the current source of truth.
+Version 2.0.1 is the current source of truth.
 
 The system is now an **options-primary tactical pipeline**:
 
@@ -175,7 +180,7 @@ The system is now an **options-primary tactical pipeline**:
 - `scanner_engine.md` defines scanner behavior and guardrails.
 - `research_agent.md` scores and validates underlyings, direction, and options suitability.
 - `options_strategy.md` scores and ranks contracts separately from the underlying thesis.
-- `portfolio_manager_agent.md` applies account, premium-risk, correlation, and exact-order constraints.
+- `portfolio_manager_agent.md` applies account, premium-allocation, planned-risk, correlation, and exact reviewed-order constraints. Exact reviewed-order approval is required only before future live execution, not before research, scoring, hypothetical proposals, or shadow tracking.
 - `system_prompt.md` remains the master behavior file.
 - `tool_policy.md` maps the expanded Robinhood tool surface to permissions and safe call sequences.
 - Universe membership is separate from temporary entry eligibility.

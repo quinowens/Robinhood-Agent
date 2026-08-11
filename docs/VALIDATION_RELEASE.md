@@ -24,6 +24,7 @@ Track:
 - Primary-vs-secondary blocking rule attribution.
 - Options setup-score distribution and option outcome quality.
 - Thesis-right versus contract-right classification.
+- Realistic funding requirement evidence from qualified-but-unaffordable options setups.
 
 ## Do Not Loosen Rules Prematurely
 
@@ -59,3 +60,4 @@ The summary should answer:
 8. Did correlation clustering create hidden concentration?
 9. Are Tier 1 and Tier 2 thresholds predictive and reachable under the current scoring model?
 10. Which primary blocking rules created the largest missed-winner or avoided-loser effects?
+11. How many genuinely qualified setups failed account fit, and what account size would have been needed to participate under current premium-risk caps?
