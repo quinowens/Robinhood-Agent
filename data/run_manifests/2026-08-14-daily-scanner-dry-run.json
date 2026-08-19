@@ -1,0 +1,166 @@
+{
+  "run_id": "2026-08-14-daily-scanner-dry-run",
+  "pipeline_version": "2.0.1",
+  "status": "DEGRADED",
+  "run_trigger": "automation: robinhood-agent-daily-scanner-dry-run",
+  "session_context": "research-only / proposal-only / shadow-trading daily options-primary scanner dry run",
+  "intended_workflow": "daily_options_primary_scanner",
+  "started_at": "2026-08-14T19:38:00Z",
+  "first_tool_call_at": "2026-08-14T19:38:00Z",
+  "last_tool_call_at": "2026-08-14T19:40:00Z",
+  "completed_at": "2026-08-14T19:45:00Z",
+  "shadow_options_research_top_n": 3,
+  "shadow_research_limit": null,
+  "live_proposal_limit": 0,
+  "live_position_limit": 0,
+  "account_snapshots": [
+    {
+      "account_snapshot_id": "acct-839798691-2026-08-14T19:38Z",
+      "account_number_masked": "*****8691",
+      "nickname": "Agentic",
+      "account_type": "cash",
+      "brokerage_account_type": "individual",
+      "agentic_allowed": true,
+      "option_level": "option_level_2",
+      "total_value": 100.0,
+      "cash": 100.0,
+      "buying_power": 100.0,
+      "equity_value": 0.0,
+      "options_value": 0.0,
+      "open_equity_positions": 0,
+      "open_option_positions": 0,
+      "queued_equity_orders": 0,
+      "confirmed_equity_orders": 0,
+      "queued_option_orders": 0,
+      "confirmed_option_orders": 0,
+      "current_open_options_premium_risk": 0.0,
+      "as_of": "2026-08-14T19:38:00Z"
+    }
+  ],
+  "account_capability_map": {
+    "broker_options_level": "option_level_2",
+    "broker_permitted": ["buy_calls", "buy_puts", "covered_calls", "cash_covered_puts", "exercise_options"],
+    "broker_unavailable": ["spreads"],
+    "strategy_enabled": ["LONG_CALL", "LONG_PUT"],
+    "strategy_disabled": ["covered_calls", "cash_secured_puts", "spreads", "0DTE", "autonomous_live_options_execution"],
+    "source": "get_accounts"
+  },
+  "seed_sources": [
+    "Momentum Candidates",
+    "Options Activity Radar",
+    "Earnings Risk Radar",
+    "Current Universe Tier 2",
+    "Current Universe Watchlist"
+  ],
+  "scanner_resolution": [
+    {
+      "name": "Momentum Candidates",
+      "expected_scan_id": "26cdeb14-da13-493f-b0c6-783468971a16",
+      "resolved_scan_id": "26cdeb14-da13-493f-b0c6-783468971a16",
+      "title": "Robinhood Agent - Momentum Candidates",
+      "matched": true,
+      "total_items": 289,
+      "sorted_by": "% Change desc"
+    },
+    {
+      "name": "Options Activity Radar",
+      "expected_scan_id": "7068db65-2a47-470c-bde9-94d66f36b806",
+      "resolved_scan_id": "7068db65-2a47-470c-bde9-94d66f36b806",
+      "title": "Robinhood Agent - Options Activity Radar",
+      "matched": true,
+      "total_items": 112,
+      "sorted_by": "Implied volatility desc"
+    },
+    {
+      "name": "Earnings Risk Radar",
+      "expected_scan_id": "737924f1-e94f-4ad4-ba98-6c12fcaafaa9",
+      "resolved_scan_id": "737924f1-e94f-4ad4-ba98-6c12fcaafaa9",
+      "title": "Robinhood Agent - Earnings Risk Radar",
+      "matched": true,
+      "total_items": 338,
+      "sorted_by": "Earnings date desc"
+    }
+  ],
+  "seed_count": 739,
+  "deduplicated_count": 18,
+  "terminal_result_count": 18,
+  "scored_count": 8,
+  "score_distribution": {
+    "highest": 82,
+    "percentile_95": null,
+    "percentile_90": null,
+    "median": null,
+    "tier_1_threshold": 85,
+    "tier_2_threshold": 75,
+    "tier_1_count": 0,
+    "tier_2_count": 8,
+    "calibration_warning": "Daily scanner run used existing Current Universe scores; not an official refresh distribution."
+  },
+  "permanently_rejected_count": 6,
+  "incomplete_count": 0,
+  "completeness_pct": 82,
+  "minimum_publish_completeness_pct": 90,
+  "benchmark_dates": {
+    "start_126d": "2026-02-01",
+    "start_63d": "2026-05-14",
+    "end": "2026-08-14"
+  },
+  "preflight": {
+    "authentication": "passed",
+    "quotes": "passed",
+    "historicals": "degraded_large_payload",
+    "fundamentals": "passed",
+    "earnings": "passed",
+    "financials": "not_requested_no_options_finalist",
+    "tradability": "passed",
+    "indexes": "degraded_spy_qqq_proxy_used",
+    "account_state": "passed",
+    "open_orders": "passed",
+    "spy_history": "passed",
+    "qqq_history": "passed"
+  },
+  "tool_calls": [
+    {"tool": "get_accounts", "status": "success", "retry_count": 0},
+    {"tool": "get_portfolio", "status": "success", "retry_count": 0, "account_number_masked": "*****8691"},
+    {"tool": "get_equity_positions", "status": "success", "retry_count": 0, "account_number_masked": "*****8691"},
+    {"tool": "get_option_positions", "status": "success", "retry_count": 0, "account_number_masked": "*****8691"},
+    {"tool": "get_equity_orders", "status": "success", "retry_count": 0, "states": ["queued", "confirmed"]},
+    {"tool": "get_option_orders", "status": "success", "retry_count": 0, "states": ["queued", "confirmed"]},
+    {"tool": "get_scans", "status": "success", "retry_count": 0},
+    {"tool": "run_scan", "status": "success", "retry_count": 0, "scan": "Momentum Candidates"},
+    {"tool": "run_scan", "status": "success", "retry_count": 0, "scan": "Options Activity Radar"},
+    {"tool": "run_scan", "status": "success", "retry_count": 0, "scan": "Earnings Risk Radar"},
+    {"tool": "get_equity_quotes", "status": "success", "retry_count": 0, "symbols": ["SPY", "QQQ", "GOOGL", "AMZN", "MSFT", "NVDA", "META", "CRWD", "PANW", "AVGO", "AMD", "MU", "SNDK", "AAOI", "RDDT", "NBIS", "SMCI", "NU", "AMAT", "TSLA"]},
+    {"tool": "get_equity_tradability", "status": "success", "retry_count": 0},
+    {"tool": "get_equity_fundamentals", "status": "success", "retry_count": 0},
+    {"tool": "get_earnings_calendar", "status": "success", "retry_count": 0},
+    {"tool": "get_earnings_results", "status": "success", "retry_count": 0, "symbols": ["NVDA", "CRWD", "PANW", "AVGO", "META", "GOOGL", "AMZN", "MSFT"]},
+    {"tool": "get_equity_historicals", "status": "success", "retry_count": 0, "note": "large transcript payload; used for regime/trend support"}
+  ],
+  "failed_calls": 0,
+  "retried_calls": 0,
+  "missing_critical_fields": [
+    "Full raw scanner row capture for all 739 total matches was not available in transcript-sized connector output.",
+    "No option-chain data pulled because no candidate passed directional thesis plus options suitability."
+  ],
+  "publish_decision": "degraded_do_not_overwrite_current_universe",
+  "state_file_decision": {
+    "state/current_universe.json": "unchanged",
+    "state/open_theses.json": "unchanged",
+    "state/rejected_candidates.json": "unchanged"
+  },
+  "orders": {
+    "review_equity_order": 0,
+    "review_option_order": 0,
+    "place_equity_order": 0,
+    "place_option_order": 0,
+    "cancel_equity_order": 0,
+    "cancel_option_order": 0
+  },
+  "notes": [
+    "No live orders were placed, modified, or canceled.",
+    "No simulated order review was run because no exact future live order was prepared.",
+    "Options Activity Radar supplied context only and did not create direction.",
+    "A failed bullish setup was not treated as automatically bearish."
+  ]
+}

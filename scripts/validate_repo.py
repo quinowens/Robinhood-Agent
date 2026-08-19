@@ -169,6 +169,8 @@ def check_v2_options_invariants(errors: list[str]) -> None:
         "options_setup_score",
         "options_data_completeness",
         "options_decision_confidence",
+        "option_mid",
+        "contract_premium_dollars",
         "setup_quality_status",
         "account_fit_status",
         "account_fit_reasons",
@@ -201,6 +203,8 @@ def check_v2_options_invariants(errors: list[str]) -> None:
         "freeze_rule",
         "entry_snapshot_at",
         "entry_midpoint",
+        "entry_option_mid",
+        "entry_contract_premium_dollars",
         "entry_open_interest",
         "entry_volume",
         "entry_breakeven",
@@ -230,6 +234,8 @@ def check_v2_options_invariants(errors: list[str]) -> None:
         "shadow_portfolio",
         "entry_snapshot_at",
         "entry_premium",
+        "entry_option_mid",
+        "entry_contract_premium_dollars",
         "underlying_price_at_entry",
         "underlying_forward_1d_return",
         "option_forward_1d_return",
@@ -325,6 +331,7 @@ def check_v201_option_records(errors: list[str]) -> None:
                 if row.get("underlying_eligibility") in blocked_eligibility:
                     fail(errors, f"account fit must not rewrite underlying eligibility: {where}")
             if row.get("option_type") in {"call", "put"} and row.get("side") == "buy":
+                validate_option_unit_fields(errors, row, where)
                 premium = row.get("premium_allocation_dollars")
                 max_loss = row.get("max_contractual_loss_dollars")
                 planned = row.get("planned_trade_risk_dollars")
@@ -357,6 +364,7 @@ def check_v201_option_records(errors: list[str]) -> None:
             )
             validate_canonical_fields(errors, row, {}, where)
             if row.get("option_type") in {"call", "put"}:
+                validate_entry_unit_fields(errors, row, where, "option shadow")
                 if numeric_equal(row.get("planned_trade_risk_dollars"), row.get("max_contractual_loss_dollars")) is False:
                     fail(errors, f"current option shadow planned trade risk must equal max contractual loss: {where}")
                 if row.get("planned_trade_risk_source") != "default_max_contractual_loss":
@@ -378,6 +386,7 @@ def check_v201_option_records(errors: list[str]) -> None:
             )
             validate_canonical_fields(errors, row, {}, where)
             if row.get("option_type") in {"call", "put"}:
+                validate_entry_unit_fields(errors, row, where, "option outcome")
                 if numeric_equal(row.get("planned_trade_risk_dollars"), row.get("max_contractual_loss_dollars")) is False:
                     fail(errors, f"current option outcome planned trade risk must equal max contractual loss: {where}")
                 if row.get("planned_trade_risk_source") != "default_max_contractual_loss":
@@ -433,6 +442,38 @@ def validate_canonical_fields(
         canonical_by_group.setdefault(str(group_id), []).append(where)
 
 
+def validate_option_unit_fields(errors: list[str], row: dict, where: str) -> None:
+    option_mid = row.get("option_mid")
+    midpoint = row.get("midpoint")
+    multiplier = row.get("contract_multiplier")
+    contract_premium = row.get("contract_premium_dollars")
+    if numeric_equal(option_mid, midpoint) is False:
+        fail(errors, f"option setup option_mid must equal midpoint option-price units: {where}")
+    if numeric_equal(multiplier, 100) is False:
+        fail(errors, f"option setup contract_multiplier must be 100: {where}")
+    expected = numeric_product(option_mid, multiplier)
+    if expected is None or numeric_equal(contract_premium, expected) is False:
+        fail(errors, f"option setup contract_premium_dollars must equal option_mid * contract_multiplier: {where}")
+    if numeric_equal(row.get("premium_per_contract"), option_mid) is False:
+        fail(errors, f"option setup premium_per_contract must remain option-price units: {where}")
+
+
+def validate_entry_unit_fields(errors: list[str], row: dict, where: str, record_name: str) -> None:
+    entry_option_mid = row.get("entry_option_mid")
+    entry_midpoint = row.get("entry_midpoint")
+    multiplier = row.get("contract_multiplier")
+    contract_premium = row.get("entry_contract_premium_dollars")
+    if numeric_equal(entry_option_mid, entry_midpoint) is False:
+        fail(errors, f"{record_name} entry_option_mid must equal entry_midpoint option-price units: {where}")
+    if numeric_equal(multiplier, 100) is False:
+        fail(errors, f"{record_name} contract_multiplier must be 100: {where}")
+    expected = numeric_product(entry_option_mid, multiplier)
+    if expected is None or numeric_equal(contract_premium, expected) is False:
+        fail(errors, f"{record_name} entry_contract_premium_dollars must equal entry_option_mid * contract_multiplier: {where}")
+    if numeric_equal(row.get("entry_premium"), entry_option_mid) is False:
+        fail(errors, f"{record_name} entry_premium must remain option-price units: {where}")
+
+
 def check_v201_run_manifests(errors: list[str]) -> None:
     for path in sorted((ROOT / "data/run_manifests").glob("*.json")):
         data = parse_json_file_return(path, errors)
@@ -461,6 +502,13 @@ def parse_json_file_return(path: Path, errors: list[str]) -> dict | None:
 def numeric_equal(left: object, right: object, tolerance: float = 0.0001) -> bool | None:
     try:
         return abs(float(left) - float(right)) <= tolerance
+    except (TypeError, ValueError):
+        return None
+
+
+def numeric_product(left: object, right: object) -> float | None:
+    try:
+        return float(left) * float(right)
     except (TypeError, ValueError):
         return None
 

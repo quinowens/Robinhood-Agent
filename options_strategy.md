@@ -258,6 +258,7 @@ Long-option risk is measured by premium allocation and maximum contractual loss.
 Every proposal must include:
 
 - Premium per contract
+- Option-price units and contract-dollar units separately, for example `option_mid: 23.50` and `contract_premium_dollars: 2350.00`
 - Number of contracts
 - Premium allocation dollars
 - Premium allocation as percentage of account

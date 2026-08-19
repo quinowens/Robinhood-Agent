@@ -1,0 +1,105 @@
+{
+  "run_id": "2026-08-13-daily-scanner-dry-run",
+  "strategy_version": "2.0.1",
+  "pipeline_version": "2.0",
+  "strategy_mode": "options_primary",
+  "operating_mode": "research_only_proposal_only_shadow_trading",
+  "run_trigger": "automation",
+  "session_context": "Robinhood Agent Daily Options Scanner Dry Run",
+  "intended_workflow": "daily_options_primary_scanner",
+  "started_at": "2026-08-13T17:00:00Z",
+  "first_tool_call_at": "2026-08-13T17:04:00Z",
+  "last_tool_call_at": "2026-08-13T17:17:32Z",
+  "completed_at": "2026-08-13T17:22:00Z",
+  "status": "DEGRADED",
+  "degraded_reasons": [
+    "Raw scanner match totals exceeded visible connector rows for Momentum Candidates and Earnings Risk Radar; persisted visible row summary and totals only.",
+    "SPX/NDX current values were unavailable through get_indexes; SPY/QQQ ETF quotes and histories were used as market proxies.",
+    "Only scoped option chains were pulled for qualified or comparison finalists, not every scanner hit."
+  ],
+  "account_snapshot": {
+    "account_snapshot_id": "acct-839798691-2026-08-13T17:16:20Z",
+    "account_snapshot_as_of": "2026-08-13T17:16:20Z",
+    "account_number_masked": "*****8691",
+    "nickname": "Agentic",
+    "brokerage_trading_type": "cash",
+    "agentic_allowed": true,
+    "option_level": "option_level_2",
+    "account_value": 100.0,
+    "cash": 100.0,
+    "buying_power": 100.0,
+    "equity_value": 0.0,
+    "options_value": 0.0,
+    "open_equity_positions": 0,
+    "open_option_positions": 0,
+    "open_equity_orders": 0,
+    "open_option_orders": 0,
+    "realized_pnl_3month": 0.0
+  },
+  "scanner_resolution": [
+    {
+      "name": "Momentum Candidates",
+      "expected_scan_id": "26cdeb14-da13-493f-b0c6-783468971a16",
+      "resolved_scan_id": "26cdeb14-da13-493f-b0c6-783468971a16",
+      "status": "matched",
+      "matches": 208,
+      "sort": "% Change desc"
+    },
+    {
+      "name": "Options Activity Radar",
+      "expected_scan_id": "7068db65-2a47-470c-bde9-94d66f36b806",
+      "resolved_scan_id": "7068db65-2a47-470c-bde9-94d66f36b806",
+      "status": "matched",
+      "matches": 63,
+      "sort": "Implied volatility desc"
+    },
+    {
+      "name": "Earnings Risk Radar",
+      "expected_scan_id": "737924f1-e94f-4ad4-ba98-6c12fcaafaa9",
+      "resolved_scan_id": "737924f1-e94f-4ad4-ba98-6c12fcaafaa9",
+      "status": "matched",
+      "matches": 332,
+      "sort": "Earnings date desc"
+    }
+  ],
+  "tool_calls": [
+    {"tool": "get_accounts", "status": "success", "retry_count": 0},
+    {"tool": "get_portfolio", "status": "success", "retry_count": 0},
+    {"tool": "get_equity_positions", "status": "success", "retry_count": 0},
+    {"tool": "get_option_positions", "status": "success", "retry_count": 0},
+    {"tool": "get_equity_orders", "status": "success", "retry_count": 0},
+    {"tool": "get_option_orders", "status": "success", "retry_count": 0},
+    {"tool": "get_scans", "status": "success", "retry_count": 0},
+    {"tool": "run_scan", "status": "success", "retry_count": 0},
+    {"tool": "get_equity_fundamentals", "status": "success", "retry_count": 0},
+    {"tool": "get_financials", "status": "success", "retry_count": 0},
+    {"tool": "get_equity_quotes", "status": "success", "retry_count": 0},
+    {"tool": "get_equity_tradability", "status": "success", "retry_count": 0},
+    {"tool": "get_equity_historicals", "status": "success", "retry_count": 0},
+    {"tool": "get_earnings_results", "status": "success", "retry_count": 0},
+    {"tool": "get_indexes", "status": "partial", "retry_count": 0},
+    {"tool": "get_realized_pnl", "status": "success_after_parameter_retry", "retry_count": 1},
+    {"tool": "get_pnl_trade_history", "status": "success", "retry_count": 0},
+    {"tool": "get_option_chains", "status": "success", "retry_count": 0},
+    {"tool": "get_option_instruments", "status": "success", "retry_count": 0},
+    {"tool": "get_option_quotes", "status": "success", "retry_count": 0}
+  ],
+  "candidate_counts": {
+    "raw_scanner_match_total": 603,
+    "raw_rows_persisted_summary": 3,
+    "deduplicated_candidates_reviewed": 14,
+    "terminal_candidates": 14,
+    "options_research_finalists": 3,
+    "pm_proposals": 0,
+    "shadow_only_qualified": 1,
+    "live_orders_reviewed": 0,
+    "live_orders_placed": 0,
+    "live_orders_modified": 0,
+    "live_orders_canceled": 0
+  },
+  "state_file_decision": {
+    "current_universe_json": "unchanged",
+    "rejected_candidates_json": "unchanged",
+    "reason": "Daily degraded dry run did not authorize an official universe rewrite; no repeated permanent reject required a state update."
+  }
+}

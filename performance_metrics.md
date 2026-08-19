@@ -93,6 +93,8 @@ Every options idea reviewed by the system should produce one row, even if reject
 | `expiration` | date | |
 | `strike` | float | |
 | `estimated_premium` | float | Per contract |
+| `option_mid` | float | Option quote midpoint in option-price units, e.g. `23.50` |
+| `contract_premium_dollars` | float | One-contract dollar premium, e.g. `2350.00` for a 100-share multiplier |
 | `contracts` | int | |
 | `premium_allocation_dollars` | float | `premium_per_contract * 100 * contracts` |
 | `premium_allocation_pct_account` | float | Premium allocation divided by account equity |
@@ -133,6 +135,7 @@ Every `SHADOW_ONLY_QUALIFIED` setup must create a shadow record with a frozen en
 | `entry_snapshot_at` | datetime | Time the contract was selected |
 | `entry_premium` | float | Midpoint/mark used for performance |
 | `entry_bid` / `entry_ask` / `entry_midpoint` | float | Quote snapshot |
+| `entry_option_mid` / `entry_contract_premium_dollars` | float | Explicit option-price midpoint and one-contract dollar premium |
 | `entry_delta` | float | When available |
 | `entry_implied_volatility` | float | When available |
 | `entry_open_interest` / `entry_volume` | int | When available |
