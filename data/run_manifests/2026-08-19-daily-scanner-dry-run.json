@@ -1,0 +1,116 @@
+{
+  "run_id": "2026-08-19-daily-scanner-dry-run",
+  "pipeline_version": "2.0.1",
+  "status": "COMPLETE_WITH_SHADOW_ONLY",
+  "run_trigger": "automation: robinhood-agent-daily-scanner-dry-run",
+  "session_context": "research-only / proposal-only / shadow-trading daily options-primary scanner dry run",
+  "intended_workflow": "daily_options_primary_scanner",
+  "started_at": "2026-08-19T20:15:00Z",
+  "first_tool_call_at": "2026-08-19T20:15:00Z",
+  "last_tool_call_at": "2026-08-19T20:35:38Z",
+  "completed_at": "2026-08-19T20:35:38Z",
+  "shadow_options_research_top_n": 3,
+  "shadow_research_limit": null,
+  "live_proposal_limit": 0,
+  "live_position_limit": 0,
+  "account_snapshots": [
+    {
+      "account_snapshot_id": "acct-839798691-2026-08-19T20:33Z",
+      "account_number_masked": "*****8691",
+      "nickname": "Agentic",
+      "account_type": "cash",
+      "brokerage_account_type": "individual",
+      "agentic_allowed": true,
+      "option_level": "option_level_2",
+      "total_value": 100.0,
+      "cash": 100.0,
+      "buying_power": 100.0,
+      "equity_value": 0.0,
+      "options_value": 0.0,
+      "open_equity_positions": 0,
+      "open_option_positions": 0,
+      "queued_equity_orders": 0,
+      "same_day_equity_orders": 0,
+      "queued_option_orders": 0,
+      "same_day_option_orders": 0,
+      "current_open_options_premium_risk": 0.0,
+      "as_of": "2026-08-19T20:33:57Z"
+    }
+  ],
+  "account_capability_map": {
+    "broker_options_level": "option_level_2",
+    "broker_permitted": ["buy_calls", "buy_puts", "covered_calls", "cash_covered_puts", "exercise_options"],
+    "broker_unavailable": ["spreads"],
+    "strategy_enabled": ["LONG_CALL", "LONG_PUT"],
+    "strategy_disabled": ["covered_calls", "cash_secured_puts", "spreads", "0DTE", "autonomous_live_options_execution"],
+    "source": "get_accounts"
+  },
+  "scanner_resolution": [
+    {
+      "name": "Momentum Candidates",
+      "expected_scan_id": "26cdeb14-da13-493f-b0c6-783468971a16",
+      "resolved_scan_id": "26cdeb14-da13-493f-b0c6-783468971a16",
+      "title": "Robinhood Agent - Momentum Candidates",
+      "matched": true,
+      "total_items": 398,
+      "sorted_by": "% Change desc"
+    },
+    {
+      "name": "Options Activity Radar",
+      "expected_scan_id": "7068db65-2a47-470c-bde9-94d66f36b806",
+      "resolved_scan_id": "7068db65-2a47-470c-bde9-94d66f36b806",
+      "title": "Robinhood Agent - Options Activity Radar",
+      "matched": true,
+      "total_items": 139,
+      "sorted_by": "Implied volatility desc"
+    },
+    {
+      "name": "Earnings Risk Radar",
+      "expected_scan_id": "737924f1-e94f-4ad4-ba98-6c12fcaafaa9",
+      "resolved_scan_id": "737924f1-e94f-4ad4-ba98-6c12fcaafaa9",
+      "title": "Robinhood Agent - Earnings Risk Radar",
+      "matched": true,
+      "total_items": 333,
+      "sorted_by": "Earnings date desc"
+    }
+  ],
+  "tool_coverage": {
+    "get_accounts": "success",
+    "get_portfolio": "success",
+    "get_equity_positions": "success",
+    "get_option_positions": "success",
+    "get_equity_orders": "success",
+    "get_option_orders": "success",
+    "get_scans": "success",
+    "run_scan": "success_3_of_3",
+    "get_equity_fundamentals": "success",
+    "get_financials": "success_with_null_for_NBIS",
+    "get_equity_quotes": "success",
+    "get_equity_tradability": "success",
+    "get_earnings_calendar": "success",
+    "get_earnings_results": "success",
+    "get_equity_technical_indicators": "success",
+    "get_option_chains": "success_limited_AMZN_only",
+    "get_option_instruments": "success_limited_AMZN_only",
+    "get_option_quotes": "success_limited_AMZN_only",
+    "review_option_order": "not_called_research_only",
+    "place_option_order": "not_called_forbidden"
+  },
+  "run_health": {
+    "expected_scanner_calls": 3,
+    "successful_scanner_calls": 3,
+    "failed_scanner_calls": 0,
+    "retried_calls": 0,
+    "raw_scanner_rows_persisted": 15,
+    "deduplicated_candidates_considered": 18,
+    "candidates_with_terminal_status": 18,
+    "completeness_percentage": 100.0,
+    "publish_decision": "complete_for_daily_dry_run; do_not_overwrite_current_universe"
+  },
+  "final_decision": {
+    "execution_decision": "NO LIVE TRADE",
+    "research_decision": "one shadow-only qualified AMZN long-call setup",
+    "portfolio_manager_recommendation": "SHADOW_ONLY_QUALIFIED; no PM_PROPOSAL because one contract premium exceeds account value and buying power",
+    "state_file_decision": "do_not_rewrite_current_universe_or_rejected_candidates"
+  }
+}
