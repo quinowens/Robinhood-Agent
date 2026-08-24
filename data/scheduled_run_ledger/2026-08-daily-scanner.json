@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "workflow": "daily_options_primary_scanner_dry_run",
+  "month": "2026-08",
+  "purpose": "Distinguish completed scheduled sessions, scheduled non-runs, failed runs, and missing records.",
+  "updated_at": "2026-08-24T20:45:00Z",
+  "entries": [
+    {
+      "date": "2026-08-17",
+      "expected_session": true,
+      "status": "missing_run_record",
+      "reason": "No daily report or structured manifest found for a regular Monday session.",
+      "required_follow_up": "Backfill manifest as failed/missing if automation logs confirm no run was attempted."
+    },
+    {
+      "date": "2026-08-18",
+      "expected_session": true,
+      "status": "partial_structured_record",
+      "reason": "Daily report exists in downstream workspace history, but main repo structured records are incomplete.",
+      "required_follow_up": "Backfill structured JSONL or mark the run degraded with an explicit manifest."
+    },
+    {
+      "date": "2026-08-19",
+      "expected_session": true,
+      "status": "completed",
+      "reason": "Daily report, manifest, scanner snapshot, research records, setup record, shadow trade, and outcome seed are present.",
+      "run_manifest": "data/run_manifests/2026-08-19-daily-scanner-dry-run.json"
+    },
+    {
+      "date": "2026-08-20",
+      "expected_session": true,
+      "status": "missing_run_record",
+      "reason": "No daily report or structured manifest found for a regular Thursday session.",
+      "required_follow_up": "Backfill manifest as failed/missing if automation logs confirm no run was attempted."
+    },
+    {
+      "date": "2026-08-21",
+      "expected_session": true,
+      "status": "partial_structured_record",
+      "reason": "Daily report exists in downstream workspace history, but main repo structured records are incomplete.",
+      "required_follow_up": "Backfill structured JSONL or mark the run degraded with an explicit manifest."
+    },
+    {
+      "date": "2026-08-22",
+      "expected_session": false,
+      "status": "scheduled_non_run_weekend_observed_run",
+      "reason": "Saturday; a downstream dry-run log exists and should be labeled weekend/no-new-regular-session tape rather than a missed scheduled weekday.",
+      "required_follow_up": "Optionally copy degraded weekend log into main repo if it should remain canonical."
+    },
+    {
+      "date": "2026-08-23",
+      "expected_session": false,
+      "status": "scheduled_non_run_weekend",
+      "reason": "Sunday; no regular market session expected.",
+      "required_follow_up": "None unless an explicit weekend review automation was separately scheduled."
+    },
+    {
+      "date": "2026-08-24",
+      "expected_session": true,
+      "status": "weekly_review_completed",
+      "reason": "Weekly research review exists; daily scanner run should still produce its own manifest if scheduled.",
+      "weekly_report": "research_logs/2026-08-24-weekly-research-review.md"
+    }
+  ]
+}
