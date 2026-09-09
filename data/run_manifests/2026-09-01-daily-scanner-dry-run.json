@@ -1,0 +1,246 @@
+{
+  "run_id": "2026-09-01-daily-scanner-dry-run",
+  "run_trigger": "automation",
+  "automation_id": "robinhood-agent-daily-scanner-dry-run",
+  "session_context": "Codex desktop automation in research-only / proposal-only / shadow-trading mode",
+  "intended_workflow": "daily options-primary scanner workflow",
+  "strategy_version": "2.0.1",
+  "pipeline_version": "2.0",
+  "status": "DEGRADED_COMPLETE",
+  "started_at": "2026-09-01T20:40:30Z",
+  "first_tool_call_at": "2026-09-01T20:40:30Z",
+  "last_tool_call_at": "2026-09-01T20:42:42Z",
+  "completed_at": "2026-09-01T20:47:00Z",
+  "mode": "research_only_proposal_only_shadow_trading",
+  "guardrails": {
+    "live_orders_allowed": false,
+    "review_option_order_called": false,
+    "place_option_order_called": false,
+    "place_equity_order_called": false,
+    "cancel_or_replace_order_called": false,
+    "allowed_option_structures": [
+      "LONG_CALL",
+      "LONG_PUT"
+    ],
+    "forbidden_structures_observed": false
+  },
+  "account_snapshot": {
+    "account_snapshot_id": "acct-8691-2026-09-01T20:41Z",
+    "account_number_last4": "8691",
+    "account_type": "cash",
+    "broker_option_level": "option_level_2",
+    "strategy_enabled_options": [
+      "LONG_CALL",
+      "LONG_PUT"
+    ],
+    "account_value": 100.0,
+    "cash": 100.0,
+    "buying_power": 100.0,
+    "equity_positions_count": 0,
+    "option_positions_count": 0,
+    "open_equity_orders_count": 0,
+    "open_option_orders_count": 0,
+    "option_watchlist_count": 0
+  },
+  "scanner_resolution": {
+    "expected": [
+      {
+        "name": "Momentum Candidates",
+        "scan_id": "26cdeb14-da13-493f-b0c6-783468971a16",
+        "matched": true
+      },
+      {
+        "name": "Options Activity Radar",
+        "scan_id": "7068db65-2a47-470c-bde9-94d66f36b806",
+        "matched": true
+      },
+      {
+        "name": "Earnings Risk Radar",
+        "scan_id": "737924f1-e94f-4ad4-ba98-6c12fcaafaa9",
+        "matched": true
+      }
+    ],
+    "degraded": false
+  },
+  "scanner_execution": {
+    "expected_scanner_calls": 3,
+    "successful_scanner_calls": 3,
+    "failed_scanner_calls": 0,
+    "retried_calls": 0,
+    "totals": {
+      "Momentum Candidates": 398,
+      "Options Activity Radar": 91,
+      "Earnings Risk Radar": 345
+    },
+    "raw_rows_persisted": 40,
+    "degraded_reason": "Connector returned capped visible scanner rows while exposing total match counts."
+  },
+  "tool_calls": [
+    {
+      "tool": "get_accounts",
+      "timestamp": "2026-09-01T20:40:30Z",
+      "success": true,
+      "retry_count": 0
+    },
+    {
+      "tool": "get_portfolio",
+      "timestamp": "2026-09-01T20:41:00Z",
+      "success": true,
+      "retry_count": 0
+    },
+    {
+      "tool": "get_equity_positions",
+      "timestamp": "2026-09-01T20:41:00Z",
+      "success": true,
+      "retry_count": 0
+    },
+    {
+      "tool": "get_option_positions",
+      "timestamp": "2026-09-01T20:41:00Z",
+      "success": true,
+      "retry_count": 0
+    },
+    {
+      "tool": "get_equity_orders",
+      "timestamp": "2026-09-01T20:41:20Z",
+      "success": true,
+      "retry_count": 0
+    },
+    {
+      "tool": "get_option_orders",
+      "timestamp": "2026-09-01T20:41:00Z",
+      "success": true,
+      "retry_count": 0
+    },
+    {
+      "tool": "get_scans",
+      "timestamp": "2026-09-01T20:40:30Z",
+      "success": true,
+      "retry_count": 0
+    },
+    {
+      "tool": "run_scan",
+      "timestamp": "2026-09-01T20:41:20Z",
+      "success": true,
+      "retry_count": 0,
+      "symbols_or_resources": "3 configured scans"
+    },
+    {
+      "tool": "get_equity_quotes",
+      "timestamp": "2026-09-01T20:41:45Z",
+      "success": true,
+      "retry_count": 0
+    },
+    {
+      "tool": "get_equity_fundamentals",
+      "timestamp": "2026-09-01T20:41:45Z",
+      "success": true,
+      "retry_count": 0
+    },
+    {
+      "tool": "get_financials",
+      "timestamp": "2026-09-01T20:41:45Z",
+      "success": true,
+      "retry_count": 0
+    },
+    {
+      "tool": "get_earnings_calendar",
+      "timestamp": "2026-09-01T20:41:45Z",
+      "success": true,
+      "retry_count": 0
+    },
+    {
+      "tool": "get_earnings_results",
+      "timestamp": "2026-09-01T20:42:00Z",
+      "success": true,
+      "retry_count": 0
+    },
+    {
+      "tool": "get_indexes",
+      "timestamp": "2026-09-01T20:41:45Z",
+      "success": true,
+      "retry_count": 0
+    },
+    {
+      "tool": "get_index_quotes",
+      "timestamp": "2026-09-01T20:42:00Z",
+      "success": true,
+      "retry_count": 0
+    },
+    {
+      "tool": "get_equity_technical_indicators",
+      "timestamp": "2026-09-01T20:42:10Z",
+      "success": true,
+      "retry_count": 0
+    },
+    {
+      "tool": "get_option_chains",
+      "timestamp": "2026-09-01T20:42:25Z",
+      "success": true,
+      "retry_count": 0,
+      "symbols_or_resources": "AAPL,META"
+    },
+    {
+      "tool": "get_option_instruments",
+      "timestamp": "2026-09-01T20:42:35Z",
+      "success": true,
+      "retry_count": 0,
+      "symbols_or_resources": "AAPL 2026-10-16 calls"
+    },
+    {
+      "tool": "get_option_quotes",
+      "timestamp": "2026-09-01T20:42:42Z",
+      "success": true,
+      "retry_count": 0,
+      "symbols_or_resources": "AAPL 315C,320C,325C,330C"
+    }
+  ],
+  "run_completeness": {
+    "deduplicated_scoped_candidates": 20,
+    "terminal_candidates": 20,
+    "completeness_pct": 100.0,
+    "publish_decision": "daily_artifacts_saved_current_universe_unchanged",
+    "degraded_items": [
+      "full_uncapped_scanner_exports_unavailable",
+      "RUT_index_quote_restricted"
+    ]
+  },
+  "final_decision": {
+    "live_trade": "NO_LIVE_TRADE",
+    "pm_proposal": false,
+    "shadow_only_qualified_count": 1,
+    "shadow_underlyings": [
+      "AAPL"
+    ],
+    "state_file_decision": "state/current_universe.json unchanged; state/rejected_candidates.json unchanged"
+  },
+  "artifact_ids": {
+    "research_ids": [
+      "2026-09-01-AAPL"
+    ],
+    "options_setup_ids": [
+      "optsetup-2026-09-01-AAPL-20261016-325C"
+    ],
+    "option_shadow_trade_ids": [
+      "optshadow-2026-09-01-AAPL-20261016-325C"
+    ],
+    "option_signal_outcome_ids": [
+      "optoutcome-2026-09-01-AAPL-20261016-325C"
+    ],
+    "raw_scanner_snapshot_files": [
+      "data/raw_scanner_snapshots/2026-09-01-daily-scanner-dry-run.jsonl"
+    ],
+    "research_record_files": [
+      "data/research_records/2026-09-01-daily-scanner-dry-run.jsonl"
+    ],
+    "options_setup_record_files": [
+      "data/options_setup_records/2026-09-01-daily-scanner-dry-run.jsonl"
+    ],
+    "option_shadow_trade_files": [
+      "data/option_shadow_trades/2026-09-01-daily-scanner-dry-run.jsonl"
+    ],
+    "option_signal_outcome_files": [
+      "data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl"
+    ]
+  }
+}

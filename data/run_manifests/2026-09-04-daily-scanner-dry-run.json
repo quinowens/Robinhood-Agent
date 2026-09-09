@@ -1,0 +1,155 @@
+{
+  "run_id": "2026-09-04-daily-scanner-dry-run",
+  "pipeline_version": "2.0.2",
+  "status": "DEGRADED_COMPLETE",
+  "run_trigger": "scheduled_automation",
+  "session_context": "Robinhood Agent Daily Options Scanner Dry Run",
+  "intended_workflow": "daily options-primary scanner workflow in research-only / proposal-only / shadow-trading mode",
+  "started_at": "2026-09-04T20:32:00Z",
+  "first_tool_call_at": "2026-09-04T20:32:03Z",
+  "last_tool_call_at": "2026-09-05T19:18:00Z",
+  "completed_at": "2026-09-05T19:18:00Z",
+  "run_status": "degraded_complete",
+  "degradation_categories": [
+    "scanner_frontend_limit_capped_visible_rows",
+    "full_financial_statement_tool_not_exposed",
+    "no_direct_breadth_tool"
+  ],
+  "decision_integrity": "PASS_NO_LIVE_ACTIONS",
+  "persistence_integrity": "PASS_SCOPED_ARTIFACTS_WRITTEN",
+  "artifact_ids": {
+    "research_record_ids": [
+      "2026-09-04-NVDA",
+      "2026-09-04-ALAB",
+      "2026-09-04-SNDK",
+      "2026-09-04-CBRS",
+      "2026-09-04-AVGO",
+      "2026-09-04-ORCL",
+      "2026-09-04-GOOGL",
+      "2026-09-04-AMZN",
+      "2026-09-04-MSFT",
+      "2026-09-04-META",
+      "2026-09-04-PANW",
+      "2026-09-04-CRWD",
+      "2026-09-04-AAPL",
+      "2026-09-04-ADCT-ATER-GNLX-CNTB-MNOV-BMEA-JFIN-GPRO"
+    ],
+    "options_setup_ids": [
+      "optsetup-2026-09-04-NVDA-20261016-230C",
+      "optsetup-2026-09-04-ALAB-20261016-310C"
+    ],
+    "shadow_trade_ids": [
+      "optshadow-2026-09-04-NVDA-20261016-230C"
+    ],
+    "outcome_record_ids": [
+      "optoutcome-2026-09-04-NVDA-20261016-230C"
+    ]
+  },
+  "persistence_integrity_details": {
+    "qualified_setups": 1,
+    "complete_chains": 2,
+    "orphaned_records": 0,
+    "missing_records": 0,
+    "exceptions": []
+  },
+  "shadow_options_research_top_n": 3,
+  "shadow_research_limit": 3,
+  "live_proposal_limit": 0,
+  "live_position_limit": 0,
+  "account_snapshots": [
+    {
+      "account_snapshot_id": "acct-8691-2026-09-04T20:38Z",
+      "account_number_last4": "8691",
+      "account_type": "cash",
+      "option_level": "option_level_2",
+      "total_value": 100.0,
+      "cash": 100.0,
+      "buying_power": 100.0,
+      "equity_value": 0.0,
+      "options_value": 0.0,
+      "equity_positions": 0,
+      "option_positions": 0,
+      "open_equity_orders": 0,
+      "open_option_orders": 0,
+      "realized_pnl_ytd": 0.0
+    }
+  ],
+  "account_capability_map": {
+    "broker_options_level": "option_level_2",
+    "broker_permitted": ["buy_calls", "buy_puts", "covered_calls", "cash_covered_puts", "exercise_options"],
+    "broker_unavailable": ["spreads"],
+    "strategy_enabled": ["LONG_CALL", "LONG_PUT"],
+    "strategy_disabled": ["covered_calls", "cash_secured_puts", "spreads", "0DTE", "autonomous_live_options_execution"]
+  },
+  "seed_sources": [
+    "Momentum Candidates",
+    "Options Activity Radar",
+    "Earnings Risk Radar",
+    "Current Universe Tier 2"
+  ],
+  "seed_count": 860,
+  "deduplicated_count": 14,
+  "terminal_result_count": 14,
+  "scored_count": 14,
+  "score_distribution": {
+    "highest": 81,
+    "percentile_95": null,
+    "percentile_90": null,
+    "median": 71,
+    "tier_1_threshold": 85,
+    "tier_2_threshold": 75,
+    "tier_1_count": 0,
+    "tier_2_count": 1,
+    "calibration_warning": "Daily scoped population is not an official monthly universe refresh."
+  },
+  "permanently_rejected_count": 1,
+  "incomplete_count": 0,
+  "completeness_pct": 100,
+  "minimum_publish_completeness_pct": 90,
+  "benchmark_dates": {
+    "start_126d": "2026-03-06",
+    "start_63d": "2026-06-05",
+    "end": "2026-09-04"
+  },
+  "preflight": {
+    "authentication": "passed",
+    "quotes": "passed",
+    "historicals": "passed",
+    "fundamentals": "passed",
+    "earnings": "passed",
+    "financials": "degraded_not_exposed",
+    "tradability": "passed",
+    "indexes": "passed",
+    "account_state": "passed",
+    "open_orders": "passed",
+    "spy_history": "passed",
+    "qqq_history": "passed"
+  },
+  "tool_calls": [
+    {"tool":"get_accounts","timestamp":"2026-09-04T20:32:03Z","success":true,"retry_count":0},
+    {"tool":"get_portfolio","timestamp":"2026-09-04T20:32:14Z","success":true,"retry_count":0},
+    {"tool":"get_equity_positions","timestamp":"2026-09-04T20:32:14Z","success":true,"retry_count":0},
+    {"tool":"get_option_positions","timestamp":"2026-09-04T20:32:14Z","success":true,"retry_count":0},
+    {"tool":"get_equity_orders","timestamp":"2026-09-04T20:32:14Z","success":true,"retry_count":0},
+    {"tool":"get_option_orders","timestamp":"2026-09-04T20:32:14Z","success":true,"retry_count":0},
+    {"tool":"get_scans","timestamp":"2026-09-04T20:32:14Z","success":true,"retry_count":0},
+    {"tool":"run_scan","timestamp":"2026-09-04T20:33:00Z","symbols_or_ids":["26cdeb14-da13-493f-b0c6-783468971a16","7068db65-2a47-470c-bde9-94d66f36b806","737924f1-e94f-4ad4-ba98-6c12fcaafaa9"],"success":true,"retry_count":0},
+    {"tool":"get_equity_quotes","timestamp":"2026-09-04T20:38:14Z","symbols_or_ids":["SPY","QQQ","GOOGL","AMZN","MSFT","NVDA","META","CRWD","PANW","AVGO","ORCL","AAPL","ALAB","CBRS","SNDK","NBIS","IREN","MRVL","COHR","MU"],"success":true,"retry_count":0},
+    {"tool":"get_equity_fundamentals","timestamp":"2026-09-04T20:38:14Z","success":true,"retry_count":0},
+    {"tool":"get_equity_tradability","timestamp":"2026-09-04T20:38:14Z","success":true,"retry_count":0},
+    {"tool":"get_indexes/get_index_quotes","timestamp":"2026-09-04T20:38:30Z","success":true,"retry_count":0},
+    {"tool":"get_equity_historicals","timestamp":"2026-09-04T20:39:00Z","success":true,"retry_count":0},
+    {"tool":"get_earnings_calendar/get_earnings_results","timestamp":"2026-09-04T20:40:00Z","success":true,"retry_count":0},
+    {"tool":"get_option_chains/get_option_instruments/get_option_quotes","timestamp":"2026-09-04T20:41:00Z","success":true,"retry_count":0},
+    {"tool":"get_realized_pnl","timestamp":"2026-09-05T19:18:00Z","success":true,"retry_count":0}
+  ],
+  "failed_calls": 0,
+  "retried_calls": 0,
+  "missing_critical_fields": [],
+  "publish_decision": "do_not_rewrite_current_universe_daily_dry_run",
+  "notes": [
+    "No review_option_order call was made because no live exact order was being prepared.",
+    "No place/cancel/modify order tools were called.",
+    "NVDA was recorded as SHADOW_ONLY_QUALIFIED; ALAB was watch-only due setup quality and extension risk."
+  ]
+}

@@ -39,10 +39,27 @@
   ],
   "account_capability_map": {
     "broker_options_level": "option_level_2",
-    "broker_permitted": ["buy_calls", "buy_puts", "covered_calls", "cash_covered_puts", "exercise_options"],
-    "broker_unavailable": ["spreads"],
-    "strategy_enabled": ["LONG_CALL", "LONG_PUT"],
-    "strategy_disabled": ["covered_calls", "cash_secured_puts", "spreads", "0DTE", "autonomous_live_options_execution"],
+    "broker_permitted": [
+      "buy_calls",
+      "buy_puts",
+      "covered_calls",
+      "cash_covered_puts",
+      "exercise_options"
+    ],
+    "broker_unavailable": [
+      "spreads"
+    ],
+    "strategy_enabled": [
+      "LONG_CALL",
+      "LONG_PUT"
+    ],
+    "strategy_disabled": [
+      "covered_calls",
+      "cash_secured_puts",
+      "spreads",
+      "0DTE",
+      "autonomous_live_options_execution"
+    ],
     "source": "get_accounts"
   },
   "scanner_resolution": [
@@ -112,5 +129,13 @@
     "research_decision": "one shadow-only qualified AMZN long-call setup",
     "portfolio_manager_recommendation": "SHADOW_ONLY_QUALIFIED; no PM_PROPOSAL because one contract premium exceeds account value and buying power",
     "state_file_decision": "do_not_rewrite_current_universe_or_rejected_candidates"
-  }
+  },
+  "artifact_ids": {
+    "options_setup_ids": [
+      "optsetup-2026-08-19-AMZN-20261016-265C"
+    ]
+  },
+  "migration_warnings": [
+    "options_setup_ids deterministically backfilled by migrate_v202_ids.py"
+  ]
 }

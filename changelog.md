@@ -1,5 +1,20 @@
 # Changelog
 
+## Version 2.0.2 — Data Integrity & Outcome Maturation
+
+- Hardened every canonical 1D/5D/10D/20D/30D option outcome with explicit status, maturity date, source timestamp, source identity, and failure reason; finalized observations remain immutable unless correction mode includes a reason.
+- Added per-horizon option and underlying MFE/MAE, benchmark excess returns, and research-only underlying-win/option-win classification.
+- Added strategy diagnostics for score discrimination, call/put and directional bias by regime, setup/contract buckets, and blocked-candidate opportunity cost without changing thresholds or decision rules.
+- Added deterministic manifest-reference repair and intentional grandfathering for irreducible legacy ledger vocabulary.
+
+- Froze the v2.0.1 trading strategy, thresholds, launch universe, and long-call/long-put scope.
+- Added a persistence integrity gate that validates the complete research → setup → shadow trade → outcome → run-manifest chain before a run may report full completion.
+- Added automatic 1D/5D/10D/20D/30D outcome maturation with immutable finalized observations, source provenance, per-window update reporting, and explicit matured-but-unavailable failures.
+- Added a scheduled-run ledger contract with completed, degraded, skipped, failed, and missing states.
+- Added stable canonical IDs and deterministic legacy-ID migration for research, setup, shadow-trade, and outcome records without changing historical economic observations.
+- Added source-data, scanner-archive, options-data, persistence, decision-data, and pipeline degradation categories so decision-critical failures remain distinct from archival limitations.
+- Extended repository validation and weekly auditing for missing references, duplicate canonical IDs, orphaned records, inconsistent option units, overdue outcomes, and unexplained scheduled-run gaps.
+
 ## Version 2.0.1 — First-Run Hardening
 
 - Added explicit broker capability mapping for the Agentic account: Level 2 options, buying calls and puts, covered calls, cash-covered puts, and exercise enabled; spreads unavailable.

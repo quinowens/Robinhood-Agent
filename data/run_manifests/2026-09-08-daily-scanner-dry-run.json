@@ -1,0 +1,166 @@
+{
+  "run_id": "2026-09-08-daily-scanner-dry-run",
+  "date": "2026-09-08",
+  "strategy_version": "2.0.2",
+  "pipeline_version": "2.0.2",
+  "strategy_mode": "options_primary",
+  "mode": "research_only_proposal_only_shadow_trading",
+  "run_trigger": "automation",
+  "session_context": "Robinhood Agent Daily Options Scanner Dry Run automation robinhood-agent-daily-scanner-dry-run",
+  "intended_workflow": "daily_options_primary_scanner_research_only",
+  "started_at": "2026-09-08T20:20:00Z",
+  "first_tool_call_at": "2026-09-08T20:20:00Z",
+  "last_tool_call_at": "2026-09-08T20:35:52Z",
+  "completed_at": "2026-09-08T20:35:52Z",
+  "status": "COMPLETE",
+  "run_status": "degraded_complete",
+  "degradation_categories": [
+    "scanner_frontend_limit_capped_visible_rows",
+    "full_financial_statement_tool_not_exposed"
+  ],
+  "decision_integrity": "PASS_NO_LIVE_ACTIONS",
+  "persistence_integrity": "PASS_SCOPED_ARTIFACTS_WRITTEN",
+  "artifact_ids": {
+    "research_record_ids": [
+      "2026-09-08-AVGO",
+      "2026-09-08-BE",
+      "2026-09-08-QCOM",
+      "2026-09-08-ROIV",
+      "2026-09-08-DOCN",
+      "2026-09-08-CRWV",
+      "2026-09-08-LITE",
+      "2026-09-08-NBIS",
+      "2026-09-08-ORCL",
+      "2026-09-08-NVDA",
+      "2026-09-08-GOOGL",
+      "2026-09-08-MSFT",
+      "2026-09-08-META",
+      "2026-09-08-CRWD",
+      "2026-09-08-PANW",
+      "2026-09-08-PERMANENT-FILTERS"
+    ],
+    "options_setup_ids": [
+      "optsetup-2026-09-08-AVGO-20261016-370C",
+      "optsetup-2026-09-08-BE-20261016-270C",
+      "optsetup-2026-09-08-QCOM-20261016-180C"
+    ],
+    "shadow_trade_ids": [
+      "optshadow-2026-09-08-AVGO-20261016-370C"
+    ],
+    "outcome_record_ids": [
+      "optoutcome-2026-09-08-AVGO-20261016-370C"
+    ]
+  },
+  "persistence_integrity_details": {
+    "qualified_setups": 1,
+    "complete_chains": 3,
+    "orphaned_records": 0,
+    "missing_records": 0,
+    "exceptions": []
+  },
+  "account_snapshot_id": "acct-8691-2026-09-08T20:31Z",
+  "account_snapshot_as_of": "2026-09-08T20:31:00Z",
+  "guardrails": {
+    "live_orders_placed": false,
+    "live_orders_modified": false,
+    "live_orders_canceled": false,
+    "review_option_order_called": false,
+    "allowed_structures": ["LONG_CALL", "LONG_PUT"],
+    "blocked_structures": ["0DTE", "NAKED_SELLING", "CASH_SECURED_PUT", "COVERED_CALL", "SPREAD", "MARGIN_DRIVEN_SELLING", "EARNINGS_LOTTERY", "CHEAP_FAR_OTM_SUBSTITUTION"]
+  },
+  "source_of_truth_files_read": [
+    "tool_policy.md",
+    "system_prompt.md",
+    "pipeline_config.md",
+    "scanner_engine.md",
+    "research_agent.md",
+    "portfolio_manager_agent.md",
+    "universe.md",
+    "performance_metrics.md",
+    "strategy.md",
+    "options_strategy.md",
+    "state/current_universe.json",
+    "state/open_theses.json",
+    "state/rejected_candidates.json",
+    "research_logs/2026-09-04-daily-scanner-dry-run.md",
+    "research_logs/2026-09-07-weekly-research-review.md",
+    "data/validation_reports/2026-08-validation-summary.json"
+  ],
+  "tools_used": {
+    "read_only_robinhood": [
+      "get_accounts",
+      "get_portfolio",
+      "get_equity_positions",
+      "get_option_positions",
+      "get_equity_orders",
+      "get_option_orders",
+      "get_scans",
+      "run_scan",
+      "get_equity_quotes",
+      "get_equity_fundamentals",
+      "get_equity_tradability",
+      "get_indexes",
+      "get_index_quotes",
+      "get_equity_historicals",
+      "get_earnings_calendar",
+      "get_earnings_results",
+      "get_option_chains",
+      "get_option_instruments",
+      "get_option_quotes"
+    ],
+    "write_or_execution_tools_not_used": [
+      "place_option_order",
+      "cancel_option_order",
+      "place_equity_order",
+      "cancel_equity_order",
+      "create_scan",
+      "update_scan"
+    ]
+  },
+  "saved_scanners": {
+    "Momentum Candidates": {
+      "expected_id": "26cdeb14-da13-493f-b0c6-783468971a16",
+      "matched": true,
+      "total_items": 399,
+      "degraded": false
+    },
+    "Options Activity Radar": {
+      "expected_id": "7068db65-2a47-470c-bde9-94d66f36b806",
+      "matched": true,
+      "total_items": 136,
+      "degraded": false
+    },
+    "Earnings Risk Radar": {
+      "expected_id": "737924f1-e94f-4ad4-ba98-6c12fcaafaa9",
+      "matched": true,
+      "total_items": 300,
+      "degraded": false
+    }
+  },
+  "preflight": {
+    "agentic_account_mask": "8691",
+    "agentic_allowed": true,
+    "option_level": "option_level_2",
+    "portfolio_value": 100.0,
+    "cash": 100.0,
+    "option_buying_power": 100.0,
+    "equity_positions": 0,
+    "option_positions": 0,
+    "queued_equity_orders": 0,
+    "queued_option_orders": 0
+  },
+  "market_context": {
+    "SPX": 7673.52,
+    "NDX": 29507.7014,
+    "VIX": 15.72,
+    "regime": "constructive but selective; VIX mid-teens with broad indexes elevated and scanner breadth tilted to growth, semiconductors, AI infrastructure, and several speculative/high-IV names"
+  },
+  "decisions": {
+    "executive_decision": "NO_LIVE_TRADE",
+    "pm_recommendation": "No account-fit proposal; shadow-track one qualified AVGO setup only.",
+    "state_current_universe_changed": false,
+    "state_rejected_candidates_changed": false,
+    "shadow_trades_created": 1,
+    "pm_proposals_created": 0
+  }
+}

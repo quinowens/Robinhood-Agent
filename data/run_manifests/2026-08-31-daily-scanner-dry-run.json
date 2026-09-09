@@ -1,0 +1,91 @@
+{
+  "run_id": "2026-08-31-daily-scanner-dry-run",
+  "automation": "Robinhood Agent Daily Options Scanner Dry Run",
+  "automation_id": "robinhood-agent-daily-scanner-dry-run",
+  "run_trigger": "scheduled_automation",
+  "session_context": "research-only / proposal-only / shadow-trading",
+  "intended_workflow": "daily options-primary scanner workflow",
+  "pipeline_version": "2.0",
+  "strategy_version": "2.0.1",
+  "strategy_mode": "options_primary",
+  "started_at": "2026-08-31T20:31:17Z",
+  "first_tool_call_at": "2026-08-31T20:32:00Z",
+  "last_tool_call_at": "2026-08-31T20:42:24Z",
+  "completed_at": "2026-08-31T20:42:24Z",
+  "status": "DEGRADED_COMPLETE",
+  "degraded_reasons": [
+    "Automation prompt workspace path /Users/quinowens/Desktop/Robinhood-Agent-v1.6 was absent; required source files were read from /Users/quinowens/Desktop/Robinhood-Agent.",
+    "Scanner connector payloads expose capped visible rows while preserving total match counts; full uncapped raw scanner exports were unavailable.",
+    "Historical tool output was too large for complete inline audit in this run; direct quotes, fundamentals, financials, earnings, tradability, and scanner evidence drove terminal classifications."
+  ],
+  "account_snapshot": {
+    "account_snapshot_id": "acct-2026-08-31T204224Z-8691",
+    "account_snapshot_as_of": "2026-08-31T20:42:24Z",
+    "account_number_masked": "••••8691",
+    "account_type": "cash",
+    "brokerage_account_type": "individual",
+    "option_level": "option_level_2",
+    "broker_options_level": "level_2",
+    "strategy_enabled_options": ["LONG_CALL", "LONG_PUT"],
+    "account_value": 100.0,
+    "cash": 100.0,
+    "buying_power": 100.0,
+    "option_buying_power": 100.0,
+    "equity_positions_count": 0,
+    "option_positions_count": 0,
+    "open_equity_orders_count": 0,
+    "open_option_orders_count": 0
+  },
+  "scanner_resolution": [
+    {"name": "Momentum Candidates", "expected_scan_id": "26cdeb14-da13-493f-b0c6-783468971a16", "matched": true, "run_status": "success", "total_items": 398},
+    {"name": "Options Activity Radar", "expected_scan_id": "7068db65-2a47-470c-bde9-94d66f36b806", "matched": true, "run_status": "success", "total_items": 80},
+    {"name": "Earnings Risk Radar", "expected_scan_id": "737924f1-e94f-4ad4-ba98-6c12fcaafaa9", "matched": true, "run_status": "success", "total_items": 342}
+  ],
+  "tool_coverage": {
+    "get_accounts": "success",
+    "get_portfolio": "success",
+    "get_equity_positions": "success",
+    "get_option_positions": "success",
+    "get_equity_orders_open_states": "success",
+    "get_option_orders_open_states": "success",
+    "get_scans": "success after alternate namespace retry",
+    "run_scan": "success 3/3",
+    "get_equity_quotes": "success",
+    "get_equity_fundamentals": "success",
+    "get_financials": "success",
+    "get_equity_tradability": "success",
+    "get_equity_historicals": "partial audit due large output",
+    "get_earnings_calendar": "success",
+    "get_earnings_results": "success for CRWD/PANW/AVGO/NVDA",
+    "get_indexes": "success",
+    "get_index_quotes": "success",
+    "get_option_chains": "not_called_no_qualified_finalist",
+    "get_option_instruments": "not_called_no_qualified_finalist",
+    "get_option_quotes": "not_called_no_qualified_finalist",
+    "review_option_order": "not_called_not_required_for_research"
+  },
+  "scanner_summary": {
+    "raw_rows_persisted": 38,
+    "deduplicated_candidates_considered": 20,
+    "terminal_candidates": 20,
+    "completeness_pct": 100.0
+  },
+  "market_context": {
+    "SPX": 7686.14,
+    "NDX": 29456.9733,
+    "VIX": 14.92,
+    "SPY_last": 767.42,
+    "SPY_daily_change_pct": -0.251,
+    "QQQ_last": 717.04,
+    "QQQ_daily_change_pct": 0.085,
+    "interpretation": "Constructive-to-neutral, not hostile; candidate-level event and direction blocks dominate."
+  },
+  "final_decision": "NO_TRADE",
+  "pm_recommendation": "No PM_PROPOSAL and no SHADOW_ONLY_QUALIFIED setup. No candidate reached option-chain work because all serious Current Universe names were either temporarily blocked or lacked a directional edge.",
+  "state_file_decision": {
+    "current_universe_json": "unchanged",
+    "open_theses_json": "unchanged",
+    "rejected_candidates_json": "unchanged"
+  },
+  "execution_statement": "No live orders were placed, modified, or canceled. Any options proposal is hypothetical and requires exact reviewed-order user approval before live execution."
+}

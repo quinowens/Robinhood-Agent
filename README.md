@@ -12,7 +12,7 @@ This project is designed for Robinhood's AI Agent platform. In v2.0, equities re
 
 ## Current Version
 
-- **Version:** 2.0.1
+- **Version:** 2.0.2
 - **Account Type:** Dedicated AI Agent account
 - **Execution Mode:** Proposal-only until explicitly upgraded
 - **Asset Type:** Options-primary; long calls/long puts only at launch; equities are approved underlyings
@@ -169,9 +169,9 @@ Not enabled by default. Requires proven performance, stable logs, clean rule com
 
 ---
 
-## Version 2.0.1 Status
+## Version 2.0.2 Status
 
-Version 2.0.1 is the current source of truth.
+Version 2.0.2 is the current source of truth. Trading thresholds and contract-selection behavior remain frozen from v2.0.1; this release adds persistence integrity, explicit degradation categories, scheduled-run accounting, and automatic outcome maturation.
 
 The system is now an **options-primary tactical pipeline**:
 
@@ -219,6 +219,9 @@ make scan-sensitive
 make daily-log DATE=2026-08-06
 make analyze-outcomes
 make validation-report MONTH=2026-08
+make integrity-audit AS_OF=2026-08-30
+make update-option-outcomes SNAPSHOT=data/outcome_update_snapshots/2026-08-24-option-outcomes.json
+make migrate-v202-ids DRY_RUN=1
 ```
 
 Generated research artifacts are currently tracked for reproducibility. The policy for what should remain tracked lives in `docs/ARTIFACT_POLICY.md`.

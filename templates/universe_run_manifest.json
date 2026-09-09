@@ -1,6 +1,6 @@
 {
   "run_id": "YYYY-MM-universe-NNN",
-  "pipeline_version": "2.0.1",
+  "pipeline_version": "2.0.2",
   "status": "RUNNING",
   "run_trigger": null,
   "session_context": null,
@@ -9,6 +9,39 @@
   "first_tool_call_at": null,
   "last_tool_call_at": null,
   "completed_at": null,
+  "run_status": "RUNNING",
+  "degradation_categories": [],
+  "decision_integrity": "PENDING",
+  "persistence_integrity": "PENDING",
+  "artifact_ids": {
+    "research_record_ids": [],
+    "options_setup_ids": [],
+    "shadow_trade_ids": [],
+    "outcome_record_ids": []
+  },
+  "persistence_integrity_details": {
+    "qualified_setups": 0,
+    "complete_chains": 0,
+    "orphaned_records": 0,
+    "missing_records": 0,
+    "exceptions": []
+  },
+  "outcome_health": {
+    "canonical_outcome_records": 0,
+    "mature_1d_expected": 0,
+    "mature_1d_observed": 0,
+    "mature_5d_expected": 0,
+    "mature_5d_observed": 0,
+    "mature_10d_expected": 0,
+    "mature_10d_observed": 0,
+    "mature_20d_expected": 0,
+    "mature_20d_observed": 0,
+    "mature_30d_expected": 0,
+    "mature_30d_observed": 0,
+    "overdue_outcome_windows": 0,
+    "update_failures": 0,
+    "status": "PENDING"
+  },
   "shadow_options_research_top_n": 3,
   "shadow_research_limit": null,
   "live_proposal_limit": null,

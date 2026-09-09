@@ -279,12 +279,21 @@ def summarize_shadow(shadow_rows: list[dict[str, Any]]) -> dict[str, Any]:
     returns = [
         value
         for row in shadow_rows
-        if (value := numeric(row.get("pnl_pct") or row.get("theoretical_option_return") or row.get("forward_30d_option_return"))) is not None
+        if (value := numeric(
+            row.get("pnl_pct")
+            or row.get("theoretical_option_return")
+            or row.get("forward_30d_option_return")
+            or row.get("forward_20d_option_return")
+            or row.get("forward_10d_option_return")
+            or row.get("forward_5d_option_return")
+            or row.get("forward_1d_option_return")
+        )) is not None
     ]
     r_multiples = [value for row in shadow_rows if (value := numeric(row.get("r_multiple"))) is not None]
     return {
         "count": len(shadow_rows),
-        "closed_count": len(returns),
+        "observed_count": len(returns),
+        "closed_count": sum(numeric(row.get("forward_30d_option_return")) is not None for row in shadow_rows),
         "average_pnl_pct": mean(returns),
         "median_pnl_pct": statistics.median(returns) if returns else None,
         "average_r_multiple": mean(r_multiples),
@@ -431,7 +440,8 @@ def summarize_option_setups(setups: list[dict[str, Any]], outcomes: list[dict[st
         merged = dict(row)
         outcome = outcome_lookup.get(str(row.get("option_setup_id")), {})
         for key, value in outcome.items():
-            merged.setdefault(key, value)
+            if key not in merged or merged[key] is None:
+                merged[key] = value
         joined.append(merged)
 
     by_type: dict[str, list[dict[str, Any]]] = defaultdict(list)
@@ -484,6 +494,14 @@ def summarize_option_setups(setups: list[dict[str, Any]], outcomes: list[dict[st
         "final_decisions": dict(sorted(final_decisions.items())),
         "account_fit_failures_by_reason": dict(sorted(account_fit_failures_by_reason.items())),
         "pipeline_conversion": dict(sorted(shadow_conversion.items())),
+        "outcome_maturation": {
+            f"{horizon}D": {
+                "eligible_records": len(canonical_outcomes),
+                "observed_option_returns": sum(numeric(row.get(f"option_forward_{horizon}d_return")) is not None for row in canonical_outcomes),
+                "observed_underlying_returns": sum(numeric(row.get(f"underlying_forward_{horizon}d_return")) is not None for row in canonical_outcomes),
+            }
+            for horizon in (1, 5, 10, 20, 30)
+        },
         "by_option_type": {key: summarize_group(rows, "option_forward_20d_return") for key, rows in sorted(by_type.items())},
         "by_dte_bucket": {key: summarize_group(rows, "option_forward_20d_return") for key, rows in sorted(by_dte.items())},
         "by_delta_bucket": {key: summarize_group(rows, "option_forward_20d_return") for key, rows in sorted(by_delta.items())},

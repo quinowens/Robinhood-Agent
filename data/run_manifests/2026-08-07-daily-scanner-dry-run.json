@@ -45,8 +45,16 @@
       "buying_power": "100.0000",
       "equity_positions": 0,
       "option_positions": 0,
-      "open_equity_orders_checked_states": ["queued", "confirmed", "partially_filled"],
-      "open_option_orders_checked_states": ["queued", "confirmed", "partially_filled"]
+      "open_equity_orders_checked_states": [
+        "queued",
+        "confirmed",
+        "partially_filled"
+      ],
+      "open_option_orders_checked_states": [
+        "queued",
+        "confirmed",
+        "partially_filled"
+      ]
     }
   ],
   "account_capability_map": {
@@ -62,7 +70,10 @@
       "spreads": false
     },
     "strategy_options_capabilities": {
-      "enabled_structures": ["LONG_CALL", "LONG_PUT"],
+      "enabled_structures": [
+        "LONG_CALL",
+        "LONG_PUT"
+      ],
       "covered_calls_enabled": false,
       "cash_secured_puts_enabled": false,
       "spreads_enabled": false,
@@ -81,8 +92,16 @@
     "buying_power": "100.0000",
     "equity_positions": 0,
     "option_positions": 0,
-    "open_equity_orders_checked_states": ["queued", "confirmed", "partially_filled"],
-    "open_option_orders_checked_states": ["queued", "confirmed", "partially_filled"]
+    "open_equity_orders_checked_states": [
+      "queued",
+      "confirmed",
+      "partially_filled"
+    ],
+    "open_option_orders_checked_states": [
+      "queued",
+      "confirmed",
+      "partially_filled"
+    ]
   },
   "scanner_resolution": {
     "status": "matched",
@@ -108,29 +127,178 @@
     ]
   },
   "call_manifest": [
-    {"tool": "get_accounts", "requested": "all accounts", "status": "success", "retry_count": 0, "missing_fields": []},
-    {"tool": "get_portfolio", "requested": "account ...8691", "status": "success", "retry_count": 0, "missing_fields": []},
-    {"tool": "get_equity_positions", "requested": "account ...8691", "status": "success", "retry_count": 0, "missing_fields": []},
-    {"tool": "get_option_positions", "requested": "account ...8691 nonzero", "status": "success", "retry_count": 0, "missing_fields": []},
-    {"tool": "get_equity_orders", "requested": "queued, confirmed, partially_filled", "status": "success", "retry_count": 0, "missing_fields": []},
-    {"tool": "get_option_orders", "requested": "queued, confirmed, partially_filled", "status": "success", "retry_count": 0, "missing_fields": []},
-    {"tool": "get_option_level_upgrade_info", "requested": "account ...8691 before app approval", "status": "success", "retry_count": 0, "missing_fields": []},
-    {"tool": "get_accounts", "requested": "fresh verification after user app approval", "status": "success", "retry_count": 0, "missing_fields": []},
-    {"tool": "get_scans", "requested": "saved scanners", "status": "success", "retry_count": 0, "missing_fields": []},
-    {"tool": "run_scan", "requested": "Momentum Candidates", "status": "success_degraded_persistence", "retry_count": 0, "missing_fields": ["full scanner row export not preserved in transcript"]},
-    {"tool": "run_scan", "requested": "Options Activity Radar", "status": "success", "retry_count": 0, "missing_fields": []},
-    {"tool": "run_scan", "requested": "Earnings Risk Radar", "status": "success_degraded_persistence", "retry_count": 0, "missing_fields": ["full scanner row export not preserved in transcript"]},
-    {"tool": "get_equity_quotes", "requested": "benchmarks, Current Universe Tier 2, and scanner leaders", "status": "success", "retry_count": 0, "missing_fields": []},
-    {"tool": "get_equity_fundamentals", "requested": "Current Universe Tier 2 and scanner leaders", "status": "success", "retry_count": 0, "missing_fields": []},
-    {"tool": "get_financials", "requested": "Current Universe Tier 2 and scanner leaders", "status": "partial", "retry_count": 0, "missing_fields": ["TEAM financials null", "HALO financials null", "SPCX financials null"]},
-    {"tool": "get_earnings_results", "requested": "Current Universe Tier 2 and scanner leaders", "status": "success", "retry_count": 0, "missing_fields": []},
-    {"tool": "get_indexes", "requested": "SPX, NDX, DJI, RUT", "status": "partial", "retry_count": 0, "missing_fields": ["DJI not returned", "RUT restricted"]},
-    {"tool": "get_index_quotes", "requested": "SPX, NDX", "status": "success", "retry_count": 0, "missing_fields": []},
-    {"tool": "get_option_chains", "requested": "NVDA", "status": "success", "retry_count": 0, "missing_fields": []},
-    {"tool": "get_option_instruments", "requested": "NVDA 2026-09-18 and 2026-10-16 calls near spot", "status": "success", "retry_count": 0, "missing_fields": []},
-    {"tool": "get_option_quotes", "requested": "six NVDA candidate calls", "status": "success", "retry_count": 0, "missing_fields": []},
-    {"tool": "review_option_order", "requested": "none; not required for shadow-only research", "status": "not_called", "retry_count": 0, "missing_fields": []},
-    {"tool": "place_option_order", "requested": "forbidden in this run", "status": "not_called", "retry_count": 0, "missing_fields": []}
+    {
+      "tool": "get_accounts",
+      "requested": "all accounts",
+      "status": "success",
+      "retry_count": 0,
+      "missing_fields": []
+    },
+    {
+      "tool": "get_portfolio",
+      "requested": "account ...8691",
+      "status": "success",
+      "retry_count": 0,
+      "missing_fields": []
+    },
+    {
+      "tool": "get_equity_positions",
+      "requested": "account ...8691",
+      "status": "success",
+      "retry_count": 0,
+      "missing_fields": []
+    },
+    {
+      "tool": "get_option_positions",
+      "requested": "account ...8691 nonzero",
+      "status": "success",
+      "retry_count": 0,
+      "missing_fields": []
+    },
+    {
+      "tool": "get_equity_orders",
+      "requested": "queued, confirmed, partially_filled",
+      "status": "success",
+      "retry_count": 0,
+      "missing_fields": []
+    },
+    {
+      "tool": "get_option_orders",
+      "requested": "queued, confirmed, partially_filled",
+      "status": "success",
+      "retry_count": 0,
+      "missing_fields": []
+    },
+    {
+      "tool": "get_option_level_upgrade_info",
+      "requested": "account ...8691 before app approval",
+      "status": "success",
+      "retry_count": 0,
+      "missing_fields": []
+    },
+    {
+      "tool": "get_accounts",
+      "requested": "fresh verification after user app approval",
+      "status": "success",
+      "retry_count": 0,
+      "missing_fields": []
+    },
+    {
+      "tool": "get_scans",
+      "requested": "saved scanners",
+      "status": "success",
+      "retry_count": 0,
+      "missing_fields": []
+    },
+    {
+      "tool": "run_scan",
+      "requested": "Momentum Candidates",
+      "status": "success_degraded_persistence",
+      "retry_count": 0,
+      "missing_fields": [
+        "full scanner row export not preserved in transcript"
+      ]
+    },
+    {
+      "tool": "run_scan",
+      "requested": "Options Activity Radar",
+      "status": "success",
+      "retry_count": 0,
+      "missing_fields": []
+    },
+    {
+      "tool": "run_scan",
+      "requested": "Earnings Risk Radar",
+      "status": "success_degraded_persistence",
+      "retry_count": 0,
+      "missing_fields": [
+        "full scanner row export not preserved in transcript"
+      ]
+    },
+    {
+      "tool": "get_equity_quotes",
+      "requested": "benchmarks, Current Universe Tier 2, and scanner leaders",
+      "status": "success",
+      "retry_count": 0,
+      "missing_fields": []
+    },
+    {
+      "tool": "get_equity_fundamentals",
+      "requested": "Current Universe Tier 2 and scanner leaders",
+      "status": "success",
+      "retry_count": 0,
+      "missing_fields": []
+    },
+    {
+      "tool": "get_financials",
+      "requested": "Current Universe Tier 2 and scanner leaders",
+      "status": "partial",
+      "retry_count": 0,
+      "missing_fields": [
+        "TEAM financials null",
+        "HALO financials null",
+        "SPCX financials null"
+      ]
+    },
+    {
+      "tool": "get_earnings_results",
+      "requested": "Current Universe Tier 2 and scanner leaders",
+      "status": "success",
+      "retry_count": 0,
+      "missing_fields": []
+    },
+    {
+      "tool": "get_indexes",
+      "requested": "SPX, NDX, DJI, RUT",
+      "status": "partial",
+      "retry_count": 0,
+      "missing_fields": [
+        "DJI not returned",
+        "RUT restricted"
+      ]
+    },
+    {
+      "tool": "get_index_quotes",
+      "requested": "SPX, NDX",
+      "status": "success",
+      "retry_count": 0,
+      "missing_fields": []
+    },
+    {
+      "tool": "get_option_chains",
+      "requested": "NVDA",
+      "status": "success",
+      "retry_count": 0,
+      "missing_fields": []
+    },
+    {
+      "tool": "get_option_instruments",
+      "requested": "NVDA 2026-09-18 and 2026-10-16 calls near spot",
+      "status": "success",
+      "retry_count": 0,
+      "missing_fields": []
+    },
+    {
+      "tool": "get_option_quotes",
+      "requested": "six NVDA candidate calls",
+      "status": "success",
+      "retry_count": 0,
+      "missing_fields": []
+    },
+    {
+      "tool": "review_option_order",
+      "requested": "none; not required for shadow-only research",
+      "status": "not_called",
+      "retry_count": 0,
+      "missing_fields": []
+    },
+    {
+      "tool": "place_option_order",
+      "requested": "forbidden in this run",
+      "status": "not_called",
+      "retry_count": 0,
+      "missing_fields": []
+    }
   ],
   "run_health": {
     "status": "degraded",
@@ -152,7 +320,11 @@
   "portfolio_manager": {
     "setup_quality_status": "QUALIFIED",
     "account_fit": "FAIL",
-    "account_fit_reasons": ["premium_allocation_exceeds_account_equity", "max_contractual_loss_exceeds_account_equity", "small_account_mode"],
+    "account_fit_reasons": [
+      "premium_allocation_exceeds_account_equity",
+      "max_contractual_loss_exceeds_account_equity",
+      "small_account_mode"
+    ],
     "option_buying_power": "100.0000",
     "option_level": "option_level_2",
     "current_open_options_premium_risk": 0,
@@ -180,5 +352,13 @@
     "rejected_candidates": "updated for MARA and HTZ repeated permanent rejects",
     "account_capabilities": "created from broker confirmation and strategy scope"
   },
-  "orders_placed_modified_or_canceled": false
+  "orders_placed_modified_or_canceled": false,
+  "artifact_ids": {
+    "options_setup_ids": [
+      "2026-08-07-NVDA-001"
+    ]
+  },
+  "migration_warnings": [
+    "options_setup_ids deterministically backfilled by migrate_v202_ids.py"
+  ]
 }

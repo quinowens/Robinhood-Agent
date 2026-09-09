@@ -63,26 +63,106 @@
     }
   ],
   "tool_calls": [
-    {"tool": "get_accounts", "status": "success", "retry_count": 0},
-    {"tool": "get_portfolio", "status": "success", "retry_count": 0},
-    {"tool": "get_equity_positions", "status": "success", "retry_count": 0},
-    {"tool": "get_option_positions", "status": "success", "retry_count": 0},
-    {"tool": "get_equity_orders", "status": "success", "retry_count": 0},
-    {"tool": "get_option_orders", "status": "success", "retry_count": 0},
-    {"tool": "get_scans", "status": "success", "retry_count": 0},
-    {"tool": "run_scan", "status": "success", "retry_count": 0},
-    {"tool": "get_equity_fundamentals", "status": "success", "retry_count": 0},
-    {"tool": "get_financials", "status": "success", "retry_count": 0},
-    {"tool": "get_equity_quotes", "status": "success", "retry_count": 0},
-    {"tool": "get_equity_tradability", "status": "success", "retry_count": 0},
-    {"tool": "get_equity_historicals", "status": "success", "retry_count": 0},
-    {"tool": "get_earnings_results", "status": "success", "retry_count": 0},
-    {"tool": "get_indexes", "status": "partial", "retry_count": 0},
-    {"tool": "get_realized_pnl", "status": "success_after_parameter_retry", "retry_count": 1},
-    {"tool": "get_pnl_trade_history", "status": "success", "retry_count": 0},
-    {"tool": "get_option_chains", "status": "success", "retry_count": 0},
-    {"tool": "get_option_instruments", "status": "success", "retry_count": 0},
-    {"tool": "get_option_quotes", "status": "success", "retry_count": 0}
+    {
+      "tool": "get_accounts",
+      "status": "success",
+      "retry_count": 0
+    },
+    {
+      "tool": "get_portfolio",
+      "status": "success",
+      "retry_count": 0
+    },
+    {
+      "tool": "get_equity_positions",
+      "status": "success",
+      "retry_count": 0
+    },
+    {
+      "tool": "get_option_positions",
+      "status": "success",
+      "retry_count": 0
+    },
+    {
+      "tool": "get_equity_orders",
+      "status": "success",
+      "retry_count": 0
+    },
+    {
+      "tool": "get_option_orders",
+      "status": "success",
+      "retry_count": 0
+    },
+    {
+      "tool": "get_scans",
+      "status": "success",
+      "retry_count": 0
+    },
+    {
+      "tool": "run_scan",
+      "status": "success",
+      "retry_count": 0
+    },
+    {
+      "tool": "get_equity_fundamentals",
+      "status": "success",
+      "retry_count": 0
+    },
+    {
+      "tool": "get_financials",
+      "status": "success",
+      "retry_count": 0
+    },
+    {
+      "tool": "get_equity_quotes",
+      "status": "success",
+      "retry_count": 0
+    },
+    {
+      "tool": "get_equity_tradability",
+      "status": "success",
+      "retry_count": 0
+    },
+    {
+      "tool": "get_equity_historicals",
+      "status": "success",
+      "retry_count": 0
+    },
+    {
+      "tool": "get_earnings_results",
+      "status": "success",
+      "retry_count": 0
+    },
+    {
+      "tool": "get_indexes",
+      "status": "partial",
+      "retry_count": 0
+    },
+    {
+      "tool": "get_realized_pnl",
+      "status": "success_after_parameter_retry",
+      "retry_count": 1
+    },
+    {
+      "tool": "get_pnl_trade_history",
+      "status": "success",
+      "retry_count": 0
+    },
+    {
+      "tool": "get_option_chains",
+      "status": "success",
+      "retry_count": 0
+    },
+    {
+      "tool": "get_option_instruments",
+      "status": "success",
+      "retry_count": 0
+    },
+    {
+      "tool": "get_option_quotes",
+      "status": "success",
+      "retry_count": 0
+    }
   ],
   "candidate_counts": {
     "raw_scanner_match_total": 603,
@@ -101,5 +181,13 @@
     "current_universe_json": "unchanged",
     "rejected_candidates_json": "unchanged",
     "reason": "Daily degraded dry run did not authorize an official universe rewrite; no repeated permanent reject required a state update."
-  }
+  },
+  "artifact_ids": {
+    "options_setup_ids": [
+      "optsetup-2026-08-13-META-20261016-600C"
+    ]
+  },
+  "migration_warnings": [
+    "options_setup_ids deterministically backfilled by migrate_v202_ids.py"
+  ]
 }

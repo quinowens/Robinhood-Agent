@@ -9,6 +9,8 @@ import re
 import sys
 from pathlib import Path
 
+from data_integrity import audit as audit_data_integrity
+
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -40,6 +42,9 @@ REQUIRED_FILES = [
     "templates/market_regime_snapshot.json",
     "templates/universe_run_manifest.json",
     "docs/VALIDATION_RELEASE.md",
+    "docs/OUTCOME_MIGRATION.md",
+    "scripts/generate_strategy_diagnostics.py",
+    "templates/scheduled_run_ledger.json",
 ]
 
 REQUIRED_DIRS = [
@@ -253,6 +258,10 @@ def check_v2_options_invariants(errors: list[str]) -> None:
     ]:
         if field not in option_outcome:
             fail(errors, f"option outcome template missing field: {field}")
+    for horizon in (1, 5, 10, 20, 30):
+        for field in [f"forward_{horizon}d_status", f"forward_{horizon}d_observation", f"option_mfe_{horizon}d", f"option_mae_{horizon}d", f"underlying_mfe_{horizon}d", f"underlying_mae_{horizon}d", f"outcome_classification_{horizon}d"]:
+            if field not in option_outcome:
+                fail(errors, f"option outcome template missing diagnostics field: {field}")
 
     universe = json.loads(read_text_file("state/current_universe.json"))
     for contract_key in ["expiration", "strike", "option_type", "contract"]:
@@ -315,7 +324,8 @@ def check_v201_option_records(errors: list[str]) -> None:
             account_fit = str(row.get("account_fit_status") or "").upper()
             final_decision = str(row.get("final_decision") or "").upper()
             where = f"{rel(path)}:{line_number}"
-            require_template_fields(errors, row, setup_template, "option setup", where)
+            if str(strategy_version) >= "2.0.2":
+                require_template_fields(errors, row, setup_template, "option setup", where)
             require_non_empty_fields(
                 errors,
                 row,
@@ -354,7 +364,8 @@ def check_v201_option_records(errors: list[str]) -> None:
             if strategy_version is None or str(strategy_version) < "2.0.1":
                 continue
             where = f"{rel(path)}:{line_number}"
-            require_template_fields(errors, row, shadow_template, "option shadow trade", where)
+            if str(strategy_version) >= "2.0.2":
+                require_template_fields(errors, row, shadow_template, "option shadow trade", where)
             require_non_empty_fields(
                 errors,
                 row,
@@ -376,7 +387,8 @@ def check_v201_option_records(errors: list[str]) -> None:
             if strategy_version is None or str(strategy_version) < "2.0.1":
                 continue
             where = f"{rel(path)}:{line_number}"
-            require_template_fields(errors, row, outcome_template, "option signal outcome", where)
+            if str(strategy_version) >= "2.0.2":
+                require_template_fields(errors, row, outcome_template, "option signal outcome", where)
             require_non_empty_fields(
                 errors,
                 row,
@@ -391,6 +403,13 @@ def check_v201_option_records(errors: list[str]) -> None:
                     fail(errors, f"current option outcome planned trade risk must equal max contractual loss: {where}")
                 if row.get("planned_trade_risk_source") != "default_max_contractual_loss":
                     fail(errors, f"current option outcome planned risk source must be default_max_contractual_loss: {where}")
+            for horizon in (1, 5, 10, 20, 30) if row.get("canonical", row.get("is_canonical", True)) is not False else ():
+                status = row.get(f"forward_{horizon}d_status")
+                if status not in {"PENDING", "OBSERVED", "MISSING_SOURCE_DATA", "UPDATE_FAILED", "NOT_APPLICABLE"}:
+                    fail(errors, f"invalid forward_{horizon}d_status {status!r}: {where}")
+                observation = row.get(f"forward_{horizon}d_observation") or {}
+                if status == "OBSERVED" and (row.get(f"option_forward_{horizon}d_return") is None or not observation.get("observed_at") or not observation.get("source")):
+                    fail(errors, f"observed {horizon}D outcome lacks value/provenance: {where}")
 
 
 def require_template_fields(
@@ -435,6 +454,10 @@ def validate_canonical_fields(
         fail(errors, f"v2.0.1 option record missing signal_group_id: {where}")
     if "is_canonical" not in row or not isinstance(row.get("is_canonical"), bool):
         fail(errors, f"v2.0.1 option record must set boolean is_canonical: {where}")
+    if "canonical" in row and row.get("canonical") != row.get("is_canonical"):
+        fail(errors, f"canonical and is_canonical disagree: {where}")
+    if row.get("superseded_by_record_id") and row.get("is_canonical") is True:
+        fail(errors, f"superseded option record cannot remain canonical: {where}")
     if row.get("is_canonical") is False and not row.get("supersedes_setup_id"):
         fail(errors, f"non-canonical option record must set supersedes_setup_id: {where}")
     group_id = row.get("signal_group_id")
@@ -488,6 +511,12 @@ def check_v201_run_manifests(errors: list[str]) -> None:
             fail(errors, f"RUNNING manifest must have completed_at null: {where}")
         if data.get("status") != "RUNNING" and not data.get("completed_at"):
             fail(errors, f"completed v2.0.1 manifest must set completed_at: {where}")
+        if str(pipeline_version) >= "2.0.2":
+            for field in ["run_status", "degradation_categories", "decision_integrity", "persistence_integrity", "artifact_ids", "persistence_integrity_details"]:
+                if field not in data:
+                    fail(errors, f"v2.0.2 run manifest missing {field}: {where}")
+            if data.get("persistence_integrity") == "FAIL" and data.get("run_status") == "COMPLETE":
+                fail(errors, f"manifest cannot be COMPLETE with failed persistence integrity: {where}")
 
 
 def parse_json_file_return(path: Path, errors: list[str]) -> dict | None:
@@ -594,6 +623,7 @@ def main() -> int:
     args = parser.parse_args()
 
     errors: list[str] = []
+    warnings: list[str] = []
 
     if args.scan_sensitive_only:
         check_sensitive_strings(errors)
@@ -604,6 +634,20 @@ def main() -> int:
         check_daily_logs(errors)
         check_v2_options_invariants(errors)
         check_sensitive_strings(errors)
+        integrity = audit_data_integrity()
+        errors.extend(
+            f"data integrity {item['code']}: {json.dumps(item, sort_keys=True)}"
+            for item in integrity["errors"]
+        )
+        warnings.extend(
+            f"data integrity {item['code']}: {json.dumps(item, sort_keys=True)}"
+            for item in integrity["warnings"]
+        )
+
+    if warnings:
+        print("Validation warnings:")
+        for warning in warnings:
+            print(f"- {warning}")
 
     if errors:
         print("Validation failed:")

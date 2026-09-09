@@ -1,0 +1,142 @@
+{
+  "run_id": "2026-09-02-daily-scanner-dry-run",
+  "pipeline_version": "2.0.2",
+  "status": "DEGRADED_COMPLETE",
+  "run_trigger": "automation",
+  "session_context": "Robinhood Agent Daily Options Scanner Dry Run",
+  "intended_workflow": "daily_options_primary_scanner_research_only_proposal_only_shadow_trading",
+  "started_at": "2026-09-02T20:26:00Z",
+  "first_tool_call_at": "2026-09-02T20:26:00Z",
+  "last_tool_call_at": "2026-09-02T20:33:57Z",
+  "completed_at": "2026-09-02T20:33:57Z",
+  "run_status": "degraded_complete",
+  "degradation_categories": [
+    "scanner_rows_capped_by_connector_visible_payload",
+    "RUT_quote_restricted_by_connector",
+    "one_empty_option_quote_validation_error_no_state_change"
+  ],
+  "decision_integrity": "PASS",
+  "persistence_integrity": "PASS",
+  "artifact_ids": {
+    "research_record_ids": [
+      "2026-09-02-NVDA",
+      "2026-09-02-SNOW",
+      "2026-09-02-DELL",
+      "2026-09-02-PANW",
+      "2026-09-02-AVGO",
+      "2026-09-02-CRWD",
+      "2026-09-02-META",
+      "2026-09-02-GOOGL",
+      "2026-09-02-AMZN",
+      "2026-09-02-MSFT",
+      "2026-09-02-AAPL",
+      "2026-09-02-CRDO",
+      "2026-09-02-ORCL"
+    ],
+    "options_setup_ids": [
+      "optsetup-2026-09-02-NVDA-20261016-225C"
+    ],
+    "shadow_trade_ids": [
+      "optshadow-2026-09-02-NVDA-20261016-225C"
+    ],
+    "outcome_record_ids": [
+      "optoutcome-2026-09-02-NVDA-20261016-225C"
+    ]
+  },
+  "persistence_integrity_details": {
+    "qualified_setups": 1,
+    "complete_chains": 1,
+    "orphaned_records": 0,
+    "missing_records": 0,
+    "exceptions": []
+  },
+  "shadow_options_research_top_n": 3,
+  "shadow_research_limit": 13,
+  "live_proposal_limit": 0,
+  "live_position_limit": 0,
+  "account_snapshots": [
+    {
+      "account_snapshot_id": "acct-8691-2026-09-02T20:32Z",
+      "account_snapshot_as_of": "2026-09-02T20:32:03Z",
+      "account_number_last4": "8691",
+      "account_type": "cash",
+      "broker_options_level": "option_level_2",
+      "account_value": 100.0,
+      "cash": 100.0,
+      "option_buying_power": 100.0,
+      "equity_positions": 0,
+      "option_positions": 0,
+      "open_equity_orders": 0,
+      "open_option_orders": 0,
+      "current_open_options_premium_risk": 0.0
+    }
+  ],
+  "account_capability_map": {
+    "broker_options_level": "option_level_2",
+    "broker_permitted": ["buy_calls", "buy_puts", "covered_calls", "cash_covered_puts", "exercise_options"],
+    "broker_unavailable": ["spreads"],
+    "strategy_enabled": ["LONG_CALL", "LONG_PUT"],
+    "strategy_disabled": ["covered_calls", "cash_secured_puts", "spreads", "0DTE", "autonomous_live_options_execution"]
+  },
+  "seed_sources": ["Momentum Candidates", "Options Activity Radar", "Earnings Risk Radar", "Current Universe Tier 2 review"],
+  "seed_count": 413,
+  "deduplicated_count": 13,
+  "terminal_result_count": 13,
+  "scored_count": 13,
+  "score_distribution": {
+    "highest": 81,
+    "percentile_95": null,
+    "percentile_90": null,
+    "median": 72,
+    "tier_1_threshold": 85,
+    "tier_2_threshold": 75,
+    "tier_1_count": 0,
+    "tier_2_count": 1,
+    "calibration_warning": null
+  },
+  "permanently_rejected_count": 8,
+  "incomplete_count": 0,
+  "completeness_pct": 100,
+  "minimum_publish_completeness_pct": 90,
+  "benchmark_dates": {
+    "start_126d": "2026-03-01",
+    "start_63d": "2026-06-01",
+    "end": "2026-09-02"
+  },
+  "preflight": {
+    "authentication": "pass",
+    "quotes": "pass",
+    "historicals": "pass",
+    "fundamentals": "pass",
+    "earnings": "pass",
+    "financials": "pass",
+    "tradability": "pass",
+    "indexes": "degraded_RUT_restricted",
+    "account_state": "pass",
+    "open_orders": "pass",
+    "spy_history": "pass",
+    "qqq_history": "pass"
+  },
+  "scanner_resolution": {
+    "Momentum Candidates": "matched_expected_name_and_id",
+    "Options Activity Radar": "matched_expected_name_and_id",
+    "Earnings Risk Radar": "matched_expected_name_and_id"
+  },
+  "scanner_results": {
+    "Momentum Candidates": {"scan_id": "26cdeb14-da13-493f-b0c6-783468971a16", "total_items": 397, "visible_rows_persisted": 100, "sort": "% Change desc"},
+    "Options Activity Radar": {"scan_id": "7068db65-2a47-470c-bde9-94d66f36b806", "total_items": 97, "visible_rows_persisted": 97, "sort": "Implied volatility desc"},
+    "Earnings Risk Radar": {"scan_id": "737924f1-e94f-4ad4-ba98-6c12fcaafaa9", "total_items": 344, "visible_rows_persisted": 100, "sort": "Earnings date desc"}
+  },
+  "failed_calls": 1,
+  "retried_calls": 0,
+  "missing_critical_fields": [],
+  "publish_decision": "do_not_update_current_universe_daily_run",
+  "execution_mode": "research_only_proposal_only_shadow_trading",
+  "live_order_tools_called": false,
+  "review_option_order_called": false,
+  "notes": [
+    "NVDA was the only Current Universe Tier 2 name with Momentum plus Options Activity overlap and enough post-earnings settled evidence for limited option-chain research.",
+    "NVDA 2026-10-16 225C passed setup quality but failed account fit because one contract midpoint premium was about $1052.50 versus $100 buying power.",
+    "No live orders were placed, modified, canceled, reviewed, or submitted."
+  ]
+}
