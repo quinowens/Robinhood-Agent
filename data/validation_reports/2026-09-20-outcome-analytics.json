@@ -1,0 +1,1057 @@
+{
+  "blocked_candidate_opportunity_cost": {
+    "account_fit_premium_risk": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "blocked_by_earnings": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 19,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 19,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 19,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 19,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 19,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 19,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "blocked_by_extension": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 18,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 18,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 18,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 18,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 18,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 18,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "duplicate_recent_shadow_setup": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 5,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 5,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 5,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 5,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 5,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 5,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "no_directional_edge": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 52,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 52,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 52,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 52,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 52,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 52,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "no_fresh_directional_edge": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 6,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 6,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 6,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 6,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 6,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 6,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "no_fresh_scanner_edge": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 3,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 3,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 3,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 3,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 3,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 3,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "outside_current_universe": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 9,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 9,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 9,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 9,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 9,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 9,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "outside_official_current_universe": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 14,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 14,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 14,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 14,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 14,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 14,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "penny_stock_or_microcap": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 8,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 8,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 8,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 8,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 8,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 8,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "permanent_filters": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 5,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 5,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 5,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 5,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 5,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 5,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "post_earnings_review": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 6,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 6,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 6,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 6,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 6,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 6,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "weak_trend": {
+      "forward_10d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_20d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_5d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "mae_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "mfe_20d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      }
+    }
+  },
+  "generated_at": "2026-09-20T23:03:00.010016+00:00",
+  "month_filter": "2026-09",
+  "options_confirmation_lift": {
+    "alpha_lift": null,
+    "confirmed_momentum": {
+      "average": null,
+      "count": 38,
+      "median": null,
+      "observed_count": 0
+    },
+    "unconfirmed_momentum": {
+      "average": null,
+      "count": 24,
+      "median": null,
+      "observed_count": 0
+    }
+  },
+  "options_strategy": {
+    "account_fit_failures_by_reason": {
+      "Name is outside official Current Universe, so account fit is secondary.": 1,
+      "No cheaper far-OTM/short-DTE substitution allowed.": 3,
+      "One-contract midpoint premium is about $1,220 versus $100 option buying power.": 1,
+      "One-contract midpoint premium is about $1052.50 versus $100 option buying power.": 1,
+      "One-contract midpoint premium is about $1122.50 versus $100 option buying power.": 1,
+      "One-contract midpoint premium is about $1832.50 versus $100 option buying power.": 1,
+      "One-contract midpoint premium is about $3440.00 versus $100 option buying power.": 1,
+      "One-contract midpoint premium is about $3502.50 versus $100 option buying power.": 1,
+      "One-contract midpoint premium is about $3557.50 versus $100 option buying power.": 1,
+      "One-contract midpoint premium is about $812.50 versus $100 option buying power.": 1,
+      "One-contract official 2026-09-03 close premium is about $1835.00 versus $100 option buying power.": 1,
+      "Premium allocation would equal about 1052.5% of account value.": 1,
+      "Premium allocation would equal about 1122.5% of account value.": 1,
+      "Premium allocation would equal about 1220% of account value.": 1,
+      "Premium allocation would equal about 1832.5% of account value.": 1,
+      "Premium allocation would equal about 1835.0% of account value.": 1,
+      "Premium allocation would equal about 3557.5% of account value.": 1,
+      "Setup quality did not pass; account fit is secondary.": 2,
+      "Small-account validation mode; do not substitute a lower-quality far-OTM or shorter-DTE contract for affordability.": 2,
+      "Small-account validation mode; do not substitute lower-quality far-OTM/shorter-DTE contract for affordability.": 4,
+      "do_not_substitute_far_otm_or_short_dte_contract": 1,
+      "one_contract_premium_2140_exceeds_100_account_value": 1,
+      "premium_allocation_2140pct_account": 1,
+      "small_account_validation_mode": 1
+    },
+    "account_fit_status": {
+      "FAIL": 10
+    },
+    "by_delta_bucket": {
+      "035_050": {
+        "average": null,
+        "count": 2,
+        "median": null,
+        "observed_count": 0
+      },
+      "051_070": {
+        "average": null,
+        "count": 8,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "by_dte_bucket": {
+      "30_45": {
+        "average": null,
+        "count": 9,
+        "median": null,
+        "observed_count": 0
+      },
+      "61_90": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "by_option_type": {
+      "call": {
+        "average": null,
+        "count": 10,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "by_options_setup_score_bucket": {
+      "60-64": {
+        "average": null,
+        "count": 2,
+        "median": null,
+        "observed_count": 0
+      },
+      "65-69": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "75-79": {
+        "average": null,
+        "count": 5,
+        "median": null,
+        "observed_count": 0
+      },
+      "80-84": {
+        "average": null,
+        "count": 2,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "by_primary_blocking_rule": {
+      "account_fit_premium_risk": {
+        "average": null,
+        "count": 7,
+        "median": null,
+        "observed_count": 0
+      },
+      "blocked_by_extension": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "outside_official_current_universe": {
+        "average": null,
+        "count": 2,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "final_decisions": {
+      "SHADOW_ONLY_QUALIFIED": 7,
+      "WATCH": 3
+    },
+    "funding_requirements": {
+      "account_fit_failure_count": 6,
+      "account_fit_failure_pct": 1.0,
+      "assumed_caps": {
+        "planned_trade_risk_pct_account": 10.0,
+        "premium_allocation_pct_account": 10.0
+      },
+      "estimated_account_size_needed": {
+        "median_failed_planned_risk_at_planned_risk_cap": 152.625,
+        "median_failed_premium_at_premium_cap": 152.625,
+        "median_planned_risk_at_planned_risk_cap": 152.625,
+        "median_premium_at_premium_cap": 152.625,
+        "p75_failed_planned_risk_at_planned_risk_cap": 206.3125,
+        "p75_failed_premium_at_premium_cap": 206.3125,
+        "p75_planned_risk_at_planned_risk_cap": 206.3125,
+        "p75_premium_at_premium_cap": 206.3125
+      },
+      "planned_trade_risk": {
+        "median_account_fit_failures": 1526.25,
+        "median_all_qualified": 1526.25,
+        "percentile_75_account_fit_failures": 2063.125,
+        "percentile_75_all_qualified": 2063.125
+      },
+      "preferred_contract_premium": {
+        "median_account_fit_failures": 1526.25,
+        "median_all_qualified": 1526.25,
+        "percentile_75_account_fit_failures": 2063.125,
+        "percentile_75_all_qualified": 2063.125
+      },
+      "qualified_setup_count": 6
+    },
+    "noncanonical_setup_records": 0,
+    "outcome_classifications": {
+      "INCONCLUSIVE": 1,
+      "UNDERLYING_LOSS_OPTION_LOSS": 3,
+      "UNDERLYING_WIN_OPTION_WIN": 3,
+      "unobserved": 3
+    },
+    "outcome_maturation": {
+      "10D": {
+        "eligible_records": 7,
+        "observed_option_returns": 3,
+        "observed_underlying_returns": 3
+      },
+      "1D": {
+        "eligible_records": 7,
+        "observed_option_returns": 1,
+        "observed_underlying_returns": 7
+      },
+      "20D": {
+        "eligible_records": 7,
+        "observed_option_returns": 0,
+        "observed_underlying_returns": 0
+      },
+      "30D": {
+        "eligible_records": 7,
+        "observed_option_returns": 0,
+        "observed_underlying_returns": 0
+      },
+      "5D": {
+        "eligible_records": 7,
+        "observed_option_returns": 2,
+        "observed_underlying_returns": 6
+      }
+    },
+    "outcome_records": 7,
+    "pipeline_conversion": {
+      "qualified_account_fit_fail": 6
+    },
+    "raw_outcome_records": 7,
+    "raw_setup_records": 10,
+    "raw_shadow_trade_records": 7,
+    "setup_quality_status": {
+      "QUALIFIED": 6,
+      "QUALIFIED_DEGRADED_QUOTE": 1,
+      "WATCH": 3
+    },
+    "setup_records": 10,
+    "shadow_trades": {
+      "average_pnl_pct": null,
+      "average_r_multiple": null,
+      "closed_count": 0,
+      "count": 7,
+      "median_pnl_pct": null,
+      "observed_count": 0,
+      "positive_rate": null
+    }
+  },
+  "sample_health": {
+    "conclusion_quality": "directional",
+    "joined_records": 153,
+    "observed_30d_outcomes": 0,
+    "research_records": 153,
+    "signal_outcomes": 0
+  },
+  "scanner_sources": {
+    "Current Universe Tier 2 review": {
+      "forward_30d_return": {
+        "average": null,
+        "count": 52,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_30d": {
+        "average": null,
+        "count": 52,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "Current Universe Watchlist review": {
+      "forward_30d_return": {
+        "average": null,
+        "count": 6,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_30d": {
+        "average": null,
+        "count": 6,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "Current Universe review": {
+      "forward_30d_return": {
+        "average": null,
+        "count": 3,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_30d": {
+        "average": null,
+        "count": 3,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "Earnings Calendar": {
+      "forward_30d_return": {
+        "average": null,
+        "count": 5,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_30d": {
+        "average": null,
+        "count": 5,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "Earnings Risk Radar": {
+      "forward_30d_return": {
+        "average": null,
+        "count": 20,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_30d": {
+        "average": null,
+        "count": 20,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "Momentum Candidates": {
+      "forward_30d_return": {
+        "average": null,
+        "count": 62,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_30d": {
+        "average": null,
+        "count": 62,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "Options Activity Radar": {
+      "forward_30d_return": {
+        "average": null,
+        "count": 107,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_30d": {
+        "average": null,
+        "count": 107,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "missing": {
+      "forward_30d_return": {
+        "average": null,
+        "count": 3,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_30d": {
+        "average": null,
+        "count": 3,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "provisional Tier 2 review": {
+      "forward_30d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_30d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      }
+    }
+  },
+  "score_buckets": {
+    "00-04": {
+      "forward_30d_return": {
+        "average": null,
+        "count": 9,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_qqq_30d": {
+        "average": null,
+        "count": 9,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_30d": {
+        "average": null,
+        "count": 9,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "05-09": {
+      "forward_30d_return": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_qqq_30d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_30d": {
+        "average": null,
+        "count": 1,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "10-14": {
+      "forward_30d_return": {
+        "average": null,
+        "count": 2,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_qqq_30d": {
+        "average": null,
+        "count": 2,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_30d": {
+        "average": null,
+        "count": 2,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "15-19": {
+      "forward_30d_return": {
+        "average": null,
+        "count": 2,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_qqq_30d": {
+        "average": null,
+        "count": 2,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_30d": {
+        "average": null,
+        "count": 2,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "60-64": {
+      "forward_30d_return": {
+        "average": null,
+        "count": 6,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_qqq_30d": {
+        "average": null,
+        "count": 6,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_30d": {
+        "average": null,
+        "count": 6,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "65-69": {
+      "forward_30d_return": {
+        "average": null,
+        "count": 15,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_qqq_30d": {
+        "average": null,
+        "count": 15,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_30d": {
+        "average": null,
+        "count": 15,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "70-74": {
+      "forward_30d_return": {
+        "average": null,
+        "count": 70,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_qqq_30d": {
+        "average": null,
+        "count": 70,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_30d": {
+        "average": null,
+        "count": 70,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "75-79": {
+      "forward_30d_return": {
+        "average": null,
+        "count": 41,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_qqq_30d": {
+        "average": null,
+        "count": 41,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_30d": {
+        "average": null,
+        "count": 41,
+        "median": null,
+        "observed_count": 0
+      }
+    },
+    "80-84": {
+      "forward_30d_return": {
+        "average": null,
+        "count": 7,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_qqq_30d": {
+        "average": null,
+        "count": 7,
+        "median": null,
+        "observed_count": 0
+      },
+      "forward_vs_spy_30d": {
+        "average": null,
+        "count": 7,
+        "median": null,
+        "observed_count": 0
+      }
+    }
+  },
+  "score_distribution": {
+    "calibration_warning": "highest_score_below_tier_1_threshold",
+    "highest": 82.0,
+    "median": 73.0,
+    "percentile_90": 78.0,
+    "percentile_95": 78.4,
+    "scored_count": 153,
+    "tier_1_count": 0,
+    "tier_1_threshold": 85,
+    "tier_2_count": 48,
+    "tier_2_threshold": 75
+  },
+  "shadow_portfolio": {
+    "average_pnl_pct": null,
+    "average_r_multiple": null,
+    "closed_count": 0,
+    "count": 0,
+    "median_pnl_pct": null,
+    "observed_count": 0,
+    "positive_rate": null
+  }
+}

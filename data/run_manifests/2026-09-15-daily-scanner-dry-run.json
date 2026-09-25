@@ -1,0 +1,130 @@
+{
+  "run_id": "2026-09-15-daily-scanner-dry-run",
+  "date": "2026-09-15",
+  "strategy_version": "2.0.1",
+  "pipeline_version": "2.0",
+  "strategy_mode": "options_primary",
+  "mode": "research_only_proposal_only_shadow_trading",
+  "run_trigger": "automation",
+  "session_context": "Robinhood Agent Daily Options Scanner Dry Run automation robinhood-agent-daily-scanner-dry-run",
+  "intended_workflow": "daily_options_primary_scanner_research_only",
+  "started_at": "2026-09-15T20:31:46Z",
+  "first_tool_call_at": "2026-09-15T20:32:47Z",
+  "last_tool_call_at": "2026-09-15T20:38:00Z",
+  "completed_at": "2026-09-15T20:40:00Z",
+  "status": "COMPLETE",
+  "run_status": "degraded_complete",
+  "degradation_categories": [
+    "scanner_frontend_limit_capped_visible_rows",
+    "full_financial_statement_tool_not_exposed",
+    "historical_tool_output_truncated_in_session_transcript",
+    "raw_scanner_rows_preserved_as_visible_payload_summary",
+    "older_uncaptured_option_history_permanently_unavailable_by_source"
+  ],
+  "decision_integrity": "PASS_NO_LIVE_ACTIONS",
+  "persistence_integrity": "PASS_SCOPED_ARTIFACTS_WRITTEN",
+  "account_snapshot_id": "acct-8691-2026-09-15T20:32Z",
+  "account_snapshot_as_of": "2026-09-15T20:32:47Z",
+  "account": {
+    "masked_account": "ending_8691",
+    "type": "cash",
+    "broker_options_level": "option_level_2",
+    "strategy_enabled_options": ["LONG_CALL", "LONG_PUT"],
+    "account_value": 100.0,
+    "cash": 100.0,
+    "option_buying_power": 100.0,
+    "equity_positions_count": 0,
+    "option_positions_count": 0,
+    "open_equity_orders_count": 0,
+    "open_option_orders_count": 0,
+    "realized_pnl_3month": 0.0
+  },
+  "scanner_resolution": [
+    {"name": "Momentum Candidates", "scan_id": "26cdeb14-da13-493f-b0c6-783468971a16", "matched": true, "total_items": 397},
+    {"name": "Options Activity Radar", "scan_id": "7068db65-2a47-470c-bde9-94d66f36b806", "matched": true, "total_items": 81},
+    {"name": "Earnings Risk Radar", "scan_id": "737924f1-e94f-4ad4-ba98-6c12fcaafaa9", "matched": true, "total_items": 182}
+  ],
+  "market_context": {
+    "SPX": 7585.73,
+    "NDX": 28937.8378,
+    "VIX": 17.2,
+    "interpretation": "Constructive but selective; acceptable for research and shadow long-call validation, not for overpaying or extension chasing."
+  },
+  "option_checkpoint": {
+    "checkpoint_date": "2026-09-15",
+    "due_count": 1,
+    "unique_option_ids_due": 1,
+    "captured_count": 1,
+    "updated_count": 1,
+    "missed_count": 0,
+    "due_manifest_retained_in": "data/option_quote_checkpoints/2026-09-15-option-quotes.json",
+    "quote_snapshot": "data/option_quote_checkpoints/2026-09-15-option-quotes.json",
+    "equity_snapshot": "data/outcome_update_snapshots/2026-09-15-avgo-equity-history.json",
+    "ingestion_status": "5D_AVGO_option_observed; older_1D_option_history_permanently_unavailable_by_source"
+  },
+  "artifact_ids": {
+    "research_record_ids": [
+      "2026-09-15-CRWD",
+      "2026-09-15-SWKS",
+      "2026-09-15-TEM",
+      "2026-09-15-RVTY",
+      "2026-09-15-AVGO",
+      "2026-09-15-META",
+      "2026-09-15-AMZN",
+      "2026-09-15-PERMANENT-FILTERS"
+    ],
+    "options_setup_ids": ["optsetup-2026-09-15-CRWD-20261120-250C"],
+    "shadow_trade_ids": ["optshadow-2026-09-15-CRWD-20261120-250C"],
+    "outcome_record_ids": ["optoutcome-2026-09-15-CRWD-20261120-250C"]
+  },
+  "candidate_counts": {
+    "deduplicated_candidates_reviewed": 19,
+    "terminal_result_count": 19,
+    "scored_count": 8,
+    "permanently_rejected_count": 1,
+    "incomplete_count": 0,
+    "completeness_pct": 100.0
+  },
+  "options_research": {
+    "chains_called_for": ["CRWD"],
+    "option_instruments_queried": 6,
+    "option_quotes_queried": 6,
+    "qualified_setups": 1,
+    "pm_proposals": 0,
+    "shadow_only_qualified": 1,
+    "selected_contract": "CRWD 2026-11-20 250C",
+    "selected_option_id": "cbca8992-e0b1-4a6f-8516-ae91a3f5194b"
+  },
+  "guardrails": {
+    "live_orders_placed": false,
+    "live_orders_modified": false,
+    "live_orders_canceled": false,
+    "review_option_order_called": false,
+    "place_option_order_called": false,
+    "allowed_structures": ["LONG_CALL", "LONG_PUT"],
+    "blocked_structures": ["0DTE", "NAKED_SELLING", "CASH_SECURED_PUT", "COVERED_CALL", "SPREAD", "MARGIN_DRIVEN_SELLING", "EARNINGS_LOTTERY", "CHEAP_FAR_OTM_SUBSTITUTION"]
+  },
+  "source_of_truth_files_read": [
+    "tool_policy.md",
+    "system_prompt.md",
+    "pipeline_config.md",
+    "scanner_engine.md",
+    "research_agent.md",
+    "portfolio_manager_agent.md",
+    "universe.md",
+    "performance_metrics.md",
+    "strategy.md",
+    "options_strategy.md",
+    "state/current_universe.json",
+    "state/open_theses.json",
+    "state/rejected_candidates.json",
+    "research_logs/2026-09-14-daily-scanner-dry-run.md",
+    "data/validation_reports/2026-09-09-outcome-health.json",
+    "data/validation_reports/2026-09-09-integrity-audit.json"
+  ],
+  "state_file_decision": {
+    "current_universe_json": "unchanged",
+    "open_theses_json": "unchanged",
+    "rejected_candidates_json": "unchanged"
+  }
+}

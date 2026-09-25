@@ -2522,7 +2522,7 @@
       "rejected_bearish_candidates": 0
     }
   },
-  "generated_at": "2026-09-09T21:16:50.256558+00:00",
+  "generated_at": "2026-09-09T21:41:06.480674+00:00",
   "interpretation_guardrail": "Descriptive diagnostics only; no threshold optimization or automatic strategy changes.",
   "overall_by_horizon": {
     "10D": {

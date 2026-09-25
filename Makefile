@@ -1,9 +1,12 @@
-.PHONY: validate scan-sensitive status daily-log analyze-outcomes strategy-diagnostics validation-report integrity-audit update-option-outcomes migrate-v202-ids
+.PHONY: validate test scan-sensitive status daily-log analyze-outcomes strategy-diagnostics validation-report integrity-audit update-option-outcomes list-due-option-checkpoints migrate-v202-ids migrate-option-outcome-component-schema
 
 PYTHON ?= python3
 
 validate:
 	$(PYTHON) scripts/validate_repo.py
+
+test:
+	$(PYTHON) -m unittest discover -s tests -v
 
 scan-sensitive:
 	$(PYTHON) scripts/validate_repo.py --scan-sensitive-only
@@ -34,5 +37,12 @@ update-option-outcomes:
 	$(PYTHON) scripts/update_option_outcomes.py --snapshot "$(SNAPSHOT)"
 	$(PYTHON) scripts/analyze_outcomes.py $(if $(MONTH),--month "$(MONTH)",) $(if $(OUTPUT),--output "$(OUTPUT)",)
 
+list-due-option-checkpoints:
+	@test -n "$(AS_OF)" || (echo "Usage: make list-due-option-checkpoints AS_OF=YYYY-MM-DD" && exit 2)
+	$(PYTHON) scripts/update_option_outcomes.py --list-due-option-checkpoints --as-of "$(AS_OF)"
+
 migrate-v202-ids:
 	$(PYTHON) scripts/migrate_v202_ids.py $(if $(DRY_RUN),--dry-run,)
+
+migrate-option-outcome-component-schema:
+	$(PYTHON) scripts/migrate_option_outcome_component_schema.py $(if $(DRY_RUN),--dry-run,)

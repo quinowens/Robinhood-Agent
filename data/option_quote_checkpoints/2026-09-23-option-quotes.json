@@ -1,0 +1,379 @@
+{
+  "source": "robinhood_option_quote_checkpoint",
+  "checkpoint_date": "2026-09-23",
+  "captured_at": "2026-09-24T04:12:00Z",
+  "requested_option_ids": [
+    "10ae1fe9-0a99-41c1-930e-259e994f6a42",
+    "2503d86d-2bb8-40e8-be73-fdeb4af43119",
+    "9e21a9c9-2c6f-4ddb-a098-29128a3b4556",
+    "cbca8992-e0b1-4a6f-8516-ae91a3f5194b"
+  ],
+  "option_quotes": {
+    "10ae1fe9-0a99-41c1-930e-259e994f6a42": {
+      "quote": {
+        "instrument_id": "10ae1fe9-0a99-41c1-930e-259e994f6a42",
+        "ask_price": "102.350000",
+        "ask_size": 126,
+        "bid_price": "98.050000",
+        "bid_size": 1,
+        "break_even_price": "750.200000",
+        "adjusted_mark_price": "100.200000",
+        "mark_price": "100.200000",
+        "high_fill_rate_buy_price": "100.822000",
+        "low_fill_rate_buy_price": "98.638000",
+        "high_fill_rate_sell_price": "99.577000",
+        "low_fill_rate_sell_price": "101.761000",
+        "previous_close_price": "94.430000",
+        "previous_close_date": "2026-09-22",
+        "implied_volatility": "0.463650",
+        "delta": "0.894082",
+        "gamma": "0.002117",
+        "rho": "0.350757",
+        "theta": "-0.408504",
+        "vega": "0.339213",
+        "open_interest": 7744,
+        "volume": 183,
+        "chance_of_profit_long": "0.456985",
+        "chance_of_profit_short": "0.543015",
+        "updated_at": "2026-09-23T19:59:59.994126517Z"
+      },
+      "close": {
+        "instrument_id": "10ae1fe9-0a99-41c1-930e-259e994f6a42",
+        "symbol": "META",
+        "date": "2026-09-22",
+        "price": "94.43",
+        "interpolated": false,
+        "source": "ddb-market-snapshot"
+      }
+    },
+    "2503d86d-2bb8-40e8-be73-fdeb4af43119": {
+      "quote": {
+        "instrument_id": "2503d86d-2bb8-40e8-be73-fdeb4af43119",
+        "ask_price": "0.000000",
+        "ask_size": 0,
+        "bid_price": "0.000000",
+        "bid_size": 0,
+        "break_even_price": "0.000000",
+        "adjusted_mark_price": "0.000000",
+        "mark_price": "0.000000",
+        "high_fill_rate_buy_price": "",
+        "low_fill_rate_buy_price": "",
+        "high_fill_rate_sell_price": "",
+        "low_fill_rate_sell_price": "",
+        "previous_close_price": "2.040000",
+        "previous_close_date": "2026-09-22",
+        "implied_volatility": null,
+        "delta": null,
+        "gamma": null,
+        "rho": null,
+        "theta": null,
+        "vega": null,
+        "open_interest": 0,
+        "volume": 0,
+        "chance_of_profit_long": null,
+        "chance_of_profit_short": null,
+        "updated_at": "0001-01-01T00:00:00Z"
+      },
+      "close": {
+        "instrument_id": "2503d86d-2bb8-40e8-be73-fdeb4af43119",
+        "symbol": "NVDA",
+        "date": "2026-09-18",
+        "price": "2.04",
+        "interpolated": true,
+        "source": "ddb-market-snapshot"
+      }
+    },
+    "9e21a9c9-2c6f-4ddb-a098-29128a3b4556": {
+      "quote": {
+        "instrument_id": "9e21a9c9-2c6f-4ddb-a098-29128a3b4556",
+        "ask_price": "0.000000",
+        "ask_size": 0,
+        "bid_price": "0.000000",
+        "bid_size": 0,
+        "break_even_price": "0.000000",
+        "adjusted_mark_price": "0.000000",
+        "mark_price": "0.000000",
+        "high_fill_rate_buy_price": "",
+        "low_fill_rate_buy_price": "",
+        "high_fill_rate_sell_price": "",
+        "low_fill_rate_sell_price": "",
+        "previous_close_price": "55.100000",
+        "previous_close_date": "2026-09-22",
+        "implied_volatility": null,
+        "delta": null,
+        "gamma": null,
+        "rho": null,
+        "theta": null,
+        "vega": null,
+        "open_interest": 0,
+        "volume": 0,
+        "chance_of_profit_long": null,
+        "chance_of_profit_short": null,
+        "updated_at": "0001-01-01T00:00:00Z"
+      },
+      "close": {
+        "instrument_id": "9e21a9c9-2c6f-4ddb-a098-29128a3b4556",
+        "symbol": "META",
+        "date": "2026-09-18",
+        "price": "55.1",
+        "interpolated": true,
+        "source": "ddb-market-snapshot"
+      }
+    },
+    "cbca8992-e0b1-4a6f-8516-ae91a3f5194b": {
+      "quote": {
+        "instrument_id": "cbca8992-e0b1-4a6f-8516-ae91a3f5194b",
+        "ask_price": "31.400000",
+        "ask_size": 13,
+        "bid_price": "30.800000",
+        "bid_size": 41,
+        "break_even_price": "281.100000",
+        "adjusted_mark_price": "31.100000",
+        "mark_price": "31.100000",
+        "high_fill_rate_buy_price": "31.288000",
+        "low_fill_rate_buy_price": "31.006000",
+        "high_fill_rate_sell_price": "30.911000",
+        "low_fill_rate_sell_price": "31.193000",
+        "previous_close_price": "22.500000",
+        "previous_close_date": "2026-09-22",
+        "implied_volatility": "0.578240",
+        "delta": "0.638815",
+        "gamma": "0.006202",
+        "rho": "0.215922",
+        "theta": "-0.211176",
+        "vega": "0.390906",
+        "open_interest": 1951,
+        "volume": 256,
+        "chance_of_profit_long": "0.350267",
+        "chance_of_profit_short": "0.649733",
+        "updated_at": "2026-09-23T19:59:59.766075538Z"
+      },
+      "close": {
+        "instrument_id": "cbca8992-e0b1-4a6f-8516-ae91a3f5194b",
+        "symbol": "CRWD",
+        "date": "2026-09-22",
+        "price": "22.5",
+        "interpolated": false,
+        "source": "ddb-market-snapshot"
+      }
+    }
+  },
+  "missing_option_ids": [],
+  "due_manifest": {
+    "capture_instruction": "Call get_option_quotes for option_ids, save the raw response with checkpoint_date/source, then rerun update_option_outcomes.py with that quote snapshot.",
+    "checkpoint_date": "2026-09-23",
+    "count": 4,
+    "due": [
+      {
+        "contract": "META 2026-10-16 650.0C",
+        "entry_option_mid": 35.575,
+        "horizon": "10D",
+        "option_id": "10ae1fe9-0a99-41c1-930e-259e994f6a42",
+        "path": "data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl",
+        "record_id": "optoutcome-2026-09-09-META-20261016-650C",
+        "signal_date": "2026-09-09",
+        "signal_trading_session": "2026-09-09",
+        "target_observation_date": "2026-09-23",
+        "underlying": "META"
+      },
+      {
+        "contract": "CRWD 2026-11-20 250.0C",
+        "entry_option_mid": 21.4,
+        "horizon": "5D",
+        "option_id": "cbca8992-e0b1-4a6f-8516-ae91a3f5194b",
+        "path": "data/option_signal_outcomes/2026-09-15-daily-scanner-dry-run.jsonl",
+        "record_id": "optoutcome-2026-09-15-CRWD-20261120-250C",
+        "signal_date": "2026-09-15",
+        "signal_trading_session": "2026-09-16",
+        "target_observation_date": "2026-09-23",
+        "underlying": "CRWD"
+      },
+      {
+        "contract": "META 2026-09-18 610C",
+        "entry_option_mid": 26.6,
+        "horizon": "30D",
+        "option_id": "9e21a9c9-2c6f-4ddb-a098-29128a3b4556",
+        "path": "data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl",
+        "record_id": "2026-08-11-META-2026-09-18-610C-outcome",
+        "signal_date": "2026-08-11",
+        "signal_trading_session": "2026-08-11",
+        "target_observation_date": "2026-09-23",
+        "underlying": "META"
+      },
+      {
+        "contract": "NVDA 2026-09-18 220C",
+        "entry_option_mid": 10.75,
+        "horizon": "30D",
+        "option_id": "2503d86d-2bb8-40e8-be73-fdeb4af43119",
+        "path": "data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl",
+        "record_id": "2026-08-11-NVDA-2026-09-18-220C-outcome",
+        "signal_date": "2026-08-11",
+        "signal_trading_session": "2026-08-11",
+        "target_observation_date": "2026-09-23",
+        "underlying": "NVDA"
+      }
+    ],
+    "option_ids": [
+      "10ae1fe9-0a99-41c1-930e-259e994f6a42",
+      "2503d86d-2bb8-40e8-be73-fdeb4af43119",
+      "9e21a9c9-2c6f-4ddb-a098-29128a3b4556",
+      "cbca8992-e0b1-4a6f-8516-ae91a3f5194b"
+    ],
+    "source": "prospective_option_checkpoint_request"
+  },
+  "raw_response": {
+    "data": {
+      "results": [
+        {
+          "quote": {
+            "instrument_id": "10ae1fe9-0a99-41c1-930e-259e994f6a42",
+            "ask_price": "102.350000",
+            "ask_size": 126,
+            "bid_price": "98.050000",
+            "bid_size": 1,
+            "break_even_price": "750.200000",
+            "adjusted_mark_price": "100.200000",
+            "mark_price": "100.200000",
+            "high_fill_rate_buy_price": "100.822000",
+            "low_fill_rate_buy_price": "98.638000",
+            "high_fill_rate_sell_price": "99.577000",
+            "low_fill_rate_sell_price": "101.761000",
+            "previous_close_price": "94.430000",
+            "previous_close_date": "2026-09-22",
+            "implied_volatility": "0.463650",
+            "delta": "0.894082",
+            "gamma": "0.002117",
+            "rho": "0.350757",
+            "theta": "-0.408504",
+            "vega": "0.339213",
+            "open_interest": 7744,
+            "volume": 183,
+            "chance_of_profit_long": "0.456985",
+            "chance_of_profit_short": "0.543015",
+            "updated_at": "2026-09-23T19:59:59.994126517Z"
+          },
+          "close": {
+            "instrument_id": "10ae1fe9-0a99-41c1-930e-259e994f6a42",
+            "symbol": "META",
+            "date": "2026-09-22",
+            "price": "94.43",
+            "interpolated": false,
+            "source": "ddb-market-snapshot"
+          }
+        },
+        {
+          "quote": {
+            "instrument_id": "2503d86d-2bb8-40e8-be73-fdeb4af43119",
+            "ask_price": "0.000000",
+            "ask_size": 0,
+            "bid_price": "0.000000",
+            "bid_size": 0,
+            "break_even_price": "0.000000",
+            "adjusted_mark_price": "0.000000",
+            "mark_price": "0.000000",
+            "high_fill_rate_buy_price": "",
+            "low_fill_rate_buy_price": "",
+            "high_fill_rate_sell_price": "",
+            "low_fill_rate_sell_price": "",
+            "previous_close_price": "2.040000",
+            "previous_close_date": "2026-09-22",
+            "implied_volatility": null,
+            "delta": null,
+            "gamma": null,
+            "rho": null,
+            "theta": null,
+            "vega": null,
+            "open_interest": 0,
+            "volume": 0,
+            "chance_of_profit_long": null,
+            "chance_of_profit_short": null,
+            "updated_at": "0001-01-01T00:00:00Z"
+          },
+          "close": {
+            "instrument_id": "2503d86d-2bb8-40e8-be73-fdeb4af43119",
+            "symbol": "NVDA",
+            "date": "2026-09-18",
+            "price": "2.04",
+            "interpolated": true,
+            "source": "ddb-market-snapshot"
+          }
+        },
+        {
+          "quote": {
+            "instrument_id": "9e21a9c9-2c6f-4ddb-a098-29128a3b4556",
+            "ask_price": "0.000000",
+            "ask_size": 0,
+            "bid_price": "0.000000",
+            "bid_size": 0,
+            "break_even_price": "0.000000",
+            "adjusted_mark_price": "0.000000",
+            "mark_price": "0.000000",
+            "high_fill_rate_buy_price": "",
+            "low_fill_rate_buy_price": "",
+            "high_fill_rate_sell_price": "",
+            "low_fill_rate_sell_price": "",
+            "previous_close_price": "55.100000",
+            "previous_close_date": "2026-09-22",
+            "implied_volatility": null,
+            "delta": null,
+            "gamma": null,
+            "rho": null,
+            "theta": null,
+            "vega": null,
+            "open_interest": 0,
+            "volume": 0,
+            "chance_of_profit_long": null,
+            "chance_of_profit_short": null,
+            "updated_at": "0001-01-01T00:00:00Z"
+          },
+          "close": {
+            "instrument_id": "9e21a9c9-2c6f-4ddb-a098-29128a3b4556",
+            "symbol": "META",
+            "date": "2026-09-18",
+            "price": "55.1",
+            "interpolated": true,
+            "source": "ddb-market-snapshot"
+          }
+        },
+        {
+          "quote": {
+            "instrument_id": "cbca8992-e0b1-4a6f-8516-ae91a3f5194b",
+            "ask_price": "31.400000",
+            "ask_size": 13,
+            "bid_price": "30.800000",
+            "bid_size": 41,
+            "break_even_price": "281.100000",
+            "adjusted_mark_price": "31.100000",
+            "mark_price": "31.100000",
+            "high_fill_rate_buy_price": "31.288000",
+            "low_fill_rate_buy_price": "31.006000",
+            "high_fill_rate_sell_price": "30.911000",
+            "low_fill_rate_sell_price": "31.193000",
+            "previous_close_price": "22.500000",
+            "previous_close_date": "2026-09-22",
+            "implied_volatility": "0.578240",
+            "delta": "0.638815",
+            "gamma": "0.006202",
+            "rho": "0.215922",
+            "theta": "-0.211176",
+            "vega": "0.390906",
+            "open_interest": 1951,
+            "volume": 256,
+            "chance_of_profit_long": "0.350267",
+            "chance_of_profit_short": "0.649733",
+            "updated_at": "2026-09-23T19:59:59.766075538Z"
+          },
+          "close": {
+            "instrument_id": "cbca8992-e0b1-4a6f-8516-ae91a3f5194b",
+            "symbol": "CRWD",
+            "date": "2026-09-22",
+            "price": "22.5",
+            "interpolated": false,
+            "source": "ddb-market-snapshot"
+          }
+        }
+      ]
+    },
+    "guide": "Each entry in results pairs the live quote with the official prior-session close for the same option contract. Current price: use quote.mark_price (adjusted_mark_price when comparing against historical cost basis); verify quote.updated_at is recent before calling it 'current' — otherwise phrase as 'as of <updated_at>'. 1D P&L per contract: (quote.mark_price - close.price) × multiplier × position_quantity (multiplier is typically 100; use trade_value_multiplier from get_option_positions for adjusted contracts). Prefer results[].close.price (official settled close) over quote.previous_close_price; when a result is missing close — either closes_error is set tool-wide, or this contract had no close in an otherwise-successful batch — fall back to quote.previous_close_price and tell the user the official close lookup is unavailable. When close.interpolated is true, surface close.date — the price is not from the requested day. Drop bid/ask when zero."
+  }
+}

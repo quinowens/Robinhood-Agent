@@ -1,0 +1,289 @@
+{
+  "source": "robinhood_option_quote_checkpoint",
+  "checkpoint_date": "2026-09-17",
+  "captured_at": "2026-09-18T04:44:16Z",
+  "option_ids": [
+    "22919d76-f8f0-4f19-b2d3-69ec3b0e5fbc",
+    "9d0e6413-018a-4706-8217-030abb5429db",
+    "cbca8992-e0b1-4a6f-8516-ae91a3f5194b"
+  ],
+  "option_quotes": {
+    "22919d76-f8f0-4f19-b2d3-69ec3b0e5fbc": {
+      "quote": {
+        "instrument_id": "22919d76-f8f0-4f19-b2d3-69ec3b0e5fbc",
+        "ask_price": "5.400000",
+        "ask_size": 20,
+        "bid_price": "5.300000",
+        "bid_size": 23,
+        "break_even_price": "230.350000",
+        "adjusted_mark_price": "5.350000",
+        "mark_price": "5.350000",
+        "high_fill_rate_buy_price": "5.379000",
+        "low_fill_rate_buy_price": "5.330000",
+        "high_fill_rate_sell_price": "5.320000",
+        "low_fill_rate_sell_price": "5.369000",
+        "previous_close_price": "4.000000",
+        "previous_close_date": "2026-09-16",
+        "implied_volatility": "0.305101",
+        "delta": "0.414019",
+        "gamma": "0.020784",
+        "rho": "0.067067",
+        "theta": "-0.136483",
+        "vega": "0.239448",
+        "open_interest": 26621,
+        "volume": 7449,
+        "chance_of_profit_long": "0.281747",
+        "chance_of_profit_short": "0.718253",
+        "updated_at": "2026-09-17T19:59:59.994973487Z"
+      },
+      "close": {
+        "instrument_id": "22919d76-f8f0-4f19-b2d3-69ec3b0e5fbc",
+        "symbol": "NVDA",
+        "date": "2026-09-16",
+        "price": "4",
+        "interpolated": false,
+        "source": "ddb-market-snapshot"
+      }
+    },
+    "9d0e6413-018a-4706-8217-030abb5429db": {
+      "quote": {
+        "instrument_id": "9d0e6413-018a-4706-8217-030abb5429db",
+        "ask_price": "3.550000",
+        "ask_size": 69,
+        "bid_price": "3.400000",
+        "bid_size": 65,
+        "break_even_price": "268.480000",
+        "adjusted_mark_price": "3.480000",
+        "mark_price": "3.475000",
+        "high_fill_rate_buy_price": "3.519000",
+        "low_fill_rate_buy_price": "3.447000",
+        "high_fill_rate_sell_price": "3.430000",
+        "low_fill_rate_sell_price": "3.502000",
+        "previous_close_price": "2.610000",
+        "previous_close_date": "2026-09-16",
+        "implied_volatility": "0.293329",
+        "delta": "0.282838",
+        "gamma": "0.016392",
+        "rho": "0.053007",
+        "theta": "-0.128942",
+        "vega": "0.237987",
+        "open_interest": 17689,
+        "volume": 3019,
+        "chance_of_profit_long": "0.207426",
+        "chance_of_profit_short": "0.792574",
+        "updated_at": "2026-09-17T19:59:59.943782189Z"
+      },
+      "close": {
+        "instrument_id": "9d0e6413-018a-4706-8217-030abb5429db",
+        "symbol": "AMZN",
+        "date": "2026-09-16",
+        "price": "2.61",
+        "interpolated": false,
+        "source": "ddb-market-snapshot"
+      }
+    },
+    "cbca8992-e0b1-4a6f-8516-ae91a3f5194b": {
+      "quote": {
+        "instrument_id": "cbca8992-e0b1-4a6f-8516-ae91a3f5194b",
+        "ask_price": "23.050000",
+        "ask_size": 323,
+        "bid_price": "21.600000",
+        "bid_size": 36,
+        "break_even_price": "272.330000",
+        "adjusted_mark_price": "22.330000",
+        "mark_price": "22.325000",
+        "high_fill_rate_buy_price": "22.740000",
+        "low_fill_rate_buy_price": "22.037000",
+        "high_fill_rate_sell_price": "21.909000",
+        "low_fill_rate_sell_price": "22.612000",
+        "previous_close_price": "20.300000",
+        "previous_close_date": "2026-09-16",
+        "implied_volatility": "0.574663",
+        "delta": "0.530543",
+        "gamma": "0.006749",
+        "rho": "0.188474",
+        "theta": "-0.195845",
+        "vega": "0.408246",
+        "open_interest": 1900,
+        "volume": 152,
+        "chance_of_profit_long": "0.301593",
+        "chance_of_profit_short": "0.698407",
+        "updated_at": "2026-09-17T19:59:59.918616331Z"
+      },
+      "close": {
+        "instrument_id": "cbca8992-e0b1-4a6f-8516-ae91a3f5194b",
+        "symbol": "CRWD",
+        "date": "2026-09-16",
+        "price": "20.3",
+        "interpolated": false,
+        "source": "ddb-market-snapshot"
+      }
+    }
+  },
+  "due_manifest": {
+    "capture_instruction": "Call get_option_quotes for option_ids, save the raw response with checkpoint_date/source, then rerun update_option_outcomes.py with that quote snapshot.",
+    "checkpoint_date": "2026-09-17",
+    "count": 3,
+    "source": "prospective_option_checkpoint_request",
+    "option_ids": [
+      "22919d76-f8f0-4f19-b2d3-69ec3b0e5fbc",
+      "9d0e6413-018a-4706-8217-030abb5429db",
+      "cbca8992-e0b1-4a6f-8516-ae91a3f5194b"
+    ],
+    "due": [
+      {
+        "contract": "AMZN 2026-10-16 265.0C",
+        "entry_option_mid": 14.0,
+        "horizon": "20D",
+        "option_id": "9d0e6413-018a-4706-8217-030abb5429db",
+        "path": "data/option_signal_outcomes/2026-08-19-daily-scanner-dry-run.jsonl",
+        "record_id": "opoutcome-2026-08-19-AMZN-20261016-265C",
+        "signal_date": "2026-08-19",
+        "signal_trading_session": "2026-08-19",
+        "target_observation_date": "2026-09-17",
+        "underlying": "AMZN"
+      },
+      {
+        "contract": "CRWD 2026-11-20 250.0C",
+        "entry_option_mid": 21.4,
+        "horizon": "1D",
+        "option_id": "cbca8992-e0b1-4a6f-8516-ae91a3f5194b",
+        "path": "data/option_signal_outcomes/2026-09-15-daily-scanner-dry-run.jsonl",
+        "record_id": "optoutcome-2026-09-15-CRWD-20261120-250C",
+        "signal_date": "2026-09-15",
+        "signal_trading_session": "2026-09-16",
+        "target_observation_date": "2026-09-17",
+        "underlying": "CRWD"
+      },
+      {
+        "contract": "NVDA 2026-10-16 225.0C",
+        "entry_option_mid": 10.525,
+        "horizon": "10D",
+        "option_id": "22919d76-f8f0-4f19-b2d3-69ec3b0e5fbc",
+        "path": "data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl",
+        "record_id": "optoutcome-2026-09-02-NVDA-20261016-225C",
+        "signal_date": "2026-09-02",
+        "signal_trading_session": "2026-09-02",
+        "target_observation_date": "2026-09-17",
+        "underlying": "NVDA"
+      }
+    ]
+  },
+  "raw_response": {
+    "data": {
+      "results": [
+        {
+          "quote": {
+            "instrument_id": "22919d76-f8f0-4f19-b2d3-69ec3b0e5fbc",
+            "ask_price": "5.400000",
+            "ask_size": 20,
+            "bid_price": "5.300000",
+            "bid_size": 23,
+            "break_even_price": "230.350000",
+            "adjusted_mark_price": "5.350000",
+            "mark_price": "5.350000",
+            "high_fill_rate_buy_price": "5.379000",
+            "low_fill_rate_buy_price": "5.330000",
+            "high_fill_rate_sell_price": "5.320000",
+            "low_fill_rate_sell_price": "5.369000",
+            "previous_close_price": "4.000000",
+            "previous_close_date": "2026-09-16",
+            "implied_volatility": "0.305101",
+            "delta": "0.414019",
+            "gamma": "0.020784",
+            "rho": "0.067067",
+            "theta": "-0.136483",
+            "vega": "0.239448",
+            "open_interest": 26621,
+            "volume": 7449,
+            "chance_of_profit_long": "0.281747",
+            "chance_of_profit_short": "0.718253",
+            "updated_at": "2026-09-17T19:59:59.994973487Z"
+          },
+          "close": {
+            "instrument_id": "22919d76-f8f0-4f19-b2d3-69ec3b0e5fbc",
+            "symbol": "NVDA",
+            "date": "2026-09-16",
+            "price": "4",
+            "interpolated": false,
+            "source": "ddb-market-snapshot"
+          }
+        },
+        {
+          "quote": {
+            "instrument_id": "9d0e6413-018a-4706-8217-030abb5429db",
+            "ask_price": "3.550000",
+            "ask_size": 69,
+            "bid_price": "3.400000",
+            "bid_size": 65,
+            "break_even_price": "268.480000",
+            "adjusted_mark_price": "3.480000",
+            "mark_price": "3.475000",
+            "high_fill_rate_buy_price": "3.519000",
+            "low_fill_rate_buy_price": "3.447000",
+            "high_fill_rate_sell_price": "3.430000",
+            "low_fill_rate_sell_price": "3.502000",
+            "previous_close_price": "2.610000",
+            "previous_close_date": "2026-09-16",
+            "implied_volatility": "0.293329",
+            "delta": "0.282838",
+            "gamma": "0.016392",
+            "rho": "0.053007",
+            "theta": "-0.128942",
+            "vega": "0.237987",
+            "open_interest": 17689,
+            "volume": 3019,
+            "chance_of_profit_long": "0.207426",
+            "chance_of_profit_short": "0.792574",
+            "updated_at": "2026-09-17T19:59:59.943782189Z"
+          },
+          "close": {
+            "instrument_id": "9d0e6413-018a-4706-8217-030abb5429db",
+            "symbol": "AMZN",
+            "date": "2026-09-16",
+            "price": "2.61",
+            "interpolated": false,
+            "source": "ddb-market-snapshot"
+          }
+        },
+        {
+          "quote": {
+            "instrument_id": "cbca8992-e0b1-4a6f-8516-ae91a3f5194b",
+            "ask_price": "23.050000",
+            "ask_size": 323,
+            "bid_price": "21.600000",
+            "bid_size": 36,
+            "break_even_price": "272.330000",
+            "adjusted_mark_price": "22.330000",
+            "mark_price": "22.325000",
+            "high_fill_rate_buy_price": "22.740000",
+            "low_fill_rate_buy_price": "22.037000",
+            "high_fill_rate_sell_price": "21.909000",
+            "low_fill_rate_sell_price": "22.612000",
+            "previous_close_price": "20.300000",
+            "previous_close_date": "2026-09-16",
+            "implied_volatility": "0.574663",
+            "delta": "0.530543",
+            "gamma": "0.006749",
+            "rho": "0.188474",
+            "theta": "-0.195845",
+            "vega": "0.408246",
+            "open_interest": 1900,
+            "volume": 152,
+            "chance_of_profit_long": "0.301593",
+            "chance_of_profit_short": "0.698407",
+            "updated_at": "2026-09-17T19:59:59.918616331Z"
+          },
+          "close": {
+            "instrument_id": "cbca8992-e0b1-4a6f-8516-ae91a3f5194b",
+            "symbol": "CRWD",
+            "date": "2026-09-16",
+            "price": "20.3",
+            "interpolated": false,
+            "source": "ddb-market-snapshot"
+          }
+        }
+      ]
+    }
+  }
+}

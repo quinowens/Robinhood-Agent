@@ -16,7 +16,7 @@
         "observed": 6
       },
       "20D": {
-        "expected": 4,
+        "expected": 3,
         "observed": 0
       },
       "30D": {
@@ -24,22 +24,22 @@
         "observed": 0
       },
       "5D": {
-        "expected": 8,
+        "expected": 7,
         "observed": 5
       }
     },
-    "overdue_outcome_windows": 17,
+    "overdue_outcome_windows": 15,
     "status": "DEGRADED",
     "update_failures": 0
   },
   "overdue_by_window": {
     "10D": 5,
     "1D": 5,
-    "20D": 4,
+    "20D": 3,
     "30D": 0,
-    "5D": 3
+    "5D": 2
   },
-  "overdue_outcome_observations": 17,
+  "overdue_outcome_observations": 15,
   "qualified_setups": 12,
   "schema_version": "2.0.2",
   "status": "PASS_WITH_WARNINGS",
@@ -47,171 +47,151 @@
   "warnings": [
     {
       "code": "MATURED_OBSERVATION_MISSING",
-      "current_status": "MISSING_SOURCE_DATA",
+      "current_status": "RETRYABLE_SOURCE_ERROR",
       "horizon": "20D",
       "maturity_date": "2026-09-04",
       "outcome_record_id": "legacy-outcome-2026-08-07-NVDA-cdbb7e49a73b",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
+      "reason": "underlying:HISTORY_UNAVAILABLE,option:HISTORY_UNAVAILABLE,spy:HISTORY_UNAVAILABLE",
       "signal_date": "2026-08-07",
       "symbol": "NVDA"
     },
     {
       "code": "MATURED_OBSERVATION_MISSING",
-      "current_status": "MISSING_SOURCE_DATA",
+      "current_status": "RETRYABLE_SOURCE_ERROR",
       "horizon": "10D",
       "maturity_date": "2026-08-25",
       "outcome_record_id": "2026-08-11-META-2026-09-18-610C-outcome",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
+      "reason": "underlying:HISTORY_UNAVAILABLE,option:HISTORY_UNAVAILABLE,spy:HISTORY_UNAVAILABLE",
       "signal_date": "2026-08-11",
       "symbol": "META"
     },
     {
       "code": "MATURED_OBSERVATION_MISSING",
-      "current_status": "MISSING_SOURCE_DATA",
+      "current_status": "RETRYABLE_SOURCE_ERROR",
       "horizon": "20D",
-      "maturity_date": "2026-09-08",
+      "maturity_date": "2026-09-09",
       "outcome_record_id": "2026-08-11-META-2026-09-18-610C-outcome",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
+      "reason": "underlying:HISTORY_UNAVAILABLE,option:HISTORY_UNAVAILABLE,spy:HISTORY_UNAVAILABLE",
       "signal_date": "2026-08-11",
       "symbol": "META"
     },
     {
       "code": "MATURED_OBSERVATION_MISSING",
-      "current_status": "MISSING_SOURCE_DATA",
+      "current_status": "RETRYABLE_SOURCE_ERROR",
       "horizon": "10D",
       "maturity_date": "2026-08-25",
       "outcome_record_id": "2026-08-11-NVDA-2026-09-18-220C-outcome",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
+      "reason": "underlying:HISTORY_UNAVAILABLE,option:HISTORY_UNAVAILABLE,spy:HISTORY_UNAVAILABLE",
       "signal_date": "2026-08-11",
       "symbol": "NVDA"
     },
     {
       "code": "MATURED_OBSERVATION_MISSING",
-      "current_status": "MISSING_SOURCE_DATA",
+      "current_status": "RETRYABLE_SOURCE_ERROR",
       "horizon": "20D",
-      "maturity_date": "2026-09-08",
+      "maturity_date": "2026-09-09",
       "outcome_record_id": "2026-08-11-NVDA-2026-09-18-220C-outcome",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
+      "reason": "underlying:HISTORY_UNAVAILABLE,option:HISTORY_UNAVAILABLE,spy:HISTORY_UNAVAILABLE",
       "signal_date": "2026-08-11",
       "symbol": "NVDA"
     },
     {
       "code": "MATURED_OBSERVATION_MISSING",
-      "current_status": "MISSING_SOURCE_DATA",
+      "current_status": "RETRYABLE_SOURCE_ERROR",
       "horizon": "10D",
       "maturity_date": "2026-08-26",
       "outcome_record_id": "opoutcome-2026-08-12-NVDA-20260918-225C",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
+      "reason": "underlying:HISTORY_UNAVAILABLE,option:HISTORY_UNAVAILABLE,spy:HISTORY_UNAVAILABLE",
       "signal_date": "2026-08-12",
       "symbol": "NVDA"
     },
     {
       "code": "MATURED_OBSERVATION_MISSING",
-      "current_status": "MISSING_SOURCE_DATA",
-      "horizon": "20D",
-      "maturity_date": "2026-09-09",
-      "outcome_record_id": "opoutcome-2026-08-12-NVDA-20260918-225C",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
-      "signal_date": "2026-08-12",
-      "symbol": "NVDA"
-    },
-    {
-      "code": "MATURED_OBSERVATION_MISSING",
-      "current_status": "MISSING_SOURCE_DATA",
+      "current_status": "RETRYABLE_SOURCE_ERROR",
       "horizon": "10D",
       "maturity_date": "2026-08-27",
       "outcome_record_id": "opoutcome-2026-08-13-META-20261016-600C",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
+      "reason": "underlying:HISTORY_UNAVAILABLE,option:HISTORY_UNAVAILABLE,spy:HISTORY_UNAVAILABLE",
       "signal_date": "2026-08-13",
       "symbol": "META"
     },
     {
       "code": "MATURED_OBSERVATION_MISSING",
-      "current_status": "MISSING_SOURCE_DATA",
+      "current_status": "RETRYABLE_SOURCE_ERROR",
       "horizon": "5D",
       "maturity_date": "2026-08-26",
       "outcome_record_id": "opoutcome-2026-08-19-AMZN-20261016-265C",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
+      "reason": "underlying:HISTORY_UNAVAILABLE,option:HISTORY_UNAVAILABLE,spy:HISTORY_UNAVAILABLE",
       "signal_date": "2026-08-19",
       "symbol": "AMZN"
     },
     {
       "code": "MATURED_OBSERVATION_MISSING",
-      "current_status": "MISSING_SOURCE_DATA",
+      "current_status": "RETRYABLE_SOURCE_ERROR",
       "horizon": "10D",
       "maturity_date": "2026-09-02",
       "outcome_record_id": "opoutcome-2026-08-19-AMZN-20261016-265C",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
+      "reason": "underlying:HISTORY_UNAVAILABLE,option:HISTORY_UNAVAILABLE,spy:HISTORY_UNAVAILABLE",
       "signal_date": "2026-08-19",
       "symbol": "AMZN"
     },
     {
       "code": "MATURED_OBSERVATION_MISSING",
-      "current_status": "MISSING_SOURCE_DATA",
+      "current_status": "RETRYABLE_SOURCE_ERROR",
       "horizon": "1D",
       "maturity_date": "2026-09-02",
       "outcome_record_id": "optoutcome-2026-09-01-AAPL-20261016-325C",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
+      "reason": "underlying:HISTORY_UNAVAILABLE,option:HISTORY_UNAVAILABLE,spy:HISTORY_UNAVAILABLE",
       "signal_date": "2026-09-01",
       "symbol": "AAPL"
     },
     {
       "code": "MATURED_OBSERVATION_MISSING",
-      "current_status": "MISSING_SOURCE_DATA",
+      "current_status": "RETRYABLE_SOURCE_ERROR",
       "horizon": "5D",
-      "maturity_date": "2026-09-08",
+      "maturity_date": "2026-09-09",
       "outcome_record_id": "optoutcome-2026-09-01-AAPL-20261016-325C",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
+      "reason": "underlying:HISTORY_UNAVAILABLE,option:HISTORY_UNAVAILABLE,spy:HISTORY_UNAVAILABLE",
       "signal_date": "2026-09-01",
       "symbol": "AAPL"
     },
     {
       "code": "MATURED_OBSERVATION_MISSING",
-      "current_status": "MISSING_SOURCE_DATA",
+      "current_status": "RETRYABLE_SOURCE_ERROR",
       "horizon": "1D",
       "maturity_date": "2026-09-03",
       "outcome_record_id": "optoutcome-2026-09-02-NVDA-20261016-225C",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
+      "reason": "underlying:HISTORY_UNAVAILABLE,option:HISTORY_UNAVAILABLE,spy:HISTORY_UNAVAILABLE",
       "signal_date": "2026-09-02",
       "symbol": "NVDA"
     },
     {
       "code": "MATURED_OBSERVATION_MISSING",
-      "current_status": "MISSING_SOURCE_DATA",
-      "horizon": "5D",
-      "maturity_date": "2026-09-09",
-      "outcome_record_id": "optoutcome-2026-09-02-NVDA-20261016-225C",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
-      "signal_date": "2026-09-02",
-      "symbol": "NVDA"
-    },
-    {
-      "code": "MATURED_OBSERVATION_MISSING",
-      "current_status": "MISSING_SOURCE_DATA",
+      "current_status": "RETRYABLE_SOURCE_ERROR",
       "horizon": "1D",
       "maturity_date": "2026-09-04",
       "outcome_record_id": "optoutcome-2026-09-03-MSFT-20261016-510C",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
+      "reason": "underlying:HISTORY_UNAVAILABLE,option:HISTORY_UNAVAILABLE,spy:HISTORY_UNAVAILABLE",
       "signal_date": "2026-09-03",
       "symbol": "MSFT"
     },
     {
       "code": "MATURED_OBSERVATION_MISSING",
-      "current_status": "MISSING_SOURCE_DATA",
+      "current_status": "RETRYABLE_SOURCE_ERROR",
       "horizon": "1D",
-      "maturity_date": "2026-09-07",
+      "maturity_date": "2026-09-08",
       "outcome_record_id": "optoutcome-2026-09-04-NVDA-20261016-230C",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
+      "reason": "underlying:HISTORY_UNAVAILABLE,option:HISTORY_UNAVAILABLE,spy:HISTORY_UNAVAILABLE",
       "signal_date": "2026-09-04",
       "symbol": "NVDA"
     },
     {
       "code": "MATURED_OBSERVATION_MISSING",
-      "current_status": "MISSING_SOURCE_DATA",
+      "current_status": "RETRYABLE_SOURCE_ERROR",
       "horizon": "1D",
       "maturity_date": "2026-09-09",
       "outcome_record_id": "optoutcome-2026-09-08-AVGO-20261016-370C",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
+      "reason": "underlying:HISTORY_UNAVAILABLE,option:HISTORY_UNAVAILABLE,spy:HISTORY_UNAVAILABLE",
       "signal_date": "2026-09-08",
       "symbol": "AVGO"
     },

@@ -1,0 +1,114 @@
+{
+  "source": "robinhood_option_quote_checkpoint",
+  "checkpoint_date": "2026-09-24",
+  "captured_at": "2026-09-25T14:49:49.042Z",
+  "requested_option_ids": [
+    "534669b1-9b50-44b5-86df-5ee12e9f5a45"
+  ],
+  "option_quotes": {
+    "534669b1-9b50-44b5-86df-5ee12e9f5a45": {
+      "quote": {
+        "instrument_id": "534669b1-9b50-44b5-86df-5ee12e9f5a45",
+        "ask_price": "0.000000",
+        "ask_size": 0,
+        "bid_price": "0.000000",
+        "bid_size": 0,
+        "break_even_price": "0.000000",
+        "adjusted_mark_price": "0.000000",
+        "mark_price": "0.000000",
+        "high_fill_rate_buy_price": "",
+        "low_fill_rate_buy_price": "",
+        "high_fill_rate_sell_price": "",
+        "low_fill_rate_sell_price": "",
+        "previous_close_price": "0.010000",
+        "previous_close_date": "2026-09-24",
+        "implied_volatility": null,
+        "delta": null,
+        "gamma": null,
+        "rho": null,
+        "theta": null,
+        "vega": null,
+        "open_interest": 0,
+        "volume": 0,
+        "chance_of_profit_long": null,
+        "chance_of_profit_short": null,
+        "updated_at": "0001-01-01T00:00:00Z"
+      },
+      "close": {
+        "instrument_id": "534669b1-9b50-44b5-86df-5ee12e9f5a45",
+        "symbol": "NVDA",
+        "date": "2026-09-18",
+        "price": "0.01",
+        "interpolated": true,
+        "source": "ddb-market-snapshot"
+      }
+    }
+  },
+  "missing_option_ids": [],
+  "due_manifest": {
+    "capture_instruction": "Call get_option_quotes for option_ids, save the raw response with checkpoint_date/source, then rerun update_option_outcomes.py with that quote snapshot.",
+    "checkpoint_date": "2026-09-24",
+    "count": 1,
+    "due": [
+      {
+        "contract": "NVDA 2026-09-18 225.0C",
+        "entry_option_mid": 10.325,
+        "horizon": "30D",
+        "option_id": "534669b1-9b50-44b5-86df-5ee12e9f5a45",
+        "path": "data/option_signal_outcomes/2026-08-12-daily-scanner-dry-run.jsonl",
+        "record_id": "opoutcome-2026-08-12-NVDA-20260918-225C",
+        "signal_date": "2026-08-12",
+        "signal_trading_session": "2026-08-12",
+        "target_observation_date": "2026-09-24",
+        "underlying": "NVDA"
+      }
+    ],
+    "option_ids": [
+      "534669b1-9b50-44b5-86df-5ee12e9f5a45"
+    ],
+    "source": "prospective_option_checkpoint_request"
+  },
+  "raw_response": {
+    "data": {
+      "results": [
+        {
+          "quote": {
+            "instrument_id": "534669b1-9b50-44b5-86df-5ee12e9f5a45",
+            "ask_price": "0.000000",
+            "ask_size": 0,
+            "bid_price": "0.000000",
+            "bid_size": 0,
+            "break_even_price": "0.000000",
+            "adjusted_mark_price": "0.000000",
+            "mark_price": "0.000000",
+            "high_fill_rate_buy_price": "",
+            "low_fill_rate_buy_price": "",
+            "high_fill_rate_sell_price": "",
+            "low_fill_rate_sell_price": "",
+            "previous_close_price": "0.010000",
+            "previous_close_date": "2026-09-24",
+            "implied_volatility": null,
+            "delta": null,
+            "gamma": null,
+            "rho": null,
+            "theta": null,
+            "vega": null,
+            "open_interest": 0,
+            "volume": 0,
+            "chance_of_profit_long": null,
+            "chance_of_profit_short": null,
+            "updated_at": "0001-01-01T00:00:00Z"
+          },
+          "close": {
+            "instrument_id": "534669b1-9b50-44b5-86df-5ee12e9f5a45",
+            "symbol": "NVDA",
+            "date": "2026-09-18",
+            "price": "0.01",
+            "interpolated": true,
+            "source": "ddb-market-snapshot"
+          }
+        }
+      ]
+    }
+  }
+}

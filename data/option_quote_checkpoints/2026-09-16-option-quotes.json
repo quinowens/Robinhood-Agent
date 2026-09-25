@@ -1,0 +1,197 @@
+{
+  "source": "robinhood_option_quote_checkpoint",
+  "checkpoint_date": "2026-09-16",
+  "captured_at": "2026-09-16T20:34:00Z",
+  "option_quotes": {
+    "10ae1fe9-0a99-41c1-930e-259e994f6a42": {
+      "quote": {
+        "instrument_id": "10ae1fe9-0a99-41c1-930e-259e994f6a42",
+        "ask_price": "44.550000",
+        "ask_size": 28,
+        "bid_price": "43.550000",
+        "bid_size": 36,
+        "break_even_price": "694.050000",
+        "adjusted_mark_price": "44.050000",
+        "mark_price": "44.050000",
+        "high_fill_rate_buy_price": "44.319000",
+        "low_fill_rate_buy_price": "43.829000",
+        "high_fill_rate_sell_price": "43.780000",
+        "low_fill_rate_sell_price": "44.270000",
+        "previous_close_price": "42.150000",
+        "previous_close_date": "2026-09-15",
+        "implied_volatility": "0.393018",
+        "delta": "0.654384",
+        "gamma": "0.004865",
+        "rho": "0.325686",
+        "theta": "-0.507762",
+        "vega": "0.711421",
+        "open_interest": 12067,
+        "volume": 1045,
+        "chance_of_profit_long": "0.382993",
+        "chance_of_profit_short": "0.617007",
+        "updated_at": "2026-09-16T19:59:59.982781404Z"
+      },
+      "close": {
+        "instrument_id": "10ae1fe9-0a99-41c1-930e-259e994f6a42",
+        "symbol": "META",
+        "date": "2026-09-15",
+        "price": "42.15",
+        "interpolated": false,
+        "source": "ddb-market-snapshot"
+      }
+    },
+    "e2993f8a-128a-4c27-a58c-8d1385a84cfb": {
+      "quote": {
+        "instrument_id": "e2993f8a-128a-4c27-a58c-8d1385a84cfb",
+        "ask_price": "14.600000",
+        "ask_size": 10,
+        "bid_price": "14.200000",
+        "bid_size": 26,
+        "break_even_price": "339.400000",
+        "adjusted_mark_price": "14.400000",
+        "mark_price": "14.400000",
+        "high_fill_rate_buy_price": "14.489000",
+        "low_fill_rate_buy_price": "14.291000",
+        "high_fill_rate_sell_price": "14.310000",
+        "low_fill_rate_sell_price": "14.508000",
+        "previous_close_price": "13.750000",
+        "previous_close_date": "2026-09-15",
+        "implied_volatility": "0.254437",
+        "delta": "0.652567",
+        "gamma": "0.015231",
+        "rho": "0.166371",
+        "theta": "-0.170530",
+        "vega": "0.351993",
+        "open_interest": 10388,
+        "volume": 1605,
+        "chance_of_profit_long": "0.391570",
+        "chance_of_profit_short": "0.608430",
+        "updated_at": "2026-09-16T19:59:59.954568388Z"
+      },
+      "close": {
+        "instrument_id": "e2993f8a-128a-4c27-a58c-8d1385a84cfb",
+        "symbol": "AAPL",
+        "date": "2026-09-15",
+        "price": "13.75",
+        "interpolated": false,
+        "source": "ddb-market-snapshot"
+      }
+    }
+  },
+  "due_manifest": {
+    "capture_instruction": "Call get_option_quotes for option_ids, save the raw response with checkpoint_date/source, then rerun update_option_outcomes.py with that quote snapshot.",
+    "checkpoint_date": "2026-09-16",
+    "count": 2,
+    "due": [
+      {
+        "contract": "AAPL 2026-10-16 325.0C",
+        "entry_option_mid": 12.2,
+        "horizon": "10D",
+        "option_id": "e2993f8a-128a-4c27-a58c-8d1385a84cfb",
+        "path": "data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl",
+        "record_id": "optoutcome-2026-09-01-AAPL-20261016-325C",
+        "signal_date": "2026-09-01",
+        "signal_trading_session": "2026-09-01",
+        "target_observation_date": "2026-09-16",
+        "underlying": "AAPL"
+      },
+      {
+        "contract": "META 2026-10-16 650.0C",
+        "entry_option_mid": 35.575,
+        "horizon": "5D",
+        "option_id": "10ae1fe9-0a99-41c1-930e-259e994f6a42",
+        "path": "data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl",
+        "record_id": "optoutcome-2026-09-09-META-20261016-650C",
+        "signal_date": "2026-09-09",
+        "signal_trading_session": "2026-09-09",
+        "target_observation_date": "2026-09-16",
+        "underlying": "META"
+      }
+    ],
+    "option_ids": [
+      "10ae1fe9-0a99-41c1-930e-259e994f6a42",
+      "e2993f8a-128a-4c27-a58c-8d1385a84cfb"
+    ],
+    "source": "prospective_option_checkpoint_request"
+  },
+  "raw_response": {
+    "data": {
+      "results": [
+        {
+          "quote": {
+            "instrument_id": "10ae1fe9-0a99-41c1-930e-259e994f6a42",
+            "ask_price": "44.550000",
+            "ask_size": 28,
+            "bid_price": "43.550000",
+            "bid_size": 36,
+            "break_even_price": "694.050000",
+            "adjusted_mark_price": "44.050000",
+            "mark_price": "44.050000",
+            "high_fill_rate_buy_price": "44.319000",
+            "low_fill_rate_buy_price": "43.829000",
+            "high_fill_rate_sell_price": "43.780000",
+            "low_fill_rate_sell_price": "44.270000",
+            "previous_close_price": "42.150000",
+            "previous_close_date": "2026-09-15",
+            "implied_volatility": "0.393018",
+            "delta": "0.654384",
+            "gamma": "0.004865",
+            "rho": "0.325686",
+            "theta": "-0.507762",
+            "vega": "0.711421",
+            "open_interest": 12067,
+            "volume": 1045,
+            "chance_of_profit_long": "0.382993",
+            "chance_of_profit_short": "0.617007",
+            "updated_at": "2026-09-16T19:59:59.982781404Z"
+          },
+          "close": {
+            "instrument_id": "10ae1fe9-0a99-41c1-930e-259e994f6a42",
+            "symbol": "META",
+            "date": "2026-09-15",
+            "price": "42.15",
+            "interpolated": false,
+            "source": "ddb-market-snapshot"
+          }
+        },
+        {
+          "quote": {
+            "instrument_id": "e2993f8a-128a-4c27-a58c-8d1385a84cfb",
+            "ask_price": "14.600000",
+            "ask_size": 10,
+            "bid_price": "14.200000",
+            "bid_size": 26,
+            "break_even_price": "339.400000",
+            "adjusted_mark_price": "14.400000",
+            "mark_price": "14.400000",
+            "high_fill_rate_buy_price": "14.489000",
+            "low_fill_rate_buy_price": "14.291000",
+            "high_fill_rate_sell_price": "14.310000",
+            "low_fill_rate_sell_price": "14.508000",
+            "previous_close_price": "13.750000",
+            "previous_close_date": "2026-09-15",
+            "implied_volatility": "0.254437",
+            "delta": "0.652567",
+            "gamma": "0.015231",
+            "rho": "0.166371",
+            "theta": "-0.170530",
+            "vega": "0.351993",
+            "open_interest": 10388,
+            "volume": 1605,
+            "chance_of_profit_long": "0.391570",
+            "chance_of_profit_short": "0.608430",
+            "updated_at": "2026-09-16T19:59:59.954568388Z"
+          },
+          "close": {
+            "instrument_id": "e2993f8a-128a-4c27-a58c-8d1385a84cfb",
+            "symbol": "AAPL",
+            "date": "2026-09-15",
+            "price": "13.75",
+            "interpolated": false,
+            "source": "ddb-market-snapshot"
+          }
+        }
+      ]
+    }
+  }
+}

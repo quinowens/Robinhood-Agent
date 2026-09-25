@@ -1,0 +1,6 @@
+Validation warnings:
+- MATURED_OBSERVATION_MISSING warnings remain for older uncaptured option horizons where source history is permanently unavailable.
+- 2026-09-16 due prospective checkpoints were captured and ingested: AAPL 10D and META 5D.
+- LEGACY_LEDGER_FORMAT_GRANDFATHERED remains for pre-v2.0.2 status vocabulary.
+
+Validation passed.

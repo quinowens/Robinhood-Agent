@@ -1,0 +1,47 @@
+{
+  "as_of": "2026-09-11T21:00:00Z",
+  "source": "robinhood_live_equity_history_snapshot",
+  "capabilities": {
+    "equity_historical": true,
+    "benchmark_historical": true,
+    "option_historical": false,
+    "option_current_quotes": true
+  },
+  "trading_dates": [
+    "2026-09-01",
+    "2026-09-02",
+    "2026-09-03",
+    "2026-09-04",
+    "2026-09-08",
+    "2026-09-09"
+  ],
+  "equity_bars": {
+    "AAPL": [
+      {"date": "2026-09-01", "open": 316.98, "close": 325.13, "high": 327.3, "low": 314.73, "volume": 53167388},
+      {"date": "2026-09-02", "open": 326.865, "close": 324.96, "high": 328.4, "low": 323.53, "volume": 33776370},
+      {"date": "2026-09-03", "open": 324.87, "close": 328.21, "high": 330.81, "low": 324.11, "volume": 37225838},
+      {"date": "2026-09-04", "open": 328.305, "close": 319.97, "high": 328.93, "low": 317.86, "volume": 39606884},
+      {"date": "2026-09-08", "open": 317.1, "close": 316.22, "high": 320.7, "low": 314.9, "volume": 35477090},
+      {"date": "2026-09-09", "open": 315.485, "close": 315.34, "high": 319.15, "low": 309.9, "volume": 65639962}
+    ],
+    "SPY": [
+      {"date": "2026-09-01", "open": 762.01, "close": 761.78, "high": 764.67, "low": 759.48, "volume": 41126315},
+      {"date": "2026-09-02", "open": 762.45, "close": 765.16, "high": 766.43, "low": 761.73, "volume": 29566216},
+      {"date": "2026-09-03", "open": 767.9, "close": 773.17, "high": 774.03, "low": 767.45, "volume": 43531581},
+      {"date": "2026-09-04", "open": 772.01, "close": 770.19, "high": 772.87, "low": 769.0, "volume": 34054199},
+      {"date": "2026-09-08", "open": 766.57, "close": 765.96, "high": 769.7, "low": 765.14, "volume": 44746095},
+      {"date": "2026-09-09", "open": 764.08, "close": 762.4, "high": 764.47, "low": 760.94, "volume": 32812411}
+    ],
+    "QQQ": [
+      {"date": "2026-09-01", "open": 707.39, "close": 707.64, "high": 712.3, "low": 704.66, "volume": 35236116},
+      {"date": "2026-09-02", "open": 707.1, "close": 709.24, "high": 709.7988, "low": 705.1, "volume": 23476207},
+      {"date": "2026-09-03", "open": 710.85, "close": 717.67, "high": 718.915, "low": 709.69, "volume": 29449781},
+      {"date": "2026-09-04", "open": 719.345, "close": 718.96, "high": 721.86, "low": 716.56, "volume": 32871076},
+      {"date": "2026-09-08", "open": 720.909, "close": 718.36, "high": 721.886, "low": 715.57, "volume": 28341416},
+      {"date": "2026-09-09", "open": 716.4, "close": 716.31, "high": 719.7, "low": 714.02, "volume": 26763377}
+    ]
+  },
+  "option_bars": {},
+  "option_id_lookup": {},
+  "option_contracts": {}
+}

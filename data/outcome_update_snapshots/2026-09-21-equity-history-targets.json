@@ -1,0 +1,31 @@
+{
+  "source": "robinhood_equity_historical_checkpoint",
+  "as_of": "2026-09-21",
+  "captured_at": "2026-09-21T20:33:13Z",
+  "capabilities": {
+    "equity_historical": true,
+    "benchmark_historical": true,
+    "option_historical": false,
+    "option_current_quotes": false
+  },
+  "equity_bars": {
+    "NVDA": [
+      {"date": "2026-08-07", "open": 221.54, "high": 224.76, "low": 220.66, "close": 223.96, "volume": 105669440},
+      {"date": "2026-09-04", "open": 231.09, "high": 234.76, "low": 229.63, "close": 230.36, "volume": 135352420},
+      {"date": "2026-09-18", "open": 219.35, "high": 222.73, "low": 218.03, "close": 222.27, "volume": 190287428},
+      {"date": "2026-09-21", "open": 222.27, "high": 222.27, "low": 222.27, "close": 222.27, "volume": 0, "interpolated": true}
+    ],
+    "SPY": [
+      {"date": "2026-08-07", "open": 771.02, "high": 773.915, "low": 769.61, "close": 773.26, "volume": 43586333},
+      {"date": "2026-09-04", "open": 772.01, "high": 772.87, "low": 769.0, "close": 770.19, "volume": 34054199},
+      {"date": "2026-09-18", "open": 761.31, "high": 762.0, "low": 757.971, "close": 761.69, "volume": 65395148},
+      {"date": "2026-09-21", "open": 761.69, "high": 761.69, "low": 761.69, "close": 761.69, "volume": 0, "interpolated": true}
+    ],
+    "QQQ": [
+      {"date": "2026-08-07", "open": 720.15, "high": 723.63, "low": 716.51, "close": 723.03, "volume": 31070371},
+      {"date": "2026-09-04", "open": 719.345, "high": 721.86, "low": 716.56, "close": 718.96, "volume": 32871076},
+      {"date": "2026-09-18", "open": 718.83, "high": 721.73, "low": 715.08, "close": 721.45, "volume": 48478713},
+      {"date": "2026-09-21", "open": 721.45, "high": 721.45, "low": 721.45, "close": 721.45, "volume": 0, "interpolated": true}
+    ]
+  }
+}

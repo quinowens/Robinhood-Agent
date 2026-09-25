@@ -6,9 +6,11 @@ from __future__ import annotations
 import argparse
 import json
 from collections import Counter, defaultdict
-from datetime import date, datetime, timedelta
+from datetime import date, datetime
 from pathlib import Path
 from typing import Any, Iterable
+
+from historical_resolver import trading_day
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -70,14 +72,7 @@ def parse_day(value: Any) -> date | None:
 
 
 def matured_day(signal_day: date, horizon: int) -> date:
-    """Conservative weekday approximation; market-calendar snapshots are authoritative."""
-    current = signal_day
-    remaining = horizon
-    while remaining:
-        current += timedelta(days=1)
-        if current.weekday() < 5:
-            remaining -= 1
-    return current
+    return trading_day(signal_day, horizon)
 
 
 def audit(as_of: date | None = None) -> dict[str, Any]:

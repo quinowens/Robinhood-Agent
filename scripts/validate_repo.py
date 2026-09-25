@@ -44,6 +44,7 @@ REQUIRED_FILES = [
     "docs/VALIDATION_RELEASE.md",
     "docs/OUTCOME_MIGRATION.md",
     "scripts/generate_strategy_diagnostics.py",
+    "scripts/historical_resolver.py",
     "templates/scheduled_run_ledger.json",
 ]
 
@@ -72,6 +73,26 @@ SECRET_PATTERNS = [
 
 SKIP_DIRS = {".git", "__pycache__", "node_modules", "dist", "build", "coverage"}
 TEXT_SUFFIXES = {".md", ".txt", ".json", ".jsonl", ".py", ".yml", ".yaml", ".toml", ".ini", ".cfg", ".env", ".example", ""}
+
+FORWARD_STATUSES = {"PENDING", "OBSERVED", "MISSING_SOURCE_DATA", "UPDATE_FAILED", "NOT_APPLICABLE", "RETRYABLE_SOURCE_ERROR", "PERMANENTLY_UNAVAILABLE"}
+COMPONENT_RETRIEVAL_STATUSES = {
+    "PENDING",
+    "OBSERVED",
+    "FOUND",
+    "NOT_YET_MATURE",
+    "NO_TRADING_DAY",
+    "INSTRUMENT_NOT_FOUND",
+    "INVALID_INSTRUMENT_ID",
+    "NO_ROWS_RETURNED",
+    "TARGET_DATE_NOT_IN_RESPONSE",
+    "OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE",
+    "SOURCE_CAPABILITY_UNSUPPORTED",
+    "CHECKPOINT_NOT_FOR_TARGET_DATE",
+    "PARSE_ERROR",
+    "HISTORY_UNAVAILABLE",
+    "SOURCE_ERROR",
+    "INVALID_RECORD",
+}
 
 
 def rel(path: Path) -> str:
@@ -387,7 +408,8 @@ def check_v201_option_records(errors: list[str]) -> None:
             if strategy_version is None or str(strategy_version) < "2.0.1":
                 continue
             where = f"{rel(path)}:{line_number}"
-            if str(strategy_version) >= "2.0.2":
+            legacy_component_schema = row.get("legacy_component_schema") is True
+            if str(strategy_version) >= "2.0.2" and not legacy_component_schema:
                 require_template_fields(errors, row, outcome_template, "option signal outcome", where)
             require_non_empty_fields(
                 errors,
@@ -405,11 +427,16 @@ def check_v201_option_records(errors: list[str]) -> None:
                     fail(errors, f"current option outcome planned risk source must be default_max_contractual_loss: {where}")
             for horizon in (1, 5, 10, 20, 30) if row.get("canonical", row.get("is_canonical", True)) is not False else ():
                 status = row.get(f"forward_{horizon}d_status")
-                if status not in {"PENDING", "OBSERVED", "MISSING_SOURCE_DATA", "UPDATE_FAILED", "NOT_APPLICABLE"}:
+                if status not in FORWARD_STATUSES:
                     fail(errors, f"invalid forward_{horizon}d_status {status!r}: {where}")
                 observation = row.get(f"forward_{horizon}d_observation") or {}
                 if status == "OBSERVED" and (row.get(f"option_forward_{horizon}d_return") is None or not observation.get("observed_at") or not observation.get("source")):
                     fail(errors, f"observed {horizon}D outcome lacks value/provenance: {where}")
+                if not legacy_component_schema:
+                    for component in ("underlying", "option", "spy", "qqq"):
+                        component_status = row.get(f"forward_{horizon}d_{component}_status")
+                        if component_status not in COMPONENT_RETRIEVAL_STATUSES:
+                            fail(errors, f"invalid {horizon}D {component} retrieval status {component_status!r}: {where}")
 
 
 def require_template_fields(
@@ -557,6 +584,10 @@ def check_json(errors: list[str]) -> None:
     for path in sorted(ROOT.glob("data/market_regime/*.json")):
         parse_json_file(path, errors)
     for path in sorted(ROOT.glob("data/validation_reports/*.json")):
+        parse_json_file(path, errors)
+    for path in sorted(ROOT.glob("data/outcome_update_snapshots/*.json")):
+        parse_json_file(path, errors)
+    for path in sorted(ROOT.glob("data/option_quote_checkpoints/*.json")):
         parse_json_file(path, errors)
     for path in sorted(ROOT.glob("backtests/*.json")):
         parse_json_file(path, errors)

@@ -2,6 +2,10 @@
 
 ## Version 2.0.2 — Data Integrity & Outcome Maturation
 
+- Updated daily, weekly, and monthly scheduled workflows to run prospective due-option discovery, exact-date live quote capture, raw checkpoint persistence, and outcome ingestion before analytics and validation; missed same-session captures degrade the run, while `OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE` remains a valid permanent historical-source status.
+- Replaced snapshot-wide all-or-nothing retrieval with reusable structured underlying, option, and benchmark resolvers; component outcomes now finalize independently.
+- Added NYSE holiday-aware trading-session horizons, exact-date resolution, same-session historical midpoint fallback, expiration intrinsic-value handling, retry metadata, and component retrieval-health rates.
+- Added regression tests for session calculation, expiration, missing histories, partial population, unit consistency, immutable finalized observations, and idempotent reruns.
 - Hardened every canonical 1D/5D/10D/20D/30D option outcome with explicit status, maturity date, source timestamp, source identity, and failure reason; finalized observations remain immutable unless correction mode includes a reason.
 - Added per-horizon option and underlying MFE/MAE, benchmark excess returns, and research-only underlying-win/option-win classification.
 - Added strategy diagnostics for score discrimination, call/put and directional bias by regime, setup/contract buckets, and blocked-candidate opportunity cost without changing thresholds or decision rules.

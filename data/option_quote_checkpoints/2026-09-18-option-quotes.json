@@ -1,0 +1,110 @@
+{
+  "source": "robinhood_option_quote_checkpoint",
+  "checkpoint_date": "2026-09-18",
+  "captured_at": "2026-09-18T20:00:05Z",
+  "option_quotes": {
+    "952f1d8b-7f5c-4a6b-82e9-a74eff0b1af5": {
+      "quote": {
+        "instrument_id": "952f1d8b-7f5c-4a6b-82e9-a74eff0b1af5",
+        "ask_price": "7.000000",
+        "ask_size": 9,
+        "bid_price": "6.550000",
+        "bid_size": 10,
+        "break_even_price": "516.780000",
+        "adjusted_mark_price": "6.780000",
+        "mark_price": "6.775000",
+        "high_fill_rate_buy_price": "6.875000",
+        "low_fill_rate_buy_price": "6.652000",
+        "high_fill_rate_sell_price": "6.674000",
+        "low_fill_rate_sell_price": "6.897000",
+        "previous_close_price": "8.830000",
+        "previous_close_date": "2026-09-17",
+        "implied_volatility": "0.237003",
+        "delta": "0.331073",
+        "gamma": "0.011249",
+        "rho": "0.118785",
+        "theta": "-0.227723",
+        "vega": "0.492662",
+        "open_interest": 39864,
+        "volume": 2287,
+        "chance_of_profit_long": "0.240561",
+        "chance_of_profit_short": "0.759439",
+        "updated_at": "2026-09-18T19:59:59.960076305Z"
+      },
+      "close": {
+        "instrument_id": "952f1d8b-7f5c-4a6b-82e9-a74eff0b1af5",
+        "symbol": "MSFT",
+        "date": "2026-09-17",
+        "price": "8.83",
+        "interpolated": false,
+        "source": "ddb-market-snapshot"
+      }
+    }
+  },
+  "due_manifest": {
+    "capture_instruction": "Call get_option_quotes for option_ids, save the raw response with checkpoint_date/source, then rerun update_option_outcomes.py with that quote snapshot.",
+    "checkpoint_date": "2026-09-18",
+    "count": 1,
+    "due": [
+      {
+        "contract": "MSFT 2026-10-16 510.0C",
+        "entry_option_mid": 18.35,
+        "horizon": "10D",
+        "option_id": "952f1d8b-7f5c-4a6b-82e9-a74eff0b1af5",
+        "path": "data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl",
+        "record_id": "optoutcome-2026-09-03-MSFT-20261016-510C",
+        "signal_date": "2026-09-03",
+        "signal_trading_session": "2026-09-03",
+        "target_observation_date": "2026-09-18",
+        "underlying": "MSFT"
+      }
+    ],
+    "option_ids": [
+      "952f1d8b-7f5c-4a6b-82e9-a74eff0b1af5"
+    ],
+    "source": "prospective_option_checkpoint_request"
+  },
+  "raw_response": {
+    "data": {
+      "results": [
+        {
+          "quote": {
+            "instrument_id": "952f1d8b-7f5c-4a6b-82e9-a74eff0b1af5",
+            "ask_price": "7.000000",
+            "ask_size": 9,
+            "bid_price": "6.550000",
+            "bid_size": 10,
+            "break_even_price": "516.780000",
+            "adjusted_mark_price": "6.780000",
+            "mark_price": "6.775000",
+            "high_fill_rate_buy_price": "6.875000",
+            "low_fill_rate_buy_price": "6.652000",
+            "high_fill_rate_sell_price": "6.674000",
+            "low_fill_rate_sell_price": "6.897000",
+            "previous_close_price": "8.830000",
+            "previous_close_date": "2026-09-17",
+            "implied_volatility": "0.237003",
+            "delta": "0.331073",
+            "gamma": "0.011249",
+            "rho": "0.118785",
+            "theta": "-0.227723",
+            "vega": "0.492662",
+            "open_interest": 39864,
+            "volume": 2287,
+            "chance_of_profit_long": "0.240561",
+            "chance_of_profit_short": "0.759439",
+            "updated_at": "2026-09-18T19:59:59.960076305Z"
+          },
+          "close": {
+            "instrument_id": "952f1d8b-7f5c-4a6b-82e9-a74eff0b1af5",
+            "symbol": "MSFT",
+            "date": "2026-09-17",
+            "price": "8.83",
+            "interpolated": false,
+            "source": "ddb-market-snapshot"
+          }
+        }
+      ]
+    }
+  }
+}

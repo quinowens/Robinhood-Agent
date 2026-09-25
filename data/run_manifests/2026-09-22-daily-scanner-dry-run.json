@@ -1,0 +1,458 @@
+{
+  "run_id": "2026-09-22-daily-scanner-dry-run",
+  "date": "2026-09-22",
+  "strategy_version": "2.0.1",
+  "pipeline_version": "2.0",
+  "strategy_mode": "options_primary",
+  "mode": "research_only_proposal_only_shadow_trading",
+  "run_trigger": "automation",
+  "session_context": "Robinhood Agent Daily Options Scanner Dry Run automation robinhood-agent-daily-scanner-dry-run",
+  "intended_workflow": "daily_options_primary_scanner_research_only",
+  "started_at": "2026-09-22T21:01:56Z",
+  "first_tool_call_at": "2026-09-22T21:01:56Z",
+  "last_tool_call_at": "2026-09-22T21:21:18Z",
+  "completed_at": "2026-09-22T21:21:18Z",
+  "status": "COMPLETE",
+  "run_status": "degraded_complete",
+  "degradation_categories": [
+    "scanner_frontend_limit_capped_visible_rows",
+    "named_terminal_records_below_90pct_of_visible_deduplicated_rows",
+    "full_financial_statement_tool_not_exposed",
+    "option_historicals_tool_not_exposed",
+    "pnl_trade_history_tool_not_exposed",
+    "option_level_upgrade_info_tool_not_exposed",
+    "equity_history_2026_09_22_latest_bars_interpolated_zero_volume",
+    "legacy_option_outcome_history_permanently_unavailable_by_source"
+  ],
+  "decision_integrity": "PASS_NO_LIVE_ACTIONS",
+  "persistence_integrity": "PASS_SCOPED_ARTIFACTS_WRITTEN",
+  "account_snapshot_id": "acct-8691-2026-09-22T21:03Z",
+  "account_snapshot_as_of": "2026-09-22T21:03:30Z",
+  "account": {
+    "masked_account": "ending_8691",
+    "type": "cash",
+    "broker_options_level": "option_level_2",
+    "strategy_enabled_options": [
+      "LONG_CALL",
+      "LONG_PUT"
+    ],
+    "account_value": 100,
+    "cash": 100,
+    "option_buying_power": 100,
+    "equity_positions_count": 0,
+    "option_positions_count": 0,
+    "open_equity_orders_count": 0,
+    "open_option_orders_count": 0,
+    "realized_pnl_3month": 0
+  },
+  "scanner_resolution": [
+    {
+      "name": "Momentum Candidates",
+      "scan_id": "26cdeb14-da13-493f-b0c6-783468971a16",
+      "matched": true,
+      "total_items": 398,
+      "returned_rows": 200
+    },
+    {
+      "name": "Options Activity Radar",
+      "scan_id": "7068db65-2a47-470c-bde9-94d66f36b806",
+      "matched": true,
+      "total_items": 202,
+      "returned_rows": 200
+    },
+    {
+      "name": "Earnings Risk Radar",
+      "scan_id": "737924f1-e94f-4ad4-ba98-6c12fcaafaa9",
+      "matched": true,
+      "total_items": 274,
+      "returned_rows": 200
+    }
+  ],
+  "market_context": {
+    "market_health_score": 72,
+    "classification": "constructive",
+    "SPX": 7764.64,
+    "NDX": 30732.3956,
+    "VIX": 14.21,
+    "SPY_regular_close_print": 773.4,
+    "QQQ_regular_close_print": 747.465,
+    "interpretation": "Constructive index backdrop with low volatility; scanner leaders were extension-heavy and did not justify immediate long-premium entries."
+  },
+  "option_checkpoint": {
+    "checkpoint_date": "2026-09-22",
+    "due_count": 1,
+    "unique_option_ids_due": 1,
+    "captured_count": 1,
+    "updated_count": 1,
+    "missed_count": 0,
+    "due_manifest_retained_in": "data/run_manifests/2026-09-22-daily-scanner-dry-run.json",
+    "quote_snapshot": "data/option_quote_checkpoints/2026-09-22-option-quotes.json",
+    "equity_snapshot": "data/outcome_update_snapshots/2026-09-22-equity-history-targets.json",
+    "record_id": "optoutcome-2026-09-08-AVGO-20261016-370C",
+    "option_return_10d": -0.358799,
+    "underlying_return_10d": -0.015928,
+    "spy_excess_return_10d": -0.025772,
+    "qqq_excess_return_10d": -0.048098,
+    "ingestion_status": "due_record_observed_all_components; underlying_and_benchmark_confidence_reduced_by_interpolated_zero_volume_target_date_bars",
+    "records_touched_by_snapshot_merge": 13
+  },
+  "artifact_ids": {
+    "research_record_ids": [
+      "2026-09-22-TWLO",
+      "2026-09-22-SHOP",
+      "2026-09-22-PANW",
+      "2026-09-22-GRAB",
+      "2026-09-22-IONQ",
+      "2026-09-22-RMBS",
+      "2026-09-22-ALAB",
+      "2026-09-22-MU",
+      "2026-09-22-NVDA",
+      "2026-09-22-AVGO",
+      "2026-09-22-GOOGL",
+      "2026-09-22-AMZN",
+      "2026-09-22-MSFT",
+      "2026-09-22-META",
+      "2026-09-22-GME",
+      "2026-09-22-PERMANENT-FILTERS"
+    ],
+    "options_setup_ids": [
+      "optsetup-2026-09-22-SHOP-20261120-145C",
+      "optsetup-2026-09-22-TWLO-20261120-280C",
+      "optsetup-2026-09-22-PANW-20261120-380C"
+    ],
+    "shadow_trade_ids": [],
+    "new_outcome_record_ids": [],
+    "updated_outcome_record_ids": [
+      "optoutcome-2026-09-08-AVGO-20261016-370C"
+    ]
+  },
+  "candidate_counts": {
+    "connector_visible_rows": 600,
+    "visible_deduplicated_symbols": 570,
+    "named_candidates_reviewed": 15,
+    "permanent_filter_buckets": 1,
+    "terminal_result_count": 16,
+    "scored_count": 15,
+    "permanently_rejected_named_count": 1,
+    "reviewed_candidate_completeness_pct": 100,
+    "visible_population_terminal_coverage_pct": 2.807
+  },
+  "provisional_tier_2": {
+    "promoted_for_run": [
+      "TWLO",
+      "SHOP"
+    ],
+    "persisted_to_current_universe": false,
+    "reason": "Both passed daily underlying promotion thresholds, but option setups remained WATCH."
+  },
+  "options_research": {
+    "chains_called_for": [
+      "TWLO",
+      "PANW",
+      "SHOP"
+    ],
+    "option_level_upgrade_info_called": false,
+    "option_instruments_queried": 168,
+    "option_quotes_queried_for_new_setups": 9,
+    "option_historicals_queried_for_new_setups": 0,
+    "selected_contracts": [
+      "TWLO 2026-11-20 280C",
+      "PANW 2026-11-20 380C",
+      "SHOP 2026-11-20 145C"
+    ],
+    "qualified_setups": 0,
+    "pm_proposals": 0,
+    "shadow_only_qualified": 0,
+    "qualified_but_not_account_fit": 0,
+    "watch_setups": 3
+  },
+  "portfolio_manager": {
+    "account_fit_status": "FAIL_ALL_REVIEWED_CONTRACTS",
+    "option_buying_power": 100,
+    "existing_option_positions": 0,
+    "open_option_orders": 0,
+    "max_planned_trade_risk_dollars": 1,
+    "current_open_options_premium_risk": 0,
+    "post_proposal_premium_risk": 0,
+    "drawdown_kill_switch": "not_triggered",
+    "recommendation": "NO_TRADE"
+  },
+  "guardrails": {
+    "live_orders_placed": false,
+    "live_orders_modified": false,
+    "live_orders_canceled": false,
+    "review_option_order_called": false,
+    "place_option_order_called": false,
+    "allowed_structures": [
+      "LONG_CALL",
+      "LONG_PUT"
+    ],
+    "blocked_structures": [
+      "0DTE",
+      "NAKED_SELLING",
+      "CASH_SECURED_PUT",
+      "COVERED_CALL",
+      "SPREAD",
+      "MARGIN_DRIVEN_SELLING",
+      "EARNINGS_LOTTERY",
+      "CHEAP_FAR_OTM_SUBSTITUTION"
+    ]
+  },
+  "source_of_truth_files_read": [
+    "tool_policy.md",
+    "system_prompt.md",
+    "pipeline_config.md",
+    "scanner_engine.md",
+    "research_agent.md",
+    "portfolio_manager_agent.md",
+    "universe.md",
+    "performance_metrics.md",
+    "strategy.md",
+    "options_strategy.md",
+    "state/current_universe.json",
+    "state/open_theses.json",
+    "state/rejected_candidates.json",
+    "research_logs/2026-09-21-daily-scanner-dry-run.md",
+    "data/validation_reports/2026-09-21-integrity-audit.json",
+    "data/validation_reports/2026-09-21-outcome-analytics.json",
+    "data/validation_reports/2026-09-21-strategy-diagnostics.json",
+    "data/validation_reports/2026-09-21-validation-output.txt"
+  ],
+  "tool_calls": [
+    {
+      "tool": "update_option_outcomes.py --list-due-option-checkpoints",
+      "timestamp": "2026-09-22T21:01:56Z",
+      "targets": [
+        "2026-09-22"
+      ],
+      "success": true,
+      "retries": 0
+    },
+    {
+      "tool": "get_option_quotes",
+      "timestamp": "2026-09-22T21:02:20Z",
+      "targets": [
+        "e6ca6071-46e2-4c5e-a216-28a042c66396"
+      ],
+      "success": true,
+      "retries": 0,
+      "purpose": "mandatory_due_checkpoint"
+    },
+    {
+      "tool": "get_accounts",
+      "timestamp": "2026-09-22T21:03:00Z",
+      "targets": [
+        "all_accounts"
+      ],
+      "success": true,
+      "retries": 0
+    },
+    {
+      "tool": "get_scans",
+      "timestamp": "2026-09-22T21:03:00Z",
+      "targets": [
+        "saved_scans"
+      ],
+      "success": true,
+      "retries": 0
+    },
+    {
+      "tool": "get_portfolio",
+      "timestamp": "2026-09-22T21:03:30Z",
+      "targets": [
+        "ending_8691"
+      ],
+      "success": true,
+      "retries": 0
+    },
+    {
+      "tool": "get_equity_positions",
+      "timestamp": "2026-09-22T21:03:30Z",
+      "targets": [
+        "ending_8691"
+      ],
+      "success": true,
+      "retries": 0
+    },
+    {
+      "tool": "get_option_positions",
+      "timestamp": "2026-09-22T21:03:30Z",
+      "targets": [
+        "ending_8691"
+      ],
+      "success": true,
+      "retries": 0
+    },
+    {
+      "tool": "get_equity_orders",
+      "timestamp": "2026-09-22T21:03:30Z",
+      "targets": [
+        "ending_8691"
+      ],
+      "success": true,
+      "retries": 0
+    },
+    {
+      "tool": "get_option_orders",
+      "timestamp": "2026-09-22T21:03:30Z",
+      "targets": [
+        "ending_8691"
+      ],
+      "success": true,
+      "retries": 0
+    },
+    {
+      "tool": "get_realized_pnl",
+      "timestamp": "2026-09-22T21:03:30Z",
+      "targets": [
+        "ending_8691",
+        "3month"
+      ],
+      "success": true,
+      "retries": 0
+    },
+    {
+      "tool": "run_scan",
+      "timestamp": "2026-09-22T21:03:30Z",
+      "targets": [
+        "26cdeb14-da13-493f-b0c6-783468971a16",
+        "7068db65-2a47-470c-bde9-94d66f36b806",
+        "737924f1-e94f-4ad4-ba98-6c12fcaafaa9"
+      ],
+      "success": true,
+      "retries": 0
+    },
+    {
+      "tool": "get_equity_fundamentals/get_equity_quotes/get_equity_tradability/get_equity_historicals",
+      "timestamp": "2026-09-22T21:05:00Z",
+      "targets": [
+        "GRAB",
+        "IONQ",
+        "RMBS",
+        "SHOP",
+        "TWLO",
+        "ALAB",
+        "MU",
+        "PANW",
+        "AVGO",
+        "NVDA",
+        "SPY",
+        "QQQ"
+      ],
+      "success": true,
+      "retries": 0
+    },
+    {
+      "tool": "get_earnings_results/get_earnings_calendar",
+      "timestamp": "2026-09-22T21:05:00Z",
+      "targets": [
+        "GRAB",
+        "IONQ",
+        "RMBS",
+        "SHOP",
+        "TWLO",
+        "ALAB",
+        "MU",
+        "PANW",
+        "AVGO",
+        "NVDA",
+        "2026-09-22..2026-10-05"
+      ],
+      "success": true,
+      "retries": 0
+    },
+    {
+      "tool": "get_indexes/get_index_quotes",
+      "timestamp": "2026-09-22T21:06:00Z",
+      "targets": [
+        "SPX",
+        "NDX",
+        "VIX"
+      ],
+      "success": true,
+      "retries": 0
+    },
+    {
+      "tool": "get_option_chains",
+      "timestamp": "2026-09-22T21:06:30Z",
+      "targets": [
+        "TWLO",
+        "PANW",
+        "SHOP"
+      ],
+      "success": true,
+      "retries": 0
+    },
+    {
+      "tool": "get_option_instruments",
+      "timestamp": "2026-09-22T21:07:00Z",
+      "targets": [
+        "TWLO 2026-11-20 calls",
+        "PANW 2026-11-20 calls",
+        "SHOP 2026-11-20 calls"
+      ],
+      "success": true,
+      "retries": 0
+    },
+    {
+      "tool": "get_option_quotes",
+      "timestamp": "2026-09-22T21:07:15Z",
+      "targets": [
+        "9 selected finalist contracts"
+      ],
+      "success": true,
+      "retries": 0
+    },
+    {
+      "tool": "update_option_outcomes.py",
+      "timestamp": "2026-09-22T21:08:50Z",
+      "targets": [
+        "2026-09-22 option checkpoint",
+        "2026-09-22 equity snapshot"
+      ],
+      "success": true,
+      "retries": 0
+    },
+    {
+      "tool": "get_portfolio/get_option_positions/get_equity_orders/get_option_orders",
+      "timestamp": "2026-09-22T21:10:30Z",
+      "targets": [
+        "ending_8691"
+      ],
+      "success": true,
+      "retries": 0,
+      "purpose": "portfolio_manager_refresh"
+    },
+    {
+      "tool": "analyze_outcomes.py/generate_strategy_diagnostics.py/data_integrity.py/validate_repo.py",
+      "timestamp": "2026-09-22T21:21:18Z",
+      "targets": [
+        "repository"
+      ],
+      "success": true,
+      "retries": 0
+    }
+  ],
+  "state_file_decision": {
+    "current_universe": "unchanged",
+    "open_theses": "unchanged",
+    "rejected_candidates": "unchanged"
+  },
+  "validation": {
+    "analyze_outcomes_ran": true,
+    "strategy_diagnostics_ran": true,
+    "data_integrity_ran": true,
+    "validate_repo_ran": true,
+    "validate_repo_status": "passed_with_warnings",
+    "validation_warning_count": 30,
+    "validation_failure_count": 0,
+    "data_integrity_status": "PASS_WITH_WARNINGS",
+    "outcome_health_status": "DEGRADED",
+    "warning_summary": "Older option horizons remain permanently unavailable because historical option bars are unsupported; one CRWD 5D source snapshot had not advanced through its target date."
+  },
+  "notes": [
+    "No setup reached QUALIFIED, so no new option shadow trade or option signal-outcome record was created.",
+    "Options Activity Radar was treated as context only and did not create direction.",
+    "No live order review was performed because no exact order was prepared for execution."
+  ]
+}

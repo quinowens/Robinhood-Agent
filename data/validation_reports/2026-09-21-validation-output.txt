@@ -1,0 +1,524 @@
+Validation warnings:
+- data integrity MATURED_OBSERVATION_MISSING: {"code": "MATURED_OBSERVATION_MISSING", "current_status": "PERMANENTLY_UNAVAILABLE", "horizon": "20D", "maturity_date": "2026-09-04", "outcome_record_id": "legacy-outcome-2026-08-07-NVDA-cdbb7e49a73b", "reason": "option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE", "signal_date": "2026-08-07", "symbol": "NVDA"}
+- data integrity MATURED_OBSERVATION_MISSING: {"code": "MATURED_OBSERVATION_MISSING", "current_status": "PERMANENTLY_UNAVAILABLE", "horizon": "30D", "maturity_date": "2026-09-21", "outcome_record_id": "legacy-outcome-2026-08-07-NVDA-cdbb7e49a73b", "reason": "option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE", "signal_date": "2026-08-07", "symbol": "NVDA"}
+- data integrity MATURED_OBSERVATION_MISSING: {"code": "MATURED_OBSERVATION_MISSING", "current_status": "MISSING_SOURCE_DATA", "horizon": "10D", "maturity_date": "2026-08-25", "outcome_record_id": "2026-08-11-META-2026-09-18-610C-outcome", "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry", "signal_date": "2026-08-11", "symbol": "META"}
+- data integrity MATURED_OBSERVATION_MISSING: {"code": "MATURED_OBSERVATION_MISSING", "current_status": "MISSING_SOURCE_DATA", "horizon": "20D", "maturity_date": "2026-09-09", "outcome_record_id": "2026-08-11-META-2026-09-18-610C-outcome", "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry", "signal_date": "2026-08-11", "symbol": "META"}
+- data integrity MATURED_OBSERVATION_MISSING: {"code": "MATURED_OBSERVATION_MISSING", "current_status": "MISSING_SOURCE_DATA", "horizon": "10D", "maturity_date": "2026-08-25", "outcome_record_id": "2026-08-11-NVDA-2026-09-18-220C-outcome", "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry", "signal_date": "2026-08-11", "symbol": "NVDA"}
+- data integrity MATURED_OBSERVATION_MISSING: {"code": "MATURED_OBSERVATION_MISSING", "current_status": "MISSING_SOURCE_DATA", "horizon": "20D", "maturity_date": "2026-09-09", "outcome_record_id": "2026-08-11-NVDA-2026-09-18-220C-outcome", "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry", "signal_date": "2026-08-11", "symbol": "NVDA"}
+- data integrity MATURED_OBSERVATION_MISSING: {"code": "MATURED_OBSERVATION_MISSING", "current_status": "MISSING_SOURCE_DATA", "horizon": "10D", "maturity_date": "2026-08-26", "outcome_record_id": "opoutcome-2026-08-12-NVDA-20260918-225C", "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry", "signal_date": "2026-08-12", "symbol": "NVDA"}
+- data integrity MATURED_OBSERVATION_MISSING: {"code": "MATURED_OBSERVATION_MISSING", "current_status": "MISSING_SOURCE_DATA", "horizon": "20D", "maturity_date": "2026-09-10", "outcome_record_id": "opoutcome-2026-08-12-NVDA-20260918-225C", "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry", "signal_date": "2026-08-12", "symbol": "NVDA"}
+- data integrity MATURED_OBSERVATION_MISSING: {"code": "MATURED_OBSERVATION_MISSING", "current_status": "MISSING_SOURCE_DATA", "horizon": "10D", "maturity_date": "2026-08-27", "outcome_record_id": "opoutcome-2026-08-13-META-20261016-600C", "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry", "signal_date": "2026-08-13", "symbol": "META"}
+- data integrity MATURED_OBSERVATION_MISSING: {"code": "MATURED_OBSERVATION_MISSING", "current_status": "PENDING", "horizon": "20D", "maturity_date": "2026-09-11", "outcome_record_id": "opoutcome-2026-08-13-META-20261016-600C", "reason": "horizon_not_mature_as_of_source_snapshot", "signal_date": "2026-08-13", "symbol": "META"}
+- data integrity MATURED_OBSERVATION_MISSING: {"code": "MATURED_OBSERVATION_MISSING", "current_status": "MISSING_SOURCE_DATA", "horizon": "5D", "maturity_date": "2026-08-26", "outcome_record_id": "opoutcome-2026-08-19-AMZN-20261016-265C", "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry", "signal_date": "2026-08-19", "symbol": "AMZN"}
+- data integrity MATURED_OBSERVATION_MISSING: {"code": "MATURED_OBSERVATION_MISSING", "current_status": "MISSING_SOURCE_DATA", "horizon": "10D", "maturity_date": "2026-09-02", "outcome_record_id": "opoutcome-2026-08-19-AMZN-20261016-265C", "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry", "signal_date": "2026-08-19", "symbol": "AMZN"}
+- data integrity MATURED_OBSERVATION_MISSING: {"code": "MATURED_OBSERVATION_MISSING", "current_status": "PENDING", "horizon": "20D", "maturity_date": "2026-09-17", "outcome_record_id": "opoutcome-2026-08-19-AMZN-20261016-265C", "reason": "horizon_not_mature_as_of_source_snapshot", "signal_date": "2026-08-19", "symbol": "AMZN"}
+- data integrity MATURED_OBSERVATION_MISSING: {"code": "MATURED_OBSERVATION_MISSING", "current_status": "MISSING_SOURCE_DATA", "horizon": "1D", "maturity_date": "2026-09-02", "outcome_record_id": "optoutcome-2026-09-01-AAPL-20261016-325C", "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry", "signal_date": "2026-09-01", "symbol": "AAPL"}
+- data integrity MATURED_OBSERVATION_MISSING: {"code": "MATURED_OBSERVATION_MISSING", "current_status": "MISSING_SOURCE_DATA", "horizon": "5D", "maturity_date": "2026-09-09", "outcome_record_id": "optoutcome-2026-09-01-AAPL-20261016-325C", "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry", "signal_date": "2026-09-01", "symbol": "AAPL"}
+- data integrity MATURED_OBSERVATION_MISSING: {"code": "MATURED_OBSERVATION_MISSING", "current_status": "PENDING", "horizon": "10D", "maturity_date": "2026-09-16", "outcome_record_id": "optoutcome-2026-09-01-AAPL-20261016-325C", "reason": "horizon_not_mature_as_of_source_snapshot", "signal_date": "2026-09-01", "symbol": "AAPL"}
+- data integrity MATURED_OBSERVATION_MISSING: {"code": "MATURED_OBSERVATION_MISSING", "current_status": "MISSING_SOURCE_DATA", "horizon": "1D", "maturity_date": "2026-09-03", "outcome_record_id": "optoutcome-2026-09-02-NVDA-20261016-225C", "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry", "signal_date": "2026-09-02", "symbol": "NVDA"}
+- data integrity MATURED_OBSERVATION_MISSING: {"code": "MATURED_OBSERVATION_MISSING", "current_status": "MISSING_SOURCE_DATA", "horizon": "5D", "maturity_date": "2026-09-10", "outcome_record_id": "optoutcome-2026-09-02-NVDA-20261016-225C", "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry", "signal_date": "2026-09-02", "symbol": "NVDA"}
+- data integrity MATURED_OBSERVATION_MISSING: {"code": "MATURED_OBSERVATION_MISSING", "current_status": "PENDING", "horizon": "10D", "maturity_date": "2026-09-17", "outcome_record_id": "optoutcome-2026-09-02-NVDA-20261016-225C", "reason": "horizon_not_mature_as_of_source_snapshot", "signal_date": "2026-09-02", "symbol": "NVDA"}
+- data integrity MATURED_OBSERVATION_MISSING: {"code": "MATURED_OBSERVATION_MISSING", "current_status": "MISSING_SOURCE_DATA", "horizon": "1D", "maturity_date": "2026-09-04", "outcome_record_id": "optoutcome-2026-09-03-MSFT-20261016-510C", "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry", "signal_date": "2026-09-03", "symbol": "MSFT"}
+- data integrity MATURED_OBSERVATION_MISSING: {"code": "MATURED_OBSERVATION_MISSING", "current_status": "PENDING", "horizon": "5D", "maturity_date": "2026-09-11", "outcome_record_id": "optoutcome-2026-09-03-MSFT-20261016-510C", "reason": "horizon_not_mature_as_of_source_snapshot", "signal_date": "2026-09-03", "symbol": "MSFT"}
+- data integrity MATURED_OBSERVATION_MISSING: {"code": "MATURED_OBSERVATION_MISSING", "current_status": "PENDING", "horizon": "10D", "maturity_date": "2026-09-18", "outcome_record_id": "optoutcome-2026-09-03-MSFT-20261016-510C", "reason": "horizon_not_mature_as_of_source_snapshot", "signal_date": "2026-09-03", "symbol": "MSFT"}
+- data integrity MATURED_OBSERVATION_MISSING: {"code": "MATURED_OBSERVATION_MISSING", "current_status": "PERMANENTLY_UNAVAILABLE", "horizon": "1D", "maturity_date": "2026-09-08", "outcome_record_id": "optoutcome-2026-09-04-NVDA-20261016-230C", "reason": "option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE", "signal_date": "2026-09-04", "symbol": "NVDA"}
+- data integrity MATURED_OBSERVATION_MISSING: {"code": "MATURED_OBSERVATION_MISSING", "current_status": "PERMANENTLY_UNAVAILABLE", "horizon": "5D", "maturity_date": "2026-09-14", "outcome_record_id": "optoutcome-2026-09-04-NVDA-20261016-230C", "reason": "option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE", "signal_date": "2026-09-04", "symbol": "NVDA"}
+- data integrity MATURED_OBSERVATION_MISSING: {"code": "MATURED_OBSERVATION_MISSING", "current_status": "MISSING_SOURCE_DATA", "horizon": "1D", "maturity_date": "2026-09-09", "outcome_record_id": "optoutcome-2026-09-08-AVGO-20261016-370C", "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry", "signal_date": "2026-09-08", "symbol": "AVGO"}
+- data integrity MATURED_OBSERVATION_MISSING: {"code": "MATURED_OBSERVATION_MISSING", "current_status": "PENDING", "horizon": "5D", "maturity_date": "2026-09-15", "outcome_record_id": "optoutcome-2026-09-08-AVGO-20261016-370C", "reason": "horizon_not_mature_as_of_source_snapshot", "signal_date": "2026-09-08", "symbol": "AVGO"}
+- data integrity MATURED_OBSERVATION_MISSING: {"code": "MATURED_OBSERVATION_MISSING", "current_status": "PENDING", "horizon": "1D", "maturity_date": "2026-09-10", "outcome_record_id": "optoutcome-2026-09-09-META-20261016-650C", "reason": "horizon_not_mature_as_of_source_snapshot", "signal_date": "2026-09-09", "symbol": "META"}
+- data integrity MATURED_OBSERVATION_MISSING: {"code": "MATURED_OBSERVATION_MISSING", "current_status": "PENDING", "horizon": "5D", "maturity_date": "2026-09-16", "outcome_record_id": "optoutcome-2026-09-09-META-20261016-650C", "reason": "horizon_not_mature_as_of_source_snapshot", "signal_date": "2026-09-09", "symbol": "META"}
+- data integrity LEGACY_LEDGER_FORMAT_GRANDFATHERED: {"code": "LEGACY_LEDGER_FORMAT_GRANDFATHERED", "count": 7, "reason": "pre-v2.0.2 status vocabulary retained as intentional migration history"}
+Validation failed:
+- invalid 1D underlying retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:1
+- invalid 1D option retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:1
+- invalid 1D spy retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:1
+- invalid 1D qqq retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:1
+- invalid 5D underlying retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:1
+- invalid 5D option retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:1
+- invalid 5D spy retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:1
+- invalid 5D qqq retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:1
+- invalid 10D underlying retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:1
+- invalid 10D option retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:1
+- invalid 10D spy retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:1
+- invalid 10D qqq retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:1
+- invalid 20D underlying retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:1
+- invalid 20D option retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:1
+- invalid 20D spy retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:1
+- invalid 20D qqq retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:1
+- invalid 30D underlying retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:1
+- invalid 30D option retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:1
+- invalid 30D spy retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:1
+- invalid 30D qqq retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:1
+- invalid 1D underlying retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:2
+- invalid 1D option retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:2
+- invalid 1D spy retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:2
+- invalid 1D qqq retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:2
+- invalid 5D underlying retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:2
+- invalid 5D option retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:2
+- invalid 5D spy retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:2
+- invalid 5D qqq retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:2
+- invalid 10D underlying retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:2
+- invalid 10D option retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:2
+- invalid 10D spy retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:2
+- invalid 10D qqq retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:2
+- invalid 20D underlying retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:2
+- invalid 20D option retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:2
+- invalid 20D spy retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:2
+- invalid 20D qqq retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:2
+- invalid 30D underlying retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:2
+- invalid 30D option retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:2
+- invalid 30D spy retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:2
+- invalid 30D qqq retrieval status None: data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl:2
+- invalid 1D underlying retrieval status None: data/option_signal_outcomes/2026-08-12-daily-scanner-dry-run.jsonl:1
+- invalid 1D option retrieval status None: data/option_signal_outcomes/2026-08-12-daily-scanner-dry-run.jsonl:1
+- invalid 1D spy retrieval status None: data/option_signal_outcomes/2026-08-12-daily-scanner-dry-run.jsonl:1
+- invalid 1D qqq retrieval status None: data/option_signal_outcomes/2026-08-12-daily-scanner-dry-run.jsonl:1
+- invalid 5D underlying retrieval status None: data/option_signal_outcomes/2026-08-12-daily-scanner-dry-run.jsonl:1
+- invalid 5D option retrieval status None: data/option_signal_outcomes/2026-08-12-daily-scanner-dry-run.jsonl:1
+- invalid 5D spy retrieval status None: data/option_signal_outcomes/2026-08-12-daily-scanner-dry-run.jsonl:1
+- invalid 5D qqq retrieval status None: data/option_signal_outcomes/2026-08-12-daily-scanner-dry-run.jsonl:1
+- invalid 10D underlying retrieval status None: data/option_signal_outcomes/2026-08-12-daily-scanner-dry-run.jsonl:1
+- invalid 10D option retrieval status None: data/option_signal_outcomes/2026-08-12-daily-scanner-dry-run.jsonl:1
+- invalid 10D spy retrieval status None: data/option_signal_outcomes/2026-08-12-daily-scanner-dry-run.jsonl:1
+- invalid 10D qqq retrieval status None: data/option_signal_outcomes/2026-08-12-daily-scanner-dry-run.jsonl:1
+- invalid 20D underlying retrieval status None: data/option_signal_outcomes/2026-08-12-daily-scanner-dry-run.jsonl:1
+- invalid 20D option retrieval status None: data/option_signal_outcomes/2026-08-12-daily-scanner-dry-run.jsonl:1
+- invalid 20D spy retrieval status None: data/option_signal_outcomes/2026-08-12-daily-scanner-dry-run.jsonl:1
+- invalid 20D qqq retrieval status None: data/option_signal_outcomes/2026-08-12-daily-scanner-dry-run.jsonl:1
+- invalid 30D underlying retrieval status None: data/option_signal_outcomes/2026-08-12-daily-scanner-dry-run.jsonl:1
+- invalid 30D option retrieval status None: data/option_signal_outcomes/2026-08-12-daily-scanner-dry-run.jsonl:1
+- invalid 30D spy retrieval status None: data/option_signal_outcomes/2026-08-12-daily-scanner-dry-run.jsonl:1
+- invalid 30D qqq retrieval status None: data/option_signal_outcomes/2026-08-12-daily-scanner-dry-run.jsonl:1
+- invalid 1D underlying retrieval status None: data/option_signal_outcomes/2026-08-13-daily-scanner-dry-run.jsonl:1
+- invalid 1D option retrieval status None: data/option_signal_outcomes/2026-08-13-daily-scanner-dry-run.jsonl:1
+- invalid 1D spy retrieval status None: data/option_signal_outcomes/2026-08-13-daily-scanner-dry-run.jsonl:1
+- invalid 1D qqq retrieval status None: data/option_signal_outcomes/2026-08-13-daily-scanner-dry-run.jsonl:1
+- invalid 5D underlying retrieval status None: data/option_signal_outcomes/2026-08-13-daily-scanner-dry-run.jsonl:1
+- invalid 5D option retrieval status None: data/option_signal_outcomes/2026-08-13-daily-scanner-dry-run.jsonl:1
+- invalid 5D spy retrieval status None: data/option_signal_outcomes/2026-08-13-daily-scanner-dry-run.jsonl:1
+- invalid 5D qqq retrieval status None: data/option_signal_outcomes/2026-08-13-daily-scanner-dry-run.jsonl:1
+- invalid 10D underlying retrieval status None: data/option_signal_outcomes/2026-08-13-daily-scanner-dry-run.jsonl:1
+- invalid 10D option retrieval status None: data/option_signal_outcomes/2026-08-13-daily-scanner-dry-run.jsonl:1
+- invalid 10D spy retrieval status None: data/option_signal_outcomes/2026-08-13-daily-scanner-dry-run.jsonl:1
+- invalid 10D qqq retrieval status None: data/option_signal_outcomes/2026-08-13-daily-scanner-dry-run.jsonl:1
+- invalid 20D underlying retrieval status None: data/option_signal_outcomes/2026-08-13-daily-scanner-dry-run.jsonl:1
+- invalid 20D option retrieval status None: data/option_signal_outcomes/2026-08-13-daily-scanner-dry-run.jsonl:1
+- invalid 20D spy retrieval status None: data/option_signal_outcomes/2026-08-13-daily-scanner-dry-run.jsonl:1
+- invalid 20D qqq retrieval status None: data/option_signal_outcomes/2026-08-13-daily-scanner-dry-run.jsonl:1
+- invalid 30D underlying retrieval status None: data/option_signal_outcomes/2026-08-13-daily-scanner-dry-run.jsonl:1
+- invalid 30D option retrieval status None: data/option_signal_outcomes/2026-08-13-daily-scanner-dry-run.jsonl:1
+- invalid 30D spy retrieval status None: data/option_signal_outcomes/2026-08-13-daily-scanner-dry-run.jsonl:1
+- invalid 30D qqq retrieval status None: data/option_signal_outcomes/2026-08-13-daily-scanner-dry-run.jsonl:1
+- invalid 1D underlying retrieval status None: data/option_signal_outcomes/2026-08-19-daily-scanner-dry-run.jsonl:1
+- invalid 1D option retrieval status None: data/option_signal_outcomes/2026-08-19-daily-scanner-dry-run.jsonl:1
+- invalid 1D spy retrieval status None: data/option_signal_outcomes/2026-08-19-daily-scanner-dry-run.jsonl:1
+- invalid 1D qqq retrieval status None: data/option_signal_outcomes/2026-08-19-daily-scanner-dry-run.jsonl:1
+- invalid 5D underlying retrieval status None: data/option_signal_outcomes/2026-08-19-daily-scanner-dry-run.jsonl:1
+- invalid 5D option retrieval status None: data/option_signal_outcomes/2026-08-19-daily-scanner-dry-run.jsonl:1
+- invalid 5D spy retrieval status None: data/option_signal_outcomes/2026-08-19-daily-scanner-dry-run.jsonl:1
+- invalid 5D qqq retrieval status None: data/option_signal_outcomes/2026-08-19-daily-scanner-dry-run.jsonl:1
+- invalid 10D underlying retrieval status None: data/option_signal_outcomes/2026-08-19-daily-scanner-dry-run.jsonl:1
+- invalid 10D option retrieval status None: data/option_signal_outcomes/2026-08-19-daily-scanner-dry-run.jsonl:1
+- invalid 10D spy retrieval status None: data/option_signal_outcomes/2026-08-19-daily-scanner-dry-run.jsonl:1
+- invalid 10D qqq retrieval status None: data/option_signal_outcomes/2026-08-19-daily-scanner-dry-run.jsonl:1
+- invalid 20D underlying retrieval status None: data/option_signal_outcomes/2026-08-19-daily-scanner-dry-run.jsonl:1
+- invalid 20D option retrieval status None: data/option_signal_outcomes/2026-08-19-daily-scanner-dry-run.jsonl:1
+- invalid 20D spy retrieval status None: data/option_signal_outcomes/2026-08-19-daily-scanner-dry-run.jsonl:1
+- invalid 20D qqq retrieval status None: data/option_signal_outcomes/2026-08-19-daily-scanner-dry-run.jsonl:1
+- invalid 30D underlying retrieval status None: data/option_signal_outcomes/2026-08-19-daily-scanner-dry-run.jsonl:1
+- invalid 30D option retrieval status None: data/option_signal_outcomes/2026-08-19-daily-scanner-dry-run.jsonl:1
+- invalid 30D spy retrieval status None: data/option_signal_outcomes/2026-08-19-daily-scanner-dry-run.jsonl:1
+- invalid 30D qqq retrieval status None: data/option_signal_outcomes/2026-08-19-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_1d_underlying_status: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_1d_option_status: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_1d_spy_status: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_1d_qqq_status: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_5d_underlying_status: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_5d_option_status: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_5d_spy_status: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_5d_qqq_status: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_10d_underlying_status: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_10d_option_status: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_10d_spy_status: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_10d_qqq_status: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_20d_underlying_status: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_20d_option_status: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_20d_spy_status: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_20d_qqq_status: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_30d_underlying_status: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_30d_option_status: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_30d_spy_status: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_30d_qqq_status: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing target_observation_date: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing attempt_count: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_attempt_at: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_error: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing retryable: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing next_retry_eligible_at: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing object component_resolutions: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing target_observation_date: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing attempt_count: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_attempt_at: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_error: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing retryable: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing next_retry_eligible_at: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing object component_resolutions: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing target_observation_date: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing attempt_count: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_attempt_at: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_error: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing retryable: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing next_retry_eligible_at: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing object component_resolutions: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing target_observation_date: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing attempt_count: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_attempt_at: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_error: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing retryable: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing next_retry_eligible_at: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing object component_resolutions: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing target_observation_date: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing attempt_count: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_attempt_at: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_error: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing retryable: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing next_retry_eligible_at: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing object component_resolutions: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing terminal_state: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing terminal_value: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing valuation_method: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- invalid 1D underlying retrieval status None: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- invalid 1D option retrieval status None: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- invalid 1D spy retrieval status None: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- invalid 1D qqq retrieval status None: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- invalid 5D underlying retrieval status None: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- invalid 5D option retrieval status None: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- invalid 5D spy retrieval status None: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- invalid 5D qqq retrieval status None: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- invalid 10D underlying retrieval status None: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- invalid 10D option retrieval status None: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- invalid 10D spy retrieval status None: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- invalid 10D qqq retrieval status None: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- invalid 20D underlying retrieval status None: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- invalid 20D option retrieval status None: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- invalid 20D spy retrieval status None: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- invalid 20D qqq retrieval status None: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- invalid 30D underlying retrieval status None: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- invalid 30D option retrieval status None: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- invalid 30D spy retrieval status None: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- invalid 30D qqq retrieval status None: data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_1d_underlying_status: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_1d_option_status: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_1d_spy_status: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_1d_qqq_status: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_5d_underlying_status: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_5d_option_status: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_5d_spy_status: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_5d_qqq_status: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_10d_underlying_status: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_10d_option_status: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_10d_spy_status: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_10d_qqq_status: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_20d_underlying_status: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_20d_option_status: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_20d_spy_status: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_20d_qqq_status: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_30d_underlying_status: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_30d_option_status: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_30d_spy_status: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_30d_qqq_status: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing target_observation_date: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing attempt_count: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_attempt_at: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_error: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing retryable: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing next_retry_eligible_at: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing object component_resolutions: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing target_observation_date: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing attempt_count: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_attempt_at: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_error: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing retryable: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing next_retry_eligible_at: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing object component_resolutions: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing target_observation_date: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing attempt_count: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_attempt_at: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_error: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing retryable: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing next_retry_eligible_at: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing object component_resolutions: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing target_observation_date: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing attempt_count: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_attempt_at: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_error: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing retryable: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing next_retry_eligible_at: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing object component_resolutions: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing target_observation_date: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing attempt_count: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_attempt_at: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_error: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing retryable: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing next_retry_eligible_at: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing object component_resolutions: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing terminal_state: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing terminal_value: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing valuation_method: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- invalid 1D underlying retrieval status None: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- invalid 1D option retrieval status None: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- invalid 1D spy retrieval status None: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- invalid 1D qqq retrieval status None: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- invalid 5D underlying retrieval status None: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- invalid 5D option retrieval status None: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- invalid 5D spy retrieval status None: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- invalid 5D qqq retrieval status None: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- invalid 10D underlying retrieval status None: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- invalid 10D option retrieval status None: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- invalid 10D spy retrieval status None: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- invalid 10D qqq retrieval status None: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- invalid 20D underlying retrieval status None: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- invalid 20D option retrieval status None: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- invalid 20D spy retrieval status None: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- invalid 20D qqq retrieval status None: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- invalid 30D underlying retrieval status None: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- invalid 30D option retrieval status None: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- invalid 30D spy retrieval status None: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- invalid 30D qqq retrieval status None: data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_1d_underlying_status: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_1d_option_status: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_1d_spy_status: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_1d_qqq_status: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_5d_underlying_status: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_5d_option_status: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_5d_spy_status: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_5d_qqq_status: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_10d_underlying_status: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_10d_option_status: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_10d_spy_status: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_10d_qqq_status: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_20d_underlying_status: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_20d_option_status: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_20d_spy_status: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_20d_qqq_status: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_30d_underlying_status: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_30d_option_status: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_30d_spy_status: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_30d_qqq_status: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing target_observation_date: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing attempt_count: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_attempt_at: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_error: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing retryable: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing next_retry_eligible_at: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing object component_resolutions: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing target_observation_date: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing attempt_count: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_attempt_at: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_error: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing retryable: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing next_retry_eligible_at: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing object component_resolutions: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing target_observation_date: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing attempt_count: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_attempt_at: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_error: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing retryable: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing next_retry_eligible_at: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing object component_resolutions: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing target_observation_date: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing attempt_count: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_attempt_at: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_error: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing retryable: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing next_retry_eligible_at: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing object component_resolutions: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing target_observation_date: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing attempt_count: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_attempt_at: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_error: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing retryable: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing next_retry_eligible_at: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing object component_resolutions: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing terminal_state: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing terminal_value: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing valuation_method: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- invalid 1D underlying retrieval status None: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- invalid 1D option retrieval status None: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- invalid 1D spy retrieval status None: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- invalid 1D qqq retrieval status None: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- invalid 5D underlying retrieval status None: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- invalid 5D option retrieval status None: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- invalid 5D spy retrieval status None: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- invalid 5D qqq retrieval status None: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- invalid 10D underlying retrieval status None: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- invalid 10D option retrieval status None: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- invalid 10D spy retrieval status None: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- invalid 10D qqq retrieval status None: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- invalid 20D underlying retrieval status None: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- invalid 20D option retrieval status None: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- invalid 20D spy retrieval status None: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- invalid 20D qqq retrieval status None: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- invalid 30D underlying retrieval status None: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- invalid 30D option retrieval status None: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- invalid 30D spy retrieval status None: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- invalid 30D qqq retrieval status None: data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing terminal_state: data/option_signal_outcomes/2026-09-04-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing terminal_value: data/option_signal_outcomes/2026-09-04-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing valuation_method: data/option_signal_outcomes/2026-09-04-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_1d_underlying_status: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_1d_option_status: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_1d_spy_status: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_1d_qqq_status: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_5d_underlying_status: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_5d_option_status: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_5d_spy_status: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_5d_qqq_status: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_10d_underlying_status: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_10d_option_status: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_10d_spy_status: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_10d_qqq_status: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_20d_underlying_status: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_20d_option_status: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_20d_spy_status: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_20d_qqq_status: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_30d_underlying_status: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_30d_option_status: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_30d_spy_status: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_30d_qqq_status: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing target_observation_date: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing attempt_count: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_attempt_at: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_error: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing retryable: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing next_retry_eligible_at: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing object component_resolutions: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing target_observation_date: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing attempt_count: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_attempt_at: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_error: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing retryable: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing next_retry_eligible_at: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing object component_resolutions: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing target_observation_date: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing attempt_count: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_attempt_at: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_error: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing retryable: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing next_retry_eligible_at: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing object component_resolutions: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing target_observation_date: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing attempt_count: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_attempt_at: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_error: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing retryable: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing next_retry_eligible_at: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing object component_resolutions: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing target_observation_date: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing attempt_count: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_attempt_at: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_error: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing retryable: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing next_retry_eligible_at: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing object component_resolutions: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing terminal_state: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing terminal_value: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing valuation_method: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- invalid 1D underlying retrieval status None: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- invalid 1D option retrieval status None: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- invalid 1D spy retrieval status None: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- invalid 1D qqq retrieval status None: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- invalid 5D underlying retrieval status None: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- invalid 5D option retrieval status None: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- invalid 5D spy retrieval status None: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- invalid 5D qqq retrieval status None: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- invalid 10D underlying retrieval status None: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- invalid 10D option retrieval status None: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- invalid 10D spy retrieval status None: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- invalid 10D qqq retrieval status None: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- invalid 20D underlying retrieval status None: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- invalid 20D option retrieval status None: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- invalid 20D spy retrieval status None: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- invalid 20D qqq retrieval status None: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- invalid 30D underlying retrieval status None: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- invalid 30D option retrieval status None: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- invalid 30D spy retrieval status None: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- invalid 30D qqq retrieval status None: data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_1d_underlying_status: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_1d_option_status: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_1d_spy_status: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_1d_qqq_status: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_5d_underlying_status: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_5d_option_status: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_5d_spy_status: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_5d_qqq_status: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_10d_underlying_status: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_10d_option_status: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_10d_spy_status: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_10d_qqq_status: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_20d_underlying_status: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_20d_option_status: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_20d_spy_status: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_20d_qqq_status: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_30d_underlying_status: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_30d_option_status: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_30d_spy_status: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing forward_30d_qqq_status: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing target_observation_date: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing attempt_count: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_attempt_at: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_error: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing retryable: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing next_retry_eligible_at: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing object component_resolutions: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing target_observation_date: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing attempt_count: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_attempt_at: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_error: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing retryable: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing next_retry_eligible_at: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing object component_resolutions: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing target_observation_date: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing attempt_count: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_attempt_at: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_error: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing retryable: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing next_retry_eligible_at: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing object component_resolutions: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing target_observation_date: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing attempt_count: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_attempt_at: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_error: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing retryable: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing next_retry_eligible_at: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing object component_resolutions: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing target_observation_date: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing attempt_count: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_attempt_at: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing last_error: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing retryable: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing next_retry_eligible_at: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing object component_resolutions: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing terminal_state: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing terminal_value: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- v2.0.1 option signal outcome missing valuation_method: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- invalid 1D underlying retrieval status None: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- invalid 1D option retrieval status None: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- invalid 1D spy retrieval status None: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- invalid 1D qqq retrieval status None: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- invalid 5D underlying retrieval status None: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- invalid 5D option retrieval status None: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- invalid 5D spy retrieval status None: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- invalid 5D qqq retrieval status None: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- invalid 10D underlying retrieval status None: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- invalid 10D option retrieval status None: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- invalid 10D spy retrieval status None: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- invalid 10D qqq retrieval status None: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- invalid 20D underlying retrieval status None: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- invalid 20D option retrieval status None: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- invalid 20D spy retrieval status None: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- invalid 20D qqq retrieval status None: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- invalid 30D underlying retrieval status None: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- invalid 30D option retrieval status None: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- invalid 30D spy retrieval status None: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1
+- invalid 30D qqq retrieval status None: data/option_signal_outcomes/2026-09-09-daily-scanner-dry-run.jsonl:1

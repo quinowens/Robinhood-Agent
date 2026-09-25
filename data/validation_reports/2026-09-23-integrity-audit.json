@@ -1,0 +1,334 @@
+{
+  "as_of": "2026-09-23",
+  "complete_qualified_chains": 13,
+  "errors": [],
+  "orphaned_outcome_records": 0,
+  "orphaned_shadow_records": 0,
+  "outcome_health": {
+    "canonical_outcome_records": 13,
+    "horizons": {
+      "10D": {
+        "expected": 12,
+        "observed": 4
+      },
+      "1D": {
+        "expected": 13,
+        "observed": 7
+      },
+      "20D": {
+        "expected": 6,
+        "observed": 0
+      },
+      "30D": {
+        "expected": 3,
+        "observed": 2
+      },
+      "5D": {
+        "expected": 13,
+        "observed": 6
+      }
+    },
+    "overdue_outcome_windows": 28,
+    "status": "DEGRADED",
+    "update_failures": 0
+  },
+  "overdue_by_window": {
+    "10D": 8,
+    "1D": 6,
+    "20D": 6,
+    "30D": 1,
+    "5D": 7
+  },
+  "overdue_outcome_observations": 28,
+  "qualified_setups": 13,
+  "schema_version": "2.0.2",
+  "status": "PASS_WITH_WARNINGS",
+  "unaccounted_scheduled_runs": 4,
+  "warnings": [
+    {
+      "code": "MATURED_OBSERVATION_MISSING",
+      "current_status": "PERMANENTLY_UNAVAILABLE",
+      "horizon": "20D",
+      "maturity_date": "2026-09-04",
+      "outcome_record_id": "legacy-outcome-2026-08-07-NVDA-cdbb7e49a73b",
+      "reason": "option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE,spy:FOUND",
+      "signal_date": "2026-08-07",
+      "symbol": "NVDA"
+    },
+    {
+      "code": "MATURED_OBSERVATION_MISSING",
+      "current_status": "PERMANENTLY_UNAVAILABLE",
+      "horizon": "30D",
+      "maturity_date": "2026-09-21",
+      "outcome_record_id": "legacy-outcome-2026-08-07-NVDA-cdbb7e49a73b",
+      "reason": "option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE,spy:FOUND",
+      "signal_date": "2026-08-07",
+      "symbol": "NVDA"
+    },
+    {
+      "code": "MATURED_OBSERVATION_MISSING",
+      "current_status": "PERMANENTLY_UNAVAILABLE",
+      "horizon": "10D",
+      "maturity_date": "2026-08-25",
+      "outcome_record_id": "2026-08-11-META-2026-09-18-610C-outcome",
+      "reason": "option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE",
+      "signal_date": "2026-08-11",
+      "symbol": "META"
+    },
+    {
+      "code": "MATURED_OBSERVATION_MISSING",
+      "current_status": "PERMANENTLY_UNAVAILABLE",
+      "horizon": "20D",
+      "maturity_date": "2026-09-09",
+      "outcome_record_id": "2026-08-11-META-2026-09-18-610C-outcome",
+      "reason": "option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE",
+      "signal_date": "2026-08-11",
+      "symbol": "META"
+    },
+    {
+      "code": "MATURED_OBSERVATION_MISSING",
+      "current_status": "PERMANENTLY_UNAVAILABLE",
+      "horizon": "10D",
+      "maturity_date": "2026-08-25",
+      "outcome_record_id": "2026-08-11-NVDA-2026-09-18-220C-outcome",
+      "reason": "option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE",
+      "signal_date": "2026-08-11",
+      "symbol": "NVDA"
+    },
+    {
+      "code": "MATURED_OBSERVATION_MISSING",
+      "current_status": "PERMANENTLY_UNAVAILABLE",
+      "horizon": "20D",
+      "maturity_date": "2026-09-09",
+      "outcome_record_id": "2026-08-11-NVDA-2026-09-18-220C-outcome",
+      "reason": "option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE",
+      "signal_date": "2026-08-11",
+      "symbol": "NVDA"
+    },
+    {
+      "code": "MATURED_OBSERVATION_MISSING",
+      "current_status": "PERMANENTLY_UNAVAILABLE",
+      "horizon": "10D",
+      "maturity_date": "2026-08-26",
+      "outcome_record_id": "opoutcome-2026-08-12-NVDA-20260918-225C",
+      "reason": "option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE",
+      "signal_date": "2026-08-12",
+      "symbol": "NVDA"
+    },
+    {
+      "code": "MATURED_OBSERVATION_MISSING",
+      "current_status": "PERMANENTLY_UNAVAILABLE",
+      "horizon": "20D",
+      "maturity_date": "2026-09-10",
+      "outcome_record_id": "opoutcome-2026-08-12-NVDA-20260918-225C",
+      "reason": "option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE",
+      "signal_date": "2026-08-12",
+      "symbol": "NVDA"
+    },
+    {
+      "code": "MATURED_OBSERVATION_MISSING",
+      "current_status": "PERMANENTLY_UNAVAILABLE",
+      "horizon": "10D",
+      "maturity_date": "2026-08-27",
+      "outcome_record_id": "opoutcome-2026-08-13-META-20261016-600C",
+      "reason": "option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE",
+      "signal_date": "2026-08-13",
+      "symbol": "META"
+    },
+    {
+      "code": "MATURED_OBSERVATION_MISSING",
+      "current_status": "PERMANENTLY_UNAVAILABLE",
+      "horizon": "20D",
+      "maturity_date": "2026-09-11",
+      "outcome_record_id": "opoutcome-2026-08-13-META-20261016-600C",
+      "reason": "option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE",
+      "signal_date": "2026-08-13",
+      "symbol": "META"
+    },
+    {
+      "code": "MATURED_OBSERVATION_MISSING",
+      "current_status": "PERMANENTLY_UNAVAILABLE",
+      "horizon": "5D",
+      "maturity_date": "2026-08-26",
+      "outcome_record_id": "opoutcome-2026-08-19-AMZN-20261016-265C",
+      "reason": "underlying:NO_ROWS_RETURNED,option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE",
+      "signal_date": "2026-08-19",
+      "symbol": "AMZN"
+    },
+    {
+      "code": "MATURED_OBSERVATION_MISSING",
+      "current_status": "PERMANENTLY_UNAVAILABLE",
+      "horizon": "10D",
+      "maturity_date": "2026-09-02",
+      "outcome_record_id": "opoutcome-2026-08-19-AMZN-20261016-265C",
+      "reason": "underlying:NO_ROWS_RETURNED,option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE",
+      "signal_date": "2026-08-19",
+      "symbol": "AMZN"
+    },
+    {
+      "code": "MATURED_OBSERVATION_MISSING",
+      "current_status": "PERMANENTLY_UNAVAILABLE",
+      "horizon": "20D",
+      "maturity_date": "2026-09-17",
+      "outcome_record_id": "opoutcome-2026-08-19-AMZN-20261016-265C",
+      "reason": "underlying:NO_ROWS_RETURNED,option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE",
+      "signal_date": "2026-08-19",
+      "symbol": "AMZN"
+    },
+    {
+      "code": "MATURED_OBSERVATION_MISSING",
+      "current_status": "PERMANENTLY_UNAVAILABLE",
+      "horizon": "1D",
+      "maturity_date": "2026-09-02",
+      "outcome_record_id": "optoutcome-2026-09-01-AAPL-20261016-325C",
+      "reason": "underlying:NO_ROWS_RETURNED,option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE",
+      "signal_date": "2026-09-01",
+      "symbol": "AAPL"
+    },
+    {
+      "code": "MATURED_OBSERVATION_MISSING",
+      "current_status": "PERMANENTLY_UNAVAILABLE",
+      "horizon": "5D",
+      "maturity_date": "2026-09-09",
+      "outcome_record_id": "optoutcome-2026-09-01-AAPL-20261016-325C",
+      "reason": "underlying:NO_ROWS_RETURNED,option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE",
+      "signal_date": "2026-09-01",
+      "symbol": "AAPL"
+    },
+    {
+      "code": "MATURED_OBSERVATION_MISSING",
+      "current_status": "PERMANENTLY_UNAVAILABLE",
+      "horizon": "10D",
+      "maturity_date": "2026-09-16",
+      "outcome_record_id": "optoutcome-2026-09-01-AAPL-20261016-325C",
+      "reason": "underlying:NO_ROWS_RETURNED,option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE",
+      "signal_date": "2026-09-01",
+      "symbol": "AAPL"
+    },
+    {
+      "code": "MATURED_OBSERVATION_MISSING",
+      "current_status": "PERMANENTLY_UNAVAILABLE",
+      "horizon": "1D",
+      "maturity_date": "2026-09-03",
+      "outcome_record_id": "optoutcome-2026-09-02-NVDA-20261016-225C",
+      "reason": "option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE",
+      "signal_date": "2026-09-02",
+      "symbol": "NVDA"
+    },
+    {
+      "code": "MATURED_OBSERVATION_MISSING",
+      "current_status": "PERMANENTLY_UNAVAILABLE",
+      "horizon": "5D",
+      "maturity_date": "2026-09-10",
+      "outcome_record_id": "optoutcome-2026-09-02-NVDA-20261016-225C",
+      "reason": "option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE",
+      "signal_date": "2026-09-02",
+      "symbol": "NVDA"
+    },
+    {
+      "code": "MATURED_OBSERVATION_MISSING",
+      "current_status": "PERMANENTLY_UNAVAILABLE",
+      "horizon": "10D",
+      "maturity_date": "2026-09-17",
+      "outcome_record_id": "optoutcome-2026-09-02-NVDA-20261016-225C",
+      "reason": "option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE",
+      "signal_date": "2026-09-02",
+      "symbol": "NVDA"
+    },
+    {
+      "code": "MATURED_OBSERVATION_MISSING",
+      "current_status": "PERMANENTLY_UNAVAILABLE",
+      "horizon": "1D",
+      "maturity_date": "2026-09-04",
+      "outcome_record_id": "optoutcome-2026-09-03-MSFT-20261016-510C",
+      "reason": "underlying:NO_ROWS_RETURNED,option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE",
+      "signal_date": "2026-09-03",
+      "symbol": "MSFT"
+    },
+    {
+      "code": "MATURED_OBSERVATION_MISSING",
+      "current_status": "PERMANENTLY_UNAVAILABLE",
+      "horizon": "5D",
+      "maturity_date": "2026-09-11",
+      "outcome_record_id": "optoutcome-2026-09-03-MSFT-20261016-510C",
+      "reason": "underlying:NO_ROWS_RETURNED,option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE",
+      "signal_date": "2026-09-03",
+      "symbol": "MSFT"
+    },
+    {
+      "code": "MATURED_OBSERVATION_MISSING",
+      "current_status": "PERMANENTLY_UNAVAILABLE",
+      "horizon": "10D",
+      "maturity_date": "2026-09-18",
+      "outcome_record_id": "optoutcome-2026-09-03-MSFT-20261016-510C",
+      "reason": "underlying:NO_ROWS_RETURNED,option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE",
+      "signal_date": "2026-09-03",
+      "symbol": "MSFT"
+    },
+    {
+      "code": "MATURED_OBSERVATION_MISSING",
+      "current_status": "PERMANENTLY_UNAVAILABLE",
+      "horizon": "1D",
+      "maturity_date": "2026-09-08",
+      "outcome_record_id": "optoutcome-2026-09-04-NVDA-20261016-230C",
+      "reason": "option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE",
+      "signal_date": "2026-09-04",
+      "symbol": "NVDA"
+    },
+    {
+      "code": "MATURED_OBSERVATION_MISSING",
+      "current_status": "PERMANENTLY_UNAVAILABLE",
+      "horizon": "5D",
+      "maturity_date": "2026-09-14",
+      "outcome_record_id": "optoutcome-2026-09-04-NVDA-20261016-230C",
+      "reason": "option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE",
+      "signal_date": "2026-09-04",
+      "symbol": "NVDA"
+    },
+    {
+      "code": "MATURED_OBSERVATION_MISSING",
+      "current_status": "PERMANENTLY_UNAVAILABLE",
+      "horizon": "1D",
+      "maturity_date": "2026-09-09",
+      "outcome_record_id": "optoutcome-2026-09-08-AVGO-20261016-370C",
+      "reason": "underlying:NO_ROWS_RETURNED,option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE",
+      "signal_date": "2026-09-08",
+      "symbol": "AVGO"
+    },
+    {
+      "code": "MATURED_OBSERVATION_MISSING",
+      "current_status": "PERMANENTLY_UNAVAILABLE",
+      "horizon": "5D",
+      "maturity_date": "2026-09-15",
+      "outcome_record_id": "optoutcome-2026-09-08-AVGO-20261016-370C",
+      "reason": "underlying:NO_ROWS_RETURNED,option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE",
+      "signal_date": "2026-09-08",
+      "symbol": "AVGO"
+    },
+    {
+      "code": "MATURED_OBSERVATION_MISSING",
+      "current_status": "PERMANENTLY_UNAVAILABLE",
+      "horizon": "1D",
+      "maturity_date": "2026-09-10",
+      "outcome_record_id": "optoutcome-2026-09-09-META-20261016-650C",
+      "reason": "option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE",
+      "signal_date": "2026-09-09",
+      "symbol": "META"
+    },
+    {
+      "code": "MATURED_OBSERVATION_MISSING",
+      "current_status": "PERMANENTLY_UNAVAILABLE",
+      "horizon": "5D",
+      "maturity_date": "2026-09-16",
+      "outcome_record_id": "optoutcome-2026-09-09-META-20261016-650C",
+      "reason": "option:OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE",
+      "signal_date": "2026-09-09",
+      "symbol": "META"
+    },
+    {
+      "code": "LEGACY_LEDGER_FORMAT_GRANDFATHERED",
+      "count": 7,
+      "reason": "pre-v2.0.2 status vocabulary retained as intentional migration history"
+    }
+  ]
+}

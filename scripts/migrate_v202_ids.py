@@ -34,6 +34,14 @@ def existing_id(row: dict[str, Any], keys: tuple[str, ...]) -> str | None:
     return next((str(row[key]) for key in keys if row.get(key)), None)
 
 
+def merge_defaults(target: dict[str, Any], defaults: dict[str, Any]) -> None:
+    for key, value in defaults.items():
+        if key not in target:
+            target[key] = copy.deepcopy(value)
+        elif isinstance(value, dict) and isinstance(target.get(key), dict):
+            merge_defaults(target[key], value)
+
+
 def migrate(dry_run: bool = False) -> dict[str, Any]:
     setup_paths = sorted((ROOT / "data/options_setup_records").glob("*.jsonl"))
     shadow_paths = sorted((ROOT / "data/option_shadow_trades").glob("*.jsonl"))
@@ -95,8 +103,7 @@ def migrate(dry_run: bool = False) -> dict[str, Any]:
                 elif kind == "outcome":
                     row.setdefault("outcome_record_id", existing_id(row, ("option_signal_outcome_id", "outcome_id")) or stable_id("outcome", path, line_number, row))
                     if str(row.get("strategy_version") or "") >= "2.0.2":
-                        for field, default in outcome_template.items():
-                            row.setdefault(field, copy.deepcopy(default))
+                        merge_defaults(row, outcome_template)
                 row.setdefault("legacy_schema", str(row.get("strategy_version") or "") < "2.0.2")
                 row.setdefault("id_migration_version", "2.0.2")
                 if row != before:

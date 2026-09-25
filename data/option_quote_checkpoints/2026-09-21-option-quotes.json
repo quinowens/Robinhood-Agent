@@ -1,0 +1,133 @@
+{
+  "source": "robinhood_option_quote_checkpoint",
+  "checkpoint_date": "2026-09-21",
+  "captured_at": "2026-09-21T20:33:13Z",
+  "requested_option_ids": [
+    "7eb8225f-ba65-41a4-89d1-d1d82a94dbe5",
+    "contract:NVDA:2026-09-18:230:call"
+  ],
+  "option_quotes": {
+    "7eb8225f-ba65-41a4-89d1-d1d82a94dbe5": {
+      "quote": {
+        "instrument_id": "7eb8225f-ba65-41a4-89d1-d1d82a94dbe5",
+        "ask_price": "6.500000",
+        "ask_size": 101,
+        "bid_price": "6.400000",
+        "bid_size": 43,
+        "break_even_price": "236.450000",
+        "adjusted_mark_price": "6.450000",
+        "mark_price": "6.450000",
+        "high_fill_rate_buy_price": "6.479000",
+        "low_fill_rate_buy_price": "6.430000",
+        "high_fill_rate_sell_price": "6.420000",
+        "low_fill_rate_sell_price": "6.469000",
+        "previous_close_price": "4.400000",
+        "previous_close_date": "2026-09-18",
+        "implied_volatility": "0.313446",
+        "delta": "0.471076",
+        "gamma": "0.021360",
+        "rho": "0.068843",
+        "theta": "-0.159358",
+        "vega": "0.236538",
+        "open_interest": 59233,
+        "volume": 16276,
+        "chance_of_profit_long": "0.311407",
+        "chance_of_profit_short": "0.688593",
+        "updated_at": "2026-09-21T19:59:59.991302992Z"
+      },
+      "close": {
+        "instrument_id": "7eb8225f-ba65-41a4-89d1-d1d82a94dbe5",
+        "symbol": "NVDA",
+        "date": "2026-09-18",
+        "price": "4.4",
+        "interpolated": false,
+        "source": "ddb-market-snapshot"
+      }
+    }
+  },
+  "missing_option_ids": [
+    {
+      "option_id": "contract:NVDA:2026-09-18:230:call",
+      "reason": "no quote row returned by get_option_quotes for requested synthetic legacy contract key"
+    }
+  ],
+  "due_manifest": {
+    "capture_instruction": "Call get_option_quotes for option_ids, save the raw response with checkpoint_date/source, then rerun update_option_outcomes.py with that quote snapshot.",
+    "checkpoint_date": "2026-09-21",
+    "count": 2,
+    "due": [
+      {
+        "contract": "NVDA 2026-10-16 230.0C",
+        "entry_option_mid": 11.225,
+        "horizon": "10D",
+        "option_id": "7eb8225f-ba65-41a4-89d1-d1d82a94dbe5",
+        "path": "data/option_signal_outcomes/2026-09-04-daily-scanner-dry-run.jsonl",
+        "record_id": "optoutcome-2026-09-04-NVDA-20261016-230C",
+        "signal_date": "2026-09-04",
+        "signal_trading_session": "2026-09-04",
+        "target_observation_date": "2026-09-21",
+        "underlying": "NVDA"
+      },
+      {
+        "contract": "NVDA 2026-09-18 230.0C",
+        "entry_option_mid": 9.775,
+        "horizon": "30D",
+        "option_id": "contract:NVDA:2026-09-18:230:call",
+        "path": "data/option_signal_outcomes/2026-08-07-daily-scanner-dry-run.jsonl",
+        "record_id": "legacy-outcome-2026-08-07-NVDA-cdbb7e49a73b",
+        "signal_date": "2026-08-07",
+        "signal_trading_session": "2026-08-07",
+        "target_observation_date": "2026-09-21",
+        "underlying": "NVDA"
+      }
+    ],
+    "option_ids": [
+      "7eb8225f-ba65-41a4-89d1-d1d82a94dbe5",
+      "contract:NVDA:2026-09-18:230:call"
+    ],
+    "source": "prospective_option_checkpoint_request"
+  },
+  "raw_response": {
+    "data": {
+      "results": [
+        {
+          "quote": {
+            "instrument_id": "7eb8225f-ba65-41a4-89d1-d1d82a94dbe5",
+            "ask_price": "6.500000",
+            "ask_size": 101,
+            "bid_price": "6.400000",
+            "bid_size": 43,
+            "break_even_price": "236.450000",
+            "adjusted_mark_price": "6.450000",
+            "mark_price": "6.450000",
+            "high_fill_rate_buy_price": "6.479000",
+            "low_fill_rate_buy_price": "6.430000",
+            "high_fill_rate_sell_price": "6.420000",
+            "low_fill_rate_sell_price": "6.469000",
+            "previous_close_price": "4.400000",
+            "previous_close_date": "2026-09-18",
+            "implied_volatility": "0.313446",
+            "delta": "0.471076",
+            "gamma": "0.021360",
+            "rho": "0.068843",
+            "theta": "-0.159358",
+            "vega": "0.236538",
+            "open_interest": 59233,
+            "volume": 16276,
+            "chance_of_profit_long": "0.311407",
+            "chance_of_profit_short": "0.688593",
+            "updated_at": "2026-09-21T19:59:59.991302992Z"
+          },
+          "close": {
+            "instrument_id": "7eb8225f-ba65-41a4-89d1-d1d82a94dbe5",
+            "symbol": "NVDA",
+            "date": "2026-09-18",
+            "price": "4.4",
+            "interpolated": false,
+            "source": "ddb-market-snapshot"
+          }
+        }
+      ]
+    }
+  }
+}

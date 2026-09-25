@@ -1,0 +1,110 @@
+{
+  "source": "robinhood_option_quote_checkpoint",
+  "checkpoint_date": "2026-09-15",
+  "captured_at": "2026-09-15T20:32:55Z",
+  "option_quotes": {
+    "e6ca6071-46e2-4c5e-a216-28a042c66396": {
+      "quote": {
+        "instrument_id": "e6ca6071-46e2-4c5e-a216-28a042c66396",
+        "ask_price": "4.550000",
+        "ask_size": 35,
+        "bid_price": "4.300000",
+        "bid_size": 119,
+        "break_even_price": "374.430000",
+        "adjusted_mark_price": "4.430000",
+        "mark_price": "4.425000",
+        "high_fill_rate_buy_price": "4.493000",
+        "low_fill_rate_buy_price": "4.371000",
+        "high_fill_rate_sell_price": "4.356000",
+        "low_fill_rate_sell_price": "4.478000",
+        "previous_close_price": "6.250000",
+        "previous_close_date": "2026-09-14",
+        "implied_volatility": "0.358149",
+        "delta": "0.227099",
+        "gamma": "0.008512",
+        "rho": "0.061627",
+        "theta": "-0.179831",
+        "vega": "0.297966",
+        "open_interest": 7704,
+        "volume": 2577,
+        "chance_of_profit_long": "0.166811",
+        "chance_of_profit_short": "0.833189",
+        "updated_at": "2026-09-15T19:59:59.955888188Z"
+      },
+      "close": {
+        "instrument_id": "e6ca6071-46e2-4c5e-a216-28a042c66396",
+        "symbol": "AVGO",
+        "date": "2026-09-14",
+        "price": "6.25",
+        "interpolated": false,
+        "source": "ddb-market-snapshot"
+      }
+    }
+  },
+  "due_manifest": {
+    "capture_instruction": "Call get_option_quotes for option_ids, save the raw response with checkpoint_date/source, then rerun update_option_outcomes.py with that quote snapshot.",
+    "checkpoint_date": "2026-09-15",
+    "count": 1,
+    "due": [
+      {
+        "contract": "AVGO 2026-10-16 370.0C",
+        "entry_option_mid": 18.325,
+        "horizon": "5D",
+        "option_id": "e6ca6071-46e2-4c5e-a216-28a042c66396",
+        "path": "data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl",
+        "record_id": "optoutcome-2026-09-08-AVGO-20261016-370C",
+        "signal_date": "2026-09-08",
+        "signal_trading_session": "2026-09-08",
+        "target_observation_date": "2026-09-15",
+        "underlying": "AVGO"
+      }
+    ],
+    "option_ids": [
+      "e6ca6071-46e2-4c5e-a216-28a042c66396"
+    ],
+    "source": "prospective_option_checkpoint_request"
+  },
+  "raw_response": {
+    "data": {
+      "results": [
+        {
+          "quote": {
+            "instrument_id": "e6ca6071-46e2-4c5e-a216-28a042c66396",
+            "ask_price": "4.550000",
+            "ask_size": 35,
+            "bid_price": "4.300000",
+            "bid_size": 119,
+            "break_even_price": "374.430000",
+            "adjusted_mark_price": "4.430000",
+            "mark_price": "4.425000",
+            "high_fill_rate_buy_price": "4.493000",
+            "low_fill_rate_buy_price": "4.371000",
+            "high_fill_rate_sell_price": "4.356000",
+            "low_fill_rate_sell_price": "4.478000",
+            "previous_close_price": "6.250000",
+            "previous_close_date": "2026-09-14",
+            "implied_volatility": "0.358149",
+            "delta": "0.227099",
+            "gamma": "0.008512",
+            "rho": "0.061627",
+            "theta": "-0.179831",
+            "vega": "0.297966",
+            "open_interest": 7704,
+            "volume": 2577,
+            "chance_of_profit_long": "0.166811",
+            "chance_of_profit_short": "0.833189",
+            "updated_at": "2026-09-15T19:59:59.955888188Z"
+          },
+          "close": {
+            "instrument_id": "e6ca6071-46e2-4c5e-a216-28a042c66396",
+            "symbol": "AVGO",
+            "date": "2026-09-14",
+            "price": "6.25",
+            "interpolated": false,
+            "source": "ddb-market-snapshot"
+          }
+        }
+      ]
+    }
+  }
+}

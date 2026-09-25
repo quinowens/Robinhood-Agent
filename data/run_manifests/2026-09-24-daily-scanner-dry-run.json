@@ -1,0 +1,79 @@
+{
+  "run_id": "2026-09-24-daily-scanner-dry-run",
+  "pipeline_version": "2.0",
+  "strategy_version": "2.0.1",
+  "run_trigger": "scheduled_automation",
+  "session_context": "local_codex_automation",
+  "intended_workflow": "daily_options_primary_scanner_dry_run",
+  "status": "DEGRADED_COMPLETE",
+  "started_at": "2026-09-24T23:04:02.878Z",
+  "first_tool_call_at": "2026-09-24T23:04:02.878Z",
+  "last_tool_call_at": "2026-09-25T16:05:11.142Z",
+  "completed_at": "2026-09-25T16:05:11.142Z",
+  "operating_mode": "research_only_proposal_only_shadow_trading",
+  "live_order_actions": 0,
+  "account_snapshot": {
+    "account_masked": "••••8691",
+    "account_value": 100,
+    "cash": 100,
+    "buying_power": 100,
+    "option_level": "option_level_2",
+    "equity_positions": 0,
+    "option_positions": 0,
+    "open_equity_orders": 0,
+    "open_option_orders": 0,
+    "realized_pnl_3month": 0
+  },
+  "scanners": [
+    {
+      "name": "Momentum Candidates",
+      "expected_scan_id": "26cdeb14-da13-493f-b0c6-783468971a16",
+      "success": true,
+      "total_items": 398,
+      "rows_returned": 200,
+      "sorted_by": "% Change desc"
+    },
+    {
+      "name": "Options Activity Radar",
+      "expected_scan_id": "7068db65-2a47-470c-bde9-94d66f36b806",
+      "success": true,
+      "total_items": 120,
+      "rows_returned": 120,
+      "sorted_by": "Implied volatility desc"
+    },
+    {
+      "name": "Earnings Risk Radar",
+      "expected_scan_id": "737924f1-e94f-4ad4-ba98-6c12fcaafaa9",
+      "success": true,
+      "total_items": 83,
+      "rows_returned": 83,
+      "sorted_by": "Earnings date desc"
+    }
+  ],
+  "option_checkpoint": {
+    "as_of": "2026-09-24",
+    "due": 1,
+    "captured": 1,
+    "updated": 1,
+    "missed": 0
+  },
+  "raw_scanner_rows": 403,
+  "deduplicated_visible_symbols": 383,
+  "named_terminal_records": 15,
+  "visible_terminal_coverage_pct": 3.92,
+  "new_option_setups": 0,
+  "new_option_shadow_trades": 0,
+  "final_decision": "NO_TRADE",
+  "state_file_decision": "UNCHANGED",
+  "validation": {
+    "status": "PASS_WITH_WARNINGS",
+    "errors": 0,
+    "overdue_permanently_unavailable_windows": 28,
+    "update_failures": 0
+  },
+  "limitations": [
+    "Full financial statements, option historicals, technical-indicator endpoint, and individual P&L trade history are not exposed by the current connector.",
+    "Momentum scan returned 200 visible rows for 398 total matches.",
+    "No September 24 option setup quote with contemporaneous Greeks and spread was retained before calendar rollover."
+  ]
+}

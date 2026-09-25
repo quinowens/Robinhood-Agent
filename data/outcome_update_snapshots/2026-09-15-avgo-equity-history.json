@@ -1,0 +1,36 @@
+{
+  "source": "robinhood_equity_history_snapshot",
+  "as_of": "2026-09-15",
+  "captured_at": "2026-09-15T20:33:12Z",
+  "capabilities": {
+    "equity_historical": true,
+    "benchmark_historical": true,
+    "option_historical": false
+  },
+  "equity_bars": {
+    "AVGO": [
+      {"date": "2026-09-08", "open": 363.675, "high": 372.6999, "low": 362.74, "close": 368.56, "volume": 30464888, "interpolated": false},
+      {"date": "2026-09-09", "open": 366.23, "high": 368.01, "low": 359.25, "close": 364.38, "volume": 25918212, "interpolated": false},
+      {"date": "2026-09-10", "open": 360.03, "high": 365.27, "low": 357.75, "close": 360.83, "volume": 23994294, "interpolated": false},
+      {"date": "2026-09-11", "open": 364.85, "high": 366.78, "low": 361.64, "close": 361.99, "volume": 21166937, "interpolated": false},
+      {"date": "2026-09-14", "open": 349.63, "high": 350.25, "low": 343.91, "close": 344.72, "volume": 32662846, "interpolated": false},
+      {"date": "2026-09-15", "open": 344.72, "high": 344.72, "low": 344.72, "close": 344.72, "volume": 0, "interpolated": true}
+    ],
+    "SPY": [
+      {"date": "2026-09-08", "open": 766.57, "high": 769.7, "low": 765.14, "close": 765.96, "volume": 44746095, "interpolated": false},
+      {"date": "2026-09-09", "open": 764.08, "high": 764.47, "low": 760.94, "close": 762.4, "volume": 32812411, "interpolated": false},
+      {"date": "2026-09-10", "open": 758.03, "high": 760.11, "low": 756.64, "close": 757.83, "volume": 42740375, "interpolated": false},
+      {"date": "2026-09-11", "open": 764.72, "high": 766.38, "low": 763.6, "close": 764.29, "volume": 45512741, "interpolated": false},
+      {"date": "2026-09-14", "open": 759.0, "high": 763.52, "low": 757.93, "close": 760.88, "volume": 43992428, "interpolated": false},
+      {"date": "2026-09-15", "open": 760.88, "high": 760.88, "low": 760.88, "close": 760.88, "volume": 0, "interpolated": true}
+    ],
+    "QQQ": [
+      {"date": "2026-09-08", "open": 720.909, "high": 721.886, "low": 715.57, "close": 718.36, "volume": 28341416, "interpolated": false},
+      {"date": "2026-09-09", "open": 716.4, "high": 719.7, "low": 714.02, "close": 716.31, "volume": 26763377, "interpolated": false},
+      {"date": "2026-09-10", "open": 707.55, "high": 712.06, "low": 706.855, "close": 708.69, "volume": 31414409, "interpolated": false},
+      {"date": "2026-09-11", "open": 715.68, "high": 717.63, "low": 713.63, "close": 714.88, "volume": 26649142, "interpolated": false},
+      {"date": "2026-09-14", "open": 703.325, "high": 712.95, "low": 702.74, "close": 709.18, "volume": 35218978, "interpolated": false},
+      {"date": "2026-09-15", "open": 709.18, "high": 709.18, "low": 709.18, "close": 709.18, "volume": 0, "interpolated": true}
+    ]
+  }
+}

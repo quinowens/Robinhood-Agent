@@ -1,174 +1,289 @@
 {
   "issues": [
     {
-      "current_status": "MISSING_SOURCE_DATA",
+      "attempted_source": "Robinhood historical bars captured during outcome-update maintenance",
+      "contract": "AAPL 2026-10-16 325.0C",
+      "current_status": "RETRYABLE_SOURCE_ERROR",
       "horizon": "1D",
-      "maturity_date": "2026-09-02",
+      "missing_component": [
+        "underlying",
+        "option",
+        "spy",
+        "qqq"
+      ],
       "path": "data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
+      "reason": "underlying:HISTORY_UNAVAILABLE,option:HISTORY_UNAVAILABLE,spy:HISTORY_UNAVAILABLE",
       "record_id": "optoutcome-2026-09-01-AAPL-20261016-325C",
+      "retryable": true,
       "signal_date": "2026-09-01",
-      "symbol": "AAPL"
+      "symbol": "AAPL",
+      "target_observation_date": "2026-09-02"
     },
     {
-      "current_status": "MISSING_SOURCE_DATA",
+      "attempted_source": "Robinhood historical bars captured during outcome-update maintenance",
+      "contract": "AAPL 2026-10-16 325.0C",
+      "current_status": "RETRYABLE_SOURCE_ERROR",
       "horizon": "5D",
-      "maturity_date": "2026-09-08",
+      "missing_component": [
+        "underlying",
+        "option",
+        "spy",
+        "qqq"
+      ],
       "path": "data/option_signal_outcomes/2026-09-01-daily-scanner-dry-run.jsonl",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
+      "reason": "underlying:HISTORY_UNAVAILABLE,option:HISTORY_UNAVAILABLE,spy:HISTORY_UNAVAILABLE",
       "record_id": "optoutcome-2026-09-01-AAPL-20261016-325C",
+      "retryable": true,
       "signal_date": "2026-09-01",
-      "symbol": "AAPL"
+      "symbol": "AAPL",
+      "target_observation_date": "2026-09-09"
     },
     {
-      "current_status": "MISSING_SOURCE_DATA",
+      "attempted_source": "Robinhood historical bars captured during outcome-update maintenance",
+      "contract": "META 2026-10-16 600.0C",
+      "current_status": "RETRYABLE_SOURCE_ERROR",
       "horizon": "10D",
-      "maturity_date": "2026-08-27",
+      "missing_component": [
+        "underlying",
+        "option",
+        "spy",
+        "qqq"
+      ],
       "path": "data/option_signal_outcomes/2026-08-13-daily-scanner-dry-run.jsonl",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
+      "reason": "underlying:HISTORY_UNAVAILABLE,option:HISTORY_UNAVAILABLE,spy:HISTORY_UNAVAILABLE",
       "record_id": "opoutcome-2026-08-13-META-20261016-600C",
+      "retryable": true,
       "signal_date": "2026-08-13",
-      "symbol": "META"
+      "symbol": "META",
+      "target_observation_date": "2026-08-27"
     },
     {
-      "current_status": "MISSING_SOURCE_DATA",
+      "attempted_source": "Robinhood historical bars captured during outcome-update maintenance",
+      "contract": "NVDA 2026-10-16 230.0C",
+      "current_status": "RETRYABLE_SOURCE_ERROR",
       "horizon": "1D",
-      "maturity_date": "2026-09-07",
+      "missing_component": [
+        "underlying",
+        "option",
+        "spy",
+        "qqq"
+      ],
       "path": "data/option_signal_outcomes/2026-09-04-daily-scanner-dry-run.jsonl",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
+      "reason": "underlying:HISTORY_UNAVAILABLE,option:HISTORY_UNAVAILABLE,spy:HISTORY_UNAVAILABLE",
       "record_id": "optoutcome-2026-09-04-NVDA-20261016-230C",
+      "retryable": true,
       "signal_date": "2026-09-04",
-      "symbol": "NVDA"
+      "symbol": "NVDA",
+      "target_observation_date": "2026-09-08"
     },
     {
-      "current_status": "MISSING_SOURCE_DATA",
+      "attempted_source": "Robinhood historical bars captured during outcome-update maintenance",
+      "contract": "AMZN 2026-10-16 265.0C",
+      "current_status": "RETRYABLE_SOURCE_ERROR",
       "horizon": "5D",
-      "maturity_date": "2026-08-26",
+      "missing_component": [
+        "underlying",
+        "option",
+        "spy",
+        "qqq"
+      ],
       "path": "data/option_signal_outcomes/2026-08-19-daily-scanner-dry-run.jsonl",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
+      "reason": "underlying:HISTORY_UNAVAILABLE,option:HISTORY_UNAVAILABLE,spy:HISTORY_UNAVAILABLE",
       "record_id": "opoutcome-2026-08-19-AMZN-20261016-265C",
+      "retryable": true,
       "signal_date": "2026-08-19",
-      "symbol": "AMZN"
+      "symbol": "AMZN",
+      "target_observation_date": "2026-08-26"
     },
     {
-      "current_status": "MISSING_SOURCE_DATA",
+      "attempted_source": "Robinhood historical bars captured during outcome-update maintenance",
+      "contract": "AMZN 2026-10-16 265.0C",
+      "current_status": "RETRYABLE_SOURCE_ERROR",
       "horizon": "10D",
-      "maturity_date": "2026-09-02",
+      "missing_component": [
+        "underlying",
+        "option",
+        "spy",
+        "qqq"
+      ],
       "path": "data/option_signal_outcomes/2026-08-19-daily-scanner-dry-run.jsonl",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
+      "reason": "underlying:HISTORY_UNAVAILABLE,option:HISTORY_UNAVAILABLE,spy:HISTORY_UNAVAILABLE",
       "record_id": "opoutcome-2026-08-19-AMZN-20261016-265C",
+      "retryable": true,
       "signal_date": "2026-08-19",
-      "symbol": "AMZN"
+      "symbol": "AMZN",
+      "target_observation_date": "2026-09-02"
     },
     {
-      "current_status": "MISSING_SOURCE_DATA",
+      "attempted_source": "Robinhood historical bars captured during outcome-update maintenance",
+      "contract": "NVDA 2026-09-18 225.0C",
+      "current_status": "RETRYABLE_SOURCE_ERROR",
       "horizon": "10D",
-      "maturity_date": "2026-08-26",
+      "missing_component": [
+        "underlying",
+        "option",
+        "spy",
+        "qqq"
+      ],
       "path": "data/option_signal_outcomes/2026-08-12-daily-scanner-dry-run.jsonl",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
+      "reason": "underlying:HISTORY_UNAVAILABLE,option:HISTORY_UNAVAILABLE,spy:HISTORY_UNAVAILABLE",
       "record_id": "opoutcome-2026-08-12-NVDA-20260918-225C",
+      "retryable": true,
       "signal_date": "2026-08-12",
-      "symbol": "NVDA"
+      "symbol": "NVDA",
+      "target_observation_date": "2026-08-26"
     },
     {
-      "current_status": "MISSING_SOURCE_DATA",
+      "attempted_source": "Robinhood historical bars captured during outcome-update maintenance",
+      "contract": "NVDA 2026-09-18 230.0C",
+      "current_status": "RETRYABLE_SOURCE_ERROR",
       "horizon": "20D",
-      "maturity_date": "2026-09-09",
-      "path": "data/option_signal_outcomes/2026-08-12-daily-scanner-dry-run.jsonl",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
-      "record_id": "opoutcome-2026-08-12-NVDA-20260918-225C",
-      "signal_date": "2026-08-12",
-      "symbol": "NVDA"
-    },
-    {
-      "current_status": "MISSING_SOURCE_DATA",
-      "horizon": "20D",
-      "maturity_date": "2026-09-04",
+      "missing_component": [
+        "underlying",
+        "option",
+        "spy",
+        "qqq"
+      ],
       "path": "data/option_signal_outcomes/2026-08-07-daily-scanner-dry-run.jsonl",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
+      "reason": "underlying:HISTORY_UNAVAILABLE,option:HISTORY_UNAVAILABLE,spy:HISTORY_UNAVAILABLE",
       "record_id": "legacy-outcome-2026-08-07-NVDA-cdbb7e49a73b",
+      "retryable": true,
       "signal_date": "2026-08-07",
-      "symbol": "NVDA"
+      "symbol": "NVDA",
+      "target_observation_date": "2026-09-04"
     },
     {
-      "current_status": "MISSING_SOURCE_DATA",
+      "attempted_source": "Robinhood historical bars captured during outcome-update maintenance",
+      "contract": "MSFT 2026-10-16 510.0C",
+      "current_status": "RETRYABLE_SOURCE_ERROR",
       "horizon": "1D",
-      "maturity_date": "2026-09-04",
+      "missing_component": [
+        "underlying",
+        "option",
+        "spy",
+        "qqq"
+      ],
       "path": "data/option_signal_outcomes/2026-09-03-daily-scanner-dry-run.jsonl",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
+      "reason": "underlying:HISTORY_UNAVAILABLE,option:HISTORY_UNAVAILABLE,spy:HISTORY_UNAVAILABLE",
       "record_id": "optoutcome-2026-09-03-MSFT-20261016-510C",
+      "retryable": true,
       "signal_date": "2026-09-03",
-      "symbol": "MSFT"
+      "symbol": "MSFT",
+      "target_observation_date": "2026-09-04"
     },
     {
-      "current_status": "MISSING_SOURCE_DATA",
+      "attempted_source": "Robinhood historical bars captured during outcome-update maintenance",
+      "contract": "META 2026-09-18 610C",
+      "current_status": "RETRYABLE_SOURCE_ERROR",
       "horizon": "10D",
-      "maturity_date": "2026-08-25",
+      "missing_component": [
+        "underlying",
+        "option",
+        "spy",
+        "qqq"
+      ],
       "path": "data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
+      "reason": "underlying:HISTORY_UNAVAILABLE,option:HISTORY_UNAVAILABLE,spy:HISTORY_UNAVAILABLE",
       "record_id": "2026-08-11-META-2026-09-18-610C-outcome",
+      "retryable": true,
       "signal_date": "2026-08-11",
-      "symbol": "META"
+      "symbol": "META",
+      "target_observation_date": "2026-08-25"
     },
     {
-      "current_status": "MISSING_SOURCE_DATA",
+      "attempted_source": "Robinhood historical bars captured during outcome-update maintenance",
+      "contract": "META 2026-09-18 610C",
+      "current_status": "RETRYABLE_SOURCE_ERROR",
       "horizon": "20D",
-      "maturity_date": "2026-09-08",
+      "missing_component": [
+        "underlying",
+        "option",
+        "spy",
+        "qqq"
+      ],
       "path": "data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
+      "reason": "underlying:HISTORY_UNAVAILABLE,option:HISTORY_UNAVAILABLE,spy:HISTORY_UNAVAILABLE",
       "record_id": "2026-08-11-META-2026-09-18-610C-outcome",
+      "retryable": true,
       "signal_date": "2026-08-11",
-      "symbol": "META"
+      "symbol": "META",
+      "target_observation_date": "2026-09-09"
     },
     {
-      "current_status": "MISSING_SOURCE_DATA",
+      "attempted_source": "Robinhood historical bars captured during outcome-update maintenance",
+      "contract": "NVDA 2026-09-18 220C",
+      "current_status": "RETRYABLE_SOURCE_ERROR",
       "horizon": "10D",
-      "maturity_date": "2026-08-25",
+      "missing_component": [
+        "underlying",
+        "option",
+        "spy",
+        "qqq"
+      ],
       "path": "data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
+      "reason": "underlying:HISTORY_UNAVAILABLE,option:HISTORY_UNAVAILABLE,spy:HISTORY_UNAVAILABLE",
       "record_id": "2026-08-11-NVDA-2026-09-18-220C-outcome",
+      "retryable": true,
       "signal_date": "2026-08-11",
-      "symbol": "NVDA"
+      "symbol": "NVDA",
+      "target_observation_date": "2026-08-25"
     },
     {
-      "current_status": "MISSING_SOURCE_DATA",
+      "attempted_source": "Robinhood historical bars captured during outcome-update maintenance",
+      "contract": "NVDA 2026-09-18 220C",
+      "current_status": "RETRYABLE_SOURCE_ERROR",
       "horizon": "20D",
-      "maturity_date": "2026-09-08",
+      "missing_component": [
+        "underlying",
+        "option",
+        "spy",
+        "qqq"
+      ],
       "path": "data/option_signal_outcomes/2026-08-11-daily-scanner-dry-run.jsonl",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
+      "reason": "underlying:HISTORY_UNAVAILABLE,option:HISTORY_UNAVAILABLE,spy:HISTORY_UNAVAILABLE",
       "record_id": "2026-08-11-NVDA-2026-09-18-220C-outcome",
+      "retryable": true,
       "signal_date": "2026-08-11",
-      "symbol": "NVDA"
+      "symbol": "NVDA",
+      "target_observation_date": "2026-09-09"
     },
     {
-      "current_status": "MISSING_SOURCE_DATA",
+      "attempted_source": "Robinhood historical bars captured during outcome-update maintenance",
+      "contract": "AVGO 2026-10-16 370.0C",
+      "current_status": "RETRYABLE_SOURCE_ERROR",
       "horizon": "1D",
-      "maturity_date": "2026-09-09",
+      "missing_component": [
+        "underlying",
+        "option",
+        "spy",
+        "qqq"
+      ],
       "path": "data/option_signal_outcomes/2026-09-08-daily-scanner-dry-run.jsonl",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
+      "reason": "underlying:HISTORY_UNAVAILABLE,option:HISTORY_UNAVAILABLE,spy:HISTORY_UNAVAILABLE",
       "record_id": "optoutcome-2026-09-08-AVGO-20261016-370C",
+      "retryable": true,
       "signal_date": "2026-09-08",
-      "symbol": "AVGO"
+      "symbol": "AVGO",
+      "target_observation_date": "2026-09-09"
     },
     {
-      "current_status": "MISSING_SOURCE_DATA",
+      "attempted_source": "Robinhood historical bars captured during outcome-update maintenance",
+      "contract": "NVDA 2026-10-16 225.0C",
+      "current_status": "RETRYABLE_SOURCE_ERROR",
       "horizon": "1D",
-      "maturity_date": "2026-09-03",
+      "missing_component": [
+        "underlying",
+        "option",
+        "spy",
+        "qqq"
+      ],
       "path": "data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
+      "reason": "underlying:HISTORY_UNAVAILABLE,option:HISTORY_UNAVAILABLE,spy:HISTORY_UNAVAILABLE",
       "record_id": "optoutcome-2026-09-02-NVDA-20261016-225C",
+      "retryable": true,
       "signal_date": "2026-09-02",
-      "symbol": "NVDA"
-    },
-    {
-      "current_status": "MISSING_SOURCE_DATA",
-      "horizon": "5D",
-      "maturity_date": "2026-09-09",
-      "path": "data/option_signal_outcomes/2026-09-02-daily-scanner-dry-run.jsonl",
-      "reason": "underlying_close_or_entry,option_close_or_entry,spy_close_or_entry",
-      "record_id": "optoutcome-2026-09-02-NVDA-20261016-225C",
-      "signal_date": "2026-09-02",
-      "symbol": "NVDA"
+      "symbol": "NVDA",
+      "target_observation_date": "2026-09-03"
     }
   ],
   "outcome_health": {
@@ -185,9 +300,9 @@
         "pending": 1
       },
       "20D": {
-        "expected": 4,
+        "expected": 3,
         "observed": 0,
-        "pending": 8
+        "pending": 9
       },
       "30D": {
         "expected": 0,
@@ -195,15 +310,46 @@
         "pending": 12
       },
       "5D": {
-        "expected": 8,
+        "expected": 7,
         "observed": 5,
-        "pending": 4
+        "pending": 5
       }
     },
-    "overdue_outcome_windows": 17,
+    "overdue_outcome_windows": 15,
     "status": "DEGRADED",
-    "update_failures": 0
+    "update_failures": 15
   },
-  "records_updated_this_run": 6,
-  "snapshot": "data/outcome_update_snapshots/2026-08-24-option-outcomes.json"
+  "outcome_retrieval_health": {
+    "component_retrieval": {
+      "option": {
+        "attempted": 27,
+        "found": 12,
+        "success_rate": 0.444444
+      },
+      "qqq": {
+        "attempted": 27,
+        "found": 12,
+        "success_rate": 0.444444
+      },
+      "spy": {
+        "attempted": 27,
+        "found": 12,
+        "success_rate": 0.444444
+      },
+      "underlying": {
+        "attempted": 27,
+        "found": 12,
+        "success_rate": 0.444444
+      }
+    },
+    "mature_observations_expected": 27,
+    "pending": 33,
+    "permanently_unavailable": 0,
+    "retryable_failures": 15,
+    "successfully_resolved": 12
+  },
+  "records_updated_this_run": 11,
+  "snapshots": [
+    "data/outcome_update_snapshots/2026-08-24-option-outcomes.json"
+  ]
 }

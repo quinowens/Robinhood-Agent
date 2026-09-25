@@ -1,0 +1,172 @@
+{
+  "run_id": "2026-09-21-daily-scanner-dry-run",
+  "date": "2026-09-21",
+  "strategy_version": "2.0.1",
+  "pipeline_version": "2.0",
+  "strategy_mode": "options_primary",
+  "mode": "research_only_proposal_only_shadow_trading",
+  "run_trigger": "automation",
+  "session_context": "Robinhood Agent Daily Options Scanner Dry Run automation robinhood-agent-daily-scanner-dry-run",
+  "intended_workflow": "daily_options_primary_scanner_research_only",
+  "started_at": "2026-09-21T20:20:00Z",
+  "first_tool_call_at": "2026-09-21T20:20:00Z",
+  "last_tool_call_at": "2026-09-21T20:41:24Z",
+  "completed_at": "2026-09-21T20:41:24Z",
+  "status": "COMPLETE",
+  "run_status": "degraded_complete",
+  "degradation_categories": [
+    "scanner_frontend_limit_capped_visible_rows",
+    "full_financial_statement_tool_not_exposed",
+    "one_due_legacy_synthetic_option_id_returned_no_quote",
+    "older_uncaptured_option_history_permanently_unavailable_by_source",
+    "equity_history_2026_09_21_latest_bars_interpolated_zero_volume",
+    "outcome_health_degraded_by_older_source_gaps"
+  ],
+  "decision_integrity": "PASS_NO_LIVE_ACTIONS",
+  "persistence_integrity": "PASS_SCOPED_ARTIFACTS_WRITTEN",
+  "account_snapshot_id": "acct-8691-2026-09-21T20:22Z",
+  "account_snapshot_as_of": "2026-09-21T20:22:00Z",
+  "account": {
+    "masked_account": "ending_8691",
+    "type": "cash",
+    "broker_options_level": "option_level_2",
+    "strategy_enabled_options": ["LONG_CALL", "LONG_PUT"],
+    "account_value": 100.0,
+    "cash": 100.0,
+    "option_buying_power": 100.0,
+    "equity_positions_count": 0,
+    "option_positions_count": 0,
+    "open_equity_orders_count": 0,
+    "open_option_orders_count": 0
+  },
+  "scanner_resolution": [
+    {"name": "Momentum Candidates", "scan_id": "26cdeb14-da13-493f-b0c6-783468971a16", "matched": true, "total_items": 398},
+    {"name": "Options Activity Radar", "scan_id": "7068db65-2a47-470c-bde9-94d66f36b806", "matched": true, "total_items": 244},
+    {"name": "Earnings Risk Radar", "scan_id": "737924f1-e94f-4ad4-ba98-6c12fcaafaa9", "matched": true, "total_items": 90}
+  ],
+  "market_context": {
+    "SPX": 7764.7,
+    "NDX": 30482.3525,
+    "VIX": 14.87,
+    "SPY_last": 773.53,
+    "QQQ_last": 741.45,
+    "interpretation": "Constructive index backdrop with low volatility and AI/semiconductor strength, but many scanner leaders were outside the approved universe or extended after one-day moves."
+  },
+  "option_checkpoint": {
+    "checkpoint_date": "2026-09-21",
+    "due_count": 2,
+    "unique_option_ids_due": 2,
+    "captured_count": 1,
+    "updated_count": 2,
+    "missed_count": 1,
+    "due_manifest_retained_in": "data/option_quote_checkpoints/2026-09-21-option-quotes.json",
+    "quote_snapshot": "data/option_quote_checkpoints/2026-09-21-option-quotes.json",
+    "equity_snapshot": "data/outcome_update_snapshots/2026-09-21-equity-history-targets.json",
+    "ingestion_status": "NVDA_20261016_230C_10D_observed; legacy_NVDA_20260918_230C_30D_underlying_and_benchmarks_observed_option_quote_unavailable_by_source"
+  },
+  "artifact_ids": {
+    "research_record_ids": [
+      "2026-09-21-ARM",
+      "2026-09-21-ALAB",
+      "2026-09-21-MRNA",
+      "2026-09-21-DOCN",
+      "2026-09-21-INTC",
+      "2026-09-21-AKAM",
+      "2026-09-21-META",
+      "2026-09-21-AMD",
+      "2026-09-21-CRWD",
+      "2026-09-21-NVDA",
+      "2026-09-21-GOOGL",
+      "2026-09-21-MSFT",
+      "2026-09-21-AMZN",
+      "2026-09-21-AVGO",
+      "2026-09-21-PANW",
+      "2026-09-21-PERMANENT-FILTERS"
+    ],
+    "options_setup_ids": [],
+    "shadow_trade_ids": [],
+    "outcome_record_ids": [
+      "optoutcome-2026-09-04-NVDA-20261016-230C",
+      "legacy-outcome-2026-08-07-NVDA-cdbb7e49a73b"
+    ]
+  },
+  "candidate_counts": {
+    "deduplicated_candidates_reviewed": 28,
+    "terminal_result_count": 28,
+    "scored_count": 15,
+    "permanently_rejected_count": 1,
+    "incomplete_count": 0,
+    "completeness_pct": 100.0
+  },
+  "options_research": {
+    "chains_called_for": [],
+    "option_level_upgrade_info_called": false,
+    "option_instruments_queried": 0,
+    "option_quotes_queried_for_new_setups": 0,
+    "option_historicals_queried_for_new_setups": 0,
+    "qualified_setups": 0,
+    "pm_proposals": 0,
+    "shadow_only_qualified": 0,
+    "qualified_but_not_account_fit": 0,
+    "selected_contract": null,
+    "selected_option_id": null
+  },
+  "portfolio_manager": {
+    "account_fit_status": "NO_NEW_SETUP_TO_FIT",
+    "option_buying_power": 100.0,
+    "existing_option_positions": 0,
+    "open_option_orders": 0,
+    "max_premium_risk_allowed": 100.0,
+    "total_open_premium_risk": 0.0,
+    "post_proposal_premium_risk": 0.0,
+    "drawdown_kill_switch": "not_triggered",
+    "recommendation": "NO_TRADE"
+  },
+  "guardrails": {
+    "live_orders_placed": false,
+    "live_orders_modified": false,
+    "live_orders_canceled": false,
+    "review_option_order_called": false,
+    "place_option_order_called": false,
+    "allowed_structures": ["LONG_CALL", "LONG_PUT"],
+    "blocked_structures": ["0DTE", "NAKED_SELLING", "CASH_SECURED_PUT", "COVERED_CALL", "SPREAD", "MARGIN_DRIVEN_SELLING", "EARNINGS_LOTTERY", "CHEAP_FAR_OTM_SUBSTITUTION"]
+  },
+  "source_of_truth_files_read": [
+    "tool_policy.md",
+    "system_prompt.md",
+    "pipeline_config.md",
+    "scanner_engine.md",
+    "research_agent.md",
+    "portfolio_manager_agent.md",
+    "universe.md",
+    "performance_metrics.md",
+    "strategy.md",
+    "options_strategy.md",
+    "state/current_universe.json",
+    "state/open_theses.json",
+    "state/rejected_candidates.json",
+    "research_logs/2026-09-20-weekly-research-review.md",
+    "research_logs/2026-09-18-daily-scanner-dry-run.md",
+    "data/validation_reports/2026-09-20-validation-output.txt"
+  ],
+  "state_file_decision": {
+    "current_universe": "unchanged",
+    "open_theses": "unchanged",
+    "rejected_candidates": "unchanged"
+  },
+  "validation": {
+    "analyze_outcomes_ran": true,
+    "strategy_diagnostics_ran": true,
+    "data_integrity_ran": true,
+    "validate_repo_ran": true,
+    "validate_repo_status": "failed_legacy_option_outcome_schema",
+    "validation_warning_count": 29,
+    "validation_failure_count": 493,
+    "warnings_summary": "Data integrity passed with warnings for matured observations missing due to older source gaps and permanent OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE records.",
+    "failure_summary": "Full validate_repo failed on pre-existing August and early September option_signal_outcomes ledger rows with missing v2.0.1 component status fields or null retrieval statuses; today's generated JSON artifacts validated syntactically."
+  },
+  "notes": [
+    "No option-chain work was performed for new setups because no finalist cleared universe, extension, duplicate-signal, and direction gates.",
+    "Options Activity Radar was treated as context only and did not create direction."
+  ]
+}
