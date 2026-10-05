@@ -1,0 +1,43 @@
+{
+  "source": "robinhood_equity_historical_checkpoint",
+  "as_of": "2026-09-25",
+  "captured_at": "2026-09-25T20:32:51.716509+00:00",
+  "capabilities": {
+    "equity_historical": true,
+    "benchmark_historical": true,
+    "option_historical": false,
+    "option_current_quotes": true
+  },
+  "equity_bars": {
+    "META": [
+      {
+        "date": "2026-09-25",
+        "open": 768.845,
+        "high": 769.71,
+        "low": 746.5405,
+        "close": 751.9,
+        "volume": 11870502
+      }
+    ],
+    "SPY": [
+      {
+        "date": "2026-09-25",
+        "open": 768.76,
+        "high": 772.28,
+        "low": 766.29,
+        "close": 771.3,
+        "volume": 12054631
+      }
+    ],
+    "QQQ": [
+      {
+        "date": "2026-09-25",
+        "open": 742.86,
+        "high": 745.915,
+        "low": 739.64,
+        "close": 744.44,
+        "volume": 9812261
+      }
+    ]
+  }
+}

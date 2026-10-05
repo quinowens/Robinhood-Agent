@@ -1,0 +1,38 @@
+{
+  "snapshot_date": "2026-10-02",
+  "run_id": "2026-10-02-daily-scanner-dry-run",
+  "market_health_score": 65,
+  "classification": "constructive",
+  "components": {
+    "spy_trend": {
+      "score": 20,
+      "close": 769.64,
+      "sma20": 764.83,
+      "sma50": 763.7,
+      "sma200": 720.47,
+      "sma50_slope_10d": 3.97
+    },
+    "qqq_trend": {
+      "score": 20,
+      "close": 749.58,
+      "sma20": 727.78,
+      "sma50": 716.82,
+      "sma200": 668.6,
+      "sma50_slope_10d": 6.87
+    },
+    "breadth": {
+      "score": 0,
+      "status": "unavailable"
+    },
+    "volatility": {
+      "score": 15,
+      "vix": 15.31
+    },
+    "sector_participation": {
+      "score": 10,
+      "status": "partial_scanner_evidence_only"
+    }
+  },
+  "interpretation": "Constructive but selective; missing breadth and formal sector participation cap confidence."
+}
+

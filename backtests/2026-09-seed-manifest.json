@@ -1,0 +1,6327 @@
+{
+  "schema_version": "2.0.2",
+  "run_id": "2026-10-03-monthly-universe-review",
+  "review_period": "2026-09",
+  "market_data_as_of": "2026-10-02",
+  "generated_at": "2026-10-05T03:43:17Z",
+  "target_seed_range": {
+    "min": 300,
+    "max": 500
+  },
+  "seed_count": 445,
+  "source_policy": "saved scanners plus prior Current Universe and recurring September research candidates",
+  "source_counts": {
+    "Momentum Candidates": 200,
+    "Options Activity Radar": 56,
+    "Earnings Risk Radar": 181
+  },
+  "terminal_counts": {
+    "scored": 32,
+    "permanent_reject": 180,
+    "explicitly_incomplete": 233,
+    "total": 445
+  },
+  "terminal_coverage_pct": 100,
+  "symbols": [
+    {
+      "symbol": "AA",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 42.07,
+        "market_cap": 12208450925,
+        "volume": 3694810.641977,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "AACI",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 10.1,
+        "market_cap": 342340130,
+        "volume": 7605.671537,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "AAPL",
+      "sources": [
+        "Momentum Candidates",
+        "monthly_finalist_enrichment",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": 333.775,
+        "market_cap": 4851251373800,
+        "volume": 33304188.153126,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "ABBV",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 263.04,
+        "market_cap": 463885958485,
+        "volume": 5863298.956432,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "ABEV",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 2.98,
+        "market_cap": 46730929757,
+        "volume": 22506335.185984,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;"
+    },
+    {
+      "symbol": "ABNB",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 163.516,
+        "market_cap": 98761497591,
+        "volume": 3447488.032999,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "ACN",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 198.94,
+        "market_cap": 116048701550,
+        "volume": 10039992.767615,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "ACV",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 24.255,
+        "market_cap": 251895758,
+        "volume": 40173.9713,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "ADM",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 81.33,
+        "market_cap": 40966564555,
+        "volume": 3472754.273818,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "AEG",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 8.46,
+        "market_cap": 13553975339,
+        "volume": 13197542.699504,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "AEHR",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 107.17,
+        "market_cap": 3501429926,
+        "volume": 2215281.21194,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "AFRM",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 70.7835,
+        "market_cap": 24152613503,
+        "volume": 2521505.870105,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "AGI",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 32.48,
+        "market_cap": 14483501775,
+        "volume": 3126173.877449,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "AGNC",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 8.795,
+        "market_cap": 11724411510,
+        "volume": 39810760.464704,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "AGRZ",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 3.67,
+        "market_cap": 3551190,
+        "volume": 23302.698655,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "AHG",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.13,
+        "market_cap": 976642761,
+        "volume": 82748.451546,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "AHR",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 50.77,
+        "market_cap": 11584454903,
+        "volume": 2444266.005599,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "AI",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 11.025,
+        "market_cap": 1770186213,
+        "volume": 5543546.611772,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "AIG",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 74.95,
+        "market_cap": 39776483365,
+        "volume": 4739464.612448,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "AIO",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 25.43,
+        "market_cap": 877506713,
+        "volume": 65203.45014,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "AKAM",
+      "sources": [
+        "Momentum Candidates",
+        "monthly_finalist_enrichment",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": 109.5352,
+        "market_cap": 15015511308,
+        "volume": 5048929.174956,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "ALAB",
+      "sources": [
+        "Momentum Candidates",
+        "monthly_finalist_enrichment",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": 350.75,
+        "market_cap": 46698720294,
+        "volume": 4120193.30909,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "AM",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 20.365,
+        "market_cap": 10044101840,
+        "volume": 3151599.147372,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "AMAT",
+      "sources": [
+        "monthly_finalist_enrichment",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": null,
+        "market_cap": null,
+        "volume": null,
+        "instrument_type": null
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "AMCR",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 41.87,
+        "market_cap": 19404648609,
+        "volume": 2404329.903928,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "AMD",
+      "sources": [
+        "monthly_finalist_enrichment",
+        "prior_current_universe_watchlist",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": null,
+        "market_cap": null,
+        "volume": null,
+        "instrument_type": null
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "AMGN",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 404,
+        "market_cap": 203466855081,
+        "volume": 3510448.508378,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "AMH",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 30.28,
+        "market_cap": 11290995295,
+        "volume": 3023310.70092,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "AMKR",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 56.04,
+        "market_cap": 11498380404,
+        "volume": 4353161.314543,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "AMPL",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 14.52,
+        "market_cap": 1813781277,
+        "volume": 1728502.32754,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "AMX",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 21.29,
+        "market_cap": 63145624469,
+        "volume": 3006026.023329,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "AMZN",
+      "sources": [
+        "monthly_finalist_enrichment",
+        "prior_current_universe_tier_2",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": null,
+        "market_cap": null,
+        "volume": null,
+        "instrument_type": null
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "ANET",
+      "sources": [
+        "monthly_finalist_enrichment",
+        "prior_current_universe_watchlist",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": null,
+        "market_cap": null,
+        "volume": null,
+        "instrument_type": null
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "ANGO",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 15.12,
+        "market_cap": 635442739,
+        "volume": 1128003.4226,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "APG",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 40.49,
+        "market_cap": 15886212517,
+        "volume": 2960719.43193,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "APH",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 87.01,
+        "market_cap": 190520603775,
+        "volume": 10766527.312158,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "APLD",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 25.37,
+        "market_cap": 7592939295,
+        "volume": 26429428.098029,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "APOG",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 35.58,
+        "market_cap": 743224290,
+        "volume": 268845.768688,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "ARBK",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 2.25,
+        "market_cap": 32928518,
+        "volume": 9772.320614,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "ARCC",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 18.8752,
+        "market_cap": 13908102507,
+        "volume": 5108740.696356,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "AREC",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.8,
+        "market_cap": 192013433,
+        "volume": 1122364.722548,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "ARQ",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 1.95,
+        "market_cap": 85153541,
+        "volume": 210258.389247,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "ARTW",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 3.09,
+        "market_cap": 16254331,
+        "volume": 5296.2633,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "AS",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 27.18,
+        "market_cap": 15784831511,
+        "volume": 5973294.82754,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "ASA",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 56.69,
+        "market_cap": 1040647899,
+        "volume": 40900.185957,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "ASTE",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 42.08,
+        "market_cap": 968907443,
+        "volume": 202443.314917,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "ASTS",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 58.4802,
+        "market_cap": 17768512107,
+        "volume": 15201149.24105,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "ASX",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 47.9,
+        "market_cap": 99059695506,
+        "volume": 8112971.840134,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "ATCX",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 2.885,
+        "market_cap": 14665424,
+        "volume": 45717.142806,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "ATGL",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 5.15,
+        "market_cap": 85605000,
+        "volume": 1479.939064,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "AUR",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 5.675,
+        "market_cap": 12766469056,
+        "volume": 14498762.531094,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "AVGO",
+      "sources": [
+        "monthly_finalist_enrichment",
+        "prior_current_universe_tier_2",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": null,
+        "market_cap": null,
+        "volume": null,
+        "instrument_type": null
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "AVNT",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 41.17,
+        "market_cap": 3776093873,
+        "volume": 876565.05775,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "AXIL",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 6.17,
+        "market_cap": 42095941,
+        "volume": 5715.815,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "AZN",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 158.2928,
+        "market_cap": 253556108950,
+        "volume": 3043257.282504,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "BAC",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 53.78,
+        "market_cap": 404880130333,
+        "volume": 35106082.110795,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "BBAI",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 2.65,
+        "market_cap": 1270660406,
+        "volume": 25283326.125688,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;"
+    },
+    {
+      "symbol": "BBD",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 3.64,
+        "market_cap": 36532394972,
+        "volume": 48378084.238787,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;"
+    },
+    {
+      "symbol": "BBIO",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 67.27,
+        "market_cap": 13352171695,
+        "volume": 2646355.413432,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "BCE",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 19.75,
+        "market_cap": 21114838291,
+        "volume": 5398625.325249,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "BE",
+      "sources": [
+        "Momentum Candidates",
+        "monthly_finalist_enrichment",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": 289.25,
+        "market_cap": 79528273966,
+        "volume": 12948666.795603,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "BEKE",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 16.44,
+        "market_cap": 17751818826,
+        "volume": 3956944.394919,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "BEN",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 32.82,
+        "market_cap": 16624276495,
+        "volume": 5056512.789461,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "BIYA",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.62,
+        "market_cap": 11064379,
+        "volume": 126317.961214,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "BMGL",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 3.2559,
+        "market_cap": 5189324,
+        "volume": 25816.7717,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "BMHL",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 4.498,
+        "market_cap": 105908609,
+        "volume": 1547,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "BN",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 37.2,
+        "market_cap": 83073575402,
+        "volume": 6743946.551028,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "BRAI",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 4.8,
+        "market_cap": 927397026,
+        "volume": 197384.333987,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "BRBR",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 7.435,
+        "market_cap": 863946981,
+        "volume": 4543546.770612,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "BRK.B",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 502.9001,
+        "market_cap": 1113032837921,
+        "volume": 4194402.418487,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "BRTX",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 2.2,
+        "market_cap": 3079915,
+        "volume": 25520.698,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "BTLN",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 5.18,
+        "market_cap": 13616002,
+        "volume": 36082.5272,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "BTSG",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 60.28,
+        "market_cap": 11668054291,
+        "volume": 3197189.273153,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "BTTC",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.6435,
+        "market_cap": 8815115,
+        "volume": 4631011.801424,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "BUUU",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 40.02,
+        "market_cap": 738822000,
+        "volume": 108872.238447,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "BX",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 112.4,
+        "market_cap": 98507965220,
+        "volume": 5714990.819778,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "BYAH",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 2.365,
+        "market_cap": 1881421,
+        "volume": 7755.4658,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "BYRN",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 3.47,
+        "market_cap": 81214496,
+        "volume": 357416.831904,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "C",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 128.53,
+        "market_cap": 223015220299,
+        "volume": 7612999.894828,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "CAT",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 846.88,
+        "market_cap": 359796729118,
+        "volume": 2388548.407009,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "CATX",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 2.75,
+        "market_cap": 315058589,
+        "volume": 2622136.371528,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "CBAT",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.38,
+        "market_cap": 122774482,
+        "volume": 266412.724125,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "CBRS",
+      "sources": [
+        "Momentum Candidates",
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 171.5128,
+        "market_cap": 45248822888,
+        "volume": 12564800.201642,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "CBT",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 76.93,
+        "market_cap": 3973005988,
+        "volume": 376701.980812,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "CCHH",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.02,
+        "market_cap": 19409038,
+        "volume": 25915,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "CCJ",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 85.694,
+        "market_cap": 39784241452,
+        "volume": 2891875.181885,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "CCL",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 25.78,
+        "market_cap": 30611657809,
+        "volume": 27475553.726209,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "CDE",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 17.665,
+        "market_cap": 19510206262,
+        "volume": 28235592.164739,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "CDNS",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 351.55,
+        "market_cap": 77082500700,
+        "volume": 2099073.040547,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "CDTG",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.085,
+        "market_cap": 3277814,
+        "volume": 73212.0642,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "CEG",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 257.55,
+        "market_cap": 91953394071,
+        "volume": 3678788.303335,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "CG",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 40.2,
+        "market_cap": 14256875247,
+        "volume": 3466054.75867,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "CGTL",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 4,
+        "market_cap": 6877020,
+        "volume": 4941.956184,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "CHTR",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 109.4725,
+        "market_cap": 15451775595,
+        "volume": 2357710.559417,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "CIGL",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.371,
+        "market_cap": 92453804,
+        "volume": 16159.934161,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "CLIK",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.07,
+        "market_cap": 9162445,
+        "volume": 21892.5011,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "CMCSA",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 21.5815,
+        "market_cap": 84209145876,
+        "volume": 21045137.357935,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "CNQ",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 48.455,
+        "market_cap": 103748149020,
+        "volume": 4597485.224094,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "COHR",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 337.15,
+        "market_cap": 56777643082,
+        "volume": 8691606.642788,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "COIN",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 183,
+        "market_cap": 48282156909,
+        "volume": 12932459.280416,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "COST",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 920.97,
+        "market_cap": 396354746286,
+        "volume": 2025894.121476,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "CPRT",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 27.23,
+        "market_cap": 28533509875,
+        "volume": 8446883.446997,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "CRDO",
+      "sources": [
+        "monthly_finalist_enrichment",
+        "prior_current_universe_watchlist",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": null,
+        "market_cap": null,
+        "volume": null,
+        "instrument_type": null
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "CRE",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 2.7,
+        "market_cap": 5437759,
+        "volume": 11156.5811,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "CRH",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 81.96,
+        "market_cap": 57680167103,
+        "volume": 5441441.186841,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "CRWD",
+      "sources": [
+        "monthly_finalist_enrichment",
+        "prior_current_universe_tier_2",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": null,
+        "market_cap": null,
+        "volume": null,
+        "instrument_type": null
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "CSX",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 47.45,
+        "market_cap": 88770598022,
+        "volume": 10964963.399799,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "CURR",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 3.1,
+        "market_cap": 348073843,
+        "volume": 84593.413021,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "CVS",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 86.49,
+        "market_cap": 117307162244,
+        "volume": 10463876.543173,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "CVX",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 207,
+        "market_cap": 414957556581,
+        "volume": 6673216.598805,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "DAL",
+      "sources": [
+        "Momentum Candidates",
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 84.24,
+        "market_cap": 51209105346,
+        "volume": 8153870.056545,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "DAR",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 64.19,
+        "market_cap": 10345559172,
+        "volume": 2128654.59488,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "DASH",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 189.2,
+        "market_cap": 85255702083,
+        "volume": 4237993.638022,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "DECK",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 79.145,
+        "market_cap": 10616737571,
+        "volume": 2711407.510624,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "DGNX",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.28,
+        "market_cap": 37286566,
+        "volume": 314290.546743,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "DLXY",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 2.02,
+        "market_cap": 6572700,
+        "volume": 50039.307696,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "DSY",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 3.54,
+        "market_cap": 16916667,
+        "volume": 7373.1965,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "DUK",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 114.38,
+        "market_cap": 91817730247,
+        "volume": 3891380.629236,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "DXST",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 2.3,
+        "market_cap": 5360609,
+        "volume": 224584.006701,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "EBAY",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 106.43,
+        "market_cap": 48580650000,
+        "volume": 2972955.254623,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "ECHO",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 94.28,
+        "market_cap": 27149261569,
+        "volume": 4944479.642103,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "EFX",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 140.03,
+        "market_cap": 19244025964,
+        "volume": 3477170.954824,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "EHGO",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.6397,
+        "market_cap": 3768204,
+        "volume": 100060.016069,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "EL",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 91.99,
+        "market_cap": 34587943004,
+        "volume": 2699666.497989,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "ELOG",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.5,
+        "market_cap": 6416000,
+        "volume": 21384,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "ENB",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 46.0487,
+        "market_cap": 106185650086,
+        "volume": 6610818.510926,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "EOG",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 141.405,
+        "market_cap": 76020013477,
+        "volume": 3599643.047708,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "EONR",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.4866,
+        "market_cap": 27164377,
+        "volume": 385160.520346,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "EPD",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 36.1882,
+        "market_cap": 82254485367,
+        "volume": 2452918.566551,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "EQNR",
+      "sources": [
+        "Momentum Candidates",
+        "monthly_finalist_enrichment",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": 42.57,
+        "market_cap": 106780213608,
+        "volume": 2942773.600138,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "EQT",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 50.31,
+        "market_cap": 31532261560,
+        "volume": 7589198.944716,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "EQX",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 11.1208,
+        "market_cap": 13556728172,
+        "volume": 9103100.88558,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "ET",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 20.485,
+        "market_cap": 72688054577,
+        "volume": 11140436.666877,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "ETN",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 437,
+        "market_cap": 154505520000,
+        "volume": 2094025.585162,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "EUDA",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 17.2363,
+        "market_cap": 51611083,
+        "volume": 15525.995622,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "EZGO",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.864,
+        "market_cap": 4510014,
+        "volume": 52411.8889,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "F",
+      "sources": [
+        "Momentum Candidates",
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 12.11,
+        "market_cap": 53234402153,
+        "volume": 49155269.815967,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "FAST",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 50.77,
+        "market_cap": 56262953501,
+        "volume": 7156959.239128,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "FBGL",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 3.81,
+        "market_cap": 5143500,
+        "volume": 25456.576292,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "FIG",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 21.37,
+        "market_cap": 12291207532,
+        "volume": 7930488.978885,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "FINS",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 11.96,
+        "market_cap": 399665537,
+        "volume": 25695.4114,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "FIS",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 32.63,
+        "market_cap": 19003763041,
+        "volume": 7034060.31075,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "FISV",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 44.37,
+        "market_cap": 26295864353,
+        "volume": 6420024.021395,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "FITB",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 50.89,
+        "market_cap": 47530239279,
+        "volume": 5586013.292072,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "FLUT",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 74.84,
+        "market_cap": 16930474791,
+        "volume": 2510056.535652,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "FLUX",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 0.576,
+        "market_cap": 13837850,
+        "volume": 167281034.485286,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "FMFC",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.173,
+        "market_cap": 3165900,
+        "volume": 260716.4537,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "FOXA",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 62.31,
+        "market_cap": 26276403951,
+        "volume": 4696076.825834,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "FRGT",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.2457,
+        "market_cap": 140571,
+        "volume": 2341660.372366,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "FTV",
+      "sources": [
+        "Momentum Candidates",
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 57.49,
+        "market_cap": 16701542975,
+        "volume": 2585405.262456,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "FWONK",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 91.26,
+        "market_cap": 23690714640,
+        "volume": 2490155.236589,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "GAUZ",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 5.13,
+        "market_cap": 5881429,
+        "volume": 13396.138451,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "GCDT",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.401,
+        "market_cap": 5420482,
+        "volume": 568248.210572,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "GE",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 309.83,
+        "market_cap": 324653310317,
+        "volume": 4166058.845606,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "GEN",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 21.995,
+        "market_cap": 18352678401,
+        "volume": 12165471.583625,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "GFI",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 35.63,
+        "market_cap": 38236772028,
+        "volume": 3698906.700867,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "GFL",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 41.97,
+        "market_cap": 18303978210,
+        "volume": 6780258.684472,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "GFS",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 50.18,
+        "market_cap": 23985722487,
+        "volume": 3657722.574156,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "GIBO",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 32.4472,
+        "market_cap": 84515351,
+        "volume": 47188,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "GILD",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 144.91,
+        "market_cap": 183116577290,
+        "volume": 5044637.444354,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "GIS",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 32.12,
+        "market_cap": 19679710864,
+        "volume": 13653577.31655,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "GLDG",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.9283,
+        "market_cap": 197815012,
+        "volume": 509182.571303,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "GLW",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 164.23,
+        "market_cap": 124177741796,
+        "volume": 7551895.690699,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "GM",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 78.285,
+        "market_cap": 73960390390,
+        "volume": 9089426.260595,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "GME",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 25.16,
+        "market_cap": 11088931760,
+        "volume": 13545758.027769,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "GMEX",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 2.468,
+        "market_cap": 1843688,
+        "volume": 77242.17803,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "GOOG",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 340.43,
+        "market_cap": 4173877985504,
+        "volume": 17559186.059801,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "GOOGL",
+      "sources": [
+        "Momentum Candidates",
+        "monthly_finalist_enrichment",
+        "prior_current_universe_tier_2",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": 343.59,
+        "market_cap": 4173877985504,
+        "volume": 23885710.150943,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "GRAB",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 3.095,
+        "market_cap": 11742036740,
+        "volume": 64621748.33316,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;"
+    },
+    {
+      "symbol": "GSUN",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.2148,
+        "market_cap": 2154200,
+        "volume": 2584804.97926,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "GVH",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.11,
+        "market_cap": 2681173,
+        "volume": 43633.9267,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "HBNB",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 4.55,
+        "market_cap": 1113994157,
+        "volume": 1705.4328,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;"
+    },
+    {
+      "symbol": "HCAI",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.507,
+        "market_cap": 5533030,
+        "volume": 219700.658067,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "HDB",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 22.5,
+        "market_cap": 115873440501,
+        "volume": 12485207.654614,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "HELE",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 26.74,
+        "market_cap": 622829711,
+        "volume": 602844.987208,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "HIFS",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 287.78,
+        "market_cap": 631225980,
+        "volume": 33258.6307,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "HOOD",
+      "sources": [
+        "Momentum Candidates",
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 112.8559,
+        "market_cap": 93882170946,
+        "volume": 29489357.120299,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "HOVR",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.69,
+        "market_cap": 112768220,
+        "volume": 279765.906303,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "HPQ",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 32.13,
+        "market_cap": 29488564686,
+        "volume": 10303690.395763,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "HSBC",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 96.16,
+        "market_cap": 347713680305,
+        "volume": 2031759.963943,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "HST",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 22.57,
+        "market_cap": 14915158166,
+        "volume": 7107430.714879,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "HTCO",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 2.31,
+        "market_cap": 21116845,
+        "volume": 52808.683014,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "HTT",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 2.3,
+        "market_cap": 358704893,
+        "volume": 116009.280607,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "HUBG",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 29.79,
+        "market_cap": 1821763062,
+        "volume": 1235382.858091,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "HUHU",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 4.76,
+        "market_cap": 127500636,
+        "volume": 7784.385581,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "HUT",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 89.7,
+        "market_cap": 11065002442,
+        "volume": 4625620.77032,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "IAG",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 18.54,
+        "market_cap": 11169819016,
+        "volume": 3640974.487266,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "ILMN",
+      "sources": [
+        "monthly_finalist_enrichment",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": null,
+        "market_cap": null,
+        "volume": null,
+        "instrument_type": null
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "INCR",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 5.1,
+        "market_cap": 81320417,
+        "volume": 2759.017605,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "INEO",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.5947,
+        "market_cap": 9472751,
+        "volume": 359922.494113,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "INSM",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 111.6,
+        "market_cap": 26769204637,
+        "volume": 4140264.133014,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "INTJ",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 3.15,
+        "market_cap": 4397250,
+        "volume": 1394.0058,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "IOTR",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.99,
+        "market_cap": 9484554,
+        "volume": 1050.8446,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "IPST",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 3.08,
+        "market_cap": 2222460,
+        "volume": 62219.3356,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "IPW",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.15,
+        "market_cap": 1305076,
+        "volume": 1269876.092717,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "IREN",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 41.785,
+        "market_cap": 16794779662,
+        "volume": 41948875.607966,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "ITP",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.14335,
+        "market_cap": 2431992,
+        "volume": 76383.447,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "IZM",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.2,
+        "market_cap": 2884346,
+        "volume": 18330.6,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "JBLU",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 4.15,
+        "market_cap": 1565845551,
+        "volume": 14655852.493428,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;"
+    },
+    {
+      "symbol": "JBS",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 11.675,
+        "market_cap": 13097951740,
+        "volume": 6703802.073832,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "JLHL",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 3.945,
+        "market_cap": 88572541,
+        "volume": 107192.424407,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "JNJ",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 256.08,
+        "market_cap": 644117697006,
+        "volume": 10942983.86724,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "JXG",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 7.95,
+        "market_cap": 92861052,
+        "volume": 25916.328313,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "JZ",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.43,
+        "market_cap": 1042799,
+        "volume": 188421.559122,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "KGC",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 24.08,
+        "market_cap": 33137930243,
+        "volume": 6787959.584276,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "KHC",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 22.2,
+        "market_cap": 29325421535,
+        "volume": 12632992.509136,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "KLAC",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 206.94,
+        "market_cap": 218663669602,
+        "volume": 7369207.801804,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "KNRX",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.2368,
+        "market_cap": 7271123,
+        "volume": 1617988.287392,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "KR",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 59.02,
+        "market_cap": 34862450961,
+        "volume": 4705666.493537,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "LAWR",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 3.7,
+        "market_cap": 172350000,
+        "volume": 0,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "LBGJ",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 2.03,
+        "market_cap": 1240403,
+        "volume": 27698.844,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "LEN",
+      "sources": [
+        "Momentum Candidates",
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 80.3304,
+        "market_cap": 18830047944,
+        "volume": 9017657.441503,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "LEVI",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 19.85,
+        "market_cap": 7646980666,
+        "volume": 3068651.298729,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "LFS",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 2.11,
+        "market_cap": 56096215,
+        "volume": 49160.8071,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "LGCL",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 2.5299,
+        "market_cap": 3242712,
+        "volume": 42454.9947,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "LHSW",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.471,
+        "market_cap": 6344721,
+        "volume": 431401.326571,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "LI",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 10.7301,
+        "market_cap": 11580843839,
+        "volume": 3677582.423819,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "LICN",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.0001,
+        "market_cap": 16328457,
+        "volume": 12950.7979,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "LITE",
+      "sources": [
+        "monthly_finalist_enrichment",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": null,
+        "market_cap": null,
+        "volume": null,
+        "instrument_type": null
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "LLY",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 1143.26,
+        "market_cap": 1014203895698,
+        "volume": 2055523.335702,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "LNKS",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.97,
+        "market_cap": 1614646,
+        "volume": 23222.4762,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "LNT",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 64.345,
+        "market_cap": 17143904297,
+        "volume": 5260143.815693,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "LOW",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 181.1,
+        "market_cap": 108900585087,
+        "volume": 2773114.988355,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "LTH",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 40.99,
+        "market_cap": 9159705248,
+        "volume": 4088250.944253,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "LUD",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 4.184,
+        "market_cap": 86675800,
+        "volume": 12667.69439,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "LW",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 43.655,
+        "market_cap": 5994265688,
+        "volume": 4091656.075461,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "LYV",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 168.81,
+        "market_cap": 39866360090,
+        "volume": 2070684.783007,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "LZMH",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.19,
+        "market_cap": 10684415,
+        "volume": 88767.668383,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "MAGH",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 6.98,
+        "market_cap": 225446000,
+        "volume": 0,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "MARA",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 11.241,
+        "market_cap": 4338141105,
+        "volume": 42371042.317883,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "MASK",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.844,
+        "market_cap": 3048950,
+        "volume": 124528.975275,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "MAT",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 15.24,
+        "market_cap": 4362639000,
+        "volume": 19033726.543223,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "MCD",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 231.94,
+        "market_cap": 175891378945,
+        "volume": 6436837.301172,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "MCRI",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 117.55,
+        "market_cap": 2106792343,
+        "volume": 210321.930052,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "MCTA",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 29.1,
+        "market_cap": 504260190,
+        "volume": 0,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "MDB",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 358.05,
+        "market_cap": 30316573371,
+        "volume": 2698398.314819,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "MENS",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 2.1953,
+        "market_cap": 159602384,
+        "volume": 29813.102791,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "META",
+      "sources": [
+        "monthly_finalist_enrichment",
+        "prior_current_universe_tier_2",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": null,
+        "market_cap": null,
+        "volume": null,
+        "instrument_type": null
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "MF",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 14.17,
+        "market_cap": 25761512,
+        "volume": 21888.021859,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "MFG",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 11.1,
+        "market_cap": 133498105281,
+        "volume": 3367568.96203,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "MFI",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 9.47,
+        "market_cap": 478181901,
+        "volume": 945.303846,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "MGN",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 3.7,
+        "market_cap": 4563331,
+        "volume": 39339.833333,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "MGRT",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 101.6,
+        "market_cap": 1461350000,
+        "volume": 4763.642972,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "MI",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.02,
+        "market_cap": 546582,
+        "volume": 225232.474409,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "MIMI",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.89,
+        "market_cap": 13165432,
+        "volume": 172553.839942,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "MLEC",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 4.75,
+        "market_cap": 3449060,
+        "volume": 44870.874484,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "MO",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 67.3777,
+        "market_cap": 117049049212,
+        "volume": 6617219.431987,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "MPC",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 422.48,
+        "market_cap": 116238985900,
+        "volume": 2167816.618361,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "MRNO",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.268,
+        "market_cap": 21364646,
+        "volume": 243943.8092,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "MRP",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 24.63,
+        "market_cap": 4086439482,
+        "volume": 8865485.203912,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "MRSH",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 170.11,
+        "market_cap": 84351863731,
+        "volume": 2927464.583246,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "MRVL",
+      "sources": [
+        "Momentum Candidates",
+        "monthly_finalist_enrichment",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": 273.04,
+        "market_cap": 206441436652,
+        "volume": 16011307.370088,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "MSFT",
+      "sources": [
+        "monthly_finalist_enrichment",
+        "prior_current_universe_tier_2",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": null,
+        "market_cap": null,
+        "volume": null,
+        "instrument_type": null
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "MSGY",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 4.32,
+        "market_cap": 9241565,
+        "volume": 318254.926779,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "MSS",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.564,
+        "market_cap": 1366746,
+        "volume": 82238.858182,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "MSTR",
+      "sources": [
+        "Momentum Candidates",
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 160.1765,
+        "market_cap": 50128999858,
+        "volume": 27920510.268228,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "MTEN",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.01,
+        "market_cap": 7715804,
+        "volume": 121078.180391,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "MU",
+      "sources": [
+        "monthly_finalist_enrichment",
+        "prior_current_universe_watchlist",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": null,
+        "market_cap": null,
+        "volume": null,
+        "instrument_type": null
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "NAMI",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 2.2698,
+        "market_cap": 8879818,
+        "volume": 64433.271401,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "NAUT",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 1.97,
+        "market_cap": 250056513,
+        "volume": 14202087.161138,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "NBIS",
+      "sources": [
+        "monthly_finalist_enrichment",
+        "prior_current_universe_watchlist",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": null,
+        "market_cap": null,
+        "volume": null,
+        "instrument_type": null
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "NCPL",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.375,
+        "market_cap": 10790861,
+        "volume": 1309442.814159,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "NCZ",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 13.97,
+        "market_cap": 265834263,
+        "volume": 61118.358137,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "NEE",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 76.9359,
+        "market_cap": 167650068657,
+        "volume": 18188729.922234,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "NEOG",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 12.145,
+        "market_cap": 2649987960,
+        "volume": 2877889.547306,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "NEOV",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 3.01,
+        "market_cap": 179990403,
+        "volume": 2989413.264608,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "NFJ",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 15.14,
+        "market_cap": 1404735056,
+        "volume": 204581.332057,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "NFLX",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 67.0744,
+        "market_cap": 318166630643,
+        "volume": 38712946.481345,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "NG",
+      "sources": [
+        "Options Activity Radar",
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 6.58,
+        "market_cap": 2884127130,
+        "volume": 5066082.462512,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "NIE",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 24.875,
+        "market_cap": 689676138,
+        "volume": 94208.57013,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "NIVF",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.1253,
+        "market_cap": 350934,
+        "volume": 313282788.368861,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "NKE",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 33.86,
+        "market_cap": 50246101070,
+        "volume": 143479998.024328,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "NLY",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 18.68,
+        "market_cap": 16001357603,
+        "volume": 17134347.63824,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "NNBR",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 4.5,
+        "market_cap": 371612007,
+        "volume": 14681808.527203,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "NNNN",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 6.49,
+        "market_cap": 243157248,
+        "volume": 27372.491305,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "NOC",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 479.69,
+        "market_cap": 75404212940,
+        "volume": 2686132.075316,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "NOK",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 10.605,
+        "market_cap": 57073595925,
+        "volume": 76077264.996621,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "NRIX",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 23.02,
+        "market_cap": 2389054342,
+        "volume": 815509.156653,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "NTCL",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 2,
+        "market_cap": 4212029,
+        "volume": 6058.25276,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "NU",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 13.46,
+        "market_cap": 66711810380,
+        "volume": 78039244.570567,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "NVDA",
+      "sources": [
+        "Momentum Candidates",
+        "Options Activity Radar",
+        "monthly_finalist_enrichment",
+        "prior_current_universe_tier_2",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": 234.22,
+        "market_cap": 5165043300000,
+        "volume": 135486245.963212,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "NVNI",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.8811,
+        "market_cap": 10766249,
+        "volume": 42391.257534,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "NXPI",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 243.76,
+        "market_cap": 55218910822,
+        "volume": 2683310.712133,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "NXT",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 84.45,
+        "market_cap": 11839454445,
+        "volume": 2174613.459432,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "NXTT",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 5.56,
+        "market_cap": 8189668,
+        "volume": 28276.268062,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "O",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 54.2238,
+        "market_cap": 54076360585,
+        "volume": 7693725.215963,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "ODC",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 89.66,
+        "market_cap": 1299024115,
+        "volume": 119906.85095,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "OEC",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 5.8,
+        "market_cap": 327266427,
+        "volume": 323833.9489,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "OHI",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 45.73,
+        "market_cap": 14214339830,
+        "volume": 2282360.180067,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "OIO",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.87,
+        "market_cap": 654281563,
+        "volume": 115956.489927,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "OKTA",
+      "sources": [
+        "monthly_finalist_enrichment",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": null,
+        "market_cap": null,
+        "volume": null,
+        "instrument_type": null
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "ON",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 85.0201,
+        "market_cap": 25928619625,
+        "volume": 22934074.349443,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "ORCL",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 142.37,
+        "market_cap": 432878045760,
+        "volume": 35476677.933076,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "OST",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.695,
+        "market_cap": 8978755,
+        "volume": 0,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "OTIS",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 64.07,
+        "market_cap": 26361351725,
+        "volume": 6162656.0945,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "OXY",
+      "sources": [
+        "Momentum Candidates",
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 58.1,
+        "market_cap": 59338474342,
+        "volume": 8917076.708907,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "P",
+      "sources": [
+        "monthly_finalist_enrichment",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": null,
+        "market_cap": null,
+        "volume": null,
+        "instrument_type": null
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "PAA",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 23.76,
+        "market_cap": 17935499413,
+        "volume": 2193104.862474,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "PAAS",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 45.525,
+        "market_cap": 19791410923,
+        "volume": 3090445.95953,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "PANW",
+      "sources": [
+        "monthly_finalist_enrichment",
+        "prior_current_universe_tier_2",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": null,
+        "market_cap": null,
+        "volume": null,
+        "instrument_type": null
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "PAYX",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 99.01,
+        "market_cap": 41542921199,
+        "volume": 2314342.302834,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "PBR",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 21.66,
+        "market_cap": 129343284436,
+        "volume": 21070394.561369,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "PBR.A",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 19.61,
+        "market_cap": 129343284436,
+        "volume": 7948756.498271,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "PCG",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 12.34,
+        "market_cap": 40081598195,
+        "volume": 41517199.588659,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "PDD",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 75.4,
+        "market_cap": 112106705347,
+        "volume": 6801688.141066,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "PENG",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 61.39,
+        "market_cap": 3144252010,
+        "volume": 3566779.349636,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "PEP",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 125.89,
+        "market_cap": 171826198236,
+        "volume": 6096671.29416,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "PHYS",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 31.22,
+        "market_cap": 15281172687,
+        "volume": 4339310.859227,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "PKE",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 30.42,
+        "market_cap": 661671838,
+        "volume": 217687.238505,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "PLRZ",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 10.01,
+        "market_cap": 23338884,
+        "volume": 56467.016,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "PLTR",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 188.79,
+        "market_cap": 418949215402,
+        "volume": 17964406.511265,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "PLUT",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 2.65,
+        "market_cap": 40677500,
+        "volume": 17787.303006,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "PMA",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.24,
+        "market_cap": 200459250,
+        "volume": 4137.3723,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "PMAX",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.8374,
+        "market_cap": 3066162,
+        "volume": 350379.4979,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "PNW",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 95.92,
+        "market_cap": 11625238685,
+        "volume": 2115593.539811,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "POAS",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.1425,
+        "market_cap": 2302545,
+        "volume": 983832.987103,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "PPL",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 32.828,
+        "market_cap": 25142523137,
+        "volume": 6388837.871134,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "PRFX",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.9301,
+        "market_cap": 3254553,
+        "volume": 52018.640534,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "PRSU",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 52.29,
+        "market_cap": 1428096438,
+        "volume": 270972.635147,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "PSIG",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 4.58,
+        "market_cap": 70444164,
+        "volume": 717196.437166,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "PSIX",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 44.81,
+        "market_cap": 1033562814,
+        "volume": 623043.43472,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "PSKY",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 9.5,
+        "market_cap": 10658484900,
+        "volume": 37391251.408647,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "PUSA",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 3.17,
+        "market_cap": 426682000,
+        "volume": 2562172.202937,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "PYPL",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 52.8139,
+        "market_cap": 45091342668,
+        "volume": 9017300.875452,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "QCOM",
+      "sources": [
+        "Momentum Candidates",
+        "monthly_finalist_enrichment",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": 184.91,
+        "market_cap": 197420300417,
+        "volume": 10142998.54482,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "QSR",
+      "sources": [
+        "Momentum Candidates",
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 69.93,
+        "market_cap": 26260054258,
+        "volume": 2748621.016778,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "RAYA",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.97,
+        "market_cap": 2035589,
+        "volume": 5069.189533,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "RBRK",
+      "sources": [
+        "monthly_finalist_enrichment",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": null,
+        "market_cap": null,
+        "volume": null,
+        "instrument_type": null
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "RCL",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 277.88,
+        "market_cap": 67911433169,
+        "volume": 3420164.696395,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "RELL",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 18.99,
+        "market_cap": 282271499,
+        "volume": 153323.763342,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "RF",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 27.4,
+        "market_cap": 24254433035,
+        "volume": 11420224.894827,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "RGC",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 6.8173,
+        "market_cap": 3372414352,
+        "volume": 429398.884339,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "RGP",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 3.89,
+        "market_cap": 133985705,
+        "volume": 249295.039651,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "RIOT",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 19.72,
+        "market_cap": 7400106198,
+        "volume": 16602848.717379,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "RIVN",
+      "sources": [
+        "Momentum Candidates",
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 14.31,
+        "market_cap": 22050917394,
+        "volume": 60903646.231272,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "RKLB",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 74.13,
+        "market_cap": 40730479999,
+        "volume": 26941413.508263,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "RKT",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 11.75,
+        "market_cap": 36669769351,
+        "volume": 39146548.779808,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "ROIV",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 35.73,
+        "market_cap": 28582321703,
+        "volume": 4365824.833916,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "RPGL",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 31.74,
+        "market_cap": 38214986,
+        "volume": 141039.405261,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "RPM",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 99.22,
+        "market_cap": 12660909170,
+        "volume": 1017521.341118,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "RVTY",
+      "sources": [
+        "monthly_finalist_enrichment",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": null,
+        "market_cap": null,
+        "volume": null,
+        "instrument_type": null
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "RYOJ",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 3.1,
+        "market_cap": 32917500,
+        "volume": 9309.919393,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "SAGT",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.5654,
+        "market_cap": 12862850,
+        "volume": 187149.250955,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "SAR",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 16.49,
+        "market_cap": 265013495,
+        "volume": 160206.847987,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "SBS",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 5.45,
+        "market_cap": 18512701506,
+        "volume": 9292192.483521,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "SCAG",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.2148,
+        "market_cap": 15974126,
+        "volume": 656016,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "SE",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 95.2767,
+        "market_cap": 63392148026,
+        "volume": 3989414.862975,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "SEGG",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 2.45,
+        "market_cap": 7643497,
+        "volume": 26596.466081,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "SFHG",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 2.15,
+        "market_cap": 8526000,
+        "volume": 6077,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "SHOP",
+      "sources": [
+        "monthly_finalist_enrichment",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": null,
+        "market_cap": null,
+        "volume": null,
+        "instrument_type": null
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "SJ",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.8545,
+        "market_cap": 36284435,
+        "volume": 17842.065421,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "SKK",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 4.39,
+        "market_cap": 17426621,
+        "volume": 4784.883049,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "SLGB",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.282,
+        "market_cap": 12955500,
+        "volume": 478819.1007,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "SLMT",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 4.36,
+        "market_cap": 48000521,
+        "volume": 42587.01795,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "SLP",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 18.4915,
+        "market_cap": 374159503,
+        "volume": 460260.249223,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "SMCI",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 43.69,
+        "market_cap": 28702817626,
+        "volume": 44548619.920159,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "SMMT",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 16.8161,
+        "market_cap": 13801068114,
+        "volume": 5198582.089458,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "SMTC",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 194.98,
+        "market_cap": 15638575148,
+        "volume": 4921367.874497,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "SMXT",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 2.16,
+        "market_cap": 10243184,
+        "volume": 24622.1215,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "SNOW",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 341.5901,
+        "market_cap": 116783856000,
+        "volume": 3305201.16971,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "SNPS",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 490.05,
+        "market_cap": 72528721411,
+        "volume": 3336624.885725,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "SNTG",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.78,
+        "market_cap": 4965425,
+        "volume": 8820.0041,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "SO",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 83.9,
+        "market_cap": 99195798558,
+        "volume": 7802508.808017,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "SPCX",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 158.98,
+        "market_cap": 2157535725509,
+        "volume": 120042521.192977,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "SPGI",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 386.59,
+        "market_cap": 119912848000,
+        "volume": 2771057.876732,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "STFS",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 3.63,
+        "market_cap": 55001469,
+        "volume": 1021579.7075,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "STLA",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 4.405,
+        "market_cap": 18852505436,
+        "volume": 42949446.77423,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;"
+    },
+    {
+      "symbol": "STM",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 57.53,
+        "market_cap": 43841666050,
+        "volume": 16358321.758615,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "STX",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 848.99,
+        "market_cap": 193054394955,
+        "volume": 13583054.007938,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "STZ",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 113.4,
+        "market_cap": 19275761845,
+        "volume": 1522822.828914,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "SUPX",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 6.7,
+        "market_cap": 288836994,
+        "volume": 267029.114361,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "SVRE",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.4,
+        "market_cap": 351258060,
+        "volume": 39211.466129,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "SWKS",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 85.05,
+        "market_cap": 12878965411,
+        "volume": 8734128.878265,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "SWVL",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 3.98,
+        "market_cap": 72406805,
+        "volume": 31706.638506,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "T",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 24.315,
+        "market_cap": 177202692909,
+        "volume": 29140495.113106,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "TC",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.74,
+        "market_cap": 44654777,
+        "volume": 3098.458,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "TCOM",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 38.18,
+        "market_cap": 25943955004,
+        "volume": 3396735.748251,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "TDTH",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1,
+        "market_cap": 108931161,
+        "volume": 59296.883129,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "TEM",
+      "sources": [
+        "Momentum Candidates",
+        "monthly_finalist_enrichment",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": 76.75,
+        "market_cap": 12703484165,
+        "volume": 5704939.08246,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "TER",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 450.56,
+        "market_cap": 53335646862,
+        "volume": 3406514.71702,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "TFC",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 46.46,
+        "market_cap": 59175572546,
+        "volume": 9146760.898464,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "TGHL",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.7859,
+        "market_cap": 19883119,
+        "volume": 46520.435027,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "THH",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.47,
+        "market_cap": 7506937,
+        "volume": 9666.3422,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "TJGC",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 33.28,
+        "market_cap": 336128765,
+        "volume": 25269.085458,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "TJX",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 132.72,
+        "market_cap": 135120813653,
+        "volume": 6951629.040364,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "TLRY",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 3.6,
+        "market_cap": 532015707,
+        "volume": 4132927.556488,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "TMDE",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.6599,
+        "market_cap": 15397371,
+        "volume": 51693.942663,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "TME",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 7.745,
+        "market_cap": 12922392611,
+        "volume": 5255385.276237,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "TMQ",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 3.09,
+        "market_cap": 560986533,
+        "volume": 1109449.228879,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "TNMG",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 4.7699,
+        "market_cap": 3605116,
+        "volume": 11230578.144259,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "TOST",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 29.95,
+        "market_cap": 17987360000,
+        "volume": 9583592.445627,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "TRP",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 59.09,
+        "market_cap": 63987029581,
+        "volume": 4531399.723904,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "TRU",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 63.46,
+        "market_cap": 14304856000,
+        "volume": 5014164.824368,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "TSCO",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 31.1994,
+        "market_cap": 17079695690,
+        "volume": 13638964.65154,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "TSEM",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 242.464,
+        "market_cap": 23210462766,
+        "volume": 2001652.180936,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "TSLA",
+      "sources": [
+        "Momentum Candidates",
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 370.7,
+        "market_cap": 1414253930843,
+        "volume": 55407613.540632,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "TSM",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 473.06,
+        "market_cap": 1940642848231,
+        "volume": 9962951.528044,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "TV",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 2.285,
+        "market_cap": 1206964658,
+        "volume": 2353253.260742,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;"
+    },
+    {
+      "symbol": "TWLO",
+      "sources": [
+        "monthly_finalist_enrichment",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": null,
+        "market_cap": null,
+        "volume": null,
+        "instrument_type": null
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "U",
+      "sources": [
+        "monthly_finalist_enrichment",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": null,
+        "market_cap": null,
+        "volume": null,
+        "instrument_type": null
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "UBS",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 47.72,
+        "market_cap": 156087378980,
+        "volume": 3307856.654453,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "UDR",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 33.28,
+        "market_cap": 11051489236,
+        "volume": 3133992.316557,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "UMC",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 26.275,
+        "market_cap": 55988199112,
+        "volume": 10220873.563973,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "UZX",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.26,
+        "market_cap": 3565709,
+        "volume": 34688.529716,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "V",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 360.79,
+        "market_cap": 697882530555,
+        "volume": 4011407.344643,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "VCIG",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.37,
+        "market_cap": 1735099,
+        "volume": 5903794.730447,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "VFS",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 3.06,
+        "market_cap": 7112189470,
+        "volume": 606007.196949,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;"
+    },
+    {
+      "symbol": "VG",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 13.18,
+        "market_cap": 36626360266,
+        "volume": 10841785.920191,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "VIAV",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 47.1,
+        "market_cap": 11621916898,
+        "volume": 10066700.925537,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "VICI",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 22.7298,
+        "market_cap": 27009432595,
+        "volume": 7795711.843764,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "VIK",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 81.18,
+        "market_cap": 38133963027,
+        "volume": 3460083.544921,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "VIVO",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 3.33,
+        "market_cap": 107498344,
+        "volume": 580440.823691,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "VLGEA",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 46,
+        "market_cap": 681977060,
+        "volume": 34039.026215,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "VNET",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 5.16,
+        "market_cap": 1457621210,
+        "volume": 6266343.349079,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "VNTG",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.645,
+        "market_cap": 19561647,
+        "volume": 78198.9274,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "VRAX",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 2.2,
+        "market_cap": 1753373,
+        "volume": 19610.8382,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "VSH",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 38.19,
+        "market_cap": 5856016595,
+        "volume": 9397423.565042,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "VTRS",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 17.61,
+        "market_cap": 19549016505,
+        "volume": 7526183.997796,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "VZ",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 45.94,
+        "market_cap": 206741614051,
+        "volume": 19770143.841758,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "WBUY",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.7802,
+        "market_cap": 4295540,
+        "volume": 237627.621531,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "WDC",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 415.17,
+        "market_cap": 149729048633,
+        "volume": 24784680.790059,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "WEC",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 101.61,
+        "market_cap": 33686309214,
+        "volume": 2750657.580592,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "WETO",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.075,
+        "market_cap": 1164025,
+        "volume": 1729771.409861,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "WM",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 204.9438,
+        "market_cap": 85539049376,
+        "volume": 2372558.081441,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "WMG",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 26.82,
+        "market_cap": 14804006461,
+        "volume": 2539591.802257,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "WMS",
+      "sources": [
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 127.27,
+        "market_cap": 9596837876,
+        "volume": 538158.862226,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "WMT",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 104.29,
+        "market_cap": 852877720907,
+        "volume": 23279455.467046,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "WS",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 36.97,
+        "market_cap": 1883496504,
+        "volume": 300744.182074,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "WSTN",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 10.15,
+        "market_cap": 80272421,
+        "volume": 0,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "microcap_below_1b;"
+    },
+    {
+      "symbol": "WY",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 18.48,
+        "market_cap": 15719252160,
+        "volume": 7708670.693404,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "XOM",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 164.13,
+        "market_cap": 671557461307,
+        "volume": 11295330.628829,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "XP",
+      "sources": [
+        "Momentum Candidates",
+        "Options Activity Radar"
+      ],
+      "observed": {
+        "price": 21.54,
+        "market_cap": 10027073264,
+        "volume": 12165519.846573,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "XTLB",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 2.3,
+        "market_cap": 6050120,
+        "volume": 6740.2895,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "XYL",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 102.5802,
+        "market_cap": 25046130323,
+        "volume": 2256745.217437,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "XYZ",
+      "sources": [
+        "Momentum Candidates"
+      ],
+      "observed": {
+        "price": 74.35,
+        "market_cap": 46038920850,
+        "volume": 3821548.784255,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "explicitly_incomplete",
+      "terminal_reason": "not_selected_for_expensive_enrichment_after_progressive_monthly_triage"
+    },
+    {
+      "symbol": "YMT",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.14,
+        "market_cap": 521845,
+        "volume": 155812.5083,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "YOUL",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.396,
+        "market_cap": 32082457,
+        "volume": 24194.910302,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "ZBAO",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.0958,
+        "market_cap": 43039551,
+        "volume": 3415887.744893,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "ZDAI",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.53,
+        "market_cap": 13240365,
+        "volume": 3409.1237,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "ZENA",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.34,
+        "market_cap": 119549239,
+        "volume": 1193836.986872,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "ZJYL",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.94,
+        "market_cap": 144847050,
+        "volume": 3795.815482,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "ZKIN",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 1.81,
+        "market_cap": 109342866,
+        "volume": 3882.622241,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "ZONE",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.1323,
+        "market_cap": 66962062,
+        "volume": 3691345.970699,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    },
+    {
+      "symbol": "ZS",
+      "sources": [
+        "monthly_finalist_enrichment",
+        "september_research_records"
+      ],
+      "observed": {
+        "price": null,
+        "market_cap": null,
+        "volume": null,
+        "instrument_type": null
+      },
+      "terminal_status": "scored",
+      "terminal_reason": "progressively_enriched_monthly_finalist"
+    },
+    {
+      "symbol": "ZTG",
+      "sources": [
+        "Earnings Risk Radar"
+      ],
+      "observed": {
+        "price": 0.9722,
+        "market_cap": 23547625,
+        "volume": 106234.660482,
+        "instrument_type": "EQUITY"
+      },
+      "terminal_status": "permanent_reject",
+      "terminal_reason": "low_price_or_penny_stock;microcap_below_1b;"
+    }
+  ]
+}
+

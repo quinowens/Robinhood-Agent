@@ -1,0 +1,5 @@
+Validation status: PASSED WITH WARNINGS
+Repository validation completed on 2026-10-04 with no errors.
+Data integrity status: PASS_WITH_WARNINGS.
+Qualified option chains: 14 complete; orphaned shadow records: 0; orphaned outcome records: 0; update failures: 0.
+Warnings: 24 matured observations remain permanently unavailable, primarily because OPTION_HISTORY_NOT_SUPPORTED_BY_SOURCE; 7 legacy-ledger status records are grandfathered; 4 scheduled-run ledger gaps remain unaccounted.

@@ -253,49 +253,51 @@ If a held stock is demoted or removed during a refresh:
 
 ## Current Universe
 
-Status: **Populated by official broad catch-up refresh on 2026-08-03.**
+Status: **Populated by the official September 2026 monthly refresh.**
 
-Run ID: `2026-08-03-catch-up-universe-refresh`
+Run ID: `2026-10-03-monthly-universe-review`
 
-The old WST watchlist remains stale and is not the source of truth.
+Market data as of: 2026-10-02
+
+The broad refresh used a 445-symbol deduplicated seed, achieved 100% terminal classification coverage, and verified all critical Tier 2 fields. Scanner payload caps and unavailable full financial statements were recorded as non-decision-critical limitations.
 
 ### Tier 1
 
-No Tier 1 names are currently approved. No candidate cleared the 85+ research-score threshold with 90%+ data completeness and sufficient decision confidence during the 2026-08-03 catch-up refresh.
+No Tier 1 names are currently approved. The highest score was 80.16 and the 95th percentile was 76.89. This is the second official refresh below the 85 threshold, so the three-refresh calibration-review trigger has not yet been reached.
 
 ### Tier 2
 
-Tier 2 names may be reviewed by the Portfolio Manager Agent when temporary blocks, earnings windows, sizing, concentration, and order-quality checks pass. User approval is required only before submitting an exact live order:
+Tier 2 names may proceed to Portfolio Manager review only when current entry, event, options-setup, account-fit, and risk checks pass. Exact reviewed-order approval remains mandatory before any live execution.
 
-| Symbol | Research Score | Data Completeness | Eligibility |
-| --- | ---: | ---: | --- |
-| GOOGL | 82 | 93% | Eligible |
-| AMZN | 82 | 93% | Blocked by extension until 2026-08-07 |
-| MSFT | 81 | 93% | Blocked by extension until 2026-08-07 |
-| NVDA | 80 | 92% | Eligible; monitor earnings |
-| META | 78 | 91% | Blocked by extension until 2026-08-07 |
-| CRWD | 77 | 87% | Eligible; monitor earnings |
-| PANW | 76 | 86% | Eligible; monitor earnings |
-| AVGO | 76 | 86% | Eligible; monitor earnings |
+| Symbol | Research Score | Data Completeness | Decision Confidence | Eligibility | Direction |
+| --- | ---: | ---: | ---: | --- | --- |
+| RBRK | 80.16 | 94% | 95% | Eligible | Bullish |
+| U | 77.42 | 94% | 95% | Eligible | Bullish |
+| TWLO | 76.45 | 94% | 95% | Eligible | Bullish |
 
 ### Watchlist
 
 Watchlist names are research-only and are not approved for new entries:
 
-`CRDO`, `MU`, `VRT`, `ORCL`, `PLTR`, `NOW`, `FSLR`, `ANET`, `AMD`, `BA`, `CRWV`, `NBIS`, `SOFI`, `COHR`
+| Symbol | Research Score | Reason |
+| --- | ---: | --- |
+| CRWD | 71.94 | Composite score below Tier 2 despite constructive bullish evidence. |
+| P | 70.97 | Strong relative strength, but participation and risk-quality inputs held the composite below Tier 2. |
+| OKTA | 69.52 | Constructive trend, but participation and risk quality were insufficient for Tier 2. |
+| LITE | 67.26 | Medium-term strength was offset by weaker earnings, participation, and risk-quality components. |
+| ILMN | 65.97 | Constructive momentum, but participation and risk-quality components were insufficient. |
 
-Temporary blocks from the 2026-08-03 refresh:
+### Temporary Blocks
 
-| Symbol | Block | Review |
-| --- | --- | --- |
-| AMZN | Post-earnings extension | 2026-08-07 |
-| MSFT | Post-earnings extension | 2026-08-07 |
-| META | Post-earnings extension and EPS-miss follow-through | 2026-08-07 |
-| PLTR | Same-day earnings report | 2026-08-06 |
-| ANET | Earnings on 2026-08-04 after market close | 2026-08-06 |
-| AMD | Earnings on 2026-08-04 after market close | 2026-08-06 |
-| CRWV | Upcoming earnings and extension risk | 2026-08-12 |
-| NBIS | Upcoming earnings and extension risk | 2026-08-13 |
+None were carried into the new universe. A future earnings, extension, market-regime, trend, or portfolio block must be added only from fresh evidence and must include an eligible-after or review date.
+
+### Refresh Notes
+
+- Prior Tier 2 members GOOGL, AMZN, MSFT, NVDA, META, CRWD, PANW, and AVGO were rescored from fresh histories rather than grandfathered.
+- CRWD remains Watchlist; the other seven prior Tier 2 members scored below Watchlist on the reproducible monthly model.
+- RBRK, U, and TWLO were promoted from September research evidence.
+- Options setup quality and account affordability did not alter universe scores or membership.
+- The superseded universe is archived in `backtests/2026-09-universe.md`.
 
 ---
 

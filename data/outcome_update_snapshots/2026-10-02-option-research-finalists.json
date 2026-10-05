@@ -1,0 +1,555 @@
+{
+  "source": "robinhood_progressive_option_research",
+  "as_of": "2026-10-02",
+  "captured_at": "2026-10-03T22:31:49.174Z",
+  "expiration": "2026-11-06",
+  "dte": 35,
+  "requested_specs": [
+    [
+      "PANW",
+      "8daccdc8-07c5-47dc-9d71-3acb79ca0fad",
+      "390.0000"
+    ],
+    [
+      "PANW",
+      "8daccdc8-07c5-47dc-9d71-3acb79ca0fad",
+      "400.0000"
+    ],
+    [
+      "PANW",
+      "8daccdc8-07c5-47dc-9d71-3acb79ca0fad",
+      "410.0000"
+    ],
+    [
+      "NBIS",
+      "311fc631-5785-4091-b5a9-d5aa43b14e54",
+      "230.0000"
+    ],
+    [
+      "NBIS",
+      "311fc631-5785-4091-b5a9-d5aa43b14e54",
+      "240.0000"
+    ],
+    [
+      "NBIS",
+      "311fc631-5785-4091-b5a9-d5aa43b14e54",
+      "250.0000"
+    ],
+    [
+      "COHR",
+      "cdc48475-c79c-4d6f-908f-6a567351fde1",
+      "320.0000"
+    ],
+    [
+      "COHR",
+      "cdc48475-c79c-4d6f-908f-6a567351fde1",
+      "330.0000"
+    ],
+    [
+      "COHR",
+      "cdc48475-c79c-4d6f-908f-6a567351fde1",
+      "340.0000"
+    ]
+  ],
+  "instruments": [
+    {
+      "id": "c82b4e6f-dc61-4900-acd2-908390a7d023",
+      "chain_id": "8daccdc8-07c5-47dc-9d71-3acb79ca0fad",
+      "chain_symbol": "PANW",
+      "underlying_type": "equity",
+      "expiration_date": "2026-11-06",
+      "sellout_datetime": "2026-11-06T20:30:00+00:00",
+      "strike_price": "390.0000",
+      "type": "call",
+      "state": "active",
+      "tradability": "tradable",
+      "trade_value_multiplier": "100.0000",
+      "min_ticks": {
+        "above_tick": "0.05",
+        "below_tick": "0.01",
+        "cutoff_price": "3.00"
+      }
+    },
+    {
+      "id": "3e6ca3e5-e893-4cb0-a72f-e635306034a6",
+      "chain_id": "8daccdc8-07c5-47dc-9d71-3acb79ca0fad",
+      "chain_symbol": "PANW",
+      "underlying_type": "equity",
+      "expiration_date": "2026-11-06",
+      "sellout_datetime": "2026-11-06T20:30:00+00:00",
+      "strike_price": "400.0000",
+      "type": "call",
+      "state": "active",
+      "tradability": "tradable",
+      "trade_value_multiplier": "100.0000",
+      "min_ticks": {
+        "above_tick": "0.05",
+        "below_tick": "0.01",
+        "cutoff_price": "3.00"
+      }
+    },
+    {
+      "id": "3ab93703-ada2-4a17-a93f-c515225b35ff",
+      "chain_id": "8daccdc8-07c5-47dc-9d71-3acb79ca0fad",
+      "chain_symbol": "PANW",
+      "underlying_type": "equity",
+      "expiration_date": "2026-11-06",
+      "sellout_datetime": "2026-11-06T20:30:00+00:00",
+      "strike_price": "410.0000",
+      "type": "call",
+      "state": "active",
+      "tradability": "tradable",
+      "trade_value_multiplier": "100.0000",
+      "min_ticks": {
+        "above_tick": "0.05",
+        "below_tick": "0.01",
+        "cutoff_price": "3.00"
+      }
+    },
+    {
+      "id": "7c79a0cc-be43-41b1-bc5f-69a4bf1c8b1b",
+      "chain_id": "311fc631-5785-4091-b5a9-d5aa43b14e54",
+      "chain_symbol": "NBIS",
+      "underlying_type": "equity",
+      "expiration_date": "2026-11-06",
+      "sellout_datetime": "2026-11-06T20:30:00+00:00",
+      "strike_price": "230.0000",
+      "type": "call",
+      "state": "active",
+      "tradability": "tradable",
+      "trade_value_multiplier": "100.0000",
+      "min_ticks": {
+        "above_tick": "0.05",
+        "below_tick": "0.01",
+        "cutoff_price": "3.00"
+      }
+    },
+    {
+      "id": "c1d17fc3-9a4c-4f04-be93-1176f0431df8",
+      "chain_id": "311fc631-5785-4091-b5a9-d5aa43b14e54",
+      "chain_symbol": "NBIS",
+      "underlying_type": "equity",
+      "expiration_date": "2026-11-06",
+      "sellout_datetime": "2026-11-06T20:30:00+00:00",
+      "strike_price": "240.0000",
+      "type": "call",
+      "state": "active",
+      "tradability": "tradable",
+      "trade_value_multiplier": "100.0000",
+      "min_ticks": {
+        "above_tick": "0.05",
+        "below_tick": "0.01",
+        "cutoff_price": "3.00"
+      }
+    },
+    {
+      "id": "f4ff677f-a050-4295-8f83-e097ac99f385",
+      "chain_id": "311fc631-5785-4091-b5a9-d5aa43b14e54",
+      "chain_symbol": "NBIS",
+      "underlying_type": "equity",
+      "expiration_date": "2026-11-06",
+      "sellout_datetime": "2026-11-06T20:30:00+00:00",
+      "strike_price": "250.0000",
+      "type": "call",
+      "state": "active",
+      "tradability": "tradable",
+      "trade_value_multiplier": "100.0000",
+      "min_ticks": {
+        "above_tick": "0.05",
+        "below_tick": "0.01",
+        "cutoff_price": "3.00"
+      }
+    },
+    {
+      "id": "363e60c1-8f3d-40b2-9cb1-6f61946aa340",
+      "chain_id": "cdc48475-c79c-4d6f-908f-6a567351fde1",
+      "chain_symbol": "COHR",
+      "underlying_type": "equity",
+      "expiration_date": "2026-11-06",
+      "sellout_datetime": "2026-11-06T20:30:00+00:00",
+      "strike_price": "320.0000",
+      "type": "call",
+      "state": "active",
+      "tradability": "tradable",
+      "trade_value_multiplier": "100.0000",
+      "min_ticks": {
+        "above_tick": "0.10",
+        "below_tick": "0.05",
+        "cutoff_price": "3.00"
+      }
+    },
+    {
+      "id": "e80d761b-af4a-4f07-ad38-169f27647fbd",
+      "chain_id": "cdc48475-c79c-4d6f-908f-6a567351fde1",
+      "chain_symbol": "COHR",
+      "underlying_type": "equity",
+      "expiration_date": "2026-11-06",
+      "sellout_datetime": "2026-11-06T20:30:00+00:00",
+      "strike_price": "330.0000",
+      "type": "call",
+      "state": "active",
+      "tradability": "tradable",
+      "trade_value_multiplier": "100.0000",
+      "min_ticks": {
+        "above_tick": "0.10",
+        "below_tick": "0.05",
+        "cutoff_price": "3.00"
+      }
+    },
+    {
+      "id": "5c183913-a898-4bef-9c8f-16ea668001cf",
+      "chain_id": "cdc48475-c79c-4d6f-908f-6a567351fde1",
+      "chain_symbol": "COHR",
+      "underlying_type": "equity",
+      "expiration_date": "2026-11-06",
+      "sellout_datetime": "2026-11-06T20:30:00+00:00",
+      "strike_price": "340.0000",
+      "type": "call",
+      "state": "active",
+      "tradability": "tradable",
+      "trade_value_multiplier": "100.0000",
+      "min_ticks": {
+        "above_tick": "0.10",
+        "below_tick": "0.05",
+        "cutoff_price": "3.00"
+      }
+    }
+  ],
+  "quote_results": [
+    {
+      "quote": {
+        "instrument_id": "c82b4e6f-dc61-4900-acd2-908390a7d023",
+        "ask_price": "36.100000",
+        "ask_size": 110,
+        "bid_price": "29.500000",
+        "bid_size": 108,
+        "break_even_price": "422.800000",
+        "adjusted_mark_price": "32.800000",
+        "mark_price": "32.800000",
+        "high_fill_rate_buy_price": "34.295000",
+        "low_fill_rate_buy_price": "31.025000",
+        "high_fill_rate_sell_price": "31.304000",
+        "low_fill_rate_sell_price": "34.574000",
+        "previous_close_price": "29.930000",
+        "previous_close_date": "2026-10-01",
+        "implied_volatility": "0.513718",
+        "delta": "0.624203",
+        "gamma": "0.006003",
+        "rho": "0.203569",
+        "theta": "-0.377425",
+        "vega": "0.466635",
+        "open_interest": 24,
+        "volume": 0,
+        "chance_of_profit_long": "0.361061",
+        "chance_of_profit_short": "0.638939",
+        "updated_at": "2026-10-02T19:59:59.543291046Z"
+      },
+      "close": {
+        "instrument_id": "c82b4e6f-dc61-4900-acd2-908390a7d023",
+        "symbol": "PANW",
+        "date": "2026-10-01",
+        "price": "29.93",
+        "interpolated": false,
+        "source": "ddb-market-snapshot"
+      }
+    },
+    {
+      "quote": {
+        "instrument_id": "3e6ca3e5-e893-4cb0-a72f-e635306034a6",
+        "ask_price": "30.600000",
+        "ask_size": 130,
+        "bid_price": "24.050000",
+        "bid_size": 121,
+        "break_even_price": "427.330000",
+        "adjusted_mark_price": "27.330000",
+        "mark_price": "27.325000",
+        "high_fill_rate_buy_price": "28.830000",
+        "low_fill_rate_buy_price": "25.592000",
+        "high_fill_rate_sell_price": "25.819000",
+        "low_fill_rate_sell_price": "29.057000",
+        "previous_close_price": "24.950000",
+        "previous_close_date": "2026-10-01",
+        "implied_volatility": "0.510141",
+        "delta": "0.561551",
+        "gamma": "0.006291",
+        "rho": "0.185159",
+        "theta": "-0.386395",
+        "vega": "0.484757",
+        "open_interest": 22,
+        "volume": 20,
+        "chance_of_profit_long": "0.335223",
+        "chance_of_profit_short": "0.664777",
+        "updated_at": "2026-10-02T19:59:59.954122762Z"
+      },
+      "close": {
+        "instrument_id": "3e6ca3e5-e893-4cb0-a72f-e635306034a6",
+        "symbol": "PANW",
+        "date": "2026-10-01",
+        "price": "24.95",
+        "interpolated": false,
+        "source": "ddb-market-snapshot"
+      }
+    },
+    {
+      "quote": {
+        "instrument_id": "3ab93703-ada2-4a17-a93f-c515225b35ff",
+        "ask_price": "23.700000",
+        "ask_size": 9,
+        "bid_price": "18.550000",
+        "bid_size": 135,
+        "break_even_price": "431.130000",
+        "adjusted_mark_price": "21.130000",
+        "mark_price": "21.125000",
+        "high_fill_rate_buy_price": "22.341000",
+        "low_fill_rate_buy_price": "19.805000",
+        "high_fill_rate_sell_price": "19.908000",
+        "low_fill_rate_sell_price": "22.444000",
+        "previous_close_price": "20.650000",
+        "previous_close_date": "2026-10-01",
+        "implied_volatility": "0.478700",
+        "delta": "0.494418",
+        "gamma": "0.006790",
+        "rho": "0.165754",
+        "theta": "-0.365722",
+        "vega": "0.490560",
+        "open_interest": 7,
+        "volume": 6,
+        "chance_of_profit_long": "0.307048",
+        "chance_of_profit_short": "0.692952",
+        "updated_at": "2026-10-02T19:59:59.952268076Z"
+      },
+      "close": {
+        "instrument_id": "3ab93703-ada2-4a17-a93f-c515225b35ff",
+        "symbol": "PANW",
+        "date": "2026-10-01",
+        "price": "20.65",
+        "interpolated": false,
+        "source": "ddb-market-snapshot"
+      }
+    },
+    {
+      "quote": {
+        "instrument_id": "7c79a0cc-be43-41b1-bc5f-69a4bf1c8b1b",
+        "ask_price": "32.000000",
+        "ask_size": 115,
+        "bid_price": "27.800000",
+        "bid_size": 161,
+        "break_even_price": "259.900000",
+        "adjusted_mark_price": "29.900000",
+        "mark_price": "29.900000",
+        "high_fill_rate_buy_price": "30.968000",
+        "low_fill_rate_buy_price": "28.899000",
+        "high_fill_rate_sell_price": "28.831000",
+        "low_fill_rate_sell_price": "30.900000",
+        "previous_close_price": "24.600000",
+        "previous_close_date": "2026-10-01",
+        "implied_volatility": "0.782534",
+        "delta": "0.641397",
+        "gamma": "0.006447",
+        "rho": "0.116999",
+        "theta": "-0.332852",
+        "vega": "0.276615",
+        "open_interest": 359,
+        "volume": 32,
+        "chance_of_profit_long": "0.348778",
+        "chance_of_profit_short": "0.651222",
+        "updated_at": "2026-10-02T19:59:59.286489446Z"
+      },
+      "close": {
+        "instrument_id": "7c79a0cc-be43-41b1-bc5f-69a4bf1c8b1b",
+        "symbol": "NBIS",
+        "date": "2026-10-01",
+        "price": "24.6",
+        "interpolated": false,
+        "source": "ddb-market-snapshot"
+      }
+    },
+    {
+      "quote": {
+        "instrument_id": "c1d17fc3-9a4c-4f04-be93-1176f0431df8",
+        "ask_price": "27.000000",
+        "ask_size": 60,
+        "bid_price": "23.350000",
+        "bid_size": 70,
+        "break_even_price": "265.180000",
+        "adjusted_mark_price": "25.180000",
+        "mark_price": "25.175000",
+        "high_fill_rate_buy_price": "26.058000",
+        "low_fill_rate_buy_price": "24.265000",
+        "high_fill_rate_sell_price": "24.291000",
+        "low_fill_rate_sell_price": "26.084000",
+        "previous_close_price": "19.800000",
+        "previous_close_date": "2026-10-01",
+        "implied_volatility": "0.796095",
+        "delta": "0.573307",
+        "gamma": "0.006645",
+        "rho": "0.106017",
+        "theta": "-0.353200",
+        "vega": "0.290366",
+        "open_interest": 44,
+        "volume": 46,
+        "chance_of_profit_long": "0.319552",
+        "chance_of_profit_short": "0.680448",
+        "updated_at": "2026-10-02T19:59:59.966694908Z"
+      },
+      "close": {
+        "instrument_id": "c1d17fc3-9a4c-4f04-be93-1176f0431df8",
+        "symbol": "NBIS",
+        "date": "2026-10-01",
+        "price": "19.8",
+        "interpolated": false,
+        "source": "ddb-market-snapshot"
+      }
+    },
+    {
+      "quote": {
+        "instrument_id": "f4ff677f-a050-4295-8f83-e097ac99f385",
+        "ask_price": "21.000000",
+        "ask_size": 13,
+        "bid_price": "19.700000",
+        "bid_size": 28,
+        "break_even_price": "270.350000",
+        "adjusted_mark_price": "20.350000",
+        "mark_price": "20.350000",
+        "high_fill_rate_buy_price": "20.687000",
+        "low_fill_rate_buy_price": "20.048000",
+        "high_fill_rate_sell_price": "20.012000",
+        "low_fill_rate_sell_price": "20.651000",
+        "previous_close_price": "16.480000",
+        "previous_close_date": "2026-10-01",
+        "implied_volatility": "0.782087",
+        "delta": "0.505034",
+        "gamma": "0.006895",
+        "rho": "0.095095",
+        "theta": "-0.351643",
+        "vega": "0.295344",
+        "open_interest": 101,
+        "volume": 46,
+        "chance_of_profit_long": "0.289786",
+        "chance_of_profit_short": "0.710214",
+        "updated_at": "2026-10-02T19:59:59.967949549Z"
+      },
+      "close": {
+        "instrument_id": "f4ff677f-a050-4295-8f83-e097ac99f385",
+        "symbol": "NBIS",
+        "date": "2026-10-01",
+        "price": "16.48",
+        "interpolated": false,
+        "source": "ddb-market-snapshot"
+      }
+    },
+    {
+      "quote": {
+        "instrument_id": "363e60c1-8f3d-40b2-9cb1-6f61946aa340",
+        "ask_price": "42.200000",
+        "ask_size": 44,
+        "bid_price": "38.800000",
+        "bid_size": 79,
+        "break_even_price": "360.500000",
+        "adjusted_mark_price": "40.500000",
+        "mark_price": "40.500000",
+        "high_fill_rate_buy_price": "41.340000",
+        "low_fill_rate_buy_price": "39.666000",
+        "high_fill_rate_sell_price": "39.659000",
+        "low_fill_rate_sell_price": "41.333000",
+        "previous_close_price": "31.050000",
+        "previous_close_date": "2026-10-01",
+        "implied_volatility": "0.765100",
+        "delta": "0.639278",
+        "gamma": "0.004758",
+        "rho": "0.162740",
+        "theta": "-0.453226",
+        "vega": "0.384872",
+        "open_interest": 19,
+        "volume": 7,
+        "chance_of_profit_long": "0.349162",
+        "chance_of_profit_short": "0.650838",
+        "updated_at": "2026-10-02T19:59:59.954455102Z"
+      },
+      "close": {
+        "instrument_id": "363e60c1-8f3d-40b2-9cb1-6f61946aa340",
+        "symbol": "COHR",
+        "date": "2026-10-01",
+        "price": "31.05",
+        "interpolated": false,
+        "source": "ddb-market-snapshot"
+      }
+    },
+    {
+      "quote": {
+        "instrument_id": "e80d761b-af4a-4f07-ad38-169f27647fbd",
+        "ask_price": "37.300000",
+        "ask_size": 34,
+        "bid_price": "32.800000",
+        "bid_size": 75,
+        "break_even_price": "365.050000",
+        "adjusted_mark_price": "35.050000",
+        "mark_price": "35.050000",
+        "high_fill_rate_buy_price": "36.096000",
+        "low_fill_rate_buy_price": "33.875000",
+        "high_fill_rate_sell_price": "34.003000",
+        "low_fill_rate_sell_price": "36.224000",
+        "previous_close_price": "27.200000",
+        "previous_close_date": "2026-10-01",
+        "implied_volatility": "0.759140",
+        "delta": "0.588842",
+        "gamma": "0.004981",
+        "rho": "0.151993",
+        "theta": "-0.465392",
+        "vega": "0.399915",
+        "open_interest": 244,
+        "volume": 2,
+        "chance_of_profit_long": "0.328888",
+        "chance_of_profit_short": "0.671112",
+        "updated_at": "2026-10-02T19:59:59.968334694Z"
+      },
+      "close": {
+        "instrument_id": "e80d761b-af4a-4f07-ad38-169f27647fbd",
+        "symbol": "COHR",
+        "date": "2026-10-01",
+        "price": "27.2",
+        "interpolated": false,
+        "source": "ddb-market-snapshot"
+      }
+    },
+    {
+      "quote": {
+        "instrument_id": "5c183913-a898-4bef-9c8f-16ea668001cf",
+        "ask_price": "33.400000",
+        "ask_size": 113,
+        "bid_price": "29.800000",
+        "bid_size": 40,
+        "break_even_price": "371.600000",
+        "adjusted_mark_price": "31.600000",
+        "mark_price": "31.600000",
+        "high_fill_rate_buy_price": "32.433000",
+        "low_fill_rate_buy_price": "30.655000",
+        "high_fill_rate_sell_price": "30.766000",
+        "low_fill_rate_sell_price": "32.544000",
+        "previous_close_price": "23.050000",
+        "previous_close_date": "2026-10-01",
+        "implied_volatility": "0.789687",
+        "delta": "0.540239",
+        "gamma": "0.004895",
+        "rho": "0.139965",
+        "theta": "-0.491412",
+        "vega": "0.408039",
+        "open_interest": 14,
+        "volume": 18,
+        "chance_of_profit_long": "0.305432",
+        "chance_of_profit_short": "0.694568",
+        "updated_at": "2026-10-02T19:59:59.955115148Z"
+      },
+      "close": {
+        "instrument_id": "5c183913-a898-4bef-9c8f-16ea668001cf",
+        "symbol": "COHR",
+        "date": "2026-10-01",
+        "price": "23.05",
+        "interpolated": false,
+        "source": "ddb-market-snapshot"
+      }
+    }
+  ],
+  "failures": []
+}
+

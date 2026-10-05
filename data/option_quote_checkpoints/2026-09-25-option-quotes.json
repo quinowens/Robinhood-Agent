@@ -1,0 +1,114 @@
+{
+  "source": "robinhood_option_quote_checkpoint",
+  "checkpoint_date": "2026-09-25",
+  "captured_at": "2026-09-25T20:32:51.716509+00:00",
+  "requested_option_ids": [
+    "4be05e33-45f4-41ec-a434-4d7960b47982"
+  ],
+  "option_quotes": {
+    "4be05e33-45f4-41ec-a434-4d7960b47982": {
+      "quote": {
+        "instrument_id": "4be05e33-45f4-41ec-a434-4d7960b47982",
+        "ask_price": "155.000000",
+        "ask_size": 31,
+        "bid_price": "151.550000",
+        "bid_size": 34,
+        "break_even_price": "753.280000",
+        "adjusted_mark_price": "153.280000",
+        "mark_price": "153.275000",
+        "high_fill_rate_buy_price": "154.098000",
+        "low_fill_rate_buy_price": "152.401000",
+        "high_fill_rate_sell_price": "152.451000",
+        "low_fill_rate_sell_price": "154.148000",
+        "previous_close_price": "180.150000",
+        "previous_close_date": "2026-09-24",
+        "implied_volatility": "0.305548",
+        "delta": "0.999180",
+        "gamma": "0.000065",
+        "rho": "0.343691",
+        "theta": "-0.068727",
+        "vega": "0.005059",
+        "open_interest": 7562,
+        "volume": 32,
+        "chance_of_profit_long": "0.487830",
+        "chance_of_profit_short": "0.512170",
+        "updated_at": "2026-09-25T19:59:59.892952656Z"
+      },
+      "close": {
+        "instrument_id": "4be05e33-45f4-41ec-a434-4d7960b47982",
+        "symbol": "META",
+        "date": "2026-09-24",
+        "price": "180.15",
+        "interpolated": false,
+        "source": "ddb-market-snapshot"
+      }
+    }
+  },
+  "missing_option_ids": [],
+  "due_manifest": {
+    "capture_instruction": "Call get_option_quotes for option_ids, save the raw response with checkpoint_date/source, then rerun update_option_outcomes.py with that quote snapshot.",
+    "checkpoint_date": "2026-09-25",
+    "count": 1,
+    "due": [
+      {
+        "contract": "META 2026-10-16 600.0C",
+        "entry_option_mid": 31.55,
+        "horizon": "30D",
+        "option_id": "4be05e33-45f4-41ec-a434-4d7960b47982",
+        "path": "data/option_signal_outcomes/2026-08-13-daily-scanner-dry-run.jsonl",
+        "record_id": "opoutcome-2026-08-13-META-20261016-600C",
+        "signal_date": "2026-08-13",
+        "signal_trading_session": "2026-08-13",
+        "target_observation_date": "2026-09-25",
+        "underlying": "META"
+      }
+    ],
+    "option_ids": [
+      "4be05e33-45f4-41ec-a434-4d7960b47982"
+    ],
+    "source": "prospective_option_checkpoint_request"
+  },
+  "raw_response": {
+    "data": {
+      "results": [
+        {
+          "quote": {
+            "instrument_id": "4be05e33-45f4-41ec-a434-4d7960b47982",
+            "ask_price": "155.000000",
+            "ask_size": 31,
+            "bid_price": "151.550000",
+            "bid_size": 34,
+            "break_even_price": "753.280000",
+            "adjusted_mark_price": "153.280000",
+            "mark_price": "153.275000",
+            "high_fill_rate_buy_price": "154.098000",
+            "low_fill_rate_buy_price": "152.401000",
+            "high_fill_rate_sell_price": "152.451000",
+            "low_fill_rate_sell_price": "154.148000",
+            "previous_close_price": "180.150000",
+            "previous_close_date": "2026-09-24",
+            "implied_volatility": "0.305548",
+            "delta": "0.999180",
+            "gamma": "0.000065",
+            "rho": "0.343691",
+            "theta": "-0.068727",
+            "vega": "0.005059",
+            "open_interest": 7562,
+            "volume": 32,
+            "chance_of_profit_long": "0.487830",
+            "chance_of_profit_short": "0.512170",
+            "updated_at": "2026-09-25T19:59:59.892952656Z"
+          },
+          "close": {
+            "instrument_id": "4be05e33-45f4-41ec-a434-4d7960b47982",
+            "symbol": "META",
+            "date": "2026-09-24",
+            "price": "180.15",
+            "interpolated": false,
+            "source": "ddb-market-snapshot"
+          }
+        }
+      ]
+    }
+  }
+}

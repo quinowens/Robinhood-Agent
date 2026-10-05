@@ -1,0 +1,138 @@
+{
+  "run_id": "2026-10-02-daily-scanner-dry-run",
+  "pipeline_version": "2.0",
+  "strategy_version": "2.0.2",
+  "run_trigger": "scheduled_automation",
+  "session_context": "post_regular_session_2026-10-02_with_late_local_completion",
+  "intended_workflow": "daily_options_primary_scanner_dry_run",
+  "status": "DEGRADED_COMPLETE",
+  "started_at": "2026-10-02T23:09:54Z",
+  "first_tool_call_at": "2026-10-03T02:57:11Z",
+  "last_tool_call_at": "2026-10-05T03:37:25Z",
+  "completed_at": "2026-10-05T03:37:25Z",
+  "operating_mode": "research_only_proposal_only_shadow_trading",
+  "live_order_actions": 0,
+  "account_snapshot": {
+    "account_snapshot_id": "acct-8691-2026-10-02-close",
+    "account_masked": "••••8691",
+    "captured_at": "2026-10-03T02:57:15.632Z",
+    "account_value": 100,
+    "cash": 100,
+    "buying_power": 100,
+    "option_buying_power": 100,
+    "option_level": "option_level_2",
+    "equity_positions": 0,
+    "option_positions": 0,
+    "open_equity_orders": 0,
+    "open_option_orders": 0,
+    "realized_pnl_3month": 0,
+    "closing_trades_3month": 0
+  },
+  "market_context": {
+    "as_of": "2026-10-02",
+    "SPX": 7722.72,
+    "NDX": 30807.9313,
+    "VIX": 15.31,
+    "SPY_close": 769.64,
+    "QQQ_close": 749.58,
+    "market_health_score": 65,
+    "regime": "CONSTRUCTIVE",
+    "decision_usable": true
+  },
+  "scanners": [
+    {
+      "name": "Momentum Candidates",
+      "expected_scan_id": "26cdeb14-da13-493f-b0c6-783468971a16",
+      "success": true,
+      "total_items": 396,
+      "rows_returned": 200,
+      "sorted_by": "% Change desc",
+      "captured_at": "2026-10-03T02:57:55.959Z",
+      "target_session_match": true
+    },
+    {
+      "name": "Options Activity Radar",
+      "expected_scan_id": "7068db65-2a47-470c-bde9-94d66f36b806",
+      "success": true,
+      "total_items": 74,
+      "rows_returned": 74,
+      "sorted_by": "Implied volatility desc",
+      "captured_at": "2026-10-03T02:57:55.959Z",
+      "target_session_match": true
+    },
+    {
+      "name": "Earnings Risk Radar",
+      "expected_scan_id": "737924f1-e94f-4ad4-ba98-6c12fcaafaa9",
+      "success": true,
+      "total_items": 41,
+      "rows_returned": 41,
+      "sorted_by": "Earnings date desc",
+      "captured_at": "2026-10-03T02:57:55.959Z",
+      "target_session_match": true
+    }
+  ],
+  "option_checkpoint": {
+    "as_of": "2026-10-02",
+    "due": 1,
+    "captured": 1,
+    "updated": 1,
+    "missed": 0,
+    "option_ids": [
+      "952f1d8b-7f5c-4a6b-82e9-a74eff0b1af5"
+    ],
+    "status": "SUCCESS",
+    "correction_applied": "Replaced provisional zero-volume equity and benchmark bars with settled regular-session bars.",
+    "result": {
+      "record_id": "optoutcome-2026-09-03-MSFT-20261016-510C",
+      "horizon": "20D",
+      "option_return": -0.213624,
+      "underlying_return": 0.014606,
+      "outcome_classification": "UNDERLYING_WIN_OPTION_LOSS"
+    }
+  },
+  "raw_scanner_rows": 315,
+  "deduplicated_visible_symbols": 295,
+  "named_terminal_records": 10,
+  "terminal_coverage_pct": 3.39,
+  "new_option_setups": 3,
+  "new_option_shadow_trades": 0,
+  "underlying_outcome_tracking_records": 10,
+  "final_decision": "NO_TRADE_NO_QUALIFIED_OPTION_SETUP",
+  "state_file_decision": "UNCHANGED",
+  "validation": {
+    "status": "PASS_WITH_WARNINGS",
+    "repository_validation": "PASSED",
+    "complete_qualified_chains": 14,
+    "errors": 0,
+    "orphaned_outcome_records": 0,
+    "orphaned_shadow_records": 0,
+    "overdue_outcome_windows": 24,
+    "update_failures": 0,
+    "unaccounted_scheduled_runs": 4
+  },
+  "limitations": [
+    "Momentum results were capped at 200 of 396 matches.",
+    "Only 10 of 295 visible unique symbols received direct enrichment and named terminal records; the run is below the 90% refresh-quality completeness gate.",
+    "Full financial statements, breadth, formal sector participation, and option historical bars were unavailable.",
+    "The official Current Universe was last refreshed on 2026-08-03 and remains stale pending a governed refresh.",
+    "The local automation completed after the target date, but scanner, quote, account, and option checkpoint decision evidence was captured for the October 2 post-close session."
+  ],
+  "evidence": {
+    "raw_scanner_snapshot": "data/raw_scanner_snapshots/2026-10-02-daily-scanner-dry-run.jsonl",
+    "research_enrichment": "data/outcome_update_snapshots/2026-10-02-daily-research-enrichment.json",
+    "long_history": "data/outcome_update_snapshots/2026-10-02-daily-research-long-history.json",
+    "option_research": "data/outcome_update_snapshots/2026-10-02-option-research-finalists.json",
+    "option_checkpoint": "data/option_quote_checkpoints/2026-10-02-option-quotes.json",
+    "outcome_snapshot": "data/outcome_update_snapshots/2026-10-02-equity-history-targets.json",
+    "research_records": "data/research_records/2026-10-02-daily-scanner-dry-run.jsonl",
+    "signal_outcomes": "data/signal_outcomes/2026-10-02-daily-scanner-dry-run.jsonl",
+    "option_setups": "data/options_setup_records/2026-10-02-daily-scanner-dry-run.jsonl",
+    "market_regime": "data/market_regime/2026-10-02-daily-scanner-dry-run.json",
+    "outcome_analytics": "data/validation_reports/2026-10-02-outcome-analytics.json",
+    "strategy_diagnostics": "data/validation_reports/2026-10-02-strategy-diagnostics.json",
+    "integrity_audit": "data/validation_reports/2026-10-02-integrity-audit.json",
+    "validation_output": "data/validation_reports/2026-10-02-validation-output.txt",
+    "report": "research_logs/2026-10-02-daily-scanner-dry-run.md"
+  }
+}
+

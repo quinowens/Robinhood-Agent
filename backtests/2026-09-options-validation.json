@@ -1,0 +1,289 @@
+{
+  "schema_version": "2.0.2",
+  "run_id": "2026-10-03-monthly-universe-review",
+  "review_period": "2026-09",
+  "market_data_as_of": "2026-10-02",
+  "operating_mode": "research_only_proposal_only_shadow_trading",
+  "allowed_structures": [
+    "LONG_CALL",
+    "LONG_PUT"
+  ],
+  "disallowed_structures": [
+    "0DTE",
+    "NAKED_OPTION_SELLING",
+    "CASH_SECURED_PUT",
+    "COVERED_CALL",
+    "MULTI_LEG_SPREAD",
+    "MARGIN_DRIVEN_SELLING",
+    "EARNINGS_LOTTERY"
+  ],
+  "account_snapshot": {
+    "account_last4": "8691",
+    "account_type": "cash",
+    "broker_option_level": "option_level_2",
+    "account_value": 100,
+    "cash": 100,
+    "option_buying_power": 100,
+    "equity_positions": 0,
+    "option_positions": 0,
+    "open_equity_orders": 0,
+    "open_option_orders": 0,
+    "current_open_options_premium_risk": 0
+  },
+  "current_finalist_reviews": [
+    {
+      "underlying": "RBRK",
+      "directional_thesis": "bullish",
+      "underlying_score": 80.16,
+      "underlying_completeness": 94,
+      "underlying_confidence": 95,
+      "contract_rank": 1,
+      "selection_reason": "Best reviewed RBRK call, but volume 7 and 4.11% midpoint spread do not clear execution quality.",
+      "option_id": "02c8258a-30c3-424f-b293-bd356a22e4e5",
+      "option_type": "call",
+      "side": "buy",
+      "position_effect": "open",
+      "expiration": "2026-11-20",
+      "dte": 49,
+      "strike": 110,
+      "bid": 14.3,
+      "ask": 14.9,
+      "midpoint": 14.6,
+      "spread_pct_mid": 4.11,
+      "delta": 0.688627,
+      "implied_volatility": 0.575259,
+      "open_interest": 150,
+      "volume": 7,
+      "breakeven": 124.6,
+      "underlying_price": 118.58,
+      "contract_premium_dollars": 1460,
+      "options_setup_score": 80,
+      "options_data_completeness": 96,
+      "options_decision_confidence": 76,
+      "component_scores": {
+        "contract_liquidity_execution": 17,
+        "expiration_thesis_fit": 19,
+        "iv_premium_reasonableness": 13,
+        "delta_strike_breakeven_fit": 14,
+        "catalyst_event_compatibility": 10,
+        "defined_exit_reward_risk": 7
+      },
+      "setup_quality_status": "WATCH",
+      "account_fit_status": "FAIL",
+      "account_fit_reasons": [
+        "one_contract_premium_1460.00_exceeds_100_buying_power",
+        "planned_trade_risk_1460.00_exceeds_1pct_account_cap",
+        "small_account_validation_mode",
+        "no_cheap_far_otm_substitution"
+      ],
+      "premium_allocation_dollars": 1460,
+      "max_contractual_loss_dollars": 1460,
+      "planned_trade_risk_dollars": 1460,
+      "final_decision": "WATCH",
+      "primary_blocking_rule": "option_execution_quality",
+      "secondary_blocking_rules": [
+        "low_contract_volume",
+        "moderate_spread",
+        "account_fit_premium_risk"
+      ],
+      "quote_updated_at": "2026-10-02T19:59:53.924017765Z"
+    },
+    {
+      "underlying": "U",
+      "directional_thesis": "bullish",
+      "underlying_score": 77.42,
+      "underlying_completeness": 94,
+      "underlying_confidence": 95,
+      "contract_rank": 1,
+      "selection_reason": "Deep open interest and volume, but 9.27% midpoint spread and 68.87% IV keep the setup at WATCH.",
+      "option_id": "ed258370-5bba-419a-8a04-ee9594ad061a",
+      "option_type": "call",
+      "side": "buy",
+      "position_effect": "open",
+      "expiration": "2026-11-20",
+      "dte": 49,
+      "strike": 45,
+      "bid": 3.6,
+      "ask": 3.95,
+      "midpoint": 3.775,
+      "spread_pct_mid": 9.27,
+      "delta": 0.506861,
+      "implied_volatility": 0.688657,
+      "open_interest": 3629,
+      "volume": 509,
+      "breakeven": 48.78,
+      "underlying_price": 43.61,
+      "contract_premium_dollars": 377.5,
+      "options_setup_score": 75,
+      "options_data_completeness": 96,
+      "options_decision_confidence": 71,
+      "component_scores": {
+        "contract_liquidity_execution": 16,
+        "expiration_thesis_fit": 19,
+        "iv_premium_reasonableness": 10,
+        "delta_strike_breakeven_fit": 14,
+        "catalyst_event_compatibility": 10,
+        "defined_exit_reward_risk": 6
+      },
+      "setup_quality_status": "WATCH",
+      "account_fit_status": "FAIL",
+      "account_fit_reasons": [
+        "one_contract_premium_377.50_exceeds_100_buying_power",
+        "planned_trade_risk_377.50_exceeds_1pct_account_cap",
+        "small_account_validation_mode",
+        "no_cheap_far_otm_substitution"
+      ],
+      "premium_allocation_dollars": 377.5,
+      "max_contractual_loss_dollars": 377.5,
+      "planned_trade_risk_dollars": 377.5,
+      "final_decision": "WATCH",
+      "primary_blocking_rule": "option_execution_quality",
+      "secondary_blocking_rules": [
+        "wide_bid_ask_spread",
+        "elevated_implied_volatility",
+        "account_fit_premium_risk"
+      ],
+      "quote_updated_at": "2026-10-02T19:59:59.854850867Z"
+    },
+    {
+      "underlying": "TWLO",
+      "directional_thesis": "bullish",
+      "underlying_score": 76.45,
+      "underlying_completeness": 94,
+      "underlying_confidence": 95,
+      "contract_rank": 1,
+      "selection_reason": "77-DTE horizon fit is good, but 7.64% midpoint spread, 69.15% IV, and low daily volume keep the setup at WATCH.",
+      "option_id": "75cb6115-0522-45c7-9351-c789822a72a3",
+      "option_type": "call",
+      "side": "buy",
+      "position_effect": "open",
+      "expiration": "2026-12-18",
+      "dte": 77,
+      "strike": 300,
+      "bid": 34,
+      "ask": 36.7,
+      "midpoint": 35.35,
+      "spread_pct_mid": 7.64,
+      "delta": 0.549673,
+      "implied_volatility": 0.691488,
+      "open_interest": 310,
+      "volume": 11,
+      "breakeven": 335.35,
+      "underlying_price": 294.58,
+      "contract_premium_dollars": 3535,
+      "options_setup_score": 73,
+      "options_data_completeness": 96,
+      "options_decision_confidence": 69,
+      "component_scores": {
+        "contract_liquidity_execution": 14,
+        "expiration_thesis_fit": 20,
+        "iv_premium_reasonableness": 9,
+        "delta_strike_breakeven_fit": 14,
+        "catalyst_event_compatibility": 10,
+        "defined_exit_reward_risk": 6
+      },
+      "setup_quality_status": "WATCH",
+      "account_fit_status": "FAIL",
+      "account_fit_reasons": [
+        "one_contract_premium_3535.00_exceeds_100_buying_power",
+        "planned_trade_risk_3535.00_exceeds_1pct_account_cap",
+        "small_account_validation_mode",
+        "no_cheap_far_otm_substitution"
+      ],
+      "premium_allocation_dollars": 3535,
+      "max_contractual_loss_dollars": 3535,
+      "planned_trade_risk_dollars": 3535,
+      "final_decision": "WATCH",
+      "primary_blocking_rule": "option_execution_quality",
+      "secondary_blocking_rules": [
+        "wide_bid_ask_spread",
+        "elevated_implied_volatility",
+        "account_fit_premium_risk"
+      ],
+      "quote_updated_at": "2026-10-02T19:59:59.982016034Z"
+    }
+  ],
+  "current_distribution": {
+    "reviewed": 3,
+    "calls": 3,
+    "puts": 0,
+    "dte_buckets": {
+      "46_60": 2,
+      "61_90": 1
+    },
+    "final_decisions": {
+      "WATCH": 3
+    },
+    "setup_quality": {
+      "WATCH": 3
+    },
+    "account_fit": {
+      "FAIL": 3
+    },
+    "primary_blocking_rules": {
+      "option_execution_quality": 3
+    }
+  },
+  "september_evidence": {
+    "setup_records": 18,
+    "qualified_setups": 7,
+    "shadow_only_qualified": 8,
+    "watch": 10,
+    "all_account_fit_failures": 18,
+    "qualified_account_fit_failure_count": 7,
+    "preferred_contract_premium_median": 1832.5,
+    "preferred_contract_premium_p75": 2707.5,
+    "current_rule_account_size_needed": {
+      "at_10pct_premium_cap": {
+        "median": 18325,
+        "p75": 27075
+      },
+      "at_1pct_planned_risk_cap": {
+        "median": 183250,
+        "p75": 270750
+      }
+    },
+    "outcome_health": {
+      "canonical_qualified_setups": 14,
+      "one_day": {
+        "sample": 8,
+        "median_option_return": -0.010017,
+        "median_underlying_return": 0.002554,
+        "option_win_rate": 0.5
+      },
+      "five_day": {
+        "sample": 8,
+        "median_option_return": -0.228519,
+        "median_underlying_return": -0.01171,
+        "option_win_rate": 0.25
+      },
+      "ten_day": {
+        "sample": 8,
+        "median_option_return": -0.392095,
+        "median_underlying_return": -0.013662,
+        "option_win_rate": 0.375
+      },
+      "twenty_day": {
+        "sample": 3,
+        "median_option_return": -0.213624,
+        "median_underlying_return": 0.014606,
+        "option_win_rate": 0
+      },
+      "thirty_day": {
+        "sample": 4,
+        "median_option_return": -1,
+        "median_underlying_return": 0.139408,
+        "option_win_rate": 0.25
+      },
+      "thirty_day_classifications": {
+        "UNDERLYING_WIN_OPTION_LOSS": 3,
+        "UNDERLYING_WIN_OPTION_WIN": 1
+      }
+    },
+    "interpretation": "Directional-only evidence. All canonical qualified setups are calls; no put sample exists. The clearest signal is that contract selection and expiration can destroy value even when the underlying thesis is right."
+  },
+  "decision": "NO_NEW_PM_PROPOSAL_OR_SHADOW_SETUP",
+  "threshold_changes_applied": false,
+  "execution_statement": "No live options order was reviewed, placed, modified, or canceled."
+}
+

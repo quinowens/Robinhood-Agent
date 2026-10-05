@@ -1,0 +1,89 @@
+{
+  "run_id": "2026-09-28-daily-scanner-dry-run",
+  "pipeline_version": "2.0",
+  "strategy_version": "2.0.1",
+  "run_trigger": "scheduled_automation",
+  "session_context": "local_codex_automation",
+  "intended_workflow": "daily_options_primary_scanner_dry_run",
+  "status": "DEGRADED_COMPLETE",
+  "started_at": "2026-09-28T20:31:26Z",
+  "first_tool_call_at": "2026-09-28T20:31:26Z",
+  "last_tool_call_at": "2026-09-28T20:42:05Z",
+  "completed_at": "2026-09-28T20:42:05Z",
+  "operating_mode": "research_only_proposal_only_shadow_trading",
+  "live_order_actions": 0,
+  "account_snapshot": {
+    "account_snapshot_id": "acct-8691-2026-09-28T20:33Z",
+    "account_masked": "••••8691",
+    "account_value": 100,
+    "cash": 100,
+    "buying_power": 100,
+    "option_buying_power": 100,
+    "option_level": "option_level_2",
+    "equity_positions": 0,
+    "option_positions": 0,
+    "open_equity_orders": 0,
+    "open_option_orders": 0,
+    "realized_pnl_3month": 0
+  },
+  "market_context": {
+    "SPX": 7683.69,
+    "NDX": 30276.81,
+    "VIX": 16.07,
+    "market_health_score": 70,
+    "regime": "constructive_selective"
+  },
+  "scanners": [
+    {"name": "Momentum Candidates", "expected_scan_id": "26cdeb14-da13-493f-b0c6-783468971a16", "success": true, "total_items": 395, "rows_returned": 200, "sorted_by": "% Change desc"},
+    {"name": "Options Activity Radar", "expected_scan_id": "7068db65-2a47-470c-bde9-94d66f36b806", "success": true, "total_items": 115, "rows_returned": 115, "sorted_by": "Implied volatility desc"},
+    {"name": "Earnings Risk Radar", "expected_scan_id": "737924f1-e94f-4ad4-ba98-6c12fcaafaa9", "success": true, "total_items": 210, "rows_returned": 200, "sorted_by": "Earnings date desc"}
+  ],
+  "option_checkpoint": {
+    "as_of": "2026-09-28",
+    "due": 0,
+    "captured": 0,
+    "updated": 0,
+    "missed": 0,
+    "option_ids": [],
+    "status": "SUCCESSFUL_NO_OP"
+  },
+  "raw_scanner_rows": 515,
+  "deduplicated_visible_symbols": 502,
+  "named_terminal_records": 15,
+  "visible_terminal_coverage_pct": 2.99,
+  "new_option_setups": 2,
+  "new_option_setup_classification": "WATCH",
+  "new_option_shadow_trades": 0,
+  "underlying_outcome_tracking_records": 15,
+  "existing_signal_groups_preserved": ["siggrp-2026-09-15-CRWD-bullish"],
+  "final_decision": "NO_TRADE",
+  "state_file_decision": "UNCHANGED",
+  "validation": {
+    "status": "PASS_WITH_WARNINGS",
+    "errors": 0,
+    "orphaned_outcome_records": 0,
+    "orphaned_shadow_records": 0,
+    "overdue_permanently_unavailable_windows": 28,
+    "update_failures": 0,
+    "unaccounted_scheduled_runs": 4
+  },
+  "limitations": [
+    "Full financial statements, option historicals, and individual P&L trade history are not exposed by the current connector.",
+    "Momentum scan returned 200 visible rows for 395 matches; Earnings Risk returned 200 for 210.",
+    "Most September 28 daily bars were not yet published; the final regular-hours quote was used for signal prices.",
+    "Only the progressive finalist set received direct enrichment.",
+    "The official Current Universe was last refreshed on 2026-08-03 and remains stale pending a governed monthly refresh."
+  ],
+  "evidence": {
+    "raw_scanner_snapshot": "data/raw_scanner_snapshots/2026-09-28-daily-scanner-dry-run.jsonl",
+    "market_regime": "data/market_regime/2026-09-28-daily-scanner-dry-run.json",
+    "research_records": "data/research_records/2026-09-28-daily-scanner-dry-run.jsonl",
+    "signal_outcomes": "data/signal_outcomes/2026-09-28-daily-scanner-dry-run.jsonl",
+    "option_setup_records": "data/options_setup_records/2026-09-28-daily-scanner-dry-run.jsonl",
+    "outcome_analytics": "data/validation_reports/2026-09-28-outcome-analytics.json",
+    "strategy_diagnostics": "data/validation_reports/2026-09-28-strategy-diagnostics.json",
+    "integrity_audit": "data/validation_reports/2026-09-28-integrity-audit.json",
+    "validation_output": "data/validation_reports/2026-09-28-validation-output.txt",
+    "report": "research_logs/2026-09-28-daily-scanner-dry-run.md"
+  }
+}

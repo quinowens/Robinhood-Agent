@@ -1,0 +1,48 @@
+{
+  "as_of_date": "2026-09-29",
+  "as_of_time": "2026-09-29T20:34:00Z",
+  "market_health_score": 65,
+  "classification": "Constructive",
+  "components": {
+    "spy_trend": 20,
+    "qqq_trend": 20,
+    "breadth": 0,
+    "volatility": 15,
+    "sector_participation": 10
+  },
+  "raw_inputs": {
+    "spy_close": 765.61,
+    "spy_20_sma": 765.1635,
+    "spy_50_sma": 762.0122,
+    "spy_200_sma": 730.4425,
+    "spy_above_50_sma": true,
+    "spy_above_200_sma": true,
+    "spy_50_sma_slope_positive": true,
+    "qqq_close": 736.53,
+    "qqq_20_sma": 721.8795,
+    "qqq_50_sma": 713.4776,
+    "qqq_200_sma": 684.6604,
+    "qqq_above_50_sma": true,
+    "qqq_above_200_sma": true,
+    "qqq_50_sma_slope_positive": true,
+    "spx": 7670.84,
+    "ndx": 30339.3329,
+    "advance_decline_signal": null,
+    "percent_above_50_sma": null,
+    "vix_level": 16.04,
+    "vix_trend": null,
+    "leading_sector_count": null
+  },
+  "risk_scaling": {
+    "max_new_entry_risk_pct": 1,
+    "tier_1_position_cap_pct": 15,
+    "tier_2_position_cap_pct": 10,
+    "new_entries_allowed": true
+  },
+  "missing_data": [
+    "breadth",
+    "vix_trend",
+    "formal_sector_participation_count"
+  ],
+  "notes": "Both benchmark proxies are above 20/50/200-day averages with positive 50-day slopes. VIX is moderate at 16.04. Missing breadth and formal sector-participation data cap the regime at Constructive."
+}

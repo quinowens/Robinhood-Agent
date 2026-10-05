@@ -1,0 +1,220 @@
+{
+  "schema_version": "2.0.2",
+  "run_id": "2026-10-03-monthly-universe-review",
+  "workflow": "monthly_underlying_options_review",
+  "review_period": "2026-09",
+  "run_trigger": "scheduled_monthly_automation",
+  "session_context": "local Codex automation; research-only / proposal-only / shadow-trading; target session 2026-10-03; latest completed market session 2026-10-02",
+  "intended_workflow": "official broad Approved Underlying Universe refresh plus separate v2.0 options-primary validation",
+  "strategy_version": "2.0.2",
+  "operating_mode": "research_only_proposal_only_shadow_trading",
+  "started_at": "2026-10-03T14:00:00Z",
+  "first_tool_call_at": "2026-10-03T14:00:30Z",
+  "last_tool_call_at": "2026-10-05T03:49:12Z",
+  "completed_at": "2026-10-05T03:49:12Z",
+  "status": "COMPLETED",
+  "degradation_categories": [
+    "scanner_archive_cap",
+    "financial_statements_unavailable",
+    "option_historicals_unavailable",
+    "outcome_history_permanent_source_limitations",
+    "scheduled_run_ledger_gaps"
+  ],
+  "decision_critical_degradation": false,
+  "account_preflight": {
+    "account_last4": "8691",
+    "account_type": "cash",
+    "broker_options_level": "option_level_2",
+    "strategy_enabled_structures": [
+      "LONG_CALL",
+      "LONG_PUT"
+    ],
+    "account_value": 100,
+    "cash": 100,
+    "buying_power": 100,
+    "option_buying_power": 100,
+    "equity_positions": 0,
+    "option_positions": 0,
+    "open_equity_orders": 0,
+    "open_option_orders": 0,
+    "current_open_options_premium_risk": 0,
+    "realized_pnl_period": "2026-09-01..2026-10-03",
+    "realized_pnl": 0,
+    "closing_trades": 0
+  },
+  "scanner_resolution": {
+    "configured": 3,
+    "matched": 3,
+    "mismatches": 0,
+    "scans": [
+      {
+        "name": "Momentum Candidates",
+        "id": "26cdeb14-da13-493f-b0c6-783468971a16",
+        "total_items": 396,
+        "returned_rows": 200,
+        "status": "SUCCESS_CAPPED"
+      },
+      {
+        "name": "Options Activity Radar",
+        "id": "7068db65-2a47-470c-bde9-94d66f36b806",
+        "total_items": 56,
+        "returned_rows": 56,
+        "status": "SUCCESS"
+      },
+      {
+        "name": "Earnings Risk Radar",
+        "id": "737924f1-e94f-4ad4-ba98-6c12fcaafaa9",
+        "total_items": 181,
+        "returned_rows": 181,
+        "status": "SUCCESS"
+      }
+    ],
+    "deduplicated_visible_scanner_symbols": 423
+  },
+  "broad_seed": {
+    "count": 445,
+    "target_min": 300,
+    "target_max": 500,
+    "within_target": true,
+    "terminal_counts": {
+      "scored": 32,
+      "permanent_reject": 180,
+      "explicitly_incomplete": 233,
+      "total": 445
+    },
+    "terminal_coverage_pct": 100
+  },
+  "progressive_enrichment": {
+    "serious_candidates": 32,
+    "tradability_verified": 32,
+    "quotes_retrieved": 32,
+    "fundamentals_retrieved": 32,
+    "histories_retrieved": 32,
+    "direct_earnings_results": 32,
+    "benchmark_histories": [
+      "SPY",
+      "QQQ"
+    ],
+    "full_reported_financial_statements": 0
+  },
+  "score_distribution": {
+    "highest": 80.1613,
+    "percentile_95": 76.8871,
+    "percentile_90": 71.8387,
+    "median": 56.6129,
+    "tier_1_count": 0,
+    "tier_2_count": 3,
+    "watchlist_count": 5,
+    "calibration_warning": "Second official refresh below Tier 1 threshold; evidence insufficient for a threshold change."
+  },
+  "completeness_gate": {
+    "run_manifest_exists": true,
+    "terminal_coverage_pct": 100,
+    "terminal_coverage_requirement_pct": 90,
+    "tier_1_tier_2_critical_data_verified": true,
+    "benchmark_histories_available": true,
+    "failures_retries_missing_fields_recorded": true,
+    "result": "PASS"
+  },
+  "official_universe_decision": {
+    "published": true,
+    "tier_1": [],
+    "tier_2": [
+      "RBRK",
+      "U",
+      "TWLO"
+    ],
+    "watchlist": [
+      "CRWD",
+      "P",
+      "OKTA",
+      "LITE",
+      "ILMN"
+    ],
+    "temporary_blocks": [],
+    "prior_universe_archived": "backtests/2026-09-universe.md"
+  },
+  "option_checkpoint": {
+    "checkpoint_date": "2026-10-03",
+    "due": 0,
+    "captured": 0,
+    "updated": 0,
+    "missed": 0,
+    "status": "SUCCESS_NO_OP",
+    "missed_prospective_during_review_period": [
+      {
+        "date": "2026-09-14",
+        "count": 1,
+        "detail": "NVDA 2026-10-16 230C 5D checkpoint due but not captured."
+      },
+      {
+        "date": "2026-09-21",
+        "count": 1,
+        "detail": "Legacy synthetic NVDA 2026-09-18 230C identifier returned no quote; no later backfill used."
+      }
+    ],
+    "permanent_historical_source_limitations": 24,
+    "unaccounted_scheduled_runs": 4
+  },
+  "options_review": {
+    "qualified_underlyings_reviewed": [
+      "RBRK",
+      "U",
+      "TWLO"
+    ],
+    "option_contracts_quoted": 18,
+    "selected_contracts": 3,
+    "pm_proposal": 0,
+    "shadow_only_qualified": 0,
+    "watch": 3,
+    "puts_reviewed": 0,
+    "live_order_reviews": 0,
+    "live_orders_placed": 0,
+    "threshold_changes_applied": false
+  },
+  "tool_coverage": {
+    "available": [
+      "get_accounts",
+      "get_portfolio",
+      "get_equity_positions",
+      "get_equity_orders",
+      "get_option_positions",
+      "get_option_orders",
+      "get_realized_pnl",
+      "get_scans",
+      "run_scan",
+      "get_equity_quotes",
+      "get_equity_tradability",
+      "get_equity_fundamentals",
+      "get_equity_historicals",
+      "get_earnings_calendar",
+      "get_earnings_results",
+      "get_indexes",
+      "get_index_quotes",
+      "get_option_chains",
+      "get_option_instruments",
+      "get_option_quotes"
+    ],
+    "unavailable": [
+      "get_financials",
+      "get_option_historicals",
+      "get_pnl_trade_history",
+      "get_equity_technical_indicators",
+      "get_option_level_upgrade_info"
+    ]
+  },
+  "artifacts": {
+    "monthly_review": "backtests/2026-09-review.md",
+    "seed_manifest": "backtests/2026-09-seed-manifest.json",
+    "scanner_raw": "backtests/2026-09-scanner-raw.json",
+    "component_scores": "backtests/2026-09-component-scores.json",
+    "run_manifest": "backtests/2026-09-run-manifest.json",
+    "archived_universe": "backtests/2026-09-universe.md",
+    "options_validation": "backtests/2026-09-options-validation.json",
+    "monthly_outcomes": "data/validation_reports/2026-09-monthly-outcomes.json",
+    "strategy_diagnostics": "data/validation_reports/2026-09-monthly-strategy-diagnostics.json",
+    "integrity_audit": "data/validation_reports/2026-10-03-monthly-integrity-audit.json",
+    "repository_validation": "data/validation_reports/2026-10-03-monthly-validation-output.txt"
+  },
+  "execution_statement": "No live orders were placed, modified, canceled, reviewed, or submitted."
+}
