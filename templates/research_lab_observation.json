@@ -1,0 +1,21 @@
+{
+  "lab_id": null,
+  "session": null,
+  "captured_at": null,
+  "source": null,
+  "raw_source_path": null,
+  "underlying_price": null,
+  "underlying_quote_at": null,
+  "thesis_valid": null,
+  "thesis_evidence": null,
+  "quotes": {
+    "REPLACE_WITH_OPTION_ID": {
+      "bid": null,
+      "ask": null,
+      "quote_at": null,
+      "implied_volatility": null,
+      "theta": null,
+      "vega": null
+    }
+  }
+}

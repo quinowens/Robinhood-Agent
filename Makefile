@@ -46,3 +46,11 @@ migrate-v202-ids:
 
 migrate-option-outcome-component-schema:
 	$(PYTHON) scripts/migrate_option_outcome_component_schema.py $(if $(DRY_RUN),--dry-run,)
+
+.PHONY: research-lab-due research-lab-report
+research-lab-due:
+	@test -n "$(AS_OF)" || (echo "Usage: make research-lab-due AS_OF=YYYY-MM-DD" && exit 2)
+	$(PYTHON) scripts/strategy_research_lab.py due --as-of "$(AS_OF)"
+
+research-lab-report:
+	$(PYTHON) scripts/strategy_research_lab.py report $(if $(AS_OF),--as-of "$(AS_OF)",) $(if $(OUTPUT),--output "$(OUTPUT)",)

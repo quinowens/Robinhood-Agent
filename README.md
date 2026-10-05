@@ -247,9 +247,13 @@ Scheduled daily, weekly, and monthly scan behavior is documented in `docs/SCHEDU
 - Options setup, shadow-trade, and outcome records
 - Account fit separated from setup quality
 
-### v2.1
+### Parallel Strategy Research Lab
 
-- Call debit spreads and put debit spreads, after validation
+See [the prospective lab protocol](docs/STRATEGY_RESEARCH_LAB.md) for frozen contract variants, daily quote capture, exit simulations and paired outcome reports. Production remains v2.0.2 with v2.0.1 trading rules. No historical enrollment or automated strategy optimization.
+
+### Future strategy releases (evidence and approval required)
+
+- Call debit spreads and put debit spreads remain disabled
 - Sector rotation model
 - Correlation model
 - Sector exposure optimizer

@@ -490,3 +490,8 @@ The agent must clearly label every candidate as one of:
 - Blocked by risk
 
 If a trade is proposed, the agent must explicitly state that no order has been placed unless a separate reviewed order is approved by the user.
+
+
+## Parallel Strategy Research Lab
+
+Follow `docs/STRATEGY_RESEARCH_LAB.md` for prospective research protocol 1. Production v2.0.2 retains v2.0.1 trading rules. For each newly qualified canonical signal, freeze A/B/C/D from contemporaneous quotes using `scripts/strategy_research_lab.py freeze`; unavailable variants stay unavailable. Do not backfill historical signals. Run the lab `due` command every trading session, capture its option IDs alongside canonical quote checkpoints, persist via `observe`, and generate a separate `report` before weekly/monthly review. Daily path capture is required even on non-horizon days. Reconcile qualified signal-group IDs against experiments; report missing entries/captures as LAB_DEGRADED. Score bearish candidate evidence independently using the lab rubric; qualification and trade permissions remain unchanged.

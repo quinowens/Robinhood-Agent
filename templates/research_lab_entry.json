@@ -1,0 +1,45 @@
+{
+  "captured_at": null,
+  "underlying_price": null,
+  "underlying_quote_at": null,
+  "raw_source_path": null,
+  "setup": {
+    "strategy_version": "2.0.2",
+    "option_setup_id": null,
+    "signal_group_id": null,
+    "option_id": null,
+    "underlying": null,
+    "directional_thesis": null,
+    "setup_quality_status": "QUALIFIED",
+    "options_setup_score": null,
+    "is_canonical": true,
+    "underlying_eligibility": "eligible",
+    "timestamp": null,
+    "underlying_invalidation_level": null
+  },
+  "contracts": [
+    {
+      "option_id": null,
+      "underlying": null,
+      "option_type": null,
+      "expiration": null,
+      "strike": null,
+      "bid": null,
+      "ask": null,
+      "quote_at": null,
+      "delta": null,
+      "theta": null,
+      "vega": null,
+      "implied_volatility": null,
+      "iv_rank": null,
+      "iv_percentile": null,
+      "iv_lookback": null,
+      "realized_volatility_20d": null,
+      "open_interest": null,
+      "volume": null,
+      "event_compatible": null,
+      "metric_availability_reasons": {},
+      "source": null
+    }
+  ]
+}

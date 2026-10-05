@@ -1,0 +1,27 @@
+{
+  "captured_at": null,
+  "underlying": null,
+  "source": null,
+  "features": {
+    "failed_breakout": {
+      "score": null,
+      "evidence": null
+    },
+    "relative_weakness": {
+      "score": null,
+      "evidence": null
+    },
+    "trend_deterioration": {
+      "score": null,
+      "evidence": null
+    },
+    "negative_catalyst_confirmation": {
+      "score": null,
+      "evidence": null
+    },
+    "weak_sector_regime_alignment": {
+      "score": null,
+      "evidence": null
+    }
+  }
+}
